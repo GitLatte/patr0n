@@ -1,7 +1,0 @@
-/* Mobil görünümde butonları ayırmak için özel stil */
-@media (max-width: 767px) {
-    .button-sep {
-        display: block;
-        margin-top: 10px;
-    }
-}
