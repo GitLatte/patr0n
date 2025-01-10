@@ -96,7 +96,7 @@ async function fetchPatronLinks() {
                     const copyButton = document.createElement('button');
                     copyButton.textContent = 'Bu Adresi Kullan';
                     copyButton.classList.add('btn', 'btn-outline-secondary', 'btn-block');
-                    copyButton.onclick = () => copyToClipboard(validatedLink);
+                                        copyButton.onclick = () => copyToClipboard(validatedLink);
 
                     const showXtreamButton = document.createElement('button');
                     showXtreamButton.classList.add('btn', 'btn-outline-secondary', 'btn-block');
