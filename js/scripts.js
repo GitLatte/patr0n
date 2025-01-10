@@ -301,7 +301,7 @@ function showToast(message) {
         position: "right", // Toast konumu: "left", "center" veya "right"
         backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
         stopOnFocus: false, // Mouse üzerine geldiğinde durmasın 
-		onClick: function() { this.hideToast(); } // Tıklanınca gizle
+		onClick: function() { this.hideToast(); }
     }).showToast();
 }
 
@@ -312,7 +312,7 @@ function copyToClipboard(text) {
     tempTextarea.select();
     document.execCommand('copy');
     document.body.removeChild(tempTextarea);
-    showToast('URL Kopyalandı: Yapıştırıp kullanabilirsiniz😅' + );
+    showToast('Kopyalandı: ' + text);
 }
 function copyAllLinks() {
     const linksText = Array.from(document.getElementById('links').getElementsByTagName('a'), link => link.href).join('\n');
