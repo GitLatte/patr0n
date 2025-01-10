@@ -3,7 +3,7 @@ function showLoadingMessage(show) {
     loadingMessage.style.display = show ? 'block' : 'none';
 }
 
-function extractLinks() {
+async function extractLinks() {
     const text = document.getElementById('inputText').value;
     const urlPattern = /(https?:\/\/[^\s]+)/g;
     const links = text.match(urlPattern);
@@ -14,7 +14,7 @@ function extractLinks() {
     linksContainer.innerHTML = '';
 
     if (links) {
-        links.forEach((link, index) => {
+        const promises = links.map(async (link, index) => {
             const linkWrapper = document.createElement('div');
             linkWrapper.classList.add('p-3', 'mb-2', 'bg-light', 'rounded');
             linkWrapper.id = 'linkWrapper_' + index;
@@ -55,6 +55,8 @@ function extractLinks() {
             linkWrapper.appendChild(xtreamPanel);
             linksContainer.appendChild(linkWrapper);
         });
+
+        await Promise.all(promises);
         copyAllLinksBtn.style.display = 'block';
         sourceInfo.textContent = 'Girilen metin içeriğinden';
         linksHeader.textContent = 'Ayıklanan Linkler (Toplam ' + links.length + ' adet)';
@@ -80,10 +82,10 @@ async function fetchPatronLinks() {
         linksContainer.innerHTML = '';
 
         if (links && links.length > 0) {
-            links.forEach((link, index) => {
+            const promises = links.map(async (link, index) => {
                 try {
                     const validatedLink = new URL(link.trim()).href;
-                    const linkWrapper = document.createElement('div');
+                                        const linkWrapper = document.createElement('div');
                     linkWrapper.classList.add('p-3', 'mb-2', 'bg-light', 'rounded');
                     linkWrapper.id = 'linkWrapper_' + index;
 
@@ -96,7 +98,7 @@ async function fetchPatronLinks() {
                     const copyButton = document.createElement('button');
                     copyButton.textContent = 'Bu Adresi Kullan';
                     copyButton.classList.add('btn', 'btn-outline-secondary', 'btn-block');
-                                        copyButton.onclick = () => copyToClipboard(validatedLink);
+                    copyButton.onclick = () => copyToClipboard(validatedLink);
 
                     const showXtreamButton = document.createElement('button');
                     showXtreamButton.classList.add('btn', 'btn-outline-secondary', 'btn-block');
@@ -126,6 +128,7 @@ async function fetchPatronLinks() {
                     console.warn('Geçersiz URL atlandı:', link);
                 }
             });
+            await Promise.all(promises);
             copyAllLinksBtn.style.display = 'block';
             sourceInfo.textContent = '@patr0n sağolsun 😅';
             linksHeader.textContent = 'Ayıklanan Linkler (Toplam ' + links.length + ' adet)';
@@ -162,7 +165,7 @@ async function fetchLinksFromPage() {
         linksContainer.innerHTML = '';
 
         if (links && links.length > 0) {
-            links.forEach((link, index) => {
+            const promises = links.map(async (link, index) => {
                 try {
                     const validatedLink = new URL(link.trim()).href;
                     const linkWrapper = document.createElement('div');
@@ -208,6 +211,7 @@ async function fetchLinksFromPage() {
                     console.warn('Geçersiz URL atlandı:', link);
                 }
             });
+            await Promise.all(promises);
             copyAllLinksBtn.style.display = 'block';
             sourceInfo.textContent = pageUrl + ' adresinden alınan linkler';
             linksHeader.textContent = 'Ayıklanan Linkler (Toplam ' + links.length + ' adet)';
