@@ -299,7 +299,7 @@ function showToast(message) {
 
     Toastify({
         text: displayMessage,
-        duration: 500, // 5 saniye boyunca görüntülenecek
+        duration: 1000, // 1 saniye boyunca görüntülenecek
         close: true,
         gravity: "bottom", // Toast konumu: "top" veya "bottom"
         position: "right", // Toast konumu: "left", "center" veya "right"
