@@ -6,18 +6,31 @@
     }
 }
 .navbar-brand img {
-    height: 40px; /* Yükseklik ayarı */
-    max-width: 100%; /* Genişlik ayarı */
-    margin-right: 10px;
+    height: 40px; /* Logonun yüksekliği */
+    margin-right: 10px; /* Logonun sağındaki boşluk */
 }
 
 .navbar-brand span {
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 1.5rem; /* Başlığın yazı tipi boyutu */
+    font-weight: bold; /* Başlığın yazı tipi kalınlığı */
+    color: #333; /* Başlığın rengi */
 }
 
+.navbar {
+    background-color: #ffffff; /* Nav barın arka plan rengi */
+    border-bottom: 1px solid #ddd; /* Alt çizgi */
+}
+
+.navbar-nav .nav-link {
+    color: #555; /* Bağlantıların rengi */
+    transition: color 0.3s; /* Renk değişimi geçiş süresi */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff; /* Bağlantıların üzerine gelindiğinde renk */
+}
 
 .toastify {
-    font-size: 0.875rem;
-    max-width: 300px;
+    font-size: 0.875rem; /* Bildirimin yazı tipi boyutu */
+    max-width: 300px; /* Bildirimin maksimum genişliği */
 }
