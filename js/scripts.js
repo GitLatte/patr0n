@@ -119,7 +119,7 @@ async function fetchPatronLinks() {
                 try {
                     const line = html.split('\n').find(line => line.includes(link));
                     const maxConnectionsMatch = line.match(/Maksimum Bağlantılar: (\d+)/);
-                    const maxConnections = maxConnectionsMatch ? ` (x${maxConnectionsMatch[1]})` : '';
+                    const maxConnections = maxConnectionsMatch ? ` (Önemli: Aynı anda en fazla ${maxConnectionsMatch[1]} kişi kullanabilir)` : '';
                     
                     const validatedLink = new URL(link.trim()).href;
                     const linkWrapper = document.createElement('div');
@@ -134,7 +134,7 @@ async function fetchPatronLinks() {
 
                     const connectionsInfo = document.createElement('span');
                     connectionsInfo.textContent = maxConnections;
-                    connectionsInfo.classList.add('ml-2', 'text-muted');
+                    connectionsInfo.classList.add('ml-2', 'font-italic', 'text-muted');
 
                     const copyButton = document.createElement('button');
                     copyButton.textContent = 'Bu Adresi Kullan';
