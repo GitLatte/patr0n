@@ -293,6 +293,8 @@ function parseXtreamDetails(link) {
 }
 
 function showToast(message) {
+	const maxMessageLength = 200; // Görüntülenecek maksimum karakter sayısı 
+	const displayMessage = message.length > maxMessageLength ? message.substring(0, maxMessageLength) + '...' : message;
     Toastify({
         text: message,
         duration: 3000,
@@ -308,12 +310,11 @@ function showToast(message) {
 function copyToClipboard(text) {
     const tempTextarea = document.createElement('textarea');
     tempTextarea.value = text;
-	ukalaCevap.value = yapistir;
     document.body.appendChild(tempTextarea);
     tempTextarea.select();
     document.execCommand('copy');
     document.body.removeChild(tempTextarea);
-    showToast('Kopyalandı: ' + yapistir);
+    showToast('Kopyalandı: ' + text);
 }
 function copyAllLinks() {
     const linksText = Array.from(document.getElementById('links').getElementsByTagName('a'), link => link.href).join('\n');
