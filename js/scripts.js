@@ -296,27 +296,10 @@ function showToast(message) {
     // Mesajı kısaltmak ve çok uzun mesajları sınırlamak
     const maxMessageLength = 200; // Görüntülenecek maksimum karakter sayısı
     const displayMessage = message.length > maxMessageLength ? message.substring(0, maxMessageLength) + '...' : message;
-	
-	const CustomIcon = ({ isLoading, type }) => {
-  if (isLoading) return <Spinner />;
-
-  switch (type) {
-    case "success":
-      return <span>✅</span>;
-    case "error":
-      return <span>❌</span>;
-    case "warning":
-      return <span>⚠️</span>;
-    case "info":
-      return <span>ℹ️</span>;
-    default:
-      return <span></span>;
-  }
-};
 
     Toastify({
         text: displayMessage,
-        duration: 1000, // 1 saniye boyunca görüntülenecek
+        duration: 1500, // 1.5 saniye boyunca görüntülenecek
         close: true,
         gravity: "bottom", // Toast konumu: "top" veya "bottom"
         position: "right", // Toast konumu: "left", "center" veya "right"
