@@ -310,9 +310,6 @@ function copyToClipboard(text) {
     showToast('Kopyalandı: ' + text);
 }
 
-// Diğer fonksiyonlarınız burada kalabilir...
-
-
 function copyAllLinks() {
     const linksText = Array.from(document.getElementById('links').getElementsByTagName('a'), link => link.href).join('\n');
     copyToClipboard(linksText);
