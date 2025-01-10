@@ -5,3 +5,19 @@
         margin-top: 10px;
     }
 }
+.navbar-brand img {
+    height: 40px; /* Yükseklik ayarı */
+    max-width: 100%; /* Genişlik ayarı */
+    margin-right: 10px;
+}
+
+.navbar-brand span {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+.toastify {
+    font-size: 0.875rem;
+    max-width: 300px;
+}
