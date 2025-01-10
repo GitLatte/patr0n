@@ -117,7 +117,11 @@ async function fetchPatronLinks() {
             // Linkleri listeye ekleme
             const promises = links.map(async (link, index) => {
                 try {
-                    const validatedLink = new URL(link.trim()).href;
+                    const line = html.split('\n').find(line => line.includes(link));
+                    const maxConnectionsMatch = line.match(/Maksimum Bağlantılar: (\d+)/);
+                    const maxConnections = maxConnectionsMatch ? ` (x${maxConnectionsMatch[1]})` : '';
+                    
+                    const validatedLink = new URL(link.trim()).href + maxConnections;
                     const linkWrapper = document.createElement('div');
                     linkWrapper.classList.add('p-3', 'mb-2', 'bg-light', 'rounded');
                     linkWrapper.id = 'linkWrapper_' + index;
@@ -182,6 +186,7 @@ async function fetchPatronLinks() {
         showLoadingMessage(false); // Çoğul URL uyarısını kaldır
     }
 }
+
 
 async function fetchLinksFromPage() {
     clearPreviousResults();
