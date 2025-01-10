@@ -103,14 +103,28 @@ async function fetchPatronLinks() {
         const copyAllLinksBtn = document.getElementById('copyAllLinksBtn');
         const sourceInfo = document.getElementById('sourceInfo');
         const linksHeader = document.getElementById('linksHeader');
+        
+        const firstLine = html.split('\n')[0].trim(); // İlk satırı al
+        
+        // En son eklenen linkleri ayıklamak
+        const sections = html.split('------------');
+        const latestSection = sections[0]; // En son eklenen linkler
+        const latestLinks = latestSection.match(urlPattern);
 
-        if (links && links.length > 0) {
-            const promises = links.map(async (link, index) => {
+        if (latestLinks && latestLinks.length > 0) {
+            // Bilgi notunu ekleme
+            const infoNote = document.createElement('div');
+            infoNote.classList.add('alert', 'alert-info', 'mt-2');
+            infoNote.textContent = firstLine;
+            linksContainer.appendChild(infoNote);
+
+            // Linkleri listeye ekleme
+            const promises = latestLinks.map(async (link, index) => {
                 try {
                     const validatedLink = new URL(link.trim()).href;
                     const linkWrapper = document.createElement('div');
                     linkWrapper.classList.add('p-3', 'mb-2', 'bg-light', 'rounded');
-                                        linkWrapper.id = 'linkWrapper_' + index;
+                    linkWrapper.id = 'linkWrapper_' + index;
 
                     const linkElement = document.createElement('a');
                     linkElement.href = validatedLink;
@@ -154,8 +168,8 @@ async function fetchPatronLinks() {
 
             await Promise.all(promises);
             copyAllLinksBtn.style.display = 'block';
-            sourceInfo.textContent = pageUrl + ' adresinden alınan linkler';
-            linksHeader.textContent = 'Ayıklanan Linkler (Toplam ' + links.length + ' adet)';
+            sourceInfo.textContent = '@patr0n sağolsun 😅';
+            linksHeader.textContent = 'Ayıklanan Linkler (Toplam ' + latestLinks.length + ' adet)';
             showNewMethodMessage(false); // Yeni yöntem uyarısını kaldır
             showLoadingMessage(false); // Çoğul URL uyarısını kaldır
         } else {
@@ -172,6 +186,7 @@ async function fetchPatronLinks() {
         showLoadingMessage(false); // Çoğul URL uyarısını kaldır
     }
 }
+
 
 function parseXtreamDetails(link) {
     const url = new URL(link);
