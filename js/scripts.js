@@ -292,6 +292,14 @@ function parseXtreamDetails(link) {
     return { server, username, password };
 }
 
+function showToast(message) {
+    const toastElement = document.getElementById('copyToast');
+    const toastBody = toastElement.querySelector('.toast-body');
+    toastBody.textContent = message;
+    const toast = new bootstrap.Toast(toastElement);
+    toast.show();
+}
+
 function copyToClipboard(text) {
     const tempTextarea = document.createElement('textarea');
     tempTextarea.value = text;
@@ -299,8 +307,11 @@ function copyToClipboard(text) {
     tempTextarea.select();
     document.execCommand('copy');
     document.body.removeChild(tempTextarea);
-    alert('Kopyalandı: ' + text);
+    showToast('Kopyalandı: ' + text);
 }
+
+// Diğer fonksiyonlarınız burada kalabilir...
+
 
 function copyAllLinks() {
     const linksText = Array.from(document.getElementById('links').getElementsByTagName('a'), link => link.href).join('\n');
