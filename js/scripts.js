@@ -30,6 +30,7 @@ function decodeURL(url) {
 }
 
 function cleanURL(url) {
+    return url.replace(/[<>"]/g, '').replace(/'/g, '').replace(/,$/g, ''); // "<", ">", çift tırnak ve tek tırnakları temizle, ayrıca sondaki virgülü kaldır
 }
 
 function extractLinks() {
