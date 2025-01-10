@@ -109,7 +109,7 @@ async function fetchPatronLinks() {
             const promises = links.map(async (link, index) => {
                 try {
                     const validatedLink = new URL(link.trim()).href;
-                                        const linkWrapper = document.createElement('div');
+                    const linkWrapper = document.createElement('div');
                     linkWrapper.classList.add('p-3', 'mb-2', 'bg-light', 'rounded');
                     linkWrapper.id = 'linkWrapper_' + index;
 
@@ -117,7 +117,7 @@ async function fetchPatronLinks() {
                     linkElement.href = validatedLink;
                     linkElement.textContent = (index + 1) + '. ' + validatedLink;
                     linkElement.target = '_blank';
-                    linkElement.classList.add('d-block', 'mb-2');
+                                        linkElement.classList.add('d-block', 'mb-2');
 
                     const copyButton = document.createElement('button');
                     copyButton.textContent = 'Bu Adresi Kullan';
