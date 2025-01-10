@@ -187,7 +187,7 @@ async function fetchLinksFromPage() {
     clearPreviousResults();
     showNewMethodMessage(true);
     const pageUrl = document.getElementById('pageUrl').value;
-    if (!pageUrl.startsWith('http')) {
+        if (!pageUrl.startsWith('http')) {
         alert('Lütfen geçerli bir URL girin (http:// veya https:// ile başlamalıdır).');
         showLoadingMessage(false);
         return;
