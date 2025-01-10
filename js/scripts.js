@@ -312,7 +312,7 @@ function copyToClipboard(text) {
     tempTextarea.select();
     document.execCommand('copy');
     document.body.removeChild(tempTextarea);
-    showToast('URL Kopyalandı: ' + Yapıştırıp 😅 kullanabilirsiniz);
+    showToast('URL Kopyalandı: Yapıştırıp kullanabilirsiniz😅');
 }
 function copyAllLinks() {
     const linksText = Array.from(document.getElementById('links').getElementsByTagName('a'), link => link.href).join('\n');
