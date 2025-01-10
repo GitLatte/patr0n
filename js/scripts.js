@@ -293,17 +293,21 @@ function parseXtreamDetails(link) {
 }
 
 function showToast(message) {
-	const maxMessageLength = 200; // Görüntülenecek maksimum karakter sayısı 
-	const displayMessage = message.length > maxMessageLength ? message.substring(0, maxMessageLength) + '...' : message;
+    // Mesajı kısaltmak ve çok uzun mesajları sınırlamak
+    const maxMessageLength = 200; // Görüntülenecek maksimum karakter sayısı
+    const displayMessage = message.length > maxMessageLength ? message.substring(0, maxMessageLength) + '...' : message;
+
     Toastify({
-        text: message,
-        duration: 3000,
+        text: displayMessage,
+        duration: 5000, // 5 saniye boyunca görüntülenecek
         close: true,
         gravity: "bottom", // Toast konumu: "top" veya "bottom"
         position: "right", // Toast konumu: "left", "center" veya "right"
-        backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
-        stopOnFocus: false, // Mouse üzerine geldiğinde durmasın 
-		onClick: function() { this.hideToast(); }
+        style: {
+            background: "linear-gradient(to right, #00b09b, #96c93d)"
+        },
+        stopOnFocus: false, // Mouse üzerine geldiğinde durmasın
+        onClick: function() { this.hideToast(); } // Tıklanınca gizle
     }).showToast();
 }
 
@@ -314,8 +318,9 @@ function copyToClipboard(text) {
     tempTextarea.select();
     document.execCommand('copy');
     document.body.removeChild(tempTextarea);
-    showToast('Kopyalandı: ' + text);
+    showToast('Kopyalandı: ' + (text.length > 200 ? text.substring(0, 200) + '...' : text));
 }
+
 function copyAllLinks() {
     const linksText = Array.from(document.getElementById('links').getElementsByTagName('a'), link => link.href).join('\n');
     copyToClipboard(linksText);
