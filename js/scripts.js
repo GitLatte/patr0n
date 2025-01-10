@@ -22,11 +22,15 @@ function clearPreviousResults() {
 
 function decodeURL(url) {
     try {
-        return decodeURIComponent(url);
+        return decodeURIComponent(url.replace(/\\+/g, ' '));
     } catch (e) {
         console.error('URL decoding failed:', e);
         return url;
     }
+}
+
+function cleanURL(url) {
+    return url.replace(/[<>"]/g, ''); // "<", ">", ve çift tırnakları temizle
 }
 
 function extractLinks() {
@@ -41,16 +45,17 @@ function extractLinks() {
     if (links && links.length > 0) {
         links.forEach((link, index) => {
             const decodedLink = decodeURL(link); // URL'yi çöz
+            const cleanedLink = cleanURL(decodedLink); // URL'yi temizle
             const linkElement = document.createElement('a');
-            linkElement.href = decodedLink;
-            linkElement.textContent = (index + 1) + '. ' + decodedLink;
+            linkElement.href = cleanedLink;
+            linkElement.textContent = (index + 1) + '. ' + cleanedLink;
             linkElement.target = '_blank';
             linkElement.classList.add('d-block', 'mb-2');
             
             const copyButton = document.createElement('button');
             copyButton.textContent = 'Bu Adresi Kullan';
             copyButton.classList.add('btn', 'btn-outline-secondary', 'btn-block');
-            copyButton.onclick = () => copyToClipboard(decodedLink);
+            copyButton.onclick = () => copyToClipboard(cleanedLink);
 
             linksContainer.appendChild(linkElement);
             linksContainer.appendChild(copyButton);
@@ -78,16 +83,17 @@ async function fetchLinksFromPage() {
         if (links && links.length > 0) {
             links.forEach((link, index) => {
                 const decodedLink = decodeURL(link); // URL'yi çöz
+                const cleanedLink = cleanURL(decodedLink); // URL'yi temizle
                 const linkElement = document.createElement('a');
-                linkElement.href = decodedLink;
-                linkElement.textContent = (index + 1) + '. ' + decodedLink;
+                linkElement.href = cleanedLink;
+                linkElement.textContent = (index + 1) + '. ' + cleanedLink;
                 linkElement.target = '_blank';
                 linkElement.classList.add('d-block', 'mb-2');
                 
                 const copyButton = document.createElement('button');
                 copyButton.textContent = 'Bu Adresi Kullan';
                 copyButton.classList.add('btn', 'btn-outline-secondary', 'btn-block');
-                copyButton.onclick = () => copyToClipboard(decodedLink);
+                copyButton.onclick = () => copyToClipboard(cleanedLink);
 
                 linksContainer.appendChild(linkElement);
                 linksContainer.appendChild(copyButton);
@@ -133,11 +139,12 @@ async function fetchPatronLinks() {
             const promises = links.map(async (link, index) => {
                 try {
                     const decodedLink = decodeURL(link); // URL'yi çöz
+                    const cleanedLink = cleanURL(decodedLink); // URL'yi temizle
                     const line = html.split('\n').find(line => line.includes(link));
                     const maxConnectionsMatch = line.match(/Maksimum Bağlantılar: (\d+)/);
                     const maxConnections = maxConnectionsMatch ? ` (Önemli: Aynı anda en fazla ${maxConnectionsMatch[1]} kişi kullanabilir)` : '';
                     
-                    const validatedLink = new URL(decodedLink.trim()).href;
+                    const validatedLink = new URL(cleanedLink.trim()).href;
                     const linkWrapper = document.createElement('div');
                     linkWrapper.classList.add('p-3', 'mb-2', 'bg-light', 'rounded');
                     linkWrapper.id = 'linkWrapper_' + index;
@@ -197,16 +204,17 @@ async function fetchPatronLinks() {
             linksContainer.textContent = 'Hiçbir link bulunamadı.';
             copyAllLinksBtn.style.display = 'none';
             sourceInfo.textContent = '';
-            showNewMethodMessage(false); // Yeni yöntem uyarısını kaldır
-            showLoadingMessage(false); // Çoğul URL uyarısını kaldır
+            showNewMethodMessage(false);
+            showLoadingMessage(false);
         }
     } catch (error) {
         console.error('Web sayfasından linkler alınamadı:', error);
         alert('Web sayfasından linkler alınamadı: ' + error);
-        showNewMethodMessage(false); // Yeni yöntem uyarısını kaldır
-        showLoadingMessage(false); // Çoğul URL uyarısını kaldır
+        showNewMethodMessage(false);
+        showLoadingMessage(false);
     }
 }
+
 
 function parseXtreamDetails(link) {
     const url = new URL(link);
