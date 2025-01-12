@@ -344,6 +344,7 @@ function showToast(message) {
     toastr.success(message);
 }
 
+
 function copyToClipboard(text) {
     const tempTextarea = document.createElement('textarea');
     tempTextarea.value = text;
@@ -358,4 +359,5 @@ function copyAllLinks() {
     const linksText = Array.from(document.getElementById('links').getElementsByTagName('a'), link => link.href).join('\n');
     copyToClipboard(linksText);
 }
+
 
