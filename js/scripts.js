@@ -9,7 +9,7 @@ function showNewMethodMessage(show) {
 }
 
 function updateProgressBar(percentage) {
-    console.log(`Progress bar updated to: ${percentage}%`); // Test mesajı
+    console.log(`İlerleme çubuğu güncelleme oranı: ${percentage}%`); // Test mesajı
     const progressBar = document.getElementById('progressBar');
     progressBar.style.width = percentage + '%';
     progressBar.setAttribute('aria-valuenow', percentage);
