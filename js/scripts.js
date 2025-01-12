@@ -333,7 +333,7 @@ function showToast(message) {
   "debug": false,
   "newestOnTop": true,
   "progressBar": true,
-  "positionClass": "toast-bottom-left",
+  "positionClass": "toast-bottom-right",
   "preventDuplicates": true,
   "onclick": null,
   "showDuration": "300",
@@ -363,5 +363,6 @@ function copyAllLinks() {
     const linksText = Array.from(document.getElementById('links').getElementsByTagName('a'), link => link.href).join('\n');
     copyToClipboard(linksText);
 }
+
 
 
