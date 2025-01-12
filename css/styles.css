@@ -32,15 +32,24 @@
     max-width: 300px; /* Bildirimin maksimum genişliği */
 }
 
-/* İlerleme Çubuğu Stilleri */
-#progressContainer {
-    margin-top: 20px;
-}
-
-#progressBar {
-    transition: width 0.1s ease;
-}
-
+/* İlerleme Çubuğu Stilleri */ 
+#customProgressContainer {
+	margin-top: 20px;
+	background-color: #f3f3f3;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	overflow: hidden;
+	display: none; height: 30px;
+	} 
+#customProgressBar {
+		height: 100%;
+		width: 0;
+		background-color: #4caf50;
+		text-align: center;
+		line-height: 30px;
+		color: white;
+		transition: width 0.1s ease;
+	}
 /* Mobil uyumluluk için linklerin düzeni */
 #links {
     overflow-x: auto;

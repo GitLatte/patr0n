@@ -8,16 +8,15 @@ function showNewMethodMessage(show) {
     newMethodMessage.style.display = show ? 'block' : 'none';
 }
 
-function updateProgressBar(percentage) {
-    console.log(`İlerleme çubuğu güncelleme oranı: ${percentage}%`); // Test mesajı
-    const progressBar = document.getElementById('progressBar');
+function updateCustomProgressBar(percentage) {
+    console.log(`Progress bar updated to: ${percentage}%`); // Test mesajı
+    const progressBar = document.getElementById('customProgressBar');
     progressBar.style.width = percentage + '%';
-    progressBar.setAttribute('aria-valuenow', percentage);
     progressBar.textContent = percentage + '%';
 }
 
-function showProgressBar(show) {
-    const progressContainer = document.getElementById('progressContainer');
+function showCustomProgressBar(show) {
+    const progressContainer = document.getElementById('customProgressContainer');
     progressContainer.style.display = show ? 'block' : 'none';
 }
 
@@ -30,8 +29,8 @@ function clearPreviousResults() {
     copyAllLinksBtn.style.display = 'none';
     sourceInfo.textContent = '';
     linksHeader.textContent = 'Ayıklanan Linkler';
-    showProgressBar(false); // Progress barı gizle
-    updateProgressBar(0); // Progress barı sıfırla
+    showCustomProgressBar(false); // Progress barı gizle
+    updateCustomProgressBar(0); // Progress barı sıfırla
 }
 
 function decodeURL(url) {
@@ -46,6 +45,7 @@ function decodeURL(url) {
 function cleanURL(url) {
     return url.replace(/[<>"]/g, '').replace(/'/g, '').replace(/,$/g, ''); // "<", ">", çift tırnak ve tek tırnakları temizle, ayrıca sondaki virgülü kaldır
 }
+
 function extractLinks() {
     clearPreviousResults();
     const inputText = document.getElementById('inputText').value;
@@ -55,7 +55,7 @@ function extractLinks() {
     const copyAllLinksBtn = document.getElementById('copyAllLinksBtn');
     
     linksContainer.innerHTML = '';
-    showProgressBar(true); // Progress barı göster
+    showCustomProgressBar(true); // Progress barı göster
     
     if (links && links.length > 0) {
         links.forEach(async (link, index) => {
@@ -77,7 +77,7 @@ function extractLinks() {
 
             // Progress bar'ı güncelle
             const progress = Math.round(((index + 1) / links.length) * 100);
-            updateProgressBar(progress);
+            updateCustomProgressBar(progress);
 
             // Gecikme ekle
             await new Promise(resolve => setTimeout(resolve, 50));
@@ -86,15 +86,15 @@ function extractLinks() {
     } else {
         linksContainer.textContent = 'Hiçbir link bulunamadı.';
         copyAllLinksBtn.style.display = 'none';
-        updateProgressBar(100);
+        updateCustomProgressBar(100);
     }
-    showProgressBar(false); // İşlem bittiğinde progress barı gizle
+    showCustomProgressBar(false); // İşlem bittiğinde progress barı gizle
 }
 
 async function fetchLinksFromPage() {
     clearPreviousResults();
     const pageUrl = document.getElementById('pageUrl').value;
-    showProgressBar(true); // Progress barı göster
+    showCustomProgressBar(true); // Progress barı göster
     try {
         const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(pageUrl)}`);
         const data = await response.json();
@@ -125,7 +125,7 @@ async function fetchLinksFromPage() {
 
                 // Progress bar'ı güncelle
                 const progress = Math.round(((index + 1) / links.length) * 100);
-                updateProgressBar(progress);
+                updateCustomProgressBar(progress);
 
                 // Gecikme ekle
                 await new Promise(resolve => setTimeout(resolve, 50));
@@ -136,20 +136,21 @@ async function fetchLinksFromPage() {
             linksContainer.textContent = 'Hiçbir link bulunamadı.';
             copyAllLinksBtn.style.display = 'none';
             sourceInfo.textContent = '';
-            updateProgressBar(100);
+            updateCustomProgressBar(100);
         }
     } catch (error) {
         console.error('Web sayfasından linkler alınamadı:', error);
         alert('Web sayfasından linkler alınamadı: ' + error);
-        updateProgressBar(100);
+        updateCustomProgressBar(100);
     }
-    showProgressBar(false); // İşlem bittiğinde progress barı gizle
+    showCustomProgressBar(false); // İşlem bittiğinde progress barı gizle
 }
+
 async function fetchPatronLinks() {
     clearPreviousResults();
     showNewMethodMessage(true);
     showLoadingMessage(true);
-    showProgressBar(true); // Progress barı göster
+    showCustomProgressBar(true); // Progress barı göster
     try {
         const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://paste.fo/raw/45174a0b7377')}`);
         const data = await response.json();
@@ -227,7 +228,7 @@ async function fetchPatronLinks() {
 
                     // Progress bar'ı güncelle
                     const progress = Math.round(((index + 1) / links.length) * 100);
-                    updateProgressBar(progress);
+                    updateCustomProgressBar(progress);
 
                     // Gecikme ekle
                     await new Promise(resolve => setTimeout(resolve, 50));
@@ -248,16 +249,16 @@ async function fetchPatronLinks() {
             sourceInfo.textContent = '';
             showNewMethodMessage(false); // Yeni yöntem uyarısını kaldır
             showLoadingMessage(false); // Çoğul URL uyarısını kaldır
-            updateProgressBar(100);
+            updateCustomProgressBar(100);
         }
     } catch (error) {
         console.error('Web sayfasından linkler alınamadı:', error);
         alert('Web sayfasından linkler alınamadı: ' + error);
         showNewMethodMessage(false); // Yeni yöntem uyarısını kaldır
         showLoadingMessage(false); // Çoğul URL uyarısını kaldır
-        updateProgressBar(100);
+        updateCustomProgressBar(100);
     }
-    showProgressBar(false); // İşlem bittiğinde progress barı gizle
+    showCustomProgressBar(false); // İşlem bittiğinde progress barı gizle
 }
 
 function parseXtreamDetails(link) {
