@@ -24,11 +24,13 @@
         <button class="btn btn-primary mr-2" onclick="extractLinks()">Linkleri Göster</button>
     </div>
 
-    <div class="form-group form-floating shadow p-3 mb-4 bg-white rounded">
+    <div class="shadow p-3 mb-4 bg-white rounded">
+	<div class="form-group form-floating">
         <label for="pageUrl">Web Sayfasından Linkleri Ayıkla</label>
-        <input id="pageUrl" class="form-control mr-1" type="text" placeholder="Web Sayfası URL'sini girin" />
+        <input id="pageUrl" class="form-control" type="text" placeholder="Web Sayfası URL'sini girin" />
         <button class="btn btn-outline-primary btn-sm" onclick="fetchLinksFromPage()">Bu Adresten Linkleri Ayıkla</button>
     </div>
+	</div>
 
     <div class="text-center mb-4">
         <button class="btn btn-success ml-2" onclick="fetchPatronLinks()">@patr0n IPTV M3u Linklerini Göster</button>
