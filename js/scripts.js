@@ -29,7 +29,7 @@ function clearPreviousResults() {
     copyAllLinksBtn.style.display = 'none';
     sourceInfo.textContent = '';
     linksHeader.textContent = 'Ayıklanan Linkler';
-    showCustomProgressBar(false); // Progress barı gizle
+    showCustomProgressBar(true); // Progress barı gizle
     updateCustomProgressBar(0); // Progress barı sıfırla
 }
 
@@ -46,7 +46,7 @@ function cleanURL(url) {
     return url.replace(/[<>"]/g, '').replace(/'/g, '').replace(/,$/g, ''); // "<", ">", çift tırnak ve tek tırnakları temizle, ayrıca sondaki virgülü kaldır
 }
 
-function extractLinks() {
+async function extractLinks() {
     clearPreviousResults();
     showNewMethodMessage(true);
     showLoadingMessage(true);
@@ -55,11 +55,13 @@ function extractLinks() {
     const links = inputText.match(urlPattern);
     const linksContainer = document.getElementById('links');
     const copyAllLinksBtn = document.getElementById('copyAllLinksBtn');
+    const linksHeader = document.getElementById('linksHeader');
     
     linksContainer.innerHTML = '';
     showCustomProgressBar(true); // Progress barı göster
     
     if (links && links.length > 0) {
+        linksHeader.textContent = 'Ayıklanan Linkler (Toplam ' + links.length + ' adet)';
         links.forEach(async (link, index) => {
             const decodedLink = decodeURL(link); // URL'yi çöz
             const cleanedLink = cleanURL(decodedLink); // URL'yi temizle
@@ -107,7 +109,7 @@ function extractLinks() {
         });
         copyAllLinksBtn.style.display = 'block';
     } else {
-        linksContainer.textContent = 'Hiçbir link bulunamadı.';
+        linksHeader.textContent = 'Hiçbir link bulunamadı.';
         copyAllLinksBtn.style.display = 'none';
         updateCustomProgressBar(100);
     }
@@ -116,12 +118,14 @@ function extractLinks() {
     showLoadingMessage(false);
 }
 
+
 async function fetchLinksFromPage() {
     clearPreviousResults();
     showNewMethodMessage(true);
     showLoadingMessage(true);
     const pageUrl = document.getElementById('pageUrl').value;
     showCustomProgressBar(true); // Progress barı göster
+    const linksHeader = document.getElementById('linksHeader');
     try {
         const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(pageUrl)}`);
         const data = await response.json();
@@ -133,6 +137,7 @@ async function fetchLinksFromPage() {
         const sourceInfo = document.getElementById('sourceInfo');
         
         if (links && links.length > 0) {
+            linksHeader.textContent = 'Ayıklanan Linkler (Toplam ' + links.length + ' adet)';
             for (const [index, link] of links.entries()) {
                 setTimeout(async () => {
                     const decodedLink = decodeURL(link); // URL'yi çöz
@@ -183,7 +188,7 @@ async function fetchLinksFromPage() {
             copyAllLinksBtn.style.display = 'block';
             sourceInfo.textContent = pageUrl;
         } else {
-            linksContainer.textContent = 'Hiçbir link bulunamadı.';
+            linksHeader.textContent = 'Hiçbir link bulunamadı.';
             copyAllLinksBtn.style.display = 'none';
             sourceInfo.textContent = '';
             updateCustomProgressBar(100);
@@ -193,7 +198,7 @@ async function fetchLinksFromPage() {
         alert('Web sayfasından linkler alınamadı: ' + error);
         updateCustomProgressBar(100);
     }
-    showCustomProgressBar(false); // İşlem bittiğinde progress barı gizle
+    showCustomProgressBar(true); // İşlem bittiğinde progress barı gizle
     showNewMethodMessage(false);
     showLoadingMessage(false);
 }
