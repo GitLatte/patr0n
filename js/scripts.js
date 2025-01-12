@@ -111,7 +111,7 @@ async function extractLinks() {
         copyAllLinksBtn.style.display = 'none';
         updateCustomProgressBar(100);
     }
-    showCustomProgressBar(true); // İşlem bittiğinde progress barı gizle
+    showCustomProgressBar(false); // İşlem bittiğinde progress barı gizle
     showNewMethodMessage(false);
     showLoadingMessage(false);
     resetVariables(); // Belleği temizle ve sıfırla
@@ -124,12 +124,7 @@ async function fetchLinksFromPage() {
     const pageUrl = document.getElementById('pageUrl').value;
     showCustomProgressBar(true); // Progress barı göster
     try {
-        const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(pageUrl)}`, {
-            method: 'GET',
-            headers: {
-                'Cache-Control': 'no-cache'
-            }
-        });
+        const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(pageUrl)}`);
         const data = await response.json();
         const html = data.contents;
         const urlPattern = /(https?:\/\/[^\s]+)/g;
@@ -199,12 +194,11 @@ async function fetchLinksFromPage() {
         alert('Web sayfasından linkler alınamadı: ' + error);
         updateCustomProgressBar(100);
     }
-    showCustomProgressBar(true); // İşlem bittiğinde progress barı gizle
+    showCustomProgressBar(false); // İşlem bittiğinde progress barı gizle
     showNewMethodMessage(false);
     showLoadingMessage(false);
     resetVariables(); // Belleği temizle ve sıfırla
 }
-
 
 async function fetchPatronLinks() {
     clearPreviousResults();
@@ -212,12 +206,7 @@ async function fetchPatronLinks() {
     showLoadingMessage(true);
     showCustomProgressBar(true); // Progress barı göster
     try {
-        const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://paste.fo/raw/45174a0b7377')}`, {
-            method: 'GET',
-            headers: {
-                'Cache-Control': 'no-cache'
-            }
-        });
+        const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://paste.fo/raw/45174a0b7377')}`);
         const data = await response.json();
         const html = data.contents;
         const urlPattern = /(https?:\/\/[^\s]+)/g;
@@ -325,7 +314,7 @@ async function fetchPatronLinks() {
         showLoadingMessage(false); // Çoğul URL uyarısını kaldır
         updateCustomProgressBar(100);
     }
-    showCustomProgressBar(true); // İşlem bittiğinde progress barı gizle
+    showCustomProgressBar(false); // İşlem bittiğinde progress barı gizle
     resetVariables(); // Belleği temizle ve sıfırla
 }
 
@@ -336,6 +325,14 @@ function parseXtreamDetails(link) {
     const username = params.get('username');
     const password = params.get('password');
     return { server, username, password };
+}
+
+function resetVariables() {
+    const progressBar = document.getElementById('customProgressBar');
+    progressBar.style.width = '0%';
+    progressBar.setAttribute('aria-valuenow', 0);
+    progressBar.textContent = '0%';
+    clearPreviousResults();
 }
 
 function showToast(message) {
