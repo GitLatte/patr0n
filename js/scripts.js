@@ -45,7 +45,6 @@ function decodeURL(url) {
 function cleanURL(url) {
     return url.replace(/[<>"]/g, '').replace(/'/g, '').replace(/,$/g, ''); // "<", ">", çift tırnak ve tek tırnakları temizle, ayrıca sondaki virgülü kaldır
 }
-
 function extractLinks() {
     clearPreviousResults();
     const inputText = document.getElementById('inputText').value;
@@ -58,7 +57,7 @@ function extractLinks() {
     showProgressBar(true); // Progress barı göster
     
     if (links && links.length > 0) {
-        links.forEach((link, index) => {
+        links.forEach(async (link, index) => {
             const decodedLink = decodeURL(link); // URL'yi çöz
             const cleanedLink = cleanURL(decodedLink); // URL'yi temizle
             const linkElement = document.createElement('a');
@@ -78,6 +77,9 @@ function extractLinks() {
             // Progress bar'ı güncelle
             const progress = Math.round(((index + 1) / links.length) * 100);
             updateProgressBar(progress);
+
+            // Gecikme ekle
+            await new Promise(resolve => setTimeout(resolve, 50));
         });
         copyAllLinksBtn.style.display = 'block';
     } else {
@@ -103,7 +105,7 @@ async function fetchLinksFromPage() {
         const sourceInfo = document.getElementById('sourceInfo');
         
         if (links && links.length > 0) {
-            links.forEach((link, index) => {
+            for (const [index, link] of links.entries()) {
                 const decodedLink = decodeURL(link); // URL'yi çöz
                 const cleanedLink = cleanURL(decodedLink); // URL'yi temizle
                 const linkElement = document.createElement('a');
@@ -123,7 +125,10 @@ async function fetchLinksFromPage() {
                 // Progress bar'ı güncelle
                 const progress = Math.round(((index + 1) / links.length) * 100);
                 updateProgressBar(progress);
-            });
+
+                // Gecikme ekle
+                await new Promise(resolve => setTimeout(resolve, 50));
+            }
             copyAllLinksBtn.style.display = 'block';
             sourceInfo.textContent = pageUrl;
         } else {
@@ -139,7 +144,6 @@ async function fetchLinksFromPage() {
     }
     showProgressBar(false); // İşlem bittiğinde progress barı gizle
 }
-
 async function fetchPatronLinks() {
     clearPreviousResults();
     showNewMethodMessage(true);
@@ -223,6 +227,9 @@ async function fetchPatronLinks() {
                     // Progress bar'ı güncelle
                     const progress = Math.round(((index + 1) / links.length) * 100);
                     updateProgressBar(progress);
+
+                    // Gecikme ekle
+                    await new Promise(resolve => setTimeout(resolve, 50));
                 } catch (urlError) {
                     console.warn('Geçersiz URL atlandı:', link);
                 }
