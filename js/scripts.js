@@ -88,7 +88,7 @@ function extractLinks() {
         copyAllLinksBtn.style.display = 'none';
         updateCustomProgressBar(100);
     }
-    showCustomProgressBar(false); // İşlem bittiğinde progress barı gizle
+    showCustomProgressBar(true); // İşlem bittiğinde progress barı gizle
 }
 
 async function fetchLinksFromPage() {
@@ -143,7 +143,7 @@ async function fetchLinksFromPage() {
         alert('Web sayfasından linkler alınamadı: ' + error);
         updateCustomProgressBar(100);
     }
-    showCustomProgressBar(false); // İşlem bittiğinde progress barı gizle
+    showCustomProgressBar(true); // İşlem bittiğinde progress barı gizle
 }
 
 async function fetchPatronLinks() {
@@ -258,7 +258,7 @@ async function fetchPatronLinks() {
         showLoadingMessage(false); // Çoğul URL uyarısını kaldır
         updateCustomProgressBar(100);
     }
-    showCustomProgressBar(false); // İşlem bittiğinde progress barı gizle
+    showCustomProgressBar(true); // İşlem bittiğinde progress barı gizle
 }
 
 function parseXtreamDetails(link) {
