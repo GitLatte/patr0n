@@ -6,6 +6,9 @@
 <title>Gelişmiş Link Ayırıcı ve Kopyalayıcı</title>
 <!-- Bootstrap CSS --> 
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<!-- Toastr CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+
 <link href="css/styles.css" rel="stylesheet">
 <link rel="icon" type="image/x-icon" href="https://gitlatte.github.io/patr0n/img/favicon.ico">
 </head>
@@ -60,26 +63,14 @@
     <div id="newMethodMessage" class="alert alert-info mt-4" style="display:none;">
         Yeni yöntem ile URL adresleri alınacaktır.
     </div>
-
-    <!-- Toast Bildirimi -->
-    <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1050;">
-        <div id="copyToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-            <div class="toast-header">
-                <strong class="me-auto">Kopyalama Sonucu</strong>
-                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-            </div>
-            <div class="toast-body">
-                İstek Kopyalandı.
-            </div>
-        </div>
-    </div>
 </div>
 
 <!-- Bootstrap JS and dependencies -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<!-- Toastr JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <script src="js/scripts.js"></script>
 </body>
 </html>
