@@ -327,25 +327,8 @@ function parseXtreamDetails(link) {
     return { server, username, password };
 }
 
-function showToast(message) {
-    toastr.options = {
-  "closeButton": true,
-  "debug": false,
-  "newestOnTop": true,
-  "progressBar": true,
-  "positionClass": "toast-bottom-right",
-  "preventDuplicates": true,
-  "onclick": null,
-  "showDuration": "300",
-  "hideDuration": "1000",
-  "timeOut": "3000",
-  "extendedTimeOut": "1000",
-  "showEasing": "swing",
-  "hideEasing": "linear",
-  "showMethod": "fadeIn",
-  "hideMethod": "fadeOut"
-    };
-    toastr.success(message);
+function showAlert(message) {
+    alert(message);
 }
 
 
@@ -356,7 +339,7 @@ function copyToClipboard(text) {
     tempTextarea.select();
     document.execCommand('copy');
     document.body.removeChild(tempTextarea);
-    showToast('Kopyalandı: ' + (text.length > 200 ? text.substring(0, 200) + '...' : text));
+    showAlert('Kopyalandı: ' + (text.length > 200 ? text.substring(0, 200) + '...' : text));
 }
 
 function copyAllLinks() {
