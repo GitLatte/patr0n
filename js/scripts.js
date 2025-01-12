@@ -8,16 +8,29 @@ function showNewMethodMessage(show) {
     newMethodMessage.style.display = show ? 'block' : 'none';
 }
 
+function updateProgressBar(percentage) {
+    const progressBar = document.getElementById('progressBar');
+    progressBar.style.width = percentage + '%';
+    progressBar.setAttribute('aria-valuenow', percentage);
+    progressBar.textContent = percentage + '%';
+}
+
+function showProgressBar(show) {
+    const progressContainer = document.getElementById('progressContainer');
+    progressContainer.style.display = show ? 'block' : 'none';
+}
+
 function clearPreviousResults() {
     const linksContainer = document.getElementById('links');
     const copyAllLinksBtn = document.getElementById('copyAllLinksBtn');
     const sourceInfo = document.getElementById('sourceInfo');
     const linksHeader = document.getElementById('linksHeader');
-
     linksContainer.innerHTML = '';
     copyAllLinksBtn.style.display = 'none';
     sourceInfo.textContent = '';
-    linksHeader.textContent = 'Bulunan bağlantı adresleri:';
+    linksHeader.textContent = 'Ayıklanan Linkler';
+    showProgressBar(false); // Progress barı gizle
+    updateProgressBar(0); // Progress barı sıfırla
 }
 
 function decodeURL(url) {
@@ -34,6 +47,7 @@ function cleanURL(url) {
 }
 
 function extractLinks() {
+    clearPreviousResults();
     const inputText = document.getElementById('inputText').value;
     const urlPattern = /(https?:\/\/[^\s]+)/g;
     const links = inputText.match(urlPattern);
@@ -41,6 +55,7 @@ function extractLinks() {
     const copyAllLinksBtn = document.getElementById('copyAllLinksBtn');
     
     linksContainer.innerHTML = '';
+    showProgressBar(true); // Progress barı göster
     
     if (links && links.length > 0) {
         links.forEach((link, index) => {
@@ -59,17 +74,24 @@ function extractLinks() {
 
             linksContainer.appendChild(linkElement);
             linksContainer.appendChild(copyButton);
+
+            // Progress bar'ı güncelle
+            const progress = Math.round(((index + 1) / links.length) * 100);
+            updateProgressBar(progress);
         });
         copyAllLinksBtn.style.display = 'block';
     } else {
         linksContainer.textContent = 'Hiçbir link bulunamadı.';
         copyAllLinksBtn.style.display = 'none';
+        updateProgressBar(100);
     }
+    showProgressBar(false); // İşlem bittiğinde progress barı gizle
 }
 
 async function fetchLinksFromPage() {
     clearPreviousResults();
     const pageUrl = document.getElementById('pageUrl').value;
+    showProgressBar(true); // Progress barı göster
     try {
         const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(pageUrl)}`);
         const data = await response.json();
@@ -91,12 +113,16 @@ async function fetchLinksFromPage() {
                 linkElement.classList.add('d-block', 'mb-2');
                 
                 const copyButton = document.createElement('button');
-                copyButton.textContent = 'Bu Adresi Kopyala';
+                copyButton.textContent = 'Bu Adresi Kullan';
                 copyButton.classList.add('btn', 'btn-outline-secondary', 'btn-block');
                 copyButton.onclick = () => copyToClipboard(cleanedLink);
 
                 linksContainer.appendChild(linkElement);
                 linksContainer.appendChild(copyButton);
+
+                // Progress bar'ı güncelle
+                const progress = Math.round(((index + 1) / links.length) * 100);
+                updateProgressBar(progress);
             });
             copyAllLinksBtn.style.display = 'block';
             sourceInfo.textContent = pageUrl;
@@ -104,17 +130,21 @@ async function fetchLinksFromPage() {
             linksContainer.textContent = 'Hiçbir link bulunamadı.';
             copyAllLinksBtn.style.display = 'none';
             sourceInfo.textContent = '';
+            updateProgressBar(100);
         }
     } catch (error) {
         console.error('Web sayfasından linkler alınamadı:', error);
         alert('Web sayfasından linkler alınamadı: ' + error);
+        updateProgressBar(100);
     }
+    showProgressBar(false); // İşlem bittiğinde progress barı gizle
 }
 
 async function fetchPatronLinks() {
     clearPreviousResults();
     showNewMethodMessage(true);
     showLoadingMessage(true);
+    showProgressBar(true); // Progress barı göster
     try {
         const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://paste.fo/raw/45174a0b7377')}`);
         const data = await response.json();
@@ -189,6 +219,10 @@ async function fetchPatronLinks() {
                     linkWrapper.appendChild(showXtreamButton);
                     linkWrapper.appendChild(xtreamPanel);
                     linksContainer.appendChild(linkWrapper);
+
+                    // Progress bar'ı güncelle
+                    const progress = Math.round(((index + 1) / links.length) * 100);
+                    updateProgressBar(progress);
                 } catch (urlError) {
                     console.warn('Geçersiz URL atlandı:', link);
                 }
@@ -204,15 +238,18 @@ async function fetchPatronLinks() {
             linksContainer.textContent = 'Hiçbir link bulunamadı.';
             copyAllLinksBtn.style.display = 'none';
             sourceInfo.textContent = '';
-            showNewMethodMessage(false);
-            showLoadingMessage(false);
+            showNewMethodMessage(false); // Yeni yöntem uyarısını kaldır
+            showLoadingMessage(false); // Çoğul URL uyarısını kaldır
+            updateProgressBar(100);
         }
     } catch (error) {
         console.error('Web sayfasından linkler alınamadı:', error);
         alert('Web sayfasından linkler alınamadı: ' + error);
-        showNewMethodMessage(false);
-        showLoadingMessage(false);
+        showNewMethodMessage(false); // Yeni yöntem uyarısını kaldır
+        showLoadingMessage(false); // Çoğul URL uyarısını kaldır
+        updateProgressBar(100);
     }
+    showProgressBar(false); // İşlem bittiğinde progress barı gizle
 }
 
 
