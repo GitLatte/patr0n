@@ -46,7 +46,7 @@ function cleanURL(url) {
     return url.replace(/[<>"]/g, '').replace(/'/g, '').replace(/,$/g, ''); // "<", ">", çift tırnak ve tek tırnakları temizle, ayrıca sondaki virgülü kaldır
 }
 
-function extractLinks() {
+async function extractLinks() {
     clearPreviousResults();
     showNewMethodMessage(true);
     showLoadingMessage(true);
@@ -114,6 +114,7 @@ function extractLinks() {
     showCustomProgressBar(true); // İşlem bittiğinde progress barı gizle
     showNewMethodMessage(false);
     showLoadingMessage(false);
+    resetVariables(); // Belleği temizle ve sıfırla
 }
 
 async function fetchLinksFromPage() {
@@ -123,7 +124,12 @@ async function fetchLinksFromPage() {
     const pageUrl = document.getElementById('pageUrl').value;
     showCustomProgressBar(true); // Progress barı göster
     try {
-        const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(pageUrl)}`);
+        const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(pageUrl)}`, {
+            method: 'GET',
+            headers: {
+                'Cache-Control': 'no-cache'
+            }
+        });
         const data = await response.json();
         const html = data.contents;
         const urlPattern = /(https?:\/\/[^\s]+)/g;
@@ -177,8 +183,8 @@ async function fetchLinksFromPage() {
                     updateCustomProgressBar(progress);
 
                     // Gecikme ekle
-                    await new Promise(resolve => setTimeout(resolve, 100));
-                }, index * 100);
+                    await new Promise(resolve => setTimeout(resolve, 20));
+                }, index * 20);
             }
             copyAllLinksBtn.style.display = 'block';
             sourceInfo.textContent = pageUrl;
@@ -196,7 +202,9 @@ async function fetchLinksFromPage() {
     showCustomProgressBar(true); // İşlem bittiğinde progress barı gizle
     showNewMethodMessage(false);
     showLoadingMessage(false);
+    resetVariables(); // Belleği temizle ve sıfırla
 }
+
 
 async function fetchPatronLinks() {
     clearPreviousResults();
@@ -204,7 +212,12 @@ async function fetchPatronLinks() {
     showLoadingMessage(true);
     showCustomProgressBar(true); // Progress barı göster
     try {
-        const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://paste.fo/raw/45174a0b7377')}`);
+        const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://paste.fo/raw/45174a0b7377')}`, {
+            method: 'GET',
+            headers: {
+                'Cache-Control': 'no-cache'
+            }
+        });
         const data = await response.json();
         const html = data.contents;
         const urlPattern = /(https?:\/\/[^\s]+)/g;
@@ -226,64 +239,66 @@ async function fetchPatronLinks() {
             // Linkleri listeye ekleme
             const promises = links.map(async (link, index) => {
                 try {
-                    const decodedLink = decodeURL(link); // URL'yi çöz
-                    const cleanedLink = cleanURL(decodedLink); // URL'yi temizle
-                    const line = html.split('\n').find(line => line.includes(link));
-                    const maxConnectionsMatch = line.match(/Maksimum Bağlantılar: (\d+)/);
-                    const maxConnections = maxConnectionsMatch ? ` (Önemli: Aynı anda en fazla ${maxConnectionsMatch[1]} kişi kullanabilir)` : '';
-                    
-                    const validatedLink = new URL(cleanedLink.trim()).href;
-                    const linkWrapper = document.createElement('div');
-                    linkWrapper.classList.add('p-3', 'mb-2', 'bg-light', 'rounded');
-                    linkWrapper.id = 'linkWrapper_' + index;
+                    setTimeout(async () => {
+                        const decodedLink = decodeURL(link); // URL'yi çöz
+                        const cleanedLink = cleanURL(decodedLink); // URL'yi temizle
+                        const line = html.split('\n').find(line => line.includes(link));
+                        const maxConnectionsMatch = line.match(/Maksimum Bağlantılar: (\d+)/);
+                        const maxConnections = maxConnectionsMatch ? ` (Önemli: Aynı anda en fazla ${maxConnectionsMatch[1]} kişi kullanabilir)` : '';
+                        
+                        const validatedLink = new URL(cleanedLink.trim()).href;
+                        const linkWrapper = document.createElement('div');
+                        linkWrapper.classList.add('p-3', 'mb-2', 'bg-light', 'rounded');
+                        linkWrapper.id = 'linkWrapper_' + index;
 
-                    const linkElement = document.createElement('a');
-                    linkElement.href = validatedLink;
-                    linkElement.textContent = (index + 1) + '. ' + validatedLink;
-                    linkElement.target = '_blank';
-                    linkElement.classList.add('d-block', 'mb-2');
+                        const linkElement = document.createElement('a');
+                        linkElement.href = validatedLink;
+                        linkElement.textContent = (index + 1) + '. ' + validatedLink;
+                        linkElement.target = '_blank';
+                        linkElement.classList.add('d-block', 'mb-2');
 
-                    const connectionsInfo = document.createElement('span');
-                    connectionsInfo.textContent = maxConnections;
-                    connectionsInfo.classList.add('ml-2', 'font-italic', 'text-muted');
+                        const connectionsInfo = document.createElement('span');
+                        connectionsInfo.textContent = maxConnections;
+                        connectionsInfo.classList.add('ml-2', 'font-italic', 'text-muted');
 
-                    const copyButton = document.createElement('button');
-                    copyButton.textContent = 'Bu Adresi Kullan';
-                    copyButton.classList.add('btn', 'btn-outline-secondary', 'btn-block');
-                    copyButton.onclick = () => copyToClipboard(validatedLink);
+                        const copyButton = document.createElement('button');
+                        copyButton.textContent = 'Bu Adresi Kullan';
+                        copyButton.classList.add('btn', 'btn-outline-secondary', 'btn-block');
+                        copyButton.onclick = () => copyToClipboard(validatedLink);
 
-                    const showXtreamButton = document.createElement('button');
-                    showXtreamButton.classList.add('btn', 'btn-outline-secondary', 'btn-block');
-                    showXtreamButton.textContent = 'Xtream Code olarak Göster';
-                    showXtreamButton.setAttribute('data-toggle', 'collapse');
-                    showXtreamButton.setAttribute('data-target', '#xtreamPanel_' + index);
-                    showXtreamButton.setAttribute('aria-expanded', 'false');
-                    showXtreamButton.setAttribute('aria-controls', 'xtreamPanel_' + index);
+                        const showXtreamButton = document.createElement('button');
+                        showXtreamButton.classList.add('btn', 'btn-outline-secondary', 'btn-block');
+                        showXtreamButton.textContent = 'Xtream Code olarak Göster';
+                        showXtreamButton.setAttribute('data-toggle', 'collapse');
+                        showXtreamButton.setAttribute('data-target', '#xtreamPanel_' + index);
+                        showXtreamButton.setAttribute('aria-expanded', 'false');
+                        showXtreamButton.setAttribute('aria-controls', 'xtreamPanel_' + index);
 
-                    const xtreamPanel = document.createElement('div');
-                    xtreamPanel.id = 'xtreamPanel_' + index;
-                    xtreamPanel.classList.add('collapse', 'mt-2');
+                        const xtreamPanel = document.createElement('div');
+                        xtreamPanel.id = 'xtreamPanel_' + index;
+                        xtreamPanel.classList.add('collapse', 'mt-2');
 
-                    const xtreamDetails = parseXtreamDetails(validatedLink);
-                    xtreamPanel.innerHTML = `
-                        <div><strong>Sunucu Adresi:</strong> <span>${xtreamDetails.server}</span></div>
-                        <div><strong>Kullanıcı Adı:</strong> <span>${xtreamDetails.username}</span></div>
-                        <div><strong>Şifre:</strong> <span>${xtreamDetails.password}</span></div>
-                    `;
+                        const xtreamDetails = parseXtreamDetails(validatedLink);
+                        xtreamPanel.innerHTML = `
+                            <div><strong>Sunucu Adresi:</strong> <span>${xtreamDetails.server}</span></div>
+                            <div><strong>Kullanıcı Adı:</strong> <span>${xtreamDetails.username}</span></div>
+                            <div><strong>Şifre:</strong> <span>${xtreamDetails.password}</span></div>
+                        `;
 
-                    linkWrapper.appendChild(linkElement);
-                    linkWrapper.appendChild(connectionsInfo); // Bağlantı bilgisi ekle
-                    linkWrapper.appendChild(copyButton);
-                    linkWrapper.appendChild(showXtreamButton);
-                    linkWrapper.appendChild(xtreamPanel);
-                    linksContainer.appendChild(linkWrapper);
+                        linkWrapper.appendChild(linkElement);
+                        linkWrapper.appendChild(connectionsInfo); // Bağlantı bilgisi ekle
+                        linkWrapper.appendChild(copyButton);
+                        linkWrapper.appendChild(showXtreamButton);
+                        linkWrapper.appendChild(xtreamPanel);
+                        linksContainer.appendChild(linkWrapper);
 
-                    // Progress bar'ı güncelle
-                    const progress = Math.round(((index + 1) / links.length) * 100);
-                    updateCustomProgressBar(progress);
+                        // Progress bar'ı güncelle
+                        const progress = Math.round(((index + 1) / links.length) * 100);
+                        updateCustomProgressBar(progress);
 
-                    // Gecikme ekle
-                    await new Promise(resolve => setTimeout(resolve, 50));
+                        // Gecikme ekle
+                        await new Promise(resolve => setTimeout(resolve, 20));
+                    }, index * 20);
                 } catch (urlError) {
                     console.warn('Geçersiz URL atlandı:', link);
                 }
@@ -311,6 +326,7 @@ async function fetchPatronLinks() {
         updateCustomProgressBar(100);
     }
     showCustomProgressBar(true); // İşlem bittiğinde progress barı gizle
+    resetVariables(); // Belleği temizle ve sıfırla
 }
 
 function parseXtreamDetails(link) {
