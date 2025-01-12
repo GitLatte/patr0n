@@ -29,7 +29,7 @@ function clearPreviousResults() {
     copyAllLinksBtn.style.display = 'none';
     sourceInfo.textContent = '';
     linksHeader.textContent = 'Ayıklanan Linkler';
-    showCustomProgressBar(true); // Progress barı gizle
+    showCustomProgressBar(false); // Progress barı gizle
     updateCustomProgressBar(0); // Progress barı sıfırla
 }
 
@@ -46,7 +46,7 @@ function cleanURL(url) {
     return url.replace(/[<>"]/g, '').replace(/'/g, '').replace(/,$/g, ''); // "<", ">", çift tırnak ve tek tırnakları temizle, ayrıca sondaki virgülü kaldır
 }
 
-async function extractLinks() {
+function extractLinks() {
     clearPreviousResults();
     showNewMethodMessage(true);
     showLoadingMessage(true);
@@ -111,10 +111,9 @@ async function extractLinks() {
         copyAllLinksBtn.style.display = 'none';
         updateCustomProgressBar(100);
     }
-    showCustomProgressBar(false); // İşlem bittiğinde progress barı gizle
+    showCustomProgressBar(true); // İşlem bittiğinde progress barı gizle
     showNewMethodMessage(false);
     showLoadingMessage(false);
-    resetVariables(); // Belleği temizle ve sıfırla
 }
 
 async function fetchLinksFromPage() {
@@ -179,7 +178,7 @@ async function fetchLinksFromPage() {
 
                     // Gecikme ekle
                     await new Promise(resolve => setTimeout(resolve, 20));
-                }, index * 20);
+                }, index * 100);
             }
             copyAllLinksBtn.style.display = 'block';
             sourceInfo.textContent = pageUrl;
@@ -197,7 +196,6 @@ async function fetchLinksFromPage() {
     showCustomProgressBar(false); // İşlem bittiğinde progress barı gizle
     showNewMethodMessage(false);
     showLoadingMessage(false);
-    resetVariables(); // Belleği temizle ve sıfırla
 }
 
 async function fetchPatronLinks() {
@@ -228,66 +226,64 @@ async function fetchPatronLinks() {
             // Linkleri listeye ekleme
             const promises = links.map(async (link, index) => {
                 try {
-                    setTimeout(async () => {
-                        const decodedLink = decodeURL(link); // URL'yi çöz
-                        const cleanedLink = cleanURL(decodedLink); // URL'yi temizle
-                        const line = html.split('\n').find(line => line.includes(link));
-                        const maxConnectionsMatch = line.match(/Maksimum Bağlantılar: (\d+)/);
-                        const maxConnections = maxConnectionsMatch ? ` (Önemli: Aynı anda en fazla ${maxConnectionsMatch[1]} kişi kullanabilir)` : '';
-                        
-                        const validatedLink = new URL(cleanedLink.trim()).href;
-                        const linkWrapper = document.createElement('div');
-                        linkWrapper.classList.add('p-3', 'mb-2', 'bg-light', 'rounded');
-                        linkWrapper.id = 'linkWrapper_' + index;
+                    const decodedLink = decodeURL(link); // URL'yi çöz
+                    const cleanedLink = cleanURL(decodedLink); // URL'yi temizle
+                    const line = html.split('\n').find(line => line.includes(link));
+                    const maxConnectionsMatch = line.match(/Maksimum Bağlantılar: (\d+)/);
+                    const maxConnections = maxConnectionsMatch ? ` (Önemli: Aynı anda en fazla ${maxConnectionsMatch[1]} kişi kullanabilir)` : '';
+                    
+                    const validatedLink = new URL(cleanedLink.trim()).href;
+                    const linkWrapper = document.createElement('div');
+                    linkWrapper.classList.add('p-3', 'mb-2', 'bg-light', 'rounded');
+                    linkWrapper.id = 'linkWrapper_' + index;
 
-                        const linkElement = document.createElement('a');
-                        linkElement.href = validatedLink;
-                        linkElement.textContent = (index + 1) + '. ' + validatedLink;
-                        linkElement.target = '_blank';
-                        linkElement.classList.add('d-block', 'mb-2');
+                    const linkElement = document.createElement('a');
+                    linkElement.href = validatedLink;
+                    linkElement.textContent = (index + 1) + '. ' + validatedLink;
+                    linkElement.target = '_blank';
+                    linkElement.classList.add('d-block', 'mb-2');
 
-                        const connectionsInfo = document.createElement('span');
-                        connectionsInfo.textContent = maxConnections;
-                        connectionsInfo.classList.add('ml-2', 'font-italic', 'text-muted');
+                    const connectionsInfo = document.createElement('span');
+                    connectionsInfo.textContent = maxConnections;
+                    connectionsInfo.classList.add('ml-2', 'font-italic', 'text-muted');
 
-                        const copyButton = document.createElement('button');
-                        copyButton.textContent = 'Bu Adresi Kullan';
-                        copyButton.classList.add('btn', 'btn-outline-secondary', 'btn-block');
-                        copyButton.onclick = () => copyToClipboard(validatedLink);
+                    const copyButton = document.createElement('button');
+                    copyButton.textContent = 'Bu Adresi Kullan';
+                    copyButton.classList.add('btn', 'btn-outline-secondary', 'btn-block');
+                    copyButton.onclick = () => copyToClipboard(validatedLink);
 
-                        const showXtreamButton = document.createElement('button');
-                        showXtreamButton.classList.add('btn', 'btn-outline-secondary', 'btn-block');
-                        showXtreamButton.textContent = 'Xtream Code olarak Göster';
-                        showXtreamButton.setAttribute('data-toggle', 'collapse');
-                        showXtreamButton.setAttribute('data-target', '#xtreamPanel_' + index);
-                        showXtreamButton.setAttribute('aria-expanded', 'false');
-                        showXtreamButton.setAttribute('aria-controls', 'xtreamPanel_' + index);
+                    const showXtreamButton = document.createElement('button');
+                    showXtreamButton.classList.add('btn', 'btn-outline-secondary', 'btn-block');
+                    showXtreamButton.textContent = 'Xtream Code olarak Göster';
+                    showXtreamButton.setAttribute('data-toggle', 'collapse');
+                    showXtreamButton.setAttribute('data-target', '#xtreamPanel_' + index);
+                    showXtreamButton.setAttribute('aria-expanded', 'false');
+                    showXtreamButton.setAttribute('aria-controls', 'xtreamPanel_' + index);
 
-                        const xtreamPanel = document.createElement('div');
-                        xtreamPanel.id = 'xtreamPanel_' + index;
-                        xtreamPanel.classList.add('collapse', 'mt-2');
+                    const xtreamPanel = document.createElement('div');
+                    xtreamPanel.id = 'xtreamPanel_' + index;
+                    xtreamPanel.classList.add('collapse', 'mt-2');
 
-                        const xtreamDetails = parseXtreamDetails(validatedLink);
-                        xtreamPanel.innerHTML = `
-                            <div><strong>Sunucu Adresi:</strong> <span>${xtreamDetails.server}</span></div>
-                            <div><strong>Kullanıcı Adı:</strong> <span>${xtreamDetails.username}</span></div>
-                            <div><strong>Şifre:</strong> <span>${xtreamDetails.password}</span></div>
-                        `;
+                    const xtreamDetails = parseXtreamDetails(validatedLink);
+                    xtreamPanel.innerHTML = `
+                        <div><strong>Sunucu Adresi:</strong> <span>${xtreamDetails.server}</span></div>
+                        <div><strong>Kullanıcı Adı:</strong> <span>${xtreamDetails.username}</span></div>
+                        <div><strong>Şifre:</strong> <span>${xtreamDetails.password}</span></div>
+                    `;
 
-                        linkWrapper.appendChild(linkElement);
-                        linkWrapper.appendChild(connectionsInfo); // Bağlantı bilgisi ekle
-                        linkWrapper.appendChild(copyButton);
-                        linkWrapper.appendChild(showXtreamButton);
-                        linkWrapper.appendChild(xtreamPanel);
-                        linksContainer.appendChild(linkWrapper);
+                    linkWrapper.appendChild(linkElement);
+                    linkWrapper.appendChild(connectionsInfo); // Bağlantı bilgisi ekle
+                    linkWrapper.appendChild(copyButton);
+                    linkWrapper.appendChild(showXtreamButton);
+                    linkWrapper.appendChild(xtreamPanel);
+                    linksContainer.appendChild(linkWrapper);
 
-                        // Progress bar'ı güncelle
-                        const progress = Math.round(((index + 1) / links.length) * 100);
-                        updateCustomProgressBar(progress);
+                    // Progress bar'ı güncelle
+                    const progress = Math.round(((index + 1) / links.length) * 100);
+                    updateCustomProgressBar(progress);
 
-                        // Gecikme ekle
-                        await new Promise(resolve => setTimeout(resolve, 20));
-                    }, index * 20);
+                    // Gecikme ekle
+                    await new Promise(resolve => setTimeout(resolve, 20));
                 } catch (urlError) {
                     console.warn('Geçersiz URL atlandı:', link);
                 }
@@ -314,8 +310,7 @@ async function fetchPatronLinks() {
         showLoadingMessage(false); // Çoğul URL uyarısını kaldır
         updateCustomProgressBar(100);
     }
-    showCustomProgressBar(false); // İşlem bittiğinde progress barı gizle
-    resetVariables(); // Belleği temizle ve sıfırla
+    showCustomProgressBar(true); // İşlem bittiğinde progress barı gizle
 }
 
 function parseXtreamDetails(link) {
@@ -325,14 +320,6 @@ function parseXtreamDetails(link) {
     const username = params.get('username');
     const password = params.get('password');
     return { server, username, password };
-}
-
-function resetVariables() {
-    const progressBar = document.getElementById('customProgressBar');
-    progressBar.style.width = '0%';
-    progressBar.setAttribute('aria-valuenow', 0);
-    progressBar.textContent = '0%';
-    clearPreviousResults();
 }
 
 function showToast(message) {
