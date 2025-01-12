@@ -21,14 +21,18 @@
     </div>
     
     <div class="text-center mb-4">
-        <button class="btn btn-primary mr-2" onclick="extractLinks()">Linkleri Göster</button>
+        <button class="btn btn-primary mr-2" onclick="extractLinks()">Metinden Linkleri Ayıkla</button>
     </div>
-
-	<div class="form-group form-floating">
-        <label for="pageUrl">Web Sayfasından Linkleri Ayıkla</label>
-        <input id="pageUrl" class="form-control" type="text" placeholder="Web Sayfası URL'sini girin" />
-        <button class="btn btn-outline-primary btn-sm" onclick="fetchLinksFromPage()">Bu Adresten Linkleri Ayıkla</button>
+	
+	<div class="shadow p-3 mb-4 bg-white rounded">
+	<label for="pageUrl">Web Sayfasından Linkleri Ayıkla</label>
+	<div class="input-group mb-3">
+    <div class="input-group-prepend">
+    <button class="btn btn-outline-primary" type="button" id="button-url" onclick="fetchLinksFromPage()">URL'yi Ayıklamaya Başla</button>
     </div>
+    <input id="pageUrl" type="text" class="form-control" placeholder="" aria-label="Web Sayfası URL'sini girin" aria-describedby="button-url">
+	</div>
+	</div>
 
     <div class="text-center mb-4">
         <button class="btn btn-success ml-2" onclick="fetchPatronLinks()">@patr0n IPTV M3u Linklerini Göster</button>
@@ -39,7 +43,7 @@
     </div>
 
     <div id="linksContainer" class="mt-4">
-        <span id="linksHeader" class="border border-info">Sonuçlar Aşağıda Listelenecektir!</span>
+        <span id="linksHeader" class="border border-info">Sonuçlar Aşağıda Listelenir</span>
         <div id="sourceInfo" class="text-muted mb-2"></div>
         <div id="links" class="alert alert-light"></div>
     </div>

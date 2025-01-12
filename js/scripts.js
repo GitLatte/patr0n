@@ -91,7 +91,7 @@ async function fetchLinksFromPage() {
                 linkElement.classList.add('d-block', 'mb-2');
                 
                 const copyButton = document.createElement('button');
-                copyButton.textContent = 'Bu Adresi Kullan';
+                copyButton.textContent = 'Bu Adresi Kopyala';
                 copyButton.classList.add('btn', 'btn-outline-secondary', 'btn-block');
                 copyButton.onclick = () => copyToClipboard(cleanedLink);
 
