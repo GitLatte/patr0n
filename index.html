@@ -27,15 +27,10 @@
     <div class="form-group form-floating">
         <label for="pageUrl">Web Sayfasından Linkleri Ayıkla</label>
         <input id="pageUrl" class="form-control" type="text" placeholder="Web Sayfası URL'sini girin" />
+		<div class="input-group-append">
         <button class="btn btn-outline-primary btn-sm" onclick="fetchLinksFromPage()">Bu Adresten Linkleri Ayıkla</button>
+		</div>
     </div>
-	<div class="input-group mb-3">
-  <div class="input-group-prepend">
-  <label for="pageUrl">Web Sayfasından Linkleri Ayıkla</label>
-    <button class="btn btn-outline-primary" type="button" onclick="fetchLinksFromPage()">Bu Adresten Linkleri Ayıkla</button>
-  </div>
-  <input id="pageUrl" type="text" class="form-control" placeholder="" aria-label="Bu Adresten Linkleri Ayıkla" aria-describedby="button-addon1">
-</div>
 
     <div class="text-center mb-4">
         <button class="btn btn-success ml-2" onclick="fetchPatronLinks()">@patr0n IPTV M3u Linklerini Göster</button>
