@@ -252,7 +252,6 @@ async function fetchPatronLinks() {
     showProgressBar(false); // İşlem bittiğinde progress barı gizle
 }
 
-
 function parseXtreamDetails(link) {
     const url = new URL(link);
     const server = url.origin;
