@@ -17,7 +17,7 @@ function clearPreviousResults() {
     linksContainer.innerHTML = '';
     copyAllLinksBtn.style.display = 'none';
     sourceInfo.textContent = '';
-    linksHeader.textContent = 'Ayıklanan Linkler';
+    linksHeader.textContent = 'Bulunan bağlantı adresleri:';
 }
 
 function decodeURL(url) {
