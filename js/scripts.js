@@ -339,15 +339,10 @@ function showToast(message) {
         "showDuration": "300",
         "hideDuration": "1000",
         "timeOut": "5000",
-        "extendedTimeOut": "1000",
-        "showEasing": "swing",
-        "hideEasing": "linear",
-        "showMethod": "fadeIn",
-        "hideMethod": "fadeOut"
+        "extendedTimeOut": "1000"
     };
     toastr.success(message);
 }
-
 
 function copyToClipboard(text) {
     const tempTextarea = document.createElement('textarea');
@@ -363,3 +358,4 @@ function copyAllLinks() {
     const linksText = Array.from(document.getElementById('links').getElementsByTagName('a'), link => link.href).join('\n');
     copyToClipboard(linksText);
 }
+
