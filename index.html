@@ -26,8 +26,11 @@
 
     <div class="form-group form-floating">
         <label for="pageUrl">Web Sayfasından Linkleri Ayıkla</label>
-        <input id="pageUrl" class="form-control" type="text" placeholder="Web Sayfası URL'sini girin" />
-        <button class="btn btn-outline-primary btn-sm" onclick="fetchLinksFromPage()">Bu Adresten Linkleri Ayıkla</button>
+		<div class="input-group-prepend">
+		<button class="btn btn-outline-primary" onclick="fetchLinksFromPage()">Linkleri Ayıkla</button>
+		</div>
+		<input id="pageUrl" type="text" class="form-control" placeholder="" aria-label="Web Sayfası URL'sini girin">
+		</div>
     </div>
 
     <div class="text-center mb-4">
