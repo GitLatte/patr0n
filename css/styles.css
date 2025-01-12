@@ -32,6 +32,15 @@
     max-width: 300px; /* Bildirimin maksimum genişliği */
 }
 
+/* İlerleme Çubuğu Stilleri */
+#progressContainer {
+    margin-top: 20px;
+}
+
+#progressBar {
+    transition: width 0.1s ease;
+}
+
 /* Mobil uyumluluk için linklerin düzeni */
 #links {
     overflow-x: auto;
