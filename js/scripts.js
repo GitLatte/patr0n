@@ -379,6 +379,7 @@ function loadPlaylists() {
         { name: "Spor Listesi", url: "https://tinyurl.com/sporlistesi1" },
         { name: "Film Listesi", url: "https://tinyurl.com/filmlistesi1" },
         { name: "Dizi Listesi", url: "https://tinyurl.com/dizilistesi1" },
+		{ name: "IPTV Sevenler (MemetCandal)", url: ",https://raw.githubusercontent.com/GitLatte/patr0n/refs/heads/site/lists/iptvsevenler.m3u" },
         // Eklemek istediğiniz diğer listeler...
     ];
 
