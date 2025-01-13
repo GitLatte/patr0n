@@ -14,7 +14,7 @@ function updateCustomProgressBar(percentage) {
 function showCustomProgressBar(show) {
     const progressContainer = document.getElementById('customProgressContainer');
     if (progressContainer) {
-        progressContainer.style.display = show ? 'block' : 'block';
+        progressContainer.style.display = show ? 'block' : 'none';
     } else {
         console.error('Progress container not found');
     }
