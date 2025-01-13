@@ -234,8 +234,7 @@ async function fetchPatronLinks() {
     currentRequest = new AbortController(); // Yeni AbortController oluştur
     const signal = currentRequest.signal; // Abort sinyalini al
 
-    const chunkSize = 1024; // 1KB'lık parçalar halinde indir
-    const maxBytes = 750 * 1024; // Yaklaşık 750 satıra denk gelen byte sayısı
+    const maxLines = 750; // İşlenecek maksimum satır sayısı
 
     try {
         let response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://paste.fo/raw/45174a0b7377')}`, { signal });
@@ -243,21 +242,25 @@ async function fetchPatronLinks() {
         let receivedBytes = 0;
         let result = '';
         let fullResult = ''; // Tüm sonuçları biriktir
+        let lines = [];
 
         while (true) {
             const { done, value } = await reader.read();
             if (done) break;
             receivedBytes += value.length;
-            result += new TextDecoder("utf-8").decode(value, { stream: true });
-            fullResult += new TextDecoder("utf-8").decode(value, { stream: true }); // Tüm sonuçları biriktir
+            const chunk = new TextDecoder("utf-8").decode(value, { stream: true });
+            result += chunk;
+            fullResult += chunk; // Tüm sonuçları biriktir
+            lines = fullResult.split('\n');
 
-            if (receivedBytes > maxBytes) {
-                console.log('Maksimum byte limitine ulaşıldı');
+            if (lines.length >= maxLines) {
+                console.log('Maksimum satır limitine ulaşıldı');
                 break;
             }
         }
 
-        const html = result.split('\n').slice(0, 750).join('\n'); // İlk 750 satırı al
+        const first750Lines = lines.slice(0, 750).join('\n'); // İlk 750 satırı al
+        const html = first750Lines;
         const fullLinks = fullResult.match(/(https?:\/\/[^\s]+)/g); // Tüm sayfadaki linkler
         const links = html.match(/(https?:\/\/[^\s]+)/g);
         const linksContainer = document.getElementById('links');
@@ -265,7 +268,7 @@ async function fetchPatronLinks() {
         const sourceInfo = document.getElementById('sourceInfo');
         const linksHeader = document.getElementById('linksHeader');
         
-        const firstLine = result.split('\n')[0].trim(); // İlk satırı al
+        const firstLine = lines[0].trim(); // İlk satırı al
 
         if (links && links.length > 0) {
             // Bilgi notunu ekleme
