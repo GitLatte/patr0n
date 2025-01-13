@@ -237,9 +237,11 @@ async function fetchPatronLinks() {
     try {
         const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://paste.fo/raw/45174a0b7377')}`, { signal });
         const data = await response.json();
-        const html = data.contents;
+        const html = data.contents.split('\n').slice(0, 750).join('\n'); // İlk 750 satırı al
+        const fullHtml = data.contents;
         const urlPattern = /(https?:\/\/[^\s]+)/g;
         const links = html.match(urlPattern);
+        const fullLinks = fullHtml.match(urlPattern); // Tüm sayfadaki linkler
         const linksContainer = document.getElementById('links');
         const copyAllLinksBtn = document.getElementById('copyAllLinksBtn');
         const sourceInfo = document.getElementById('sourceInfo');
@@ -253,6 +255,12 @@ async function fetchPatronLinks() {
             infoNote.classList.add('alert', 'alert-info', 'mt-2');
             infoNote.textContent = `Son güncelleme tarihi: ${firstLine}`;
             linksContainer.appendChild(infoNote);
+
+            // Toplam link sayısını gösterme
+            const totalLinksNote = document.createElement('div');
+            totalLinksNote.classList.add('alert', 'alert-secondary', 'mt-2');
+            totalLinksNote.textContent = `Toplam Link Sayısı: ${fullLinks ? fullLinks.length : 0} (İlk 750 satırdan ${links.length} tanesi görüntüleniyor)`;
+            linksContainer.appendChild(totalLinksNote);
 
             // Linkleri listeye ekleme
             links.forEach(async (link, index) => {
@@ -340,7 +348,6 @@ async function fetchPatronLinks() {
     }
     showCustomProgressBar(false); // İşlem bittiğinde progress barı gizle
 }
-
 
 function parseXtreamDetails(link) {
     const url = new URL(link);
