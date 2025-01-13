@@ -76,9 +76,18 @@
     </div>
 
     <!-- Custom Progress Bar -->
-	<div id="customProgressContainer" style="display: none;">
-    <div id="customProgress" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar">0%</div>
-	</div>
+	<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="progress green">
+                <h3 class="progress-title">Tamamlanıyor</h3>
+                <div class="progress-bar" style="width:0%; background:#21da9a;">
+                    <div class="progress-value">0%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
     <div class="text-center mb-4 d-flex justify-content-center">
         <button class="btn btn-warning" id="copyAllLinksBtn" style="display:none;" onclick="copyAllLinks()">Tüm Linkleri Kopyala</button>
