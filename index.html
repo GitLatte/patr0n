@@ -76,20 +76,9 @@
     </div>
 
     <!-- Custom Progress Bar -->
-	<div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="progress-bar-outer" style="background: #dceeef;">
-                <div class="progress-inner">
-                    <div class="progress" style="background: #00b7f9;">
-                        <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
-                    </div>
-                    <div class="progress-value">0%</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+	<div id="customProgressContainer" style="display: none;">
+    <div id="customProgress">0%</div>
+	</div>
 
     <div class="text-center mb-4 d-flex justify-content-center">
         <button class="btn btn-warning" id="copyAllLinksBtn" style="display:none;" onclick="copyAllLinks()">Tüm Linkleri Kopyala</button>

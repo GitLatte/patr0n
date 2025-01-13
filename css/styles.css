@@ -27,57 +27,24 @@
     margin: 15px auto 0; /* Alt çizginin konumu */
 }
 
-/* Progress Bar Stili */
-.progress-bar-outer{
-    margin-bottom: 20px;
-    border-radius: 30px;
-    padding: 20px;
-    border: 1px solid rgba(50, 50, 50, 0.10);
+/* Custom Progress Bar Styles */
+#customProgressContainer {
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 20px 0;
 }
-.progress-bar-outer:last-child{
-    margin-bottom: 0;
-}
-.progress-bar-outer .progress-inner{
-    background: #e2eef4;
-    border-radius: 20px;
-    padding: 25px;
-    box-shadow: inset 0 0 3px 3px rgba(50, 50, 50, 0.20);
-    position: relative;
-}
-.progress-bar-outer .progress{
-    height: 27px;
-    margin: 0;
-    padding: 4px 0;
-    border-radius: 10px;
-    position: relative;
-}
-.progress-bar-outer .progress-bar{
-    box-shadow: none;
-    background: transparent;
-    animation: progress 4s;
-}
-.progress-bar-outer .progress:before{
-    content: "\f111";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    position: absolute;
-    top: 4px;
-    color: #fff;
-}
-.progress-bar-outer .progress-value{
-    position: absolute;
-    top: 27px;
-    left: 48%;
-    font-size: 18px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: #fff;
-}
-@-webkit-keyframes progress{
-    0% { width: 0%;}
-}
-@keyframes progress{
-    0% { width:0%; }
+
+#customProgress {
+    width: 0;
+    height: 30px;
+    background-color: #4caf50;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    border-radius: 5px;
+    transition: width 0.25s ease-in-out;
 }
 
 

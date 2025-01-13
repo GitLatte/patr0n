@@ -1,26 +1,24 @@
 let currentRequest = null; // Şu anki aktif istek
 
-function updateProgressBar(percentage) {
-    const progressBar = document.querySelector('.progress-bar');
-    const progressValue = document.querySelector('.progress-value');
-    if (progressBar && progressValue) {
+function updateCustomProgressBar(percentage) {
+    console.log(`Progress bar updated to: ${percentage}%`); // Test mesajı
+    const progressBar = document.getElementById('customProgress');
+    if (progressBar) {
         progressBar.style.width = percentage + '%';
-        progressValue.textContent = percentage + '%';
+        progressBar.textContent = percentage + '%';
     } else {
-        console.error('Progress bar or value element not found');
+        console.error('Progress bar element not found');
     }
 }
 
-
-function showProgressBar(show) {
-    const progressContainer = document.querySelector('.progress-bar-outer');
+function showCustomProgressBar(show) {
+    const progressContainer = document.getElementById('customProgressContainer');
     if (progressContainer) {
         progressContainer.style.display = show ? 'block' : 'none';
     } else {
         console.error('Progress container not found');
     }
 }
-
 
 
 function decodeURL(url) {
