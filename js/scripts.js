@@ -256,7 +256,7 @@ async function fetchPatronLinks() {
 
             // Linkleri listeye ekleme
             links.forEach(async (link, index) => {
-                if (signal.aborted) return;
+                if (signal.aborted) return; // İptal edildi mi kontrol et
                 const decodedLink = decodeURL(link); // URL'yi çöz
                 const cleanedLink = cleanURL(decodedLink); // URL'yi temizle
                 const line = html.split('\n').find(line => line.includes(link));
