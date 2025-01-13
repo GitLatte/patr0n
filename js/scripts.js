@@ -226,7 +226,7 @@ async function fetchPatronLinks() {
     showNewMethodMessage(true);
     showLoadingMessage(true);
     showCustomProgressBar(true); // Progress barı göster
-    
+
     if (currentRequest) {
         currentRequest.abort(); // Önceki istek varsa iptal et
     }
@@ -234,14 +234,32 @@ async function fetchPatronLinks() {
     currentRequest = new AbortController(); // Yeni AbortController oluştur
     const signal = currentRequest.signal; // Abort sinyalini al
 
+    const chunkSize = 1024; // 1KB'lık parçalar halinde indir
+    const maxBytes = 750 * 1024; // Yaklaşık 750 satıra denk gelen byte sayısı
+
     try {
-        const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://paste.fo/raw/45174a0b7377')}`, { signal });
-        const data = await response.json();
-        const html = data.contents.split('\n').slice(0, 750).join('\n'); // İlk 750 satırı al
-        const fullHtml = data.contents;
-        const urlPattern = /(https?:\/\/[^\s]+)/g;
-        const links = html.match(urlPattern);
-        const fullLinks = fullHtml.match(urlPattern); // Tüm sayfadaki linkler
+        let response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://paste.fo/raw/45174a0b7377')}`, { signal });
+        const reader = response.body.getReader();
+        let receivedBytes = 0;
+        let result = '';
+        let fullResult = ''; // Tüm sonuçları biriktir
+
+        while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+            receivedBytes += value.length;
+            result += new TextDecoder("utf-8").decode(value, { stream: true });
+            fullResult += new TextDecoder("utf-8").decode(value, { stream: true }); // Tüm sonuçları biriktir
+
+            if (receivedBytes > maxBytes) {
+                console.log('Maksimum byte limitine ulaşıldı');
+                break;
+            }
+        }
+
+        const html = result.split('\n').slice(0, 750).join('\n'); // İlk 750 satırı al
+        const fullLinks = fullResult.match(/(https?:\/\/[^\s]+)/g); // Tüm sayfadaki linkler
+        const links = html.match(/(https?:\/\/[^\s]+)/g);
         const linksContainer = document.getElementById('links');
         const copyAllLinksBtn = document.getElementById('copyAllLinksBtn');
         const sourceInfo = document.getElementById('sourceInfo');
