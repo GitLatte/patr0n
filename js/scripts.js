@@ -242,6 +242,7 @@ async function fetchLinksFromPage() {
 }
 
 // @patr0n Linklerini Ayıklama
+// @patr0n Linklerini Ayıklama
 async function fetchPatronLinks() {
     clearPreviousResults();
     showNewMethodMessage(true);
@@ -278,20 +279,27 @@ async function fetchPatronLinks() {
             // Linkleri listeye ekleme
             links.forEach(async (link, index) => {
                 if (signal.aborted) return;
-                const decodedLink = decodeURL(link); // URL'yi çöz
-                const cleanedLink = cleanURL(decodedLink); // URL'yi temizle
+                
+                // URL'yi doğrula ve temizle
+                let cleanedLink;
+                try {
+                    cleanedLink = new URL(cleanURL(decodeURL(link)).trim()).href;
+                } catch (e) {
+                    console.error('Geçersiz URL atlandı:', link);
+                    return; // Geçersiz URL'yi atla
+                }
+                
                 const line = html.split('\n').find(line => line.includes(link));
                 const maxConnectionsMatch = line.match(/Maksimum Bağlantılar: (\d+)/);
                 const maxConnections = maxConnectionsMatch ? ` (Önemli: Aynı anda en fazla ${maxConnectionsMatch[1]} kişi kullanabilir)` : '';
                 
-                const validatedLink = new URL(cleanedLink.trim()).href;
                 const linkWrapper = document.createElement('div');
                 linkWrapper.classList.add('p-3', 'mb-2', 'bg-light', 'rounded');
                 linkWrapper.id = 'linkWrapper_' + index;
 
                 const linkElement = document.createElement('a');
-                linkElement.href = validatedLink;
-                linkElement.textContent = (index + 1) + '. ' + validatedLink;
+                linkElement.href = cleanedLink;
+                linkElement.textContent = (index + 1) + '. ' + cleanedLink;
                 linkElement.target = '_blank';
                 linkElement.classList.add('d-block', 'mb-2');
 
@@ -302,7 +310,7 @@ async function fetchPatronLinks() {
                 const copyButton = document.createElement('button');
                 copyButton.textContent = 'Bu Adresi Kullan';
                 copyButton.classList.add('btn', 'btn-outline-secondary', 'btn-block');
-                copyButton.onclick = () => copyToClipboard(validatedLink);
+                copyButton.onclick = () => copyToClipboard(cleanedLink);
 
                 const showXtreamButton = document.createElement('button');
                 showXtreamButton.classList.add('btn', 'btn-outline-secondary', 'btn-block');
@@ -316,7 +324,7 @@ async function fetchPatronLinks() {
                 xtreamPanel.id = 'xtreamPanel_' + index;
                 xtreamPanel.classList.add('collapse', 'mt-2');
 
-                const xtreamDetails = parseXtreamDetails(validatedLink);
+                const xtreamDetails = parseXtreamDetails(cleanedLink);
                 xtreamPanel.innerHTML = `
                     <div><strong>Sunucu Adresi:</strong> <span>${xtreamDetails.server}</span></div>
                     <div><strong>Kullanıcı Adı:</strong> <span>${xtreamDetails.username}</span></div>
@@ -336,7 +344,7 @@ async function fetchPatronLinks() {
 
                 // Gecikme ekle
                 await new Promise(resolve => setTimeout(resolve, 20));
-                        });
+            });
             copyAllLinksBtn.style.display = 'block';
             sourceInfo.textContent = '@patr0n sağolsun 😅';
             linksHeader.textContent = 'Ayıklanan Linkler (Toplam ' + links.length + ' adet)';
