@@ -234,41 +234,18 @@ async function fetchPatronLinks() {
     currentRequest = new AbortController(); // Yeni AbortController oluştur
     const signal = currentRequest.signal; // Abort sinyalini al
 
-    const maxLines = 750; // İşlenecek maksimum satır sayısı
-
     try {
         let response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://paste.fo/raw/45174a0b7377')}`, { signal });
-        const reader = response.body.getReader();
-        let receivedBytes = 0;
-        let result = '';
-        let fullResult = ''; // Tüm sonuçları biriktir
-        let lines = [];
-
-        while (true) {
-            const { done, value } = await reader.read();
-            if (done) break;
-            receivedBytes += value.length;
-            const chunk = new TextDecoder("utf-8").decode(value, { stream: true });
-            result += chunk;
-            fullResult += chunk; // Tüm sonuçları biriktir
-            lines = fullResult.split('\n');
-
-            if (lines.length >= maxLines) {
-                console.log('Maksimum satır limitine ulaşıldı');
-                break;
-            }
-        }
-
-        const first750Lines = lines.slice(0, 750).join('\n'); // İlk 750 satırı al
-        const html = first750Lines;
-        const fullLinks = fullResult.match(/(https?:\/\/[^\s]+)/g); // Tüm sayfadaki linkler
-        const links = html.match(/(https?:\/\/[^\s]+)/g);
+        const data = await response.json();
+        const html = data.contents;
+        const urlPattern = /(https?:\/\/[^\s]+)/g;
+        const links = html.match(urlPattern);
         const linksContainer = document.getElementById('links');
         const copyAllLinksBtn = document.getElementById('copyAllLinksBtn');
         const sourceInfo = document.getElementById('sourceInfo');
         const linksHeader = document.getElementById('linksHeader');
         
-        const firstLine = lines[0].trim(); // İlk satırı al
+        const firstLine = html.split('\n')[0].trim(); // İlk satırı al
 
         if (links && links.length > 0) {
             // Bilgi notunu ekleme
@@ -277,15 +254,9 @@ async function fetchPatronLinks() {
             infoNote.textContent = `Son güncelleme tarihi: ${firstLine}`;
             linksContainer.appendChild(infoNote);
 
-            // Toplam link sayısını gösterme
-            const totalLinksNote = document.createElement('div');
-            totalLinksNote.classList.add('alert', 'alert-secondary', 'mt-2');
-            totalLinksNote.textContent = `Toplam Link Sayısı: ${fullLinks ? fullLinks.length : 0} (İlk 750 satırdan ${links.length} tanesi görüntüleniyor)`;
-            linksContainer.appendChild(totalLinksNote);
-
             // Linkleri listeye ekleme
             links.forEach(async (link, index) => {
-                if (signal.aborted) return; // İptal edildi mi kontrol et
+                if (signal.aborted) return;
                 const decodedLink = decodeURL(link); // URL'yi çöz
                 const cleanedLink = cleanURL(decodedLink); // URL'yi temizle
                 const line = html.split('\n').find(line => line.includes(link));
@@ -369,7 +340,6 @@ async function fetchPatronLinks() {
     }
     showCustomProgressBar(false); // İşlem bittiğinde progress barı gizle
 }
-
 
 function parseXtreamDetails(link) {
     const url = new URL(link);
