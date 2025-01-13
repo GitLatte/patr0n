@@ -7,7 +7,7 @@ function updateCustomProgressBar(percentage) {
     if (progressBar && progressValue) {
         progressBar.style.width = percentage + '%';
         if (percentage === 100) {
-            progressValue.textContent = 'İşlem tamamlandı';
+            progressValue.textContent = `İşlem tamamlandı: ${percentage}%`;
         } else {
             progressValue.textContent = `${percentage}%`;
         }
@@ -154,7 +154,6 @@ async function extractLinks() {
     showNewMethodMessage(false);
     showLoadingMessage(false);
 }
-
 // Linkleri Ayıklama (örnek olarak fetchLinksFromPage fonksiyonu güncelleniyor)
 async function fetchLinksFromPage() {
     clearPreviousResults();
