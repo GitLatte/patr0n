@@ -8,7 +8,6 @@ function updateCustomProgressBar(percentage) {
         progressBar.style.width = percentage + '%';
         if (percentage === 100) {
             progressValue.textContent = 'İşlem tamamlandı';
-            progressBar.style.color = 'black'; // Yazıyı belirgin hale getirmek için renk ayarı
         } else {
             progressValue.textContent = `${percentage}%`;
         }
@@ -16,7 +15,6 @@ function updateCustomProgressBar(percentage) {
         console.error('Progress bar or value element not found');
     }
 }
-
 
 
 function showCustomProgressBar(show) {
