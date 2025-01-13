@@ -6,12 +6,12 @@ function updateCustomProgressBar(percentage) {
     
     if (progressBar && progressValue) {
         progressBar.style.width = percentage + '%';
-        progressValue.textContent = `${percentage}%`;
+        progressBar.textContent = percentage + '%';
+        progressValue.textContent = `Progress: ${percentage}%`;
     } else {
         console.error('Progress bar or value element not found');
     }
 }
-
 
 function showCustomProgressBar(show) {
     const progressContainer = document.getElementById('customProgressContainer');
@@ -78,12 +78,15 @@ async function extractLinks() {
     clearPreviousResults();
     showNewMethodMessage(true);
     showLoadingMessage(true);
-    showCustomProgressBar(true); // Progress bar'ı göster
+	showCustomProgressBar(true); // Progress barı göster
     const inputText = document.getElementById('inputText').value;
     const urlPattern = /(https?:\/\/[^\s]+)/g;
     const links = inputText.match(urlPattern);
     const linksContainer = document.getElementById('links');
     const copyAllLinksBtn = document.getElementById('copyAllLinksBtn');
+    
+    linksContainer.innerHTML = '';
+    showCustomProgressBar(true); // Progress barı göster
     
     if (currentRequest) {
         currentRequest.abort(); // Önceki istek varsa iptal et
@@ -93,7 +96,6 @@ async function extractLinks() {
     const signal = currentRequest.signal; // Abort sinyalini al
 
     if (links && links.length > 0) {
-        linksContainer.innerHTML = '';
         links.forEach(async (link, index) => {
             if (signal.aborted) return;
             const decodedLink = decodeURL(link); // URL'yi çöz
@@ -146,7 +148,7 @@ async function extractLinks() {
         copyAllLinksBtn.style.display = 'none';
         updateCustomProgressBar(100);
     }
-    showCustomProgressBar(false); // İşlem bittiğinde progress barı gizle
+    showCustomProgressBar(true); // İşlem bittiğinde progress barı gizle
     showNewMethodMessage(false);
     showLoadingMessage(false);
 }
