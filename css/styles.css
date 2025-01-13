@@ -27,29 +27,25 @@
     margin: 15px auto 0; /* Alt çizginin konumu */
 }
 
-.toastify {
-    font-size: 0.875rem; /* Bildirimin yazı tipi boyutu */
-    max-width: 300px; /* Bildirimin maksimum genişliği */
+/* Progress Bar Stili */
+#customProgressBar {
+    display: none;
+    height: 30px;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+#customProgress {
+    height: 100%;
+    width: 0;
+    background-color: #4caf50;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    border-radius: 5px;
 }
 
-/* İlerleme Çubuğu Stilleri */ 
-#customProgressContainer {
-	margin-top: 20px;
-	background-color: #f3f3f3;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	overflow: hidden;
-	display: none; height: 30px;
-	} 
-#customProgressBar {
-		height: 100%;
-		width: 0;
-		background-color: #4caf50;
-		text-align: center;
-		line-height: 30px;
-		color: white;
-		transition: width 0.1s ease;
-	}
 /* Mobil uyumluluk için linklerin düzeni */
 #links {
     overflow-x: auto;

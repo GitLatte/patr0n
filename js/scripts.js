@@ -1,15 +1,5 @@
 let currentRequest = null; // Şu anki aktif istek
 
-function showLoadingMessage(show) {
-    const loadingMessage = document.getElementById('loadingMessage');
-    loadingMessage.style.display = show ? 'block' : 'none';
-}
-
-function showNewMethodMessage(show) {
-    const newMethodMessage = document.getElementById('newMethodMessage');
-    newMethodMessage.style.display = show ? 'block' : 'none';
-}
-
 function updateCustomProgressBar(percentage) {
     console.log(`Progress bar updated to: ${percentage}%`); // Test mesajı
     const progressBar = document.getElementById('customProgressBar');
@@ -44,10 +34,19 @@ function decodeURL(url) {
     }
 }
 
+function showLoadingMessage(show) {
+    const loadingMessage = document.getElementById('loadingMessage');
+    loadingMessage.style.display = show ? 'block' : 'none';
+}
+
+function showNewMethodMessage(show) {
+    const newMethodMessage = document.getElementById('newMethodMessage');
+    newMethodMessage.style.display = show ? 'block' : 'none';
+}
+
 function cleanURL(url) {
     return url.replace(/[<>"]/g, '').replace(/'/g, '').replace(/,$/g, ''); // "<", ">", çift tırnak ve tek tırnakları temizle, ayrıca sondaki virgülü kaldır
 }
-
 // Metinden Linkleri Ayıklama
 async function extractLinks() {
     clearPreviousResults();
@@ -126,7 +125,6 @@ async function extractLinks() {
     showNewMethodMessage(false);
     showLoadingMessage(false);
 }
-
 // Linkleri Ayıklama (örnek olarak fetchLinksFromPage fonksiyonu güncelleniyor)
 async function fetchLinksFromPage() {
     clearPreviousResults();
@@ -354,7 +352,6 @@ function showAlert(message) {
     alert(message);
 }
 
-
 function copyToClipboard(text) {
     const tempTextarea = document.createElement('textarea');
     tempTextarea.value = text;
@@ -368,51 +365,4 @@ function copyToClipboard(text) {
 function copyAllLinks() {
     const linksText = Array.from(document.getElementById('links').getElementsByTagName('a'), link => link.href).join('\n');
     copyToClipboard(linksText);
-}
-
-// Hazır Listeleri Yükleme
-function loadPlaylists() {
-    const playlists = [
-        { name: "Spor Listesi", url: "https://tinyurl.com/sporlistesi1" },
-        { name: "Film Listesi", url: "https://tinyurl.com/filmlistesi1" },
-        { name: "Dizi Listesi", url: "https://tinyurl.com/dizilistesi1" },
-        // Eklemek istediğiniz diğer listeler...
-    ];
-
-    const playlistContainer = document.getElementById('playlistContainer');
-    playlists.forEach(playlist => {
-        const listItem = document.createElement('li');
-        listItem.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center');
-        listItem.textContent = playlist.name;
-
-        const copyButton = document.createElement('button');
-        copyButton.classList.add('btn', 'btn-outline-secondary', 'btn-sm');
-        copyButton.textContent = 'Kopyala';
-        copyButton.onclick = () => copyToClipboard(playlist.url);
-
-        listItem.appendChild(copyButton);
-        playlistContainer.appendChild(listItem);
-    });
-}
-
-// Bölümleri Gösterme ve Gizleme
-function showSection(sectionId) {
-    const sections = ['metin-ayiklama', 'url-ayiklama', 'patron-ayiklama', 'hazir-listeler'];
-    sections.forEach(id => {
-        const section = document.getElementById(id);
-        if (id === sectionId) {
-            section.classList.remove('d-none');
-        } else {
-            section.classList.add('d-none');
-        }
-    });
-    resetPage();
-}
-
-function resetPage() {
-    if (currentRequest) {
-        currentRequest.abort(); // Aktif isteği iptal et
-        currentRequest = null;
-    }
-    clearPreviousResults(); // Sonuçları temizle
 }
