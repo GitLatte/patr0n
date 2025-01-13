@@ -11,6 +11,15 @@ function updateCustomProgressBar(percentage) {
     }
 }
 
+function showCustomProgressBar(show) {
+    const progressContainer = document.getElementById('customProgressContainer');
+    if (progressContainer) {
+        progressContainer.style.display = show ? 'block' : 'none';
+    } else {
+        console.error('Progress container not found');
+    }
+}
+
 function decodeURL(url) {
     try {
         return decodeURIComponent(url.replace(/\\+/g, ' '));
@@ -32,15 +41,6 @@ function showNewMethodMessage(show) {
 
 function cleanURL(url) {
     return url.replace(/[<>"]/g, '').replace(/'/g, '').replace(/,$/g, ''); // "<", ">", çift tırnak ve tek tırnakları temizle, ayrıca sondaki virgülü kaldır
-}
-
-function showCustomProgressBar(show) {
-    const progressContainer = document.getElementById('customProgressContainer');
-    if (progressContainer) {
-        progressContainer.style.display = show ? 'block' : 'none';
-    } else {
-        console.error('Progress container not found');
-    }
 }
 
 function clearPreviousResults() {
@@ -361,6 +361,36 @@ async function fetchPatronLinks() {
     }
     showCustomProgressBar(false); // İşlem bittiğinde progress barı gizle
 }
+
+function loadPlaylists() {
+    const playlists = [
+        { name: "Spor Listesi", url: "https://tinyurl.com/sporlistesi1" },
+        { name: "Film Listesi", url: "https://tinyurl.com/filmlistesi1" },
+        { name: "Dizi Listesi", url: "https://tinyurl.com/dizilistesi1" },
+        // Eklemek istediğiniz diğer listeler...
+    ];
+
+    const playlistContainer = document.getElementById('playlistContainer');
+    playlists.forEach(playlist => {
+        const listItem = document.createElement('li');
+        listItem.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center');
+        listItem.textContent = playlist.name;
+
+        const copyButton = document.createElement('button');
+        copyButton.classList.add('btn', 'btn-outline-secondary', 'btn-sm');
+        copyButton.textContent = 'Kopyala';
+        copyButton.onclick = () => copyToClipboard(playlist.url);
+
+        listItem.appendChild(copyButton);
+        playlistContainer.appendChild(listItem);
+    });
+}
+
+// Sayfa yüklendiğinde hazır listeleri yükle
+document.addEventListener('DOMContentLoaded', function() {
+    loadPlaylists();
+    showSection('metin-ayiklama'); // İlk açılışta metin ayıklama bölümünü göster
+});
 
 function parseXtreamDetails(link) {
     const url = new URL(link);
