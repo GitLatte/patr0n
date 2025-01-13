@@ -346,6 +346,8 @@ function copyAllLinks() {
     const linksText = Array.from(document.getElementById('links').getElementsByTagName('a'), link => link.href).join('\n');
     copyToClipboard(linksText);
 }
+
+
 // Hazır Listeleri Yükleme
 function loadPlaylists() {
     const playlists = [
@@ -371,7 +373,18 @@ function loadPlaylists() {
     });
 }
 
+// Bölümleri Gösterme ve Gizleme
+function showSection(sectionId) {
+    const sections = ['metin-ayiklama', 'url-ayiklama', 'patron-ayiklama', 'hazir-listeler'];
+    sections.forEach(id => {
+        const section = document.getElementById(id);
+        if (id === sectionId) {
+            section.classList.remove('d-none');
+        } else {
+            section.classList.add('d-none');
+        }
+    });
+}
+
 // Sayfa yüklendiğinde hazır listeleri yükle
 document.addEventListener('DOMContentLoaded', loadPlaylists);
-
-
