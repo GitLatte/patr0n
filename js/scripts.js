@@ -21,7 +21,7 @@ function clearPreviousResults() {
     copyAllLinksBtn.style.display = 'none';
     sourceInfo.textContent = '';
     linksHeader.textContent = 'Ayıklanan Linkler';
-    showCustomProgressBar(true); // Progress barı gizle
+    showCustomProgressBar(false); // Progress barı gizle
     updateCustomProgressBar(0); // Progress barı sıfırla
 }
 
@@ -46,6 +46,19 @@ function showNewMethodMessage(show) {
 
 function cleanURL(url) {
     return url.replace(/[<>"]/g, '').replace(/'/g, '').replace(/,$/g, ''); // "<", ">", çift tırnak ve tek tırnakları temizle, ayrıca sondaki virgülü kaldır
+}
+
+function showSection(sectionId) {
+    const sections = ['metin-ayiklama', 'url-ayiklama', 'patron-ayiklama', 'hazir-listeler'];
+    sections.forEach(id => {
+        const section = document.getElementById(id);
+        if (id === sectionId) {
+            section.classList.remove('d-none');
+        } else {
+            section.classList.add('d-none');
+        }
+    });
+    clearPreviousResults();
 }
 // Metinden Linkleri Ayıklama
 async function extractLinks() {
@@ -313,7 +326,7 @@ async function fetchPatronLinks() {
 
                 // Gecikme ekle
                 await new Promise(resolve => setTimeout(resolve, 20));
-            });
+                        });
             copyAllLinksBtn.style.display = 'block';
             sourceInfo.textContent = '@patr0n sağolsun 😅';
             linksHeader.textContent = 'Ayıklanan Linkler (Toplam ' + links.length + ' adet)';
