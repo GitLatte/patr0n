@@ -11,6 +11,7 @@ function updateCustomProgressBar(percentage) {
     }
 }
 
+
 function showCustomProgressBar(show) {
     const progressContainer = document.getElementById('customProgressContainer');
     if (progressContainer) {
@@ -19,6 +20,7 @@ function showCustomProgressBar(show) {
         console.error('Progress container not found');
     }
 }
+
 
 function decodeURL(url) {
     try {
@@ -52,9 +54,9 @@ function clearPreviousResults() {
     copyAllLinksBtn.style.display = 'none';
     sourceInfo.textContent = '';
     linksHeader.textContent = 'Ayıklanan Linkler';
-    showCustomProgressBar(true); // Progress barı göster
     updateCustomProgressBar(0); // Progress barı sıfırla
 }
+
 
 function showSection(sectionId) {
     const sections = ['metin-ayiklama', 'url-ayiklama', 'patron-ayiklama', 'hazir-listeler'];
@@ -75,6 +77,7 @@ async function extractLinks() {
     clearPreviousResults();
     showNewMethodMessage(true);
     showLoadingMessage(true);
+	showCustomProgressBar(true); // Progress barı göster
     const inputText = document.getElementById('inputText').value;
     const urlPattern = /(https?:\/\/[^\s]+)/g;
     const links = inputText.match(urlPattern);
@@ -153,6 +156,7 @@ async function fetchLinksFromPage() {
     clearPreviousResults();
     showNewMethodMessage(true);
     showLoadingMessage(true);
+	showCustomProgressBar(true); // Progress barı göster
     const pageUrl = document.getElementById('pageUrl').value;
     showCustomProgressBar(true); // Progress barı göster
 
