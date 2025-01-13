@@ -2,17 +2,12 @@ let currentRequest = null; // Şu anki aktif istek
 
 function updateCustomProgressBar(percentage) {
     console.log(`Progress bar updated to: ${percentage}%`); // Test mesajı
-    const progressBar = document.getElementById('customProgressBar');
-    progressBar.style.width = percentage + '%';
-    progressBar.textContent = percentage + '%';
-}
-
-function showCustomProgressBar(show) {
-    const progressContainer = document.getElementById('customProgressContainer');
-    if (progressContainer) {
-        progressContainer.style.display = show ? 'block' : 'none';
+    const progressBar = document.getElementById('customProgress');
+    if (progressBar) {
+        progressBar.style.width = percentage + '%';
+        progressBar.textContent = percentage + '%';
     } else {
-        console.error('Progress container not found');
+        console.error('Progress bar element not found');
     }
 }
 
@@ -37,6 +32,15 @@ function showNewMethodMessage(show) {
 
 function cleanURL(url) {
     return url.replace(/[<>"]/g, '').replace(/'/g, '').replace(/,$/g, ''); // "<", ">", çift tırnak ve tek tırnakları temizle, ayrıca sondaki virgülü kaldır
+}
+
+function showCustomProgressBar(show) {
+    const progressContainer = document.getElementById('customProgressContainer');
+    if (progressContainer) {
+        progressContainer.style.display = show ? 'block' : 'none';
+    } else {
+        console.error('Progress container not found');
+    }
 }
 
 function clearPreviousResults() {
@@ -64,6 +68,7 @@ function showSection(sectionId) {
     });
     clearPreviousResults(); // Sonuçları temizle
 }
+
 
 // Metinden Linkleri Ayıklama
 async function extractLinks() {
