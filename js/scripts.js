@@ -9,20 +9,11 @@ function updateCustomProgressBar(percentage) {
 
 function showCustomProgressBar(show) {
     const progressContainer = document.getElementById('customProgressContainer');
-    progressContainer.style.display = show ? 'block' : 'none';
-}
-
-function clearPreviousResults() {
-    const linksContainer = document.getElementById('links');
-    const copyAllLinksBtn = document.getElementById('copyAllLinksBtn');
-    const sourceInfo = document.getElementById('sourceInfo');
-    const linksHeader = document.getElementById('linksHeader');
-    linksContainer.innerHTML = '';
-    copyAllLinksBtn.style.display = 'none';
-    sourceInfo.textContent = '';
-    linksHeader.textContent = 'Ayıklanan Linkler';
-    showCustomProgressBar(false); // Progress barı gizle
-    updateCustomProgressBar(0); // Progress barı sıfırla
+    if (progressContainer) {
+        progressContainer.style.display = show ? 'block' : 'none';
+    } else {
+        console.error('Progress container not found');
+    }
 }
 
 function decodeURL(url) {
@@ -48,6 +39,19 @@ function cleanURL(url) {
     return url.replace(/[<>"]/g, '').replace(/'/g, '').replace(/,$/g, ''); // "<", ">", çift tırnak ve tek tırnakları temizle, ayrıca sondaki virgülü kaldır
 }
 
+function clearPreviousResults() {
+    const linksContainer = document.getElementById('links');
+    const copyAllLinksBtn = document.getElementById('copyAllLinksBtn');
+    const sourceInfo = document.getElementById('sourceInfo');
+    const linksHeader = document.getElementById('linksHeader');
+    linksContainer.innerHTML = '';
+    copyAllLinksBtn.style.display = 'none';
+    sourceInfo.textContent = '';
+    linksHeader.textContent = 'Ayıklanan Linkler';
+    showCustomProgressBar(true); // Progress barı gizle
+    updateCustomProgressBar(0); // Progress barı sıfırla
+}
+
 function showSection(sectionId) {
     const sections = ['metin-ayiklama', 'url-ayiklama', 'patron-ayiklama', 'hazir-listeler'];
     sections.forEach(id => {
@@ -58,8 +62,9 @@ function showSection(sectionId) {
             section.classList.add('d-none');
         }
     });
-    clearPreviousResults();
+    clearPreviousResults(); // Sonuçları temizle
 }
+
 // Metinden Linkleri Ayıklama
 async function extractLinks() {
     clearPreviousResults();
