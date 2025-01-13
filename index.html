@@ -6,30 +6,31 @@
 <title>Gelişmiş Link Ayırıcı ve Kopyalayıcı</title>
 <!-- Bootstrap CSS --> 
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 <link href="css/styles.css" rel="stylesheet">
 <link rel="icon" type="image/x-icon" href="https://gitlatte.github.io/patr0n/img/favicon.ico">
 </head>
 <body>
 
 <!-- Üst Menü -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Link Ayırıcı</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#"><i class="fas fa-link"></i> Link Ayırıcı</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
+    <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#" onclick="showSection('metin-ayiklama')">Metin Ayıkla</a>
+        <a class="nav-link" href="#" onclick="showSection('metin-ayiklama')"><i class="fas fa-file-alt"></i> Metin Ayıkla</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" onclick="showSection('url-ayiklama')">URL Ayıkla</a>
+        <a class="nav-link" href="#" onclick="showSection('url-ayiklama')"><i class="fas fa-globe"></i> URL Ayıkla</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" onclick="showSection('patron-ayiklama')">@patr0n</a>
+        <a class="nav-link" href="#" onclick="showSection('patron-ayiklama')"><i class="fas fa-tv"></i> @patr0n</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" onclick="showSection('hazir-listeler')">Hazır Listeler</a>
+        <a class="nav-link" href="#" onclick="showSection('hazir-listeler')"><i class="fas fa-list"></i> Hazır Listeler</a>
       </li>
     </ul>
   </div>

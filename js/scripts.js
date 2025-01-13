@@ -347,7 +347,6 @@ function copyAllLinks() {
     copyToClipboard(linksText);
 }
 
-
 // Hazır Listeleri Yükleme
 function loadPlaylists() {
     const playlists = [
