@@ -387,4 +387,7 @@ function showSection(sectionId) {
 }
 
 // Sayfa yüklendiğinde hazır listeleri yükle
-document.addEventListener('DOMContentLoaded', loadPlaylists);
+document.addEventListener('DOMContentLoaded', function() {
+    loadPlaylists();
+    showSection('metin-ayiklama'); // İlk açılışta metin ayıklama bölümünü göster
+});
