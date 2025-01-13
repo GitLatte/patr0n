@@ -265,7 +265,7 @@ async function fetchPatronLinks() {
         const sourceInfo = document.getElementById('sourceInfo');
         const linksHeader = document.getElementById('linksHeader');
         
-        const firstLine = html.split('\n')[0].trim(); // İlk satırı al
+        const firstLine = result.split('\n')[0].trim(); // İlk satırı al
 
         if (links && links.length > 0) {
             // Bilgi notunu ekleme
@@ -366,6 +366,7 @@ async function fetchPatronLinks() {
     }
     showCustomProgressBar(false); // İşlem bittiğinde progress barı gizle
 }
+
 
 function parseXtreamDetails(link) {
     const url = new URL(link);
