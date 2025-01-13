@@ -52,7 +52,7 @@ function clearPreviousResults() {
     copyAllLinksBtn.style.display = 'none';
     sourceInfo.textContent = '';
     linksHeader.textContent = 'Ayıklanan Linkler';
-    showCustomProgressBar(true); // Progress barı gizle
+    showCustomProgressBar(true); // Progress barı göster
     updateCustomProgressBar(0); // Progress barı sıfırla
 }
 
