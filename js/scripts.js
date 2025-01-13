@@ -346,6 +346,32 @@ function copyAllLinks() {
     const linksText = Array.from(document.getElementById('links').getElementsByTagName('a'), link => link.href).join('\n');
     copyToClipboard(linksText);
 }
+// Hazır Listeleri Yükleme
+function loadPlaylists() {
+    const playlists = [
+        { name: "Spor Listesi", url: "https://tinyurl.com/sporlistesi1" },
+        { name: "Film Listesi", url: "https://tinyurl.com/filmlistesi1" },
+        { name: "Dizi Listesi", url: "https://tinyurl.com/dizilistesi1" },
+        // Eklemek istediğiniz diğer listeler...
+    ];
 
+    const playlistContainer = document.getElementById('playlistContainer');
+    playlists.forEach(playlist => {
+        const listItem = document.createElement('li');
+        listItem.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center');
+        listItem.textContent = playlist.name;
+
+        const copyButton = document.createElement('button');
+        copyButton.classList.add('btn', 'btn-outline-secondary', 'btn-sm');
+        copyButton.textContent = 'Kopyala';
+        copyButton.onclick = () => copyToClipboard(playlist.url);
+
+        listItem.appendChild(copyButton);
+        playlistContainer.appendChild(listItem);
+    });
+}
+
+// Sayfa yüklendiğinde hazır listeleri yükle
+document.addEventListener('DOMContentLoaded', loadPlaylists);
 
 
