@@ -378,28 +378,59 @@ async function fetchPatronLinks() {
     showCustomProgressBar(true); // İşlem bittiğinde progress barı gizle
 }
 
-function loadPlaylists() {
+async function loadPlaylists() {
     const playlists = [
         { name: "Spor Listesi (Hazırlanıyor)", url: "https://tinyurl.com/sporlistesi1" },
         { name: "Film Listesi (Hazırlanıyor)", url: "https://tinyurl.com/filmlistesi1" },
         { name: "Dizi Listesi (Hazırlanıyor)", url: "https://tinyurl.com/dizilistesi1" },
-		{ name: "IPTV Sevenler (Sinetech.tr @MemetCandal)", url: ",https://raw.githubusercontent.com/GitLatte/patr0n/refs/heads/site/lists/iptvsevenler.m3u" },
+        { name: "IPTV Sevenler (Sinetech.tr @MemetCandal)", url: "https://raw.githubusercontent.com/GitLatte/patr0n/refs/heads/site/lists/iptvsevenler.m3u" },
         // Eklemek istediğiniz diğer listeler...
     ];
 
     const playlistContainer = document.getElementById('playlistContainer');
-    playlists.forEach(playlist => {
+    playlistContainer.innerHTML = ''; // Önceki içeriği temizle
+
+    playlists.forEach(async playlist => {
         const listItem = document.createElement('li');
         listItem.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center');
-        listItem.textContent = playlist.name;
+        
+        const nameText = document.createElement('span');
+        nameText.textContent = playlist.name;
 
         const copyButton = document.createElement('button');
         copyButton.classList.add('btn', 'btn-outline-secondary', 'btn-sm');
         copyButton.textContent = 'Kopyala';
         copyButton.onclick = () => copyToClipboard(playlist.url);
 
+        const infoIcon = document.createElement('i');
+        infoIcon.classList.add('bi', 'bi-info-circle');
+        infoIcon.setAttribute('data-bs-toggle', 'popover');
+        infoIcon.setAttribute('data-bs-content', 'Yükleniyor...');
+
+        listItem.appendChild(nameText);
         listItem.appendChild(copyButton);
+        listItem.appendChild(infoIcon);
         playlistContainer.appendChild(listItem);
+
+        // Bilgi ikonuna dinamik içerik yükleme
+        try {
+            const response = await fetch(playlist.url);
+            const text = await response.text();
+            const channelGroups = text.split('#EXTINF').length - 1; // Örnek kanal grubu sayımı
+            const channels = text.split('http').length - 1; // Örnek kanal sayımı
+            const content = `Toplam ${channelGroups} kanal grubu, her grupta ${Math.round(channels / channelGroups)} kanal, toplam ${channels} kanal`;
+
+            infoIcon.setAttribute('data-bs-content', content);
+            new bootstrap.Popover(infoIcon); // Popover'ı yeniden oluştur
+        } catch (error) {
+            infoIcon.setAttribute('data-bs-content', 'Bilgiler yüklenemedi');
+        }
+    });
+
+    // Sayfa yüklendiğinde popover'ları etkinleştir
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl);
     });
 }
 
