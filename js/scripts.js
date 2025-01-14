@@ -437,37 +437,7 @@ async function loadPlaylists() {
                 });
             }
 
-            // Kanal sayısını hesaplama
-            const extinfLines = text.match(/#EXTINF[\s\S]*?https?:\/\/[^\s]+/g);
-            const channels = extinfLines ? extinfLines.length : 0;
-
-            // İçeriği oluşturma
-            const content = `Toplam ${groupTitles.size} kanal grubu, toplam ${channels} kanal`;
-
-            infoIcon.setAttribute('data-content', content);
-            $(infoIcon).popover(); // Popover'ı yeniden oluştur
-        } catch (error) {
-            infoIcon.setAttribute('data-content', 'Bilgiler yüklenemedi');
-        }
-    }
-
-    // Sayfa yüklendiğinde popover'ları etkinleştir
-    $('[data-toggle="popover"]').popover();
-
-    // Navbar öğelerine tıklandığında popover'ları kapatma
-    $('.navbar-nav .nav-link').on('click', function () {
-        $('[data-toggle="popover"]').each(function () {
-            $(this).popover('hide');
-        });
-    });
-
-    // Playlist adına tıklandığında popup açma
-    $('.playlist-name').on('click', async function () {
-        const url = $(this).data('url');
-        try {
-            const response = await fetch(url);
-            const text = await response.text();
-
+            // Kanal URL'lerini ve isimlerini almak için
             const channels = [];
             const lines = text.split('\n'); // Satırlara ayır
             for (let i = 0; i < lines.length; i++) {
@@ -487,19 +457,62 @@ async function loadPlaylists() {
 
             console.log(channels); // Kanalların doğru alınıp alınmadığını kontrol edin.
 
-            const channelSelect = document.getElementById('channelSelect');
-            channelSelect.innerHTML = ''; // Önceki kanalları temizle
-            channels.forEach(channel => {
-                const option = document.createElement('option');
-                option.value = channel.url;
-                option.textContent = channel.name;
-                channelSelect.appendChild(option);
-            });
+            // İçeriği oluşturma
+            const content = `Toplam ${groupTitles.size} kanal grubu, toplam ${channels.length} kanal`;
 
-            $('#channelPopup').modal('show');
+            infoIcon.setAttribute('data-content', content);
+            $(infoIcon).popover(); // Popover'ı yeniden oluştur
         } catch (error) {
-            console.error('Kanal bilgileri yüklenemedi:', error);
+            infoIcon.setAttribute('data-content', 'Bilgiler yüklenemedi');
         }
+
+        // Playlist adına tıklandığında popup açma
+        nameText.addEventListener('click', async function () {
+            try {
+                const response = await fetch(playlist.url);
+                const text = await response.text();
+
+                const channels = [];
+                const lines = text.split('\n'); // Satırlara ayır
+                for (let i = 0; i < lines.length; i++) {
+                    if (lines[i].startsWith('#EXTINF')) {
+                        const urlLine = lines[i + 1].trim();
+                        if (urlLine.startsWith('http')) { // Geçerli URL'leri kontrol et
+                            const nameMatch = lines[i].match(/tvg-name="([^"]+)"/) || lines[i].match(/tvg-id="([^"]+)"/);
+                            const channelName = nameMatch ? nameMatch[1].trim() : `Kanal ${i / 2 + 1}`;
+                            const channel = {
+                                url: urlLine,
+                                name: channelName
+                            };
+                            channels.push(channel);
+                        }
+                    }
+                }
+
+                const channelSelect = document.getElementById('channelSelect');
+                channelSelect.innerHTML = ''; // Önceki kanalları temizle
+                channels.forEach(channel => {
+                    const option = document.createElement('option');
+                    option.value = channel.url;
+                    option.textContent = channel.name;
+                    channelSelect.appendChild(option);
+                });
+
+                $('#channelPopup').modal('show');
+            } catch (error) {
+                console.error('Kanal bilgileri yüklenemedi:', error);
+            }
+        });
+    }
+
+    // Sayfa yüklendiğinde popover'ları etkinleştir
+    $('[data-toggle="popover"]').popover();
+
+    // Navbar öğelerine tıklandığında popover'ları kapatma
+    $('.navbar-nav .nav-link').on('click', function () {
+        $('[data-toggle="popover"]').each(function () {
+            $(this).popover('hide');
+        });
     });
 
     // Plyr video oynatıcısını başlatma
