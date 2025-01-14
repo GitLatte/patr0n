@@ -429,13 +429,22 @@ async function loadPlaylists() {
             const response = await fetch(playlist.url);
             const text = await response.text();
             
-            const groupTitles = text.match(/group-title="([^"]+)"/g);
-            const channelGroups = groupTitles ? groupTitles.length : 0;
+            // Tekil grup başlıklarını belirlemek için set kullanma
+            const groupTitles = new Set();
+            const groupTitleMatches = text.match(/group-title="([^"]+)"/g);
+            if (groupTitleMatches) {
+                groupTitleMatches.forEach(match => {
+                    const groupTitle = match.match(/group-title="([^"]+)"/)[1];
+                    groupTitles.add(groupTitle);
+                });
+            }
 
+            // Kanal sayısını hesaplama
             const extinfLines = text.match(/#EXTINF[\s\S]*?https?:\/\/[^\s]+/g);
             const channels = extinfLines ? extinfLines.length : 0;
 
-            const content = `Toplam ${channelGroups} kanal grubu, toplam ${channels} kanal`;
+            // İçeriği oluşturma
+            const content = `Toplam ${groupTitles.size} kanal grubu, toplam ${channels} kanal`;
 
             infoIcon.setAttribute('data-content', content);
             $(infoIcon).popover(); // Popover'ı yeniden oluştur
