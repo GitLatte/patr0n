@@ -476,9 +476,14 @@ async function loadPlaylists() {
             const extinfLines = text.match(/#EXTINF[\s\S]*?https?:\/\/[^\s]+/g);
             if (extinfLines) {
                 extinfLines.forEach(line => {
-                    const match = line.match(/https?:\/\/[^\s]+/);
-                    if (match) {
-                        channels.push(match[0]);
+                    const urlMatch = line.match(/https?:\/\/[^\s]+/);
+                    const nameMatch = line.match(/tvg-name="([^"]+)"/) || line.match(/tvg-id="([^"]+)"/);
+                    if (urlMatch && nameMatch) {
+                        const channel = {
+                            url: urlMatch[0],
+                            name: nameMatch[1].trim()
+                        };
+                        channels.push(channel);
                     }
                 });
             }
@@ -487,8 +492,8 @@ async function loadPlaylists() {
             channelSelect.innerHTML = ''; // Önceki kanalları temizle
             channels.forEach(channel => {
                 const option = document.createElement('option');
-                option.value = channel;
-                option.textContent = channel;
+                option.value = channel.url;
+                option.textContent = channel.name;
                 channelSelect.appendChild(option);
             });
 
