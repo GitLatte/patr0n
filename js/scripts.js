@@ -446,3 +446,13 @@ document.querySelector('.navbar-brand').addEventListener('click', function(e) {
     e.preventDefault(); // Varsayılan bağlantı davranışını engelle
     resetPage(); // Sayfayı başlangıç durumuna getir
 });
+
+// Tüm navbar öğelerini seç
+const navbarItems = document.querySelectorAll('.navbar-nav .nav-link');
+
+// Her bir navbar öğesine event listener ekle
+navbarItems.forEach(item => {
+    item.addEventListener('click', function() {
+        showCustomProgressBar(false); // Progress bar'ı gizle
+    });
+});
