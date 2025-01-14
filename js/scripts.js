@@ -390,7 +390,7 @@ async function loadPlaylists() {
     const playlistContainer = document.getElementById('playlistContainer');
     playlistContainer.innerHTML = ''; // Önceki içeriği temizle
 
-    playlists.forEach(async playlist => {
+    for (const playlist of playlists) {
         const listItem = document.createElement('li');
         listItem.classList.add('list-group-item');
         
@@ -412,6 +412,8 @@ async function loadPlaylists() {
         infoIcon.classList.add('bi', 'bi-info-circle');
         infoIcon.setAttribute('data-toggle', 'popover');
         infoIcon.setAttribute('data-content', 'Yükleniyor...');
+        infoIcon.setAttribute('tabindex', '0'); // Popover'un çalışmasını sağlamak için tabindex ekliyoruz
+        infoIcon.setAttribute('role', 'button'); // Popover'un çalışmasını sağlamak için role ekliyoruz
 
         itemButtons.appendChild(copyButton);
         itemButtons.appendChild(infoIcon);
@@ -435,7 +437,7 @@ async function loadPlaylists() {
         } catch (error) {
             infoIcon.setAttribute('data-content', 'Bilgiler yüklenemedi');
         }
-    });
+    }
 
     // Sayfa yüklendiğinde popover'ları etkinleştir
     $('[data-toggle="popover"]').popover();
