@@ -428,9 +428,14 @@ async function loadPlaylists() {
         try {
             const response = await fetch(playlist.url);
             const text = await response.text();
-            const channelGroups = text.split('#EXTINF').length - 1; // Örnek kanal grubu sayımı
-            const channels = text.split('http').length - 1; // Örnek kanal sayımı
-            const content = `Toplam ${channelGroups} kanal grubu, her grupta ${Math.round(channels / channelGroups)} kanal, toplam ${channels} kanal`;
+            
+            const groupTitles = text.match(/group-title="([^"]+)"/g);
+            const channelGroups = groupTitles ? groupTitles.length : 0;
+
+            const extinfLines = text.match(/#EXTINF[\s\S]*?https?:\/\/[^\s]+/g);
+            const channels = extinfLines ? extinfLines.length : 0;
+
+            const content = `Toplam ${channelGroups} kanal grubu, toplam ${channels} kanal`;
 
             infoIcon.setAttribute('data-content', content);
             $(infoIcon).popover(); // Popover'ı yeniden oluştur
