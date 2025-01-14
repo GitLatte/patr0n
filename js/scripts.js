@@ -389,7 +389,7 @@ async function loadPlaylists() {
     for (const playlist of playlists) {
         const listItem = document.createElement('li');
         listItem.classList.add('list-group-item');
-        
+
         const itemContent = document.createElement('div');
         itemContent.classList.add('item-content');
 
@@ -415,7 +415,7 @@ async function loadPlaylists() {
 
         itemButtons.appendChild(copyButton);
         itemButtons.appendChild(infoIcon);
-        
+
         itemContent.appendChild(nameText);
         itemContent.appendChild(itemButtons);
 
@@ -426,7 +426,7 @@ async function loadPlaylists() {
         try {
             const response = await fetch(playlist.url);
             const text = await response.text();
-            
+
             // Tekil grup başlıklarını belirlemek için set kullanma ve normalize etme
             const groupTitles = new Set();
             const groupTitleMatches = text.match(/group-title="([^"]+)"/g);
@@ -442,8 +442,8 @@ async function loadPlaylists() {
             const lines = text.split('\n'); // Satırlara ayır
             for (let i = 0; i < lines.length; i++) {
                 if (lines[i].startsWith('#EXTINF')) {
-                    const urlLine = lines[i + 1] && lines[i + 1].trim(); // Null kontrolü
-                    if (urlLine && urlLine.startsWith('http')) { // Geçerli URL'leri kontrol et
+                    const urlLine = lines[i + 1].trim();
+                    if (urlLine.startsWith('http')) { // Geçerli URL'leri kontrol et
                         const nameMatch = lines[i].match(/tvg-name="([^"]+)"/) || lines[i].match(/tvg-id="([^"]+)"/);
                         const channelName = nameMatch ? nameMatch[1].trim() : `Kanal ${i / 2 + 1}`;
                         const channel = {
@@ -476,8 +476,8 @@ async function loadPlaylists() {
                 const lines = text.split('\n'); // Satırlara ayır
                 for (let i = 0; i < lines.length; i++) {
                     if (lines[i].startsWith('#EXTINF')) {
-                        const urlLine = lines[i + 1] && lines[i + 1].trim(); // Null kontrolü
-                        if (urlLine && urlLine.startsWith('http')) { // Geçerli URL'leri kontrol et
+                        const urlLine = lines[i + 1].trim();
+                        if (urlLine.startsWith('http')) { // Geçerli URL'leri kontrol et
                             const nameMatch = lines[i].match(/tvg-name="([^"]+)"/) || lines[i].match(/tvg-id="([^"]+)"/);
                             const channelName = nameMatch ? nameMatch[1].trim() : `Kanal ${i / 2 + 1}`;
                             const channel = {

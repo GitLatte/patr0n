@@ -78,29 +78,29 @@
             <!-- Hazır listeler burada görünecek -->
         </ul>
 
-	<!-- Kanal Listesi Popup -->
-	<div id="channelPopup" class="modal fade" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Kanal Listesi</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div>
-                    <label for="channelSelect">Kanal Seç:</label>
-                    <select id="channelSelect" class="custom-select"></select>
+    <!-- Kanal Listesi Popup -->
+    <div id="channelPopup" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Kanal Listesi</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-                <video id="videoPlayer" class="plyr" controls>
-                    <source id="videoSource" src="" type="application/x-mpegURL">
-                </video>
+                <div class="modal-body">
+                    <div>
+                        <label for="channelSelect">Kanal Seç:</label>
+                        <select id="channelSelect" class="custom-select"></select>
+                    </div>
+                    <video id="videoPlayer" playsinline controls data-poster="">
+                        <source id="videoSource" src="" type="application/x-mpegURL" />
+                    </video>
+                </div>
             </div>
         </div>
     </div>
-	</div>
-
+	
     </div>
 
     <!-- Custom Progress Bar -->
