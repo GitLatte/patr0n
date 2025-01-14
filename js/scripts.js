@@ -469,19 +469,20 @@ async function loadPlaylists() {
             const text = await response.text();
 
             const channels = [];
-            const extinfLines = text.match(/#EXTINF[\s\S]*?https?:\/\/[^\s]+/g);
-            if (extinfLines) {
-                extinfLines.forEach(line => {
-                    const urlMatch = line.match(/https?:\/\/[^\s]+/);
-                    const nameMatch = line.match(/tvg-name="([^"]+)"/) || line.match(/tvg-id="([^"]+)"/);
-                    if (urlMatch && nameMatch) {
+            const lines = text.split('\n'); // Satırlara ayır
+            for (let i = 0; i < lines.length; i++) {
+                if (lines[i].startsWith('#EXTINF')) {
+                    const urlLine = lines[i + 1].trim();
+                    if (urlLine.startsWith('http')) { // Geçerli URL'leri kontrol et
+                        const nameMatch = lines[i].match(/tvg-name="([^"]+)"/) || lines[i].match(/tvg-id="([^"]+)"/);
+                        const channelName = nameMatch ? nameMatch[1].trim() : `Kanal ${i / 2 + 1}`;
                         const channel = {
-                            url: urlMatch[0],
-                            name: nameMatch[1].trim()
+                            url: urlLine,
+                            name: channelName
                         };
                         channels.push(channel);
                     }
-                });
+                }
             }
 
             console.log(channels); // Kanalların doğru alınıp alınmadığını kontrol edin.
@@ -530,6 +531,7 @@ document.addEventListener('DOMContentLoaded', function() {
     loadPlaylists();
     showSection('metin-ayiklama'); // İlk açılışta metin ayıklama bölümünü göster
 });
+
 
 
 function parseXtreamDetails(link) {
