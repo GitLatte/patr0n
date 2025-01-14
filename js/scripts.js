@@ -88,6 +88,7 @@ async function extractLinks() {
     const links = inputText.match(urlPattern);
     const linksContainer = document.getElementById('links');
     const copyAllLinksBtn = document.getElementById('copyAllLinksBtn');
+    const linksHeader = document.getElementById('linksHeader'); // Link başlığı elemanını al
     
     if (currentRequest) {
         currentRequest.abort(); // Önceki istek varsa iptal et
@@ -145,6 +146,7 @@ async function extractLinks() {
             await new Promise(resolve => setTimeout(resolve, 20));
         });
         copyAllLinksBtn.style.display = 'block';
+        linksHeader.textContent = `Ayıklanan Linkler (Toplam ${links.length} adet)`; // Toplam link sayısını ekle
     } else {
         linksContainer.textContent = 'Hiçbir link bulunamadı.';
         copyAllLinksBtn.style.display = 'none';
@@ -154,14 +156,15 @@ async function extractLinks() {
     showNewMethodMessage(false);
     showLoadingMessage(false);
 }
+
 // Linkleri Ayıklama (örnek olarak fetchLinksFromPage fonksiyonu güncelleniyor)
 async function fetchLinksFromPage() {
     clearPreviousResults();
     showNewMethodMessage(true);
     showLoadingMessage(true);
-	showCustomProgressBar(true); // Progress barı göster
+    showCustomProgressBar(true); // Progress bar'ı göster
     const pageUrl = document.getElementById('pageUrl').value;
-    showCustomProgressBar(true); // Progress barı göster
+    const linksHeader = document.getElementById('linksHeader'); // Link başlığı elemanını al
 
     if (currentRequest) {
         currentRequest.abort(); // Önceki istek varsa iptal et
@@ -181,7 +184,9 @@ async function fetchLinksFromPage() {
         const sourceInfo = document.getElementById('sourceInfo');
         
         if (links && links.length > 0) {
+            linksContainer.innerHTML = '';
             links.forEach(async (link, index) => {
+                if (signal.aborted) return;
                 const decodedLink = decodeURL(link); // URL'yi çöz
                 const cleanedLink = cleanURL(decodedLink); // URL'yi temizle
                 const linkElement = document.createElement('a');
@@ -228,6 +233,7 @@ async function fetchLinksFromPage() {
             });
             copyAllLinksBtn.style.display = 'block';
             sourceInfo.textContent = pageUrl;
+            linksHeader.textContent = `Ayıklanan Linkler (Toplam ${links.length} adet)`; // Toplam link sayısını ekle
         } else {
             linksContainer.textContent = 'Hiçbir link bulunamadı.';
             copyAllLinksBtn.style.display = 'none';
@@ -243,12 +249,11 @@ async function fetchLinksFromPage() {
             updateCustomProgressBar(100);
         }
     }
-    showCustomProgressBar(true); // İşlem bittiğinde progress barı gizle
+    showCustomProgressBar(false); // İşlem bittiğinde progress barı gizle
     showNewMethodMessage(false);
     showLoadingMessage(false);
 }
 
-// @patr0n Linklerini Ayıklama
 // @patr0n Linklerini Ayıklama
 async function fetchPatronLinks() {
     clearPreviousResults();
