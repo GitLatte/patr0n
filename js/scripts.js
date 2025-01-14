@@ -380,9 +380,9 @@ async function fetchPatronLinks() {
 
 async function loadPlaylists() {
     const playlists = [
-        { name: "Spor Listesi (Hazırlanıyor)", url: "https://tinyurl.com/sporlistesi1" },
-        { name: "Film Listesi (Hazırlanıyor)", url: "https://tinyurl.com/filmlistesi1" },
-        { name: "Dizi Listesi (Hazırlanıyor)", url: "https://tinyurl.com/dizilistesi1" },
+        { name: "Spor Listesi (Hazırlanıyor)", url: "https://example.com/sporlistesi1.m3u" },
+        { name: "Film Listesi (Hazırlanıyor)", url: "https://example.com/filmlistesi1.m3u" },
+        { name: "Dizi Listesi (Hazırlanıyor)", url: "https://example.com/dizilistesi1.m3u" },
         { name: "IPTV Sevenler (Sinetech.tr @MemetCandal)", url: "https://raw.githubusercontent.com/GitLatte/patr0n/refs/heads/site/lists/iptvsevenler.m3u" },
         // Eklemek istediğiniz diğer listeler...
     ];
