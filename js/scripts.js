@@ -381,7 +381,6 @@ async function fetchPatronLinks() {
 async function loadPlaylists() {
     const playlists = [
         { name: "IPTV Sevenler (Sinetech.tr @MemetCandal)", url: "https://raw.githubusercontent.com/GitLatte/patr0n/refs/heads/site/lists/iptvsevenler.m3u" },
-        // Her bir listeyi buraya ekleyeceğim.
     ];
 
     const playlistContainer = document.getElementById('playlistContainer');
@@ -485,6 +484,8 @@ async function loadPlaylists() {
                 });
             }
 
+            console.log(channels); // Kanalların doğru alınıp alınmadığını kontrol edin.
+
             const channelSelect = document.getElementById('channelSelect');
             channelSelect.innerHTML = ''; // Önceki kanalları temizle
             channels.forEach(channel => {
@@ -515,7 +516,12 @@ async function loadPlaylists() {
                 }
             ]
         };
-        videoPlayer.play();
+
+        setTimeout(() => {
+            videoPlayer.play().catch(error => {
+                console.error('Video oynatılamadı:', error);
+            });
+        }, 500); // Video oynatma gecikmesi ekleyin
     });
 }
 
@@ -524,6 +530,7 @@ document.addEventListener('DOMContentLoaded', function() {
     loadPlaylists();
     showSection('metin-ayiklama'); // İlk açılışta metin ayıklama bölümünü göster
 });
+
 
 function parseXtreamDetails(link) {
     const url = new URL(link);
