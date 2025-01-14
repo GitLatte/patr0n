@@ -6,11 +6,7 @@ function updateCustomProgressBar(percentage) {
     
     if (progressBar && progressValue) {
         progressBar.style.width = percentage + '%';
-        if (percentage === 100) {
-            progressValue.textContent = `İşlem tamamlandı: ${percentage}%`;
-        } else {
-            progressValue.textContent = `${percentage}%`;
-        }
+        progressValue.textContent = percentage === 100 ? 'İşlem tamamlandı' : `${percentage}%`;
     } else {
         console.error('Progress bar or value element not found');
     }
