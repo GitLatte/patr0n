@@ -455,6 +455,13 @@ async function loadPlaylists() {
 
     // Sayfa yüklendiğinde popover'ları etkinleştir
     $('[data-toggle="popover"]').popover();
+
+    // Navbar öğelerine tıklandığında popover'ları kapatma
+    $('.navbar-nav .nav-link').on('click', function () {
+        $('[data-toggle="popover"]').each(function () {
+            $(this).popover('hide');
+        });
+    });
 }
 
 // Sayfa yüklendiğinde hazır listeleri yükle
