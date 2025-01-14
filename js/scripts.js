@@ -51,16 +51,11 @@ function clearPreviousResults() {
     const copyAllLinksBtn = document.getElementById('copyAllLinksBtn');
     const sourceInfo = document.getElementById('sourceInfo');
     const linksHeader = document.getElementById('linksHeader');
-    const fileInput = document.getElementById('fileInput'); // Dosya seçme alanı
-
     linksContainer.innerHTML = '';
     copyAllLinksBtn.style.display = 'none';
     sourceInfo.textContent = '';
-    linksHeader.innerHTML = 'Sonuçlar Aşağıda Listelenir <i class="bi bi-sort-down"></i>'; // Bootstrap ikonu ekle
+	linksHeader.innerHTML = 'Sonuçlar Aşağıda Listelenir <i class="bi bi-sort-down"></i>';
     updateCustomProgressBar(0); // Progress barı sıfırla
-
-    document.getElementById('inputText').value = ''; // Metin alanını temizle
-    fileInput.value = ''; // Dosya seçme alanını temizle
 }
 
 
@@ -451,6 +446,7 @@ document.querySelector('.navbar-brand').addEventListener('click', function(e) {
     e.preventDefault(); // Varsayılan bağlantı davranışını engelle
     resetPage(); // Sayfayı başlangıç durumuna getir
 });
+
 // Tüm navbar öğelerini seç
 const navbarItems = document.querySelectorAll('.navbar-nav .nav-link');
 
@@ -458,9 +454,6 @@ const navbarItems = document.querySelectorAll('.navbar-nav .nav-link');
 navbarItems.forEach(item => {
     item.addEventListener('click', function() {
         showCustomProgressBar(false); // Progress bar'ı gizle
-        clearPreviousResults(); // Metin alanını ve dosya seçme alanını temizle
-        document.getElementById('inputText').value = ''; // Metin alanını temizle
-        document.getElementById('fileInput').value = ''; // Dosya seçme alanını temizle
 
         // Hazır Listeler'e geçiş yapılınca "Sonuçlar Aşağıda Listelenir" metnini gizle
         if (item.textContent.trim() === 'Hazır Listeler') {
