@@ -513,8 +513,8 @@ async function loadPlaylists() {
         });
     });
 
-    // Plyr video oynatıcısını başlatma
-    const videoPlayer = new Plyr('#videoPlayer', {});
+    // Video.js video oynatıcısını başlatma
+    const videoPlayer = videojs('videoPlayer');
 
     // Kanal seçildiğinde video oynatıcıda oynatma
     $('#channelSelect').on('change', function () {
@@ -538,21 +538,8 @@ async function loadPlaylists() {
                 break;
         }
 
-        videoPlayer.source = {
-            type: 'video',
-            sources: [
-                {
-                    src: selectedChannel,
-                    type: mimeType
-                }
-            ]
-        };
-
-        setTimeout(() => {
-            videoPlayer.play().catch(error => {
-                console.error('Video oynatılamadı:', error);
-            });
-        }, 500); // Video oynatma gecikmesi ekleyin
+        videoPlayer.src({ type: mimeType, src: selectedChannel });
+        videoPlayer.play();
     });
 }
 

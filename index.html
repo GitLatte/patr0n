@@ -77,7 +77,10 @@
         <ul id="playlistContainer" class="list-group">
             <!-- Hazır listeler burada görünecek -->
         </ul> 
-	<!-- Kanal Listesi Popup -->
+    <!-- Playlist Container -->
+    <ul id="playlistContainer" class="list-group"></ul>
+
+    <!-- Kanal Listesi Popup -->
     <div id="channelPopup" class="modal fade" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
@@ -93,7 +96,7 @@
                         <select id="channelSelect" class="custom-select"></select>
                     </div>
                     <video id="videoPlayer" class="video-js vjs-default-skin" controls preload="auto" width="640" height="264">
-                        <source id="videoSource" src="" type="application/x-mpegURL">
+                        <source id="videoSource" src="" type="application/x-mpegURL" />
                     </video>
                 </div>
             </div>
