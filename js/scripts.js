@@ -429,12 +429,12 @@ async function loadPlaylists() {
             const response = await fetch(playlist.url);
             const text = await response.text();
             
-            // Tekil grup başlıklarını belirlemek için set kullanma
+            // Tekil grup başlıklarını belirlemek için set kullanma ve normalize etme
             const groupTitles = new Set();
             const groupTitleMatches = text.match(/group-title="([^"]+)"/g);
             if (groupTitleMatches) {
                 groupTitleMatches.forEach(match => {
-                    const groupTitle = match.match(/group-title="([^"]+)"/)[1];
+                    const groupTitle = match.match(/group-title="([^"]+)"/)[1].trim().toLowerCase(); // Normalize etme
                     groupTitles.add(groupTitle);
                 });
             }
