@@ -58,8 +58,7 @@ function clearPreviousResults() {
     linksContainer.innerHTML = '';
     copyAllLinksBtn.style.display = 'none';
     sourceInfo.textContent = '';
-	linksHeader.style.display = 'none';
-    linksHeader.textContent = 'Ayıklanan Linkler';
+    linksHeader.textContent = 'Sonuçlar Aşağıda Listelenir';
     updateCustomProgressBar(0); // Progress barı sıfırla
 }
 
