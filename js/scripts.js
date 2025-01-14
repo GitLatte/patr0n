@@ -390,7 +390,7 @@ async function loadPlaylists() {
     const playlistContainer = document.getElementById('playlistContainer');
     playlistContainer.innerHTML = ''; // Önceki içeriği temizle
 
-    for (const playlist of playlists) {
+    playlists.forEach(async playlist => {
         const listItem = document.createElement('li');
         listItem.classList.add('list-group-item');
         
@@ -404,14 +404,14 @@ async function loadPlaylists() {
         itemButtons.classList.add('item-buttons');
 
         const copyButton = document.createElement('button');
-        copyButton.classList.add('btn', 'btn-outline-success', 'btn-sm');
+        copyButton.classList.add('btn', 'btn-outline-secondary', 'btn-sm');
         copyButton.textContent = 'Kopyala';
         copyButton.onclick = () => copyToClipboard(playlist.url);
 
         const infoIcon = document.createElement('i');
         infoIcon.classList.add('bi', 'bi-info-circle');
-        infoIcon.setAttribute('data-bs-toggle', 'popover');
-        infoIcon.setAttribute('data-bs-content', 'Yükleniyor...');
+        infoIcon.setAttribute('data-toggle', 'popover');
+        infoIcon.setAttribute('data-content', 'Yükleniyor...');
 
         itemButtons.appendChild(copyButton);
         itemButtons.appendChild(infoIcon);
@@ -430,18 +430,15 @@ async function loadPlaylists() {
             const channels = text.split('http').length - 1; // Örnek kanal sayımı
             const content = `Toplam ${channelGroups} kanal grubu, her grupta ${Math.round(channels / channelGroups)} kanal, toplam ${channels} kanal`;
 
-            infoIcon.setAttribute('data-bs-content', content);
-            new bootstrap.Popover(infoIcon); // Popover'ı yeniden oluştur
+            infoIcon.setAttribute('data-content', content);
+            $(infoIcon).popover(); // Popover'ı yeniden oluştur
         } catch (error) {
-            infoIcon.setAttribute('data-bs-content', 'Bilgiler yüklenemedi');
+            infoIcon.setAttribute('data-content', 'Bilgiler yüklenemedi');
         }
-    }
+    });
 
     // Sayfa yüklendiğinde popover'ları etkinleştir
-    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
-    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-        return new bootstrap.Popover(popoverTriggerEl);
-    });
+    $('[data-toggle="popover"]').popover();
 }
 
 // Sayfa yüklendiğinde hazır listeleri yükle
