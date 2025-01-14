@@ -399,6 +399,8 @@ async function loadPlaylists() {
 
         const nameText = document.createElement('span');
         nameText.textContent = playlist.name;
+        nameText.classList.add('playlist-name');
+        nameText.setAttribute('data-url', playlist.url);
 
         const itemButtons = document.createElement('div');
         itemButtons.classList.add('item-buttons');
@@ -461,6 +463,57 @@ async function loadPlaylists() {
         $('[data-toggle="popover"]').each(function () {
             $(this).popover('hide');
         });
+    });
+
+    // Playlist adına tıklandığında popup açma
+    $('.playlist-name').on('click', async function () {
+        const url = $(this).data('url');
+        try {
+            const response = await fetch(url);
+            const text = await response.text();
+
+            const channels = [];
+            const extinfLines = text.match(/#EXTINF[\s\S]*?https?:\/\/[^\s]+/g);
+            if (extinfLines) {
+                extinfLines.forEach(line => {
+                    const match = line.match(/https?:\/\/[^\s]+/);
+                    if (match) {
+                        channels.push(match[0]);
+                    }
+                });
+            }
+
+            const channelSelect = document.getElementById('channelSelect');
+            channelSelect.innerHTML = ''; // Önceki kanalları temizle
+            channels.forEach(channel => {
+                const option = document.createElement('option');
+                option.value = channel;
+                option.textContent = channel;
+                channelSelect.appendChild(option);
+            });
+
+            $('#channelPopup').modal('show');
+        } catch (error) {
+            console.error('Kanal bilgileri yüklenemedi:', error);
+        }
+    });
+
+    // Plyr video oynatıcısını başlatma
+    const videoPlayer = new Plyr('#videoPlayer', {});
+
+    // Kanal seçildiğinde video oynatıcıda oynatma
+    $('#channelSelect').on('change', function () {
+        const selectedChannel = $(this).val();
+        videoPlayer.source = {
+            type: 'video',
+            sources: [
+                {
+                    src: selectedChannel,
+                    type: 'application/x-mpegURL'
+                }
+            ]
+        };
+        videoPlayer.play();
     });
 }
 
