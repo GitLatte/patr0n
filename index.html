@@ -8,7 +8,7 @@
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.1/font/bootstrap-icons.min.css">
-<link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+<link href="https://vjs.zencdn.net/7.14.3/video-js.css" rel="stylesheet" />
 <link href="css/styles.css" rel="stylesheet">
 <link rel="icon" type="image/x-icon" href="https://gitlatte.github.io/patr0n/img/favicon.ico">
 </head>
@@ -76,29 +76,29 @@
         <h3>Hazır Listeler</h3>
         <ul id="playlistContainer" class="list-group">
             <!-- Hazır listeler burada görünecek -->
-        </ul>
+        </ul> 
 	<!-- Kanal Listesi Popup -->
-	<div id="channelPopup" class="modal fade" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Kanal Listesi</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div>
-                    <label for="channelSelect">Kanal Seç:</label>
-                    <select id="channelSelect" class="custom-select"></select>
+    <div id="channelPopup" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Kanal Listesi</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-                <video id="videoPlayer" playsinline controls data-poster="">
-                    <source id="videoSource" src="" type="" />
-                </video>
+                <div class="modal-body">
+                    <div>
+                        <label for="channelSelect">Kanal Seç:</label>
+                        <select id="channelSelect" class="custom-select"></select>
+                    </div>
+                    <video id="videoPlayer" class="video-js vjs-default-skin" controls preload="auto" width="640" height="264">
+                        <source id="videoSource" src="" type="application/x-mpegURL">
+                    </video>
+                </div>
             </div>
         </div>
     </div>
-	</div>
 
 	
     </div>
@@ -132,7 +132,7 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+<script src="https://vjs.zencdn.net/7.14.3/video.min.js"></script>
 <script src="js/scripts.js"></script>
 </body>
 </html>

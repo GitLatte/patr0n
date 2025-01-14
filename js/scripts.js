@@ -562,6 +562,7 @@ document.addEventListener('DOMContentLoaded', function() {
     showSection('metin-ayiklama'); // İlk açılışta metin ayıklama bölümünü göster
 });
 
+
 function parseXtreamDetails(link) {
     const url = new URL(link);
     const server = url.origin;
