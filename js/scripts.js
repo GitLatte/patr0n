@@ -436,3 +436,13 @@ function copyAllLinks() {
     const linksText = Array.from(document.getElementById('links').getElementsByTagName('a'), link => link.href).join('\n');
     copyToClipboard(linksText);
 }
+function resetPage() {
+    clearPreviousResults();
+    document.getElementById('inputText').value = '';
+    document.getElementById('pageUrl').value = '';
+    showSection('metin-ayiklama'); // İlk açılışta metin ayıklama bölümünü göster
+}
+document.querySelector('.navbar-brand').addEventListener('click', function(e) {
+    e.preventDefault(); // Varsayılan bağlantı davranışını engelle
+    resetPage(); // Sayfayı başlangıç durumuna getir
+});
