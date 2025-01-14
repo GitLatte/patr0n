@@ -152,7 +152,7 @@ async function extractLinks() {
         copyAllLinksBtn.style.display = 'none';
         updateCustomProgressBar(100);
     }
-    showCustomProgressBar(false); // İşlem bittiğinde progress barı gizle
+    showCustomProgressBar(true); // İşlem bittiğinde progress barı gizle
     showNewMethodMessage(false);
     showLoadingMessage(false);
 }
@@ -249,7 +249,7 @@ async function fetchLinksFromPage() {
             updateCustomProgressBar(100);
         }
     }
-    showCustomProgressBar(false); // İşlem bittiğinde progress barı gizle
+    showCustomProgressBar(true); // İşlem bittiğinde progress barı gizle
     showNewMethodMessage(false);
     showLoadingMessage(false);
 }
