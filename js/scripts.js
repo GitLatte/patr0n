@@ -51,18 +51,12 @@ function clearPreviousResults() {
     const copyAllLinksBtn = document.getElementById('copyAllLinksBtn');
     const sourceInfo = document.getElementById('sourceInfo');
     const linksHeader = document.getElementById('linksHeader');
-    const fileInput = document.getElementById('fileInput'); // Dosya seçme alanı
-
     linksContainer.innerHTML = '';
     copyAllLinksBtn.style.display = 'none';
     sourceInfo.textContent = '';
-    linksHeader.innerHTML = 'Sonuçlar Aşağıda Listelenir <i class="bi bi-sort-down"></i>'; // Bootstrap ikonu ekle
+	linksHeader.innerHTML = 'Sonuçlar Aşağıda Listelenir <i class="bi bi-sort-down"></i>';
     updateCustomProgressBar(0); // Progress barı sıfırla
-
-    document.getElementById('inputText').value = ''; // Metin alanını temizle
-    fileInput.value = ''; // Dosya seçme alanını temizle
 }
-
 
 
 function showSection(sectionId) {
@@ -455,14 +449,6 @@ document.querySelector('.navbar-brand').addEventListener('click', function(e) {
 
 // Tüm navbar öğelerini seç
 const navbarItems = document.querySelectorAll('.navbar-nav .nav-link');
-
-// Her bir navbar öğesine event listener ekle
-navbarItems.forEach(item => {
-    item.addEventListener('click', function() {
-        showCustomProgressBar(false); // Progress bar'ı gizle
-        clearPreviousResults(); // Metin alanını ve dosya seçme alanını temizle
-    });
-});
 
 // Her bir navbar öğesine event listener ekle
 navbarItems.forEach(item => {
