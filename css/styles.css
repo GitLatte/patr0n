@@ -71,3 +71,22 @@
         padding: 10px;
     }
 }
+
+.list-group-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+.item-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+.item-buttons {
+        margin-left: auto;
+        display: flex;
+        gap: 10px;
+    }

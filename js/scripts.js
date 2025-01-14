@@ -392,10 +392,16 @@ async function loadPlaylists() {
 
     playlists.forEach(async playlist => {
         const listItem = document.createElement('li');
-        listItem.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center');
+        listItem.classList.add('list-group-item');
         
+        const itemContent = document.createElement('div');
+        itemContent.classList.add('item-content');
+
         const nameText = document.createElement('span');
         nameText.textContent = playlist.name;
+
+        const itemButtons = document.createElement('div');
+        itemButtons.classList.add('item-buttons');
 
         const copyButton = document.createElement('button');
         copyButton.classList.add('btn', 'btn-outline-secondary', 'btn-sm');
@@ -407,9 +413,13 @@ async function loadPlaylists() {
         infoIcon.setAttribute('data-bs-toggle', 'popover');
         infoIcon.setAttribute('data-bs-content', 'Yükleniyor...');
 
-        listItem.appendChild(nameText);
-        listItem.appendChild(copyButton);
-        listItem.appendChild(infoIcon);
+        itemButtons.appendChild(copyButton);
+        itemButtons.appendChild(infoIcon);
+        
+        itemContent.appendChild(nameText);
+        itemContent.appendChild(itemButtons);
+
+        listItem.appendChild(itemContent);
         playlistContainer.appendChild(listItem);
 
         // Bilgi ikonuna dinamik içerik yükleme
@@ -433,6 +443,10 @@ async function loadPlaylists() {
         return new bootstrap.Popover(popoverTriggerEl);
     });
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    loadPlaylists();
+});
 
 // Sayfa yüklendiğinde hazır listeleri yükle
 document.addEventListener('DOMContentLoaded', function() {
