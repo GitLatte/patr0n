@@ -148,7 +148,7 @@ async function extractLinks() {
         copyAllLinksBtn.style.display = 'none';
         updateCustomProgressBar(100);
     }
-    showCustomProgressBar(true); // İşlem bittiğinde progress barı gizle
+    showCustomProgressBar(false); // İşlem bittiğinde progress barı gizle
     showNewMethodMessage(false);
     showLoadingMessage(false);
 }
@@ -455,4 +455,16 @@ navbarItems.forEach(item => {
     item.addEventListener('click', function() {
         showCustomProgressBar(false); // Progress bar'ı gizle
     });
+});
+
+// Metin alanına dosya ile de metin ekleyip link ayıklamak için
+document.getElementById('fileInput').addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            document.getElementById('inputText').value = e.target.result; // Dosya içeriğini metin alanına ekle
+        };
+        reader.readAsText(file);
+    }
 });

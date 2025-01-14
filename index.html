@@ -43,14 +43,16 @@
         <div class="header-underline"></div>
     </div>
 
-    <!-- Metin Ayıklama Bölümü -->
-    <div id="metin-ayiklama" class="form-group form-floating d-none">
-        <label for="inputText">Metin Ekle/Linkleri Ayıkla</label>
-        <textarea id="inputText" class="form-control" rows="5" placeholder="Metni buraya yapıştırın..."></textarea>
-        <div class="text-center mb-4 mt-3">
-            <button class="btn btn-primary mr-2" onclick="extractLinks()">Metinden Linkleri Ayıkla</button>
-        </div>
+   <!-- Metin Ayıklama Bölümü -->
+	<div id="metin-ayiklama" class="form-group form-floating d-none">
+    <label for="inputText">Metin Ekle/Linkleri Ayıkla</label>
+    <textarea id="inputText" class="form-control" rows="5" placeholder="Metni buraya yapıştırın..."></textarea>
+    <input type="file" id="fileInput" class="form-control-file mt-2" accept=".txt">
+    <small class="form-text text-muted">Yüklediğiniz dosyalar yalnızca işleme sürecinde kullanılır ve ardından otomatik olarak silinir.</small>
+    <div class="text-center mb-4 mt-3">
+        <button class="btn btn-primary mr-2" onclick="extractLinks()">Metinden Linkleri Ayıkla</button>
     </div>
+	</div>
 
     <!-- URL Ayıklama Bölümü -->
     <div id="url-ayiklama" class="shadow p-3 mb-4 bg-white rounded d-none">
