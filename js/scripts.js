@@ -513,7 +513,7 @@ async function loadPlaylists() {
         });
     });
 
-    // Video.js video oynatıcısını başlatma
+    // Video.js ve HLS.js video oynatıcısını başlatma
     const videoPlayer = videojs('videoPlayer');
 
     // Kanal seçildiğinde video oynatıcıda oynatma
@@ -538,8 +538,17 @@ async function loadPlaylists() {
                 break;
         }
 
-        videoPlayer.src({ type: mimeType, src: selectedChannel });
-        videoPlayer.play();
+        if (Hls.isSupported() && mimeType === 'application/x-mpegURL') {
+            const hls = new Hls();
+            hls.loadSource(selectedChannel);
+            hls.attachMedia(videoPlayer.tech().el());
+            hls.on(Hls.Events.MANIFEST_PARSED, function () {
+                videoPlayer.play();
+            });
+        } else {
+            videoPlayer.src({ type: mimeType, src: selectedChannel });
+            videoPlayer.play();
+        }
     });
 }
 
