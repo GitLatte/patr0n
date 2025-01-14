@@ -439,20 +439,19 @@ async function loadPlaylists() {
 
             // Kanal URL'lerini ve isimlerini almak için
             const channels = [];
-            const lines = text.split('\n'); // Satırlara ayır
-            for (let i = 0; i < lines.length; i++) {
-                if (lines[i].startsWith('#EXTINF')) {
-                    const urlLine = lines[i + 1].trim();
-                    if (urlLine.startsWith('http')) { // Geçerli URL'leri kontrol et
-                        const nameMatch = lines[i].match(/tvg-name="([^"]+)"/) || lines[i].match(/tvg-id="([^"]+)"/);
-                        const channelName = nameMatch ? nameMatch[1].trim() : `Kanal ${i / 2 + 1}`;
+            const extinfLines = text.match(/#EXTINF[\s\S]*?https?:\/\/[^\s]+/g);
+            if (extinfLines) {
+                extinfLines.forEach((line) => {
+                    const urlMatch = line.match(/(http[^\s]+)/);
+                    const nameMatch = line.match(/tvg-name="([^"]+)"/) || line.match(/tvg-id="([^"]+)"/);
+                    if (urlMatch && nameMatch) {
                         const channel = {
-                            url: urlLine,
-                            name: channelName
+                            url: urlMatch[1],
+                            name: nameMatch[1].trim()
                         };
                         channels.push(channel);
                     }
-                }
+                });
             }
 
             console.log(channels); // Kanalların doğru alınıp alınmadığını kontrol edin.
@@ -473,20 +472,19 @@ async function loadPlaylists() {
                 const text = await response.text();
 
                 const channels = [];
-                const lines = text.split('\n'); // Satırlara ayır
-                for (let i = 0; i < lines.length; i++) {
-                    if (lines[i].startsWith('#EXTINF')) {
-                        const urlLine = lines[i + 1].trim();
-                        if (urlLine.startsWith('http')) { // Geçerli URL'leri kontrol et
-                            const nameMatch = lines[i].match(/tvg-name="([^"]+)"/) || lines[i].match(/tvg-id="([^"]+)"/);
-                            const channelName = nameMatch ? nameMatch[1].trim() : `Kanal ${i / 2 + 1}`;
+                const extinfLines = text.match(/#EXTINF[\s\S]*?https?:\/\/[^\s]+/g);
+                if (extinfLines) {
+                    extinfLines.forEach((line) => {
+                        const urlMatch = line.match(/(http[^\s]+)/);
+                        const nameMatch = line.match(/tvg-name="([^"]+)"/) || line.match(/tvg-id="([^"]+)"/);
+                        if (urlMatch && nameMatch) {
                             const channel = {
-                                url: urlLine,
-                                name: channelName
+                                url: urlMatch[1],
+                                name: nameMatch[1].trim()
                             };
                             channels.push(channel);
                         }
-                    }
+                    });
                 }
 
                 const channelSelect = document.getElementById('channelSelect');
@@ -521,12 +519,31 @@ async function loadPlaylists() {
     // Kanal seçildiğinde video oynatıcıda oynatma
     $('#channelSelect').on('change', function () {
         const selectedChannel = $(this).val();
+        const fileExtension = selectedChannel.split('.').pop();
+        let mimeType = 'video/mp4'; // Varsayılan MIME türü
+
+        // MIME türünü URL uzantısına göre belirleyelim
+        switch(fileExtension) {
+            case 'm3u8':
+                mimeType = 'application/x-mpegURL';
+                break;
+            case 'mpd':
+                mimeType = 'application/dash+xml';
+                break;
+            case 'mp4':
+                mimeType = 'video/mp4';
+                break;
+            case 'webm':
+                mimeType = 'video/webm';
+                break;
+        }
+
         videoPlayer.source = {
             type: 'video',
             sources: [
                 {
                     src: selectedChannel,
-                    type: 'application/x-mpegURL'
+                    type: mimeType
                 }
             ]
         };
