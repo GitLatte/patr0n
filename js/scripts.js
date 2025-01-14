@@ -442,8 +442,8 @@ async function loadPlaylists() {
             const lines = text.split('\n'); // Satırlara ayır
             for (let i = 0; i < lines.length; i++) {
                 if (lines[i].startsWith('#EXTINF')) {
-                    const urlLine = lines[i + 1].trim();
-                    if (urlLine.startsWith('http')) { // Geçerli URL'leri kontrol et
+                    const urlLine = lines[i + 1] && lines[i + 1].trim(); // Null kontrolü
+                    if (urlLine && urlLine.startsWith('http')) { // Geçerli URL'leri kontrol et
                         const nameMatch = lines[i].match(/tvg-name="([^"]+)"/) || lines[i].match(/tvg-id="([^"]+)"/);
                         const channelName = nameMatch ? nameMatch[1].trim() : `Kanal ${i / 2 + 1}`;
                         const channel = {
@@ -476,8 +476,8 @@ async function loadPlaylists() {
                 const lines = text.split('\n'); // Satırlara ayır
                 for (let i = 0; i < lines.length; i++) {
                     if (lines[i].startsWith('#EXTINF')) {
-                        const urlLine = lines[i + 1].trim();
-                        if (urlLine.startsWith('http')) { // Geçerli URL'leri kontrol et
+                        const urlLine = lines[i + 1] && lines[i + 1].trim(); // Null kontrolü
+                        if (urlLine && urlLine.startsWith('http')) { // Geçerli URL'leri kontrol et
                             const nameMatch = lines[i].match(/tvg-name="([^"]+)"/) || lines[i].match(/tvg-id="([^"]+)"/);
                             const channelName = nameMatch ? nameMatch[1].trim() : `Kanal ${i / 2 + 1}`;
                             const channel = {
@@ -544,8 +544,6 @@ document.addEventListener('DOMContentLoaded', function() {
     loadPlaylists();
     showSection('metin-ayiklama'); // İlk açılışta metin ayıklama bölümünü göster
 });
-
-
 
 function parseXtreamDetails(link) {
     const url = new URL(link);
