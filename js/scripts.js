@@ -58,7 +58,7 @@ function clearPreviousResults() {
     linksContainer.innerHTML = '';
     copyAllLinksBtn.style.display = 'none';
     sourceInfo.textContent = '';
-    linksHeader.textContent = 'Sonuçlar Aşağıda Listelenir';
+    linksHeader.textContent = 'Sonuçlar Aşağıda Listelenir <i class="bi bi-sort-down"></i>';
     updateCustomProgressBar(0); // Progress barı sıfırla
 }
 
