@@ -455,11 +455,11 @@ navbarItems.forEach(item => {
     item.addEventListener('click', function() {
         showCustomProgressBar(false); // Progress bar'ı gizle
 
-        // Hazır Listeler'e geçiş yapılınca "Sonuçlar Aşağıda Listelenir" metnini gizle
+        // Hazır Listeler'e geçiş yapılınca "linksContainer"ı gizle
         if (item.textContent.trim() === 'Hazır Listeler') {
-            document.getElementById('linksHeader').style.display = 'none';
+            document.getElementById('linksContainer').style.display = 'none';
         } else {
-            document.getElementById('linksHeader').style.display = 'block';
+            document.getElementById('linksContainer').style.display = 'block';
         }
     });
 });
