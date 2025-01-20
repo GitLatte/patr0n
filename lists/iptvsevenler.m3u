@@ -893,3 +893,9 @@ https://a3.vidload.lol/1055/1080p.m3u8
 https://vidrame.pro/vr/get/968e8cf1/1080.txt
 #EXTINF:-1 tvg-name="Ters Yuz 2"tvg-id=""tvg-logo="https://www.hdfilmcehennemi.nl/images/list/poster/inside-out-2.webp"group-title="Film-Animasyon":http-referrer="":http-user-agent="",Ters Yuz 2
 https://s230.rapidrame.com/hls2/01/00021/x7y9j0h1okjd_,l,n,.urlset/index-f2-v1-a1.m3u8?t=DZNe7Tib8vOHcNtAf8DvBBIllqUp9e-T0qOONzQ2hL0&s=1735415922&e=1199998800&f=107414&srv=s390&i=0.0&sp=0&p1=s230&p2=s230
+#EXTINF:-1 tvg-name="Rize Türk" tvg-id="Rize Türk" tvg-logo="https://static.mytuner.mobi/media/tvos_radios/zz6qfcraqnlg.png"group-title="Karadeniz" ,Rize Türk
+https://yayin.rizeturk.com:3777/hybrid/play.m3u8
+#EXTINF:-1 tvg-name="Kanal 53" tvg-id="Kanal 53" tvg-logo="https://i.ibb.co/B3mRdGQ/download.png" group-title="Karadeniz" ,Kanal 53
+https://kanal53.ozelip.com:3448/hybrid/play.m3u8
+#EXTINF:-1 tvg-name="Slow Karadeniz TV" tvg-id="Slow Karadeniz TV" tvg-logo="https://i.ibb.co/zhcztDv/slowkaradeniztv.png" group-title="Karadeniz" ,Slow Karadeniz TV
+https://yayin.slowkaradeniztv.com:3390/hybrid/play.m3u8
