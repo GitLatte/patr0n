@@ -380,8 +380,7 @@ async function fetchPatronLinks() {
 
 async function loadPlaylists() {
     const playlists = [
-        { name: "IPTV Sevenler (Sinetech.tr @MemetCandal)", url: "https://raw.githubusercontent.com/GitLatte/patr0n/refs/heads/site/lists/iptvsevenler.m3u" },
-	{ name: "patr0nSpor (Sinetech.tr @patr0n)", url: "https://paste.fo/raw/b6a604d0b45b" },    
+        { name: "IPTV Sevenler (Sinetech.tr @MemetCandal)", url: "https://raw.githubusercontent.com/GitLatte/patr0n/refs/heads/site/lists/iptvsevenler.m3u" },    
     ];
 
     const playlistContainer = document.getElementById('playlistContainer');
