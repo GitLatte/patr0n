@@ -300,8 +300,14 @@ async function fetchPatronLinks() {
                 }
                 
                 const line = html.split('\n').find(line => line.includes(link));
-                const maxConnectionsMatch = line.match(/Maksimum Bağlantılar: (\d+)/);
+                const maxConnectionsMatch = line.match(/(?:Maksimum Bağlantılar|Maximum Connections): (\d+)/);
                 const maxConnections = maxConnectionsMatch ? ` (Önemli: Aynı anda en fazla ${maxConnectionsMatch[1]} kişi kullanabilir)` : '';
+                const statusMatch = line.match(/(?:Durum|Status): ([^\n]+)/);
+                const status = statusMatch ? ` (Durum: ${statusMatch[1]})` : '';
+                const expiresMatch = line.match(/(?:Son kullanma tarihi|Expires): ([^\n]+)/);
+                const expires = expiresMatch ? ` (Son kullanma tarihi: ${expiresMatch[1]})` : '';
+                const activeConnectionsMatch = line.match(/(?:Şu anda kullananlar|Active Connections): (\d+)/);
+                const activeConnections = activeConnectionsMatch ? ` (Şu anda kullananlar: ${activeConnectionsMatch[1]})` : '';
                 
                 const linkWrapper = document.createElement('div');
                 linkWrapper.classList.add('p-3', 'mb-2', 'bg-light', 'rounded');
@@ -316,6 +322,18 @@ async function fetchPatronLinks() {
                 const connectionsInfo = document.createElement('span');
                 connectionsInfo.textContent = maxConnections;
                 connectionsInfo.classList.add('ml-2', 'font-italic', 'text-muted');
+
+                const statusInfo = document.createElement('span');
+                statusInfo.textContent = status;
+                statusInfo.classList.add('ml-2', 'font-italic', 'text-muted');
+
+                const expiresInfo = document.createElement('span');
+                expiresInfo.textContent = expires;
+                expiresInfo.classList.add('ml-2', 'font-italic', 'text-muted');
+
+                const activeConnectionsInfo = document.createElement('span');
+                activeConnectionsInfo.textContent = activeConnections;
+                activeConnectionsInfo.classList.add('ml-2', 'font-italic', 'text-muted');
 
                 const copyButton = document.createElement('button');
                 copyButton.textContent = 'Bu Adresi Kullan';
@@ -343,6 +361,9 @@ async function fetchPatronLinks() {
 
                 linkWrapper.appendChild(linkElement);
                 linkWrapper.appendChild(connectionsInfo); // Bağlantı bilgisi ekle
+                linkWrapper.appendChild(statusInfo); // Durum bilgisi ekle
+                linkWrapper.appendChild(expiresInfo); // Son kullanma tarihi bilgisi ekle
+                linkWrapper.appendChild(activeConnectionsInfo); // Şu anda kullananlar bilgisi ekle
                 linkWrapper.appendChild(copyButton);
                 linkWrapper.appendChild(showXtreamButton);
                 linkWrapper.appendChild(xtreamPanel);
