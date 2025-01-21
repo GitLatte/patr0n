@@ -230,8 +230,9 @@ async function fetchLinksFromPage() {
                 copyButton.classList.add('btn', 'btn-outline-success', 'btn-block');
                 copyButton.onclick = () => copyToClipboard(cleanedLink);
 
-                // Xtream Code olarak gösterme düğmesini sadece uygun URL'ler için ekle
-                if (cleanedLink.includes('m3u') || cleanedLink.includes('m3u8') || cleanedLink.includes('playlist')) {
+                // Xtream Code olarak gösterme düğmesini sadece username ve password parametreleri varsa ekle
+                const url = new URL(cleanedLink);
+                if (url.searchParams.has('username') && url.searchParams.has('password')) {
                     const showXtreamButton = document.createElement('button');
                     showXtreamButton.classList.add('btn', 'btn-outline-info', 'btn-block');
                     showXtreamButton.textContent = 'Xtream Code olarak Göster';
