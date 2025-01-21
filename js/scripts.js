@@ -496,18 +496,20 @@ async function loadPlaylists() {
                     channelSelect.appendChild(option);
                 });
 
+                console.log(channels); // Kanalların doğru alındığını kontrol edin
+                
                 $('#channelPopup').modal('show');
             } catch (error) {
                 console.error('Kanal bilgileri yüklenemedi:', error);
             }
         });
     }
-
-    // Sayfa yüklendiğinde hazır listeleri yükle
-    document.addEventListener('DOMContentLoaded', function() {
-        loadPlaylists();
-    });
 }
+
+// Sayfa yüklendiğinde hazır listeleri yükle
+document.addEventListener('DOMContentLoaded', function() {
+    loadPlaylists();
+});
 
 function parseXtreamDetails(link) {
     const url = new URL(link);
