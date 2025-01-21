@@ -223,9 +223,6 @@ async function fetchLinksFromPage() {
                 // Progress bar'ı güncelle
                 const progress = Math.round(((index + 1) / links.length) * 100);
                 updateCustomProgressBar(progress);
-
-                // Gecikme ekle
-                await new Promise(resolve => setTimeout(resolve, 1));
             }
             copyAllLinksBtn.style.display = 'block';
             sourceInfo.textContent = pageUrl;
