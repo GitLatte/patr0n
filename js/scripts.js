@@ -272,6 +272,8 @@ async function fetchPatronLinks() {
         // Ayıklama işlemi
         const urlPattern = /(https?:\/\/[^\s]+)/g;
         const links = html.match(urlPattern);
+        const lines = html.split('\n'); // Satırları ayır
+
         const linksContainer = document.getElementById('links');
         const copyAllLinksBtn = document.getElementById('copyAllLinksBtn');
         const sourceInfo = document.getElementById('sourceInfo');
@@ -300,9 +302,9 @@ async function fetchPatronLinks() {
                 }
 
                 // İlgili bilgileri içeren satırları bul
-                const matchingLines = html.split('\n').filter(line => line.includes(link) || line.includes("Real Url:"));
-                const linkLine = matchingLines.find(line => line.includes(link)) || ''; // Link içeren satır
-                const infoLine = matchingLines.find(line => line.includes("Real Url:") && !line.includes(link)) || ''; // Bilgi içeren satır
+                const linkLineIndex = lines.findIndex(line => line.includes(link));
+                const linkLine = lines[linkLineIndex] || '';
+                const infoLine = lines[linkLineIndex + 1] || '';
 
                 const maxConnectionsMatch = (linkLine + ' ' + infoLine).match(/(?:Maksimum Bağlantılar|Maximum Connections): (\d+)/);
                 const maxConnections = maxConnectionsMatch ? ` (Önemli: Aynı anda en fazla ${maxConnectionsMatch[1]} kişi kullanabilir)` : '';
@@ -364,10 +366,10 @@ async function fetchPatronLinks() {
                 `;
 
                 linkWrapper.appendChild(linkElement);
-                linkWrapper.appendChild(connectionsInfo); // Bağlantı bilgisi ekle
-                linkWrapper.appendChild(statusInfo); // Durum bilgisi ekle
-                linkWrapper.appendChild(expiresInfo); // Son kullanma tarihi bilgisi ekle
-                linkWrapper.appendChild(activeConnectionsInfo); // Şu anda kullananlar bilgisi ekle
+                if (maxConnections) linkWrapper.appendChild(connectionsInfo); // Bağlantı bilgisi ekle
+                if (status) linkWrapper.appendChild(statusInfo); // Durum bilgisi ekle
+                if (expires) linkWrapper.appendChild(expiresInfo); // Son kullanma tarihi bilgisi ekle
+                if (activeConnections) linkWrapper.appendChild(activeConnectionsInfo); // Şu anda kullananlar bilgisi ekle
                 linkWrapper.appendChild(copyButton);
                 linkWrapper.appendChild(showXtreamButton);
                 linkWrapper.appendChild(xtreamPanel);
