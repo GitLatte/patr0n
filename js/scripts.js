@@ -110,29 +110,8 @@ async function extractLinks() {
             copyButton.classList.add('btn', 'btn-outline-secondary', 'btn-block');
             copyButton.onclick = () => copyToClipboard(cleanedLink);
 
-            const showXtreamButton = document.createElement('button');
-            showXtreamButton.classList.add('btn', 'btn-outline-secondary', 'btn-block');
-            showXtreamButton.textContent = 'Xtream Code olarak Göster';
-            showXtreamButton.setAttribute('data-toggle', 'collapse');
-            showXtreamButton.setAttribute('data-target', '#xtreamPanel_' + index);
-            showXtreamButton.setAttribute('aria-expanded', 'false');
-            showXtreamButton.setAttribute('aria-controls', 'xtreamPanel_' + index);
-
-            const xtreamPanel = document.createElement('div');
-            xtreamPanel.id = 'xtreamPanel_' + index;
-            xtreamPanel.classList.add('collapse', 'mt-2');
-
-            const xtreamDetails = parseXtreamDetails(cleanedLink);
-            xtreamPanel.innerHTML = `
-                <div><strong>Sunucu Adresi:</strong> <span>${xtreamDetails.server}</span></div>
-                <div><strong>Kullanıcı Adı:</strong> <span>${xtreamDetails.username}</span></div>
-                <div><strong>Şifre:</strong> <span>${xtreamDetails.password}</span></div>
-            `;
-
             linksContainer.appendChild(linkElement);
             linksContainer.appendChild(copyButton);
-            linksContainer.appendChild(showXtreamButton);
-            linksContainer.appendChild(xtreamPanel);
 
             // Progress bar'ı güncelle
             const progress = Math.round(((index + 1) / links.length) * 100);
