@@ -170,9 +170,9 @@ async function fetchLinksFromPage() {
     const signal = currentRequest.signal; // Abort sinyalini al
     
     try {
-        const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(pageUrl)}`, { signal });
-        const data = await response.json();
-        const html = data.contents;
+        const proxyUrl = 'https://cors.portisroad.workers.dev/?url='; // Cloudflare Worker URL'sini kullanıyoruz
+        const response = await fetch(proxyUrl + encodeURIComponent(pageUrl), { signal });
+        const html = await response.text(); // Proxy kullandığımız için doğrudan metin olarak alıyoruz
         const urlPattern = /(https?:\/\/[^\s]+)/g;
         const links = html.match(urlPattern);
         const linksContainer = document.getElementById('links');
@@ -181,7 +181,7 @@ async function fetchLinksFromPage() {
         
         if (links && links.length > 0) {
             linksContainer.innerHTML = '';
-            links.forEach(async (link, index) => {
+            for (const [index, link] of links.entries()) {
                 if (signal.aborted) return;
                 const decodedLink = decodeURL(link); // URL'yi çöz
                 const cleanedLink = cleanURL(decodedLink); // URL'yi temizle
@@ -192,12 +192,12 @@ async function fetchLinksFromPage() {
                 linkElement.classList.add('d-block', 'mb-2');
                 
                 const copyButton = document.createElement('button');
-                copyButton.textContent = 'Bu Adresi Kullan';
-                copyButton.classList.add('btn', 'btn-outline-secondary', 'btn-block');
+                copyButton.textContent = 'Bu Adresi Kopyala 📋';
+                copyButton.classList.add('btn', 'btn-outline-success', 'btn-block');
                 copyButton.onclick = () => copyToClipboard(cleanedLink);
 
                 const showXtreamButton = document.createElement('button');
-                showXtreamButton.classList.add('btn', 'btn-outline-secondary', 'btn-block');
+                showXtreamButton.classList.add('btn', 'btn-outline-info', 'btn-block');
                 showXtreamButton.textContent = 'Xtream Code olarak Göster';
                 showXtreamButton.setAttribute('data-toggle', 'collapse');
                 showXtreamButton.setAttribute('data-target', '#xtreamPanel_' + index);
@@ -226,10 +226,10 @@ async function fetchLinksFromPage() {
 
                 // Gecikme ekle
                 await new Promise(resolve => setTimeout(resolve, 20));
-            });
+            }
             copyAllLinksBtn.style.display = 'block';
             sourceInfo.textContent = pageUrl;
-            linksHeader.textContent = `Ayıklanan Linkler (Toplam ${links.length} adet)`; // Toplam link sayısını ekle
+            linksHeader.innerHTML = `Bulunan bağlantı toplamı <strong>${links.length}</strong> adet`; // Toplam link sayısını ekle
         } else {
             linksContainer.textContent = 'Hiçbir link bulunamadı.';
             copyAllLinksBtn.style.display = 'none';
