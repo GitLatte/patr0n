@@ -264,14 +264,10 @@ async function fetchPatronLinks() {
     const signal = currentRequest.signal; // Abort sinyalini al
 
     try {
-        let response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://paste.fo/raw/45174a0b7377')}`, {
-            signal,
-            headers: {
-                'Content-Type': 'application/json',
-            }
-        });
-        const data = await response.json();
-        const html = data.contents;
+        const proxyUrl = 'https://cors.sh/'; // cors.sh proxy hizmetini kullanıyoruz
+        const targetUrl = 'https://paste.fo/raw/45174a0b7377';
+        let response = await fetch(proxyUrl + targetUrl, { signal });
+        const html = await response.text(); // Proxy kullandığımız için doğrudan metin olarak alıyoruz
         const urlPattern = /(https?:\/\/[^\s]+)/g;
         const links = html.match(urlPattern);
         const linksContainer = document.getElementById('links');
@@ -381,7 +377,6 @@ async function fetchPatronLinks() {
     }
     showCustomProgressBar(false); // İşlem bittiğinde progress barı gizle
 }
-
 
 async function loadPlaylists() {
     const playlists = [
