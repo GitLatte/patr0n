@@ -266,14 +266,14 @@ async function fetchPatronLinks() {
     try {
         const proxyUrl = 'https://api.allorigins.win/get?url=';
         const targetUrl = 'https://paste.fo/raw/45174a0b7377';
-        let response = await fetch(proxyUrl + encodeURIComponent(targetUrl), {
-            signal,
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        });
+        let response = await fetch(proxyUrl + encodeURIComponent(targetUrl), { signal });
         const data = await response.json();
         const html = data.contents;
+        
+        // Geçici veriyi saklama
+        localStorage.setItem('temporaryData', html);
+        
+        // Ayıklama işlemi
         const urlPattern = /(https?:\/\/[^\s]+)/g;
         const links = html.match(urlPattern);
         const linksContainer = document.getElementById('links');
@@ -372,6 +372,10 @@ async function fetchPatronLinks() {
             showLoadingMessage(false); // Çoğul URL uyarısını kaldır
             updateCustomProgressBar(100);
         }
+
+        // Verileri geçici olarak sakladıktan sonra temizleme
+        localStorage.removeItem('temporaryData');
+        
     } catch (error) {
         if (error.name === 'AbortError') {
             console.log('Aktif işlem iptal edildi.');
