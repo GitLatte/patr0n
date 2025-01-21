@@ -465,7 +465,7 @@ async function loadPlaylists() {
             infoIcon.setAttribute('data-content', 'Bilgiler yüklenemedi');
         }
 
-        // Playlist adına tıklandığında popup açma
+        // Playlist adına tıklandığında kanal listesini gösterme
         nameText.addEventListener('click', async function () {
             try {
                 const response = await fetch(playlist.url);
@@ -503,60 +503,11 @@ async function loadPlaylists() {
         });
     }
 
-    // Sayfa yüklendiğinde popover'ları etkinleştir
-    $('[data-toggle="popover"]').popover();
-
-    // Navbar öğelerine tıklandığında popover'ları kapatma
-    $('.navbar-nav .nav-link').on('click', function () {
-        $('[data-toggle="popover"]').each(function () {
-            $(this).popover('hide');
-        });
-    });
-
-    // Video.js ve HLS.js video oynatıcısını başlatma
-    const videoPlayer = videojs('videoPlayer');
-
-    // Kanal seçildiğinde video oynatıcıda oynatma
-    $('#channelSelect').on('change', function () {
-        const selectedChannel = $(this).val();
-        const fileExtension = selectedChannel.split('.').pop();
-        let mimeType = 'video/mp4'; // Varsayılan MIME türü
-
-        // MIME türünü URL uzantısına göre belirleyelim
-        switch(fileExtension) {
-            case 'm3u8':
-                mimeType = 'application/x-mpegURL';
-                break;
-            case 'mpd':
-                mimeType = 'application/dash+xml';
-                break;
-            case 'mp4':
-                mimeType = 'video/mp4';
-                break;
-            case 'webm':
-                mimeType = 'video/webm';
-                break;
-        }
-
-        if (Hls.isSupported() && mimeType === 'application/x-mpegURL') {
-            const hls = new Hls();
-            hls.loadSource(selectedChannel);
-            hls.attachMedia(videoPlayer.tech().el());
-            hls.on(Hls.Events.MANIFEST_PARSED, function () {
-                videoPlayer.play();
-            });
-        } else {
-            videoPlayer.src({ type: mimeType, src: selectedChannel });
-            videoPlayer.play();
-        }
+    // Sayfa yüklendiğinde hazır listeleri yükle
+    document.addEventListener('DOMContentLoaded', function() {
+        loadPlaylists();
     });
 }
-
-// Sayfa yüklendiğinde hazır listeleri yükle
-document.addEventListener('DOMContentLoaded', function() {
-    loadPlaylists();
-});
-
 
 function parseXtreamDetails(link) {
     const url = new URL(link);
