@@ -225,7 +225,7 @@ async function fetchLinksFromPage() {
                 updateCustomProgressBar(progress);
 
                 // Gecikme ekle
-                await new Promise(resolve => setTimeout(resolve, 20));
+                await new Promise(resolve => setTimeout(resolve, 1));
             }
             copyAllLinksBtn.style.display = 'block';
             sourceInfo.textContent = pageUrl;
