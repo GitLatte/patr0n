@@ -230,31 +230,35 @@ async function fetchLinksFromPage() {
                 copyButton.classList.add('btn', 'btn-outline-success', 'btn-block');
                 copyButton.onclick = () => copyToClipboard(cleanedLink);
 
-                const showXtreamButton = document.createElement('button');
-                showXtreamButton.classList.add('btn', 'btn-outline-info', 'btn-block');
-                showXtreamButton.textContent = 'Xtream Code olarak Göster';
-                showXtreamButton.setAttribute('data-toggle', 'collapse');
-                showXtreamButton.setAttribute('data-target', '#xtreamPanel_' + index);
-                showXtreamButton.setAttribute('aria-expanded', 'false');
-                showXtreamButton.setAttribute('aria-controls', 'xtreamPanel_' + index);
+                // Xtream Code olarak gösterme düğmesini sadece uygun URL'ler için ekle
+                if (cleanedLink.includes('m3u') || cleanedLink.includes('m3u8') || cleanedLink.includes('playlist')) {
+                    const showXtreamButton = document.createElement('button');
+                    showXtreamButton.classList.add('btn', 'btn-outline-info', 'btn-block');
+                    showXtreamButton.textContent = 'Xtream Code olarak Göster';
+                    showXtreamButton.setAttribute('data-toggle', 'collapse');
+                    showXtreamButton.setAttribute('data-target', '#xtreamPanel_' + index);
+                    showXtreamButton.setAttribute('aria-expanded', 'false');
+                    showXtreamButton.setAttribute('aria-controls', 'xtreamPanel_' + index);
 
-                const xtreamPanel = document.createElement('div');
-                xtreamPanel.id = 'xtreamPanel_' + index;
-                xtreamPanel.classList.add('collapse', 'mt-2');
+                    const xtreamPanel = document.createElement('div');
+                    xtreamPanel.id = 'xtreamPanel_' + index;
+                    xtreamPanel.classList.add('collapse', 'mt-2');
 
-                const xtreamDetails = parseXtreamDetails(cleanedLink);
-                xtreamPanel.innerHTML = `
-                    <div><strong>Sunucu Adresi:</strong> <span>${xtreamDetails.server}</span></div>
-                    <div><strong>Kullanıcı Adı:</strong> <span>${xtreamDetails.username}</span></div>
-                    <div><strong>Şifre:</strong> <span>${xtreamDetails.password}</span></div>
-                `;
+                    const xtreamDetails = parseXtreamDetails(cleanedLink);
+                    xtreamPanel.innerHTML = `
+                        <div><strong>Sunucu Adresi:</strong> <span>${xtreamDetails.server}</span></div>
+                        <div><strong>Kullanıcı Adı:</strong> <span>${xtreamDetails.username}</span></div>
+                        <div><strong>Şifre:</strong> <span>${xtreamDetails.password}</span></div>
+                    `;
+
+                    linkWrapper.appendChild(showXtreamButton);
+                    linkWrapper.appendChild(xtreamPanel);
+                }
 
                 linkWrapper.appendChild(linkElement);
                 if (maxConnections) linkWrapper.appendChild(connectionsInfo); // Bağlantı bilgisi ekle
                 if (expires) linkWrapper.appendChild(expiresInfo); // Son kullanma tarihi bilgisi ekle
                 linkWrapper.appendChild(copyButton);
-                linkWrapper.appendChild(showXtreamButton);
-                linkWrapper.appendChild(xtreamPanel);
                 linksContainer.appendChild(linkWrapper);
 
                 // Progress bar'ı güncelle
@@ -310,7 +314,7 @@ async function fetchLinksFromPage() {
             updateCustomProgressBar(100, 0);
         }
     }
-    showCustomProgressBar(true); // İşlem bittiğinde progress barı gizle
+    showCustomProgressBar(false); // İşlem bittiğinde progress barı gizle
     showNewMethodMessage(false);
     showLoadingMessage(false);
 }
