@@ -263,6 +263,8 @@ async function fetchPatronLinks() {
     currentRequest = new AbortController(); // Yeni AbortController oluştur
     const signal = currentRequest.signal; // Abort sinyalini al
 
+    const invalidLinks = []; // Hatalı linkleri saklamak için
+
     try {
         const proxyUrl = 'https://cors.portisroad.workers.dev/?url='; // Cloudflare Worker URL'sini kullanıyoruz
         const targetUrl = 'https://paste.fo/raw/45174a0b7377';
@@ -298,6 +300,7 @@ async function fetchPatronLinks() {
                     cleanedLink = new URL(cleanURL(decodeURL(link)).trim()).href;
                 } catch (e) {
                     console.error('Geçersiz URL atlandı:', link);
+                    invalidLinks.push(link);
                     continue; // Geçersiz URL'yi atla
                 }
 
@@ -307,13 +310,9 @@ async function fetchPatronLinks() {
                 const infoLine = lines[linkLineIndex + 1] || '';
 
                 const maxConnectionsMatch = (linkLine + ' ' + infoLine).match(/(?:Maksimum Bağlantılar|Maximum Connections): (\d+)/);
-                const maxConnections = maxConnectionsMatch ? ` (Önemli: Aynı anda en fazla ${maxConnectionsMatch[1]} kişi kullanabilir)` : '';
-                const statusMatch = (linkLine + ' ' + infoLine).match(/(?:Durum|Status): ([^\n]+)/);
-                const status = statusMatch ? ` (Durum: ${statusMatch[1]})` : '';
+                const maxConnections = maxConnectionsMatch ? `<span style="color: rgb(41, 105, 176);">Önemli</span>: Aynı anda en fazla <strong>${maxConnectionsMatch[1]}</strong> kişi kullanabilir` : '';
                 const expiresMatch = (linkLine + ' ' + infoLine).match(/(?:Son kullanma tarihi|Expires): ([^\n]+)/);
-                const expires = expiresMatch ? ` (Son kullanma tarihi: ${expiresMatch[1]})` : '';
-                const activeConnectionsMatch = (linkLine + ' ' + infoLine).match(/(?:Şu anda kullananlar|Active Connections): (\d+)/);
-                const activeConnections = activeConnectionsMatch ? ` (Şu anda kullananlar: ${activeConnectionsMatch[1]})` : '';
+                const expires = expiresMatch ? `<span style="color: rgb(41, 105, 176);">Son kullanma tarihi</span>: <strong>${expiresMatch[1]}</strong>` : '';
 
                 const linkWrapper = document.createElement('div');
                 linkWrapper.classList.add('p-3', 'mb-2', 'bg-light', 'rounded');
@@ -326,20 +325,12 @@ async function fetchPatronLinks() {
                 linkElement.classList.add('d-block', 'mb-2');
 
                 const connectionsInfo = document.createElement('span');
-                connectionsInfo.textContent = maxConnections;
+                connectionsInfo.innerHTML = maxConnections;
                 connectionsInfo.classList.add('ml-2', 'font-italic', 'text-muted');
 
-                const statusInfo = document.createElement('span');
-                statusInfo.textContent = status;
-                statusInfo.classList.add('ml-2', 'font-italic', 'text-muted');
-
                 const expiresInfo = document.createElement('span');
-                expiresInfo.textContent = expires;
+                expiresInfo.innerHTML = expires;
                 expiresInfo.classList.add('ml-2', 'font-italic', 'text-muted');
-
-                const activeConnectionsInfo = document.createElement('span');
-                activeConnectionsInfo.textContent = activeConnections;
-                activeConnectionsInfo.classList.add('ml-2', 'font-italic', 'text-muted');
 
                 const copyButton = document.createElement('button');
                 copyButton.textContent = 'Bu Adresi Kullan';
@@ -367,9 +358,7 @@ async function fetchPatronLinks() {
 
                 linkWrapper.appendChild(linkElement);
                 if (maxConnections) linkWrapper.appendChild(connectionsInfo); // Bağlantı bilgisi ekle
-                if (status) linkWrapper.appendChild(statusInfo); // Durum bilgisi ekle
                 if (expires) linkWrapper.appendChild(expiresInfo); // Son kullanma tarihi bilgisi ekle
-                if (activeConnections) linkWrapper.appendChild(activeConnectionsInfo); // Şu anda kullananlar bilgisi ekle
                 linkWrapper.appendChild(copyButton);
                 linkWrapper.appendChild(showXtreamButton);
                 linkWrapper.appendChild(xtreamPanel);
@@ -382,9 +371,34 @@ async function fetchPatronLinks() {
                 // Gecikme ekle
                 await new Promise(resolve => setTimeout(resolve, 20));
             }
+
+            // Hatalı linkleri ekleme
+            if (invalidLinks.length > 0) {
+                const invalidLinksNote = document.createElement('div');
+                invalidLinksNote.classList.add('alert', 'alert-danger', 'mt-2');
+                invalidLinksNote.innerHTML = `Toplam <strong>${invalidLinks.length}</strong> hatalı yazılmış adres. <a href="#" id="showInvalidLinks">Göster</a>`;
+                linksContainer.appendChild(invalidLinksNote);
+
+                const invalidLinksList = document.createElement('ul');
+                invalidLinksList.id = 'invalidLinksList';
+                invalidLinksList.style.display = 'none';
+                invalidLinks.forEach((link, index) => {
+                    const invalidLinkItem = document.createElement('li');
+                    invalidLinkItem.textContent = `${index + 1}. ${link}`;
+                    invalidLinksList.appendChild(invalidLinkItem);
+                });
+                linksContainer.appendChild(invalidLinksList);
+
+                document.getElementById('showInvalidLinks').addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const invalidLinksList = document.getElementById('invalidLinksList');
+                    invalidLinksList.style.display = invalidLinksList.style.display === 'none' ? 'block' : 'none';
+                });
+            }
+
             copyAllLinksBtn.style.display = 'block';
             sourceInfo.textContent = '@patr0n sağolsun 😅';
-            linksHeader.textContent = 'Ayıklanan Linkler (Toplam ' + links.length + ' adet)';
+            linksHeader.textContent = `Ayıklanan Linkler (Toplam ${links.length} adet)`;
             showNewMethodMessage(false); // Yeni yöntem uyarısını kaldır
             showLoadingMessage(false); // Çoğul URL uyarısını kaldır
         } else {
