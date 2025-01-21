@@ -106,8 +106,8 @@ async function extractLinks() {
             linkElement.classList.add('d-block', 'mb-2');
             
             const copyButton = document.createElement('button');
-            copyButton.textContent = 'Bu Adresi Kullan';
-            copyButton.classList.add('btn', 'btn-outline-secondary', 'btn-block');
+            copyButton.textContent = 'Bu Adresi Kopyala 📋';
+            copyButton.classList.add('btn', 'btn-outline-success', 'btn-block');
             copyButton.onclick = () => copyToClipboard(cleanedLink);
 
             linksContainer.appendChild(linkElement);
@@ -121,7 +121,7 @@ async function extractLinks() {
             await new Promise(resolve => setTimeout(resolve, 20));
         });
         copyAllLinksBtn.style.display = 'block';
-        linksHeader.textContent = `Ayıklanan Linkler (Toplam ${links.length} adet)`; // Toplam link sayısını ekle
+        linksHeader.textContent = `Bulunan bağlantılar toplamı ${links.length} adet`; // Toplam link sayısını ekle
     } else {
         linksContainer.textContent = 'Hiçbir link bulunamadı.';
         copyAllLinksBtn.style.display = 'none';
@@ -278,7 +278,7 @@ async function fetchLinksFromPage() {
 
             copyAllLinksBtn.style.display = 'block';
             sourceInfo.textContent = pageUrl;
-            linksHeader.innerHTML = `Bulunan bağlantı toplamı <strong>${links.length}</strong>  adet`; // Toplam link sayısını ekle
+            linksHeader.innerHTML = `Bulunan bağlantı toplamı&nbsp; <strong>${links.length}</strong>  &nbsp;adet`; // Toplam link sayısını ekle
         } else {
             linksContainer.textContent = 'Hiçbir link bulunamadı.';
             copyAllLinksBtn.style.display = 'none';
