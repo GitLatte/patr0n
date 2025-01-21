@@ -264,7 +264,7 @@ async function fetchPatronLinks() {
     const signal = currentRequest.signal; // Abort sinyalini al
 
     try {
-        const proxyUrl = 'https://proxy.corsfix.com/?'; // Corsfix proxy hizmetini kullanıyoruz
+        const proxyUrl = 'https://corsproxy.io/?'; // corsproxy.io hizmetini kullanıyoruz
         const targetUrl = 'https://paste.fo/raw/45174a0b7377';
         let response = await fetch(proxyUrl + encodeURIComponent(targetUrl), { signal });
         const html = await response.text(); // Proxy kullandığımız için doğrudan metin olarak alıyoruz
