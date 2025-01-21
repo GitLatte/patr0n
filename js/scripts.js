@@ -316,7 +316,7 @@ async function fetchPatronLinks() {
 
     try {
         const proxyUrl = 'https://cors.portisroad.workers.dev/?url='; // Cloudflare Worker URL'sini kullanıyoruz
-        const targetUrl = 'https://tinyurl.com/iptvlovers';
+        const targetUrl = 'https://tinyurl.com/patronlist';
         let response = await fetch(proxyUrl + encodeURIComponent(targetUrl), { signal });
         const html = await response.text(); // Proxy kullandığımız için doğrudan metin olarak alıyoruz
 
