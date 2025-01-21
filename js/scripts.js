@@ -311,7 +311,7 @@ async function fetchPatronLinks() {
 
                 const maxConnectionsMatch = (linkLine + ' ' + infoLine).match(/(?:Maksimum Bağlantılar|Maximum Connections): (\d+)/);
                 const maxConnections = maxConnectionsMatch ? `<span style="color: rgb(41, 105, 176);">Önemli</span>: Aynı anda en fazla <strong>${maxConnectionsMatch[1]}</strong> kişi kullanabilir` : '';
-                const expiresMatch = (linkLine + ' ' + infoLine).match(/(?:Son kullanma tarihi|Expires): ([^\n]+)/);
+                const expiresMatch = (linkLine + ' ' + infoLine).match(/(?:Son kullanma tarihi|Expires): ([\d\/\.\- ]+ \d+:\d+:\d+)/);
                 const expires = expiresMatch ? `<span style="color: rgb(41, 105, 176);">Son kullanma tarihi</span>: <strong>${expiresMatch[1]}</strong>` : '';
 
                 const linkWrapper = document.createElement('div');
@@ -418,8 +418,9 @@ async function fetchPatronLinks() {
             updateCustomProgressBar(100);
         }
     }
-    showCustomProgressBar(false); // İşlem bittiğinde progress barı gizle
+    showCustomProgressBar(true); // İşlem bittiğinde progress barı gizle
 }
+
 
 async function loadPlaylists() {
     const playlists = [
