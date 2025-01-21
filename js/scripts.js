@@ -264,16 +264,16 @@ async function fetchPatronLinks() {
     const signal = currentRequest.signal; // Abort sinyalini al
 
     try {
-        const proxyUrl = 'https://cors-anywhere.herokuapp.com/'; // cors-anywhere proxy hizmetini kullanıyoruz
+        const proxyUrl = 'https://api.allorigins.win/get?url=';
         const targetUrl = 'https://paste.fo/raw/45174a0b7377';
-        let response = await fetch(proxyUrl + targetUrl, {
+        let response = await fetch(proxyUrl + encodeURIComponent(targetUrl), {
             signal,
             headers: {
-                'origin': 'https://gitlatte.github.io',
-                'x-requested-with': 'XMLHttpRequest'
+                'Content-Type': 'application/json'
             }
         });
-        const html = await response.text(); // Proxy kullandığımız için doğrudan metin olarak alıyoruz
+        const data = await response.json();
+        const html = data.contents;
         const urlPattern = /(https?:\/\/[^\s]+)/g;
         const links = html.match(urlPattern);
         const linksContainer = document.getElementById('links');
