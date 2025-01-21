@@ -377,7 +377,7 @@ async function fetchPatronLinks() {
 
             // Hatalı linkleri ekleme ve toplam sayıları güncelleme
             if (invalidLinks.length > 0) {
-                summaryNote.innerHTML += ` (Toplam <strong>${invalidLinks.length}</strong> hatalı yazılmış adres) <a href="#" id="showInvalidLinks">Göster</a>`;
+                summaryNote.innerHTML += ` (Toplam <strong>${invalidLinks.length}</strong> hatalı yazılmış adres <a href="#" id="showInvalidLinks">Göster</a>)`;
 
                 const invalidLinksList = document.createElement('ul');
                 invalidLinksList.id = 'invalidLinksList';
