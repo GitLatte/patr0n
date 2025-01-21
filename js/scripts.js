@@ -293,7 +293,7 @@ async function fetchPatronLinks() {
             // Hatalı linkleri ve toplam sayıları gösterme alanı ekle
             const summaryNote = document.createElement('div');
             summaryNote.classList.add('alert', 'alert-warning', 'mt-2');
-            summaryNote.innerHTML = `Ayıklanan Linkler (Toplam <strong>${links.length}</strong> adet)`;
+            summaryNote.innerHTML = `Ayıklanan Linkler (Toplam <strong>${links.length}</strong> adet) (Toplam <strong>${invalidLinks.length}</strong> hatalı yazılmış adres <a href="#" id="showInvalidLinks">Göster</a>)`;
             linksContainer.appendChild(summaryNote);
 
             // Linkleri listeye ekleme
@@ -389,10 +389,13 @@ async function fetchPatronLinks() {
                 });
                 summaryNote.appendChild(invalidLinksList);
 
-                document.getElementById('showInvalidLinks').addEventListener('click', (e) => {
+                const showInvalidLinksButton = document.getElementById('showInvalidLinks');
+                showInvalidLinksButton.addEventListener('click', (e) => {
                     e.preventDefault();
                     const invalidLinksList = document.getElementById('invalidLinksList');
-                    invalidLinksList.style.display = invalidLinksList.style.display === 'none' ? 'block' : 'none';
+                    const isVisible = invalidLinksList.style.display === 'none';
+                    invalidLinksList.style.display = isVisible ? 'block' : 'none';
+                    showInvalidLinksButton.textContent = isVisible ? 'Gizle' : 'Göster';
                 });
             }
 
@@ -417,9 +420,8 @@ async function fetchPatronLinks() {
             updateCustomProgressBar(100, 0);
         }
     }
-    showCustomProgressBar(true); // İşlem bittiğinde progress barı gizle
+    showCustomProgressBar(false); // İşlem bittiğinde progress barı gizle
 }
-
 
 async function loadPlaylists() {
     const playlists = [
