@@ -376,7 +376,7 @@ async function fetchPatronLinks() {
                 const progress = Math.round(((index + 1) / links.length) * 100);
                 updateCustomProgressBar(progress, index + 1);
 				// Gecikme ekle // 
-				await new Promise(resolve => setTimeout(resolve, 5));
+				await new Promise(resolve => setTimeout(resolve, 1));
             }
 
             // Hatalı linkleri ekleme ve toplam sayıları güncelleme
@@ -427,7 +427,7 @@ async function fetchPatronLinks() {
             updateCustomProgressBar(100, 0);
         }
     }
-    showCustomProgressBar(false); // İşlem bittiğinde progress barı gizle
+    showCustomProgressBar(true); // İşlem bittiğinde progress barı gizle
 }
 
 async function loadPlaylists() {
