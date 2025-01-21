@@ -175,22 +175,56 @@ async function fetchLinksFromPage() {
         const html = await response.text(); // Proxy kullandığımız için doğrudan metin olarak alıyoruz
         const urlPattern = /(https?:\/\/[^\s]+)/g;
         const links = html.match(urlPattern);
+        const lines = html.split('\n'); // Satırları ayır
         const linksContainer = document.getElementById('links');
         const copyAllLinksBtn = document.getElementById('copyAllLinksBtn');
         const sourceInfo = document.getElementById('sourceInfo');
         
         if (links && links.length > 0) {
             linksContainer.innerHTML = '';
+            const invalidLinks = []; // Hatalı linkleri saklamak için
+            
             for (const [index, link] of links.entries()) {
                 if (signal.aborted) return;
-                const decodedLink = decodeURL(link); // URL'yi çöz
-                const cleanedLink = cleanURL(decodedLink); // URL'yi temizle
+
+                // URL'yi doğrula ve temizle
+                let cleanedLink;
+                try {
+                    cleanedLink = new URL(cleanURL(decodeURL(link)).trim()).href;
+                } catch (e) {
+                    console.error('Geçersiz URL atlandı:', link);
+                    invalidLinks.push(link);
+                    continue; // Geçersiz URL'yi atla
+                }
+
+                // İlgili bilgileri içeren satırları bul
+                const linkLineIndex = lines.findIndex(line => line.includes(link));
+                const linkLine = lines[linkLineIndex] || '';
+                const infoLine = lines[linkLineIndex + 1] || '';
+
+                const maxConnectionsMatch = (linkLine + ' ' + infoLine).match(/(?:Maksimum Bağlantılar|Maximum Connections): (\d+)/);
+                const maxConnections = maxConnectionsMatch ? `<span style="color: rgb(41, 105, 176);">Önemli</span>: Aynı anda en fazla <strong>${maxConnectionsMatch[1]}</strong> kişi kullanabilir` : '';
+                const expiresMatch = (linkLine + ' ' + infoLine).match(/(?:Son kullanma tarihi|Expires): ([\d\/\.\- ]+ \d+:\d+:\d+)/);
+                const expires = expiresMatch ? `<span style="color: rgb(41, 105, 176);">Son kullanma tarihi</span>: <strong>${expiresMatch[1]}</strong>` : '';
+
+                const linkWrapper = document.createElement('div');
+                linkWrapper.classList.add('p-3', 'mb-2', 'bg-light', 'rounded');
+                linkWrapper.id = 'linkWrapper_' + index;
+
                 const linkElement = document.createElement('a');
                 linkElement.href = cleanedLink;
                 linkElement.textContent = (index + 1) + '. ' + cleanedLink;
                 linkElement.target = '_blank';
                 linkElement.classList.add('d-block', 'mb-2');
-                
+
+                const connectionsInfo = document.createElement('span');
+                connectionsInfo.innerHTML = maxConnections;
+                connectionsInfo.classList.add('ml-2', 'font-italic', 'text-muted');
+
+                const expiresInfo = document.createElement('span');
+                expiresInfo.innerHTML = expires;
+                expiresInfo.classList.add('ml-2', 'font-italic', 'text-muted');
+
                 const copyButton = document.createElement('button');
                 copyButton.textContent = 'Bu Adresi Kopyala 📋';
                 copyButton.classList.add('btn', 'btn-outline-success', 'btn-block');
@@ -215,15 +249,49 @@ async function fetchLinksFromPage() {
                     <div><strong>Şifre:</strong> <span>${xtreamDetails.password}</span></div>
                 `;
 
-                linksContainer.appendChild(linkElement);
-                linksContainer.appendChild(copyButton);
-                linksContainer.appendChild(showXtreamButton);
-                linksContainer.appendChild(xtreamPanel);
+                linkWrapper.appendChild(linkElement);
+                if (maxConnections) linkWrapper.appendChild(connectionsInfo); // Bağlantı bilgisi ekle
+                if (expires) linkWrapper.appendChild(expiresInfo); // Son kullanma tarihi bilgisi ekle
+                linkWrapper.appendChild(copyButton);
+                linkWrapper.appendChild(showXtreamButton);
+                linkWrapper.appendChild(xtreamPanel);
+                linksContainer.appendChild(linkWrapper);
 
                 // Progress bar'ı güncelle
                 const progress = Math.round(((index + 1) / links.length) * 100);
-                updateCustomProgressBar(progress);
+                updateCustomProgressBar(progress, index + 1);
+
+                // Gecikme ekle
+                await new Promise(resolve => setTimeout(resolve, 1)); // 1 milisaniye gecikme
             }
+
+            // Hatalı linkleri ekleme ve toplam sayıları güncelleme
+            if (invalidLinks.length > 0) {
+                const invalidLinksNote = document.createElement('div');
+                invalidLinksNote.classList.add('alert', 'alert-danger', 'mt-2');
+                invalidLinksNote.innerHTML = `Toplam <strong>${invalidLinks.length}</strong> hatalı yazılmış adres. <a href="#" id="showInvalidLinks">Göster</a>`;
+                linksContainer.appendChild(invalidLinksNote);
+
+                const invalidLinksList = document.createElement('ul');
+                invalidLinksList.id = 'invalidLinksList';
+                invalidLinksList.style.display = 'none';
+                invalidLinks.forEach((link, index) => {
+                    const invalidLinkItem = document.createElement('li');
+                    invalidLinkItem.textContent = `${index + 1}. ${link}`;
+                    invalidLinksList.appendChild(invalidLinkItem);
+                });
+                linksContainer.appendChild(invalidLinksList);
+
+                const showInvalidLinksButton = document.getElementById('showInvalidLinks');
+                showInvalidLinksButton.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const invalidLinksList = document.getElementById('invalidLinksList');
+                    const isVisible = invalidLinksList.style.display === 'none';
+                    invalidLinksList.style.display = isVisible ? 'block' : 'none';
+                    showInvalidLinksButton.textContent = isVisible ? 'Gizle' : 'Göster';
+                });
+            }
+
             copyAllLinksBtn.style.display = 'block';
             sourceInfo.textContent = pageUrl;
             linksHeader.innerHTML = `Bulunan bağlantı toplamı <strong>${links.length}</strong> adet`; // Toplam link sayısını ekle
@@ -231,7 +299,7 @@ async function fetchLinksFromPage() {
             linksContainer.textContent = 'Hiçbir link bulunamadı.';
             copyAllLinksBtn.style.display = 'none';
             sourceInfo.textContent = '';
-            updateCustomProgressBar(100);
+            updateCustomProgressBar(100, 0);
         }
     } catch (error) {
         if (error.name === 'AbortError') {
@@ -239,7 +307,7 @@ async function fetchLinksFromPage() {
         } else {
             console.error('Web sayfasından linkler alınamadı:', error);
             alert('Web sayfasından linkler alınamadı: ' + error);
-            updateCustomProgressBar(100);
+            updateCustomProgressBar(100, 0);
         }
     }
     showCustomProgressBar(true); // İşlem bittiğinde progress barı gizle
