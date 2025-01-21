@@ -268,10 +268,7 @@ async function fetchPatronLinks() {
         const targetUrl = 'https://paste.fo/raw/45174a0b7377';
         let response = await fetch(proxyUrl + encodeURIComponent(targetUrl), { signal });
         const html = await response.text(); // Proxy kullandığımız için doğrudan metin olarak alıyoruz
-        
-        // Geçici veriyi saklama
-        localStorage.setItem('temporaryData', html);
-        
+
         // Ayıklama işlemi
         const urlPattern = /(https?:\/\/[^\s]+)/g;
         const links = html.match(urlPattern);
@@ -371,10 +368,6 @@ async function fetchPatronLinks() {
             showLoadingMessage(false); // Çoğul URL uyarısını kaldır
             updateCustomProgressBar(100);
         }
-
-        // Verileri geçici olarak sakladıktan sonra temizleme
-        localStorage.removeItem('temporaryData');
-        
     } catch (error) {
         if (error.name === 'AbortError') {
             console.log('Aktif işlem iptal edildi.');
