@@ -264,9 +264,14 @@ async function fetchPatronLinks() {
     const signal = currentRequest.signal; // Abort sinyalini al
 
     try {
-        const proxyUrl = 'https://corst-anywhere.herokuapp.com/'; // Corst Anywhere proxy hizmetini kullanıyoruz
+        const proxyUrl = 'https://cors-anywhere.herokuapp.com/'; // cors-anywhere proxy hizmetini kullanıyoruz
         const targetUrl = 'https://paste.fo/raw/45174a0b7377';
-        let response = await fetch(proxyUrl + targetUrl, { signal });
+        let response = await fetch(proxyUrl + targetUrl, {
+            signal,
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest'
+            }
+        });
         const html = await response.text(); // Proxy kullandığımız için doğrudan metin olarak alıyoruz
         const urlPattern = /(https?:\/\/[^\s]+)/g;
         const links = html.match(urlPattern);
