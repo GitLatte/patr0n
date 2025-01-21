@@ -287,28 +287,32 @@ async function fetchPatronLinks() {
             linksContainer.appendChild(infoNote);
 
             // Linkleri listeye ekleme
-            links.forEach(async (link, index) => {
+            for (const [index, link] of links.entries()) {
                 if (signal.aborted) return;
-                
+
                 // URL'yi doğrula ve temizle
                 let cleanedLink;
                 try {
                     cleanedLink = new URL(cleanURL(decodeURL(link)).trim()).href;
                 } catch (e) {
                     console.error('Geçersiz URL atlandı:', link);
-                    return; // Geçersiz URL'yi atla
+                    continue; // Geçersiz URL'yi atla
                 }
-                
-                const line = html.split('\n').find(line => line.includes(link));
-                const maxConnectionsMatch = line.match(/(?:Maksimum Bağlantılar|Maximum Connections): (\d+)/);
+
+                // İlgili bilgileri içeren satırları bul
+                const matchingLines = html.split('\n').filter(line => line.includes(link) || line.includes("Real Url:"));
+                const linkLine = matchingLines.find(line => line.includes(link)) || ''; // Link içeren satır
+                const infoLine = matchingLines.find(line => line.includes("Real Url:") && !line.includes(link)) || ''; // Bilgi içeren satır
+
+                const maxConnectionsMatch = (linkLine + ' ' + infoLine).match(/(?:Maksimum Bağlantılar|Maximum Connections): (\d+)/);
                 const maxConnections = maxConnectionsMatch ? ` (Önemli: Aynı anda en fazla ${maxConnectionsMatch[1]} kişi kullanabilir)` : '';
-                const statusMatch = line.match(/(?:Durum|Status): ([^\n]+)/);
+                const statusMatch = (linkLine + ' ' + infoLine).match(/(?:Durum|Status): ([^\n]+)/);
                 const status = statusMatch ? ` (Durum: ${statusMatch[1]})` : '';
-                const expiresMatch = line.match(/(?:Son kullanma tarihi|Expires): ([^\n]+)/);
+                const expiresMatch = (linkLine + ' ' + infoLine).match(/(?:Son kullanma tarihi|Expires): ([^\n]+)/);
                 const expires = expiresMatch ? ` (Son kullanma tarihi: ${expiresMatch[1]})` : '';
-                const activeConnectionsMatch = line.match(/(?:Şu anda kullananlar|Active Connections): (\d+)/);
+                const activeConnectionsMatch = (linkLine + ' ' + infoLine).match(/(?:Şu anda kullananlar|Active Connections): (\d+)/);
                 const activeConnections = activeConnectionsMatch ? ` (Şu anda kullananlar: ${activeConnectionsMatch[1]})` : '';
-                
+
                 const linkWrapper = document.createElement('div');
                 linkWrapper.classList.add('p-3', 'mb-2', 'bg-light', 'rounded');
                 linkWrapper.id = 'linkWrapper_' + index;
@@ -375,7 +379,7 @@ async function fetchPatronLinks() {
 
                 // Gecikme ekle
                 await new Promise(resolve => setTimeout(resolve, 20));
-            });
+            }
             copyAllLinksBtn.style.display = 'block';
             sourceInfo.textContent = '@patr0n sağolsun 😅';
             linksHeader.textContent = 'Ayıklanan Linkler (Toplam ' + links.length + ' adet)';
