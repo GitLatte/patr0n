@@ -149,7 +149,7 @@ async function fetchLinksFromPage() {
     const signal = currentRequest.signal; // Abort sinyalini al
     
     try {
-        const proxyUrl = 'https://cors.portisroad.workers.dev/?url='; // Cloudflare Worker URL'sini kullanıyoruz
+        const proxyUrl = 'https://cors.gitlatte.workers.dev/?url='; // Cloudflare Worker URL'sini kullanıyoruz
         const response = await fetch(proxyUrl + encodeURIComponent(pageUrl), { signal });
         const html = await response.text(); // Proxy kullandığımız için doğrudan metin olarak alıyoruz
         const urlPattern = /(https?:\/\/[^\s]+)/g;
@@ -315,7 +315,7 @@ async function fetchPatronLinks() {
     const invalidLinks = []; // Hatalı linkleri saklamak için
 
     try {
-        const proxyUrl = 'https://cors.portisroad.workers.dev/?url='; // Cloudflare Worker URL'sini kullanıyoruz
+        const proxyUrl = 'https://cors.gitlatte.workers.dev/?url='; // Cloudflare Worker URL'sini kullanıyoruz
         const targetUrl = 'https://tinyurl.com/patronlist';
         let response = await fetch(proxyUrl + encodeURIComponent(targetUrl), { signal });
         const html = await response.text(); // Proxy kullandığımız için doğrudan metin olarak alıyoruz
