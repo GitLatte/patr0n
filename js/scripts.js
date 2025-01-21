@@ -269,7 +269,8 @@ async function fetchPatronLinks() {
         let response = await fetch(proxyUrl + targetUrl, {
             signal,
             headers: {
-                'X-Requested-With': 'XMLHttpRequest'
+                'origin': 'https://gitlatte.github.io',
+                'x-requested-with': 'XMLHttpRequest'
             }
         });
         const html = await response.text(); // Proxy kullandığımız için doğrudan metin olarak alıyoruz
