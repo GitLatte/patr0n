@@ -1,18 +1,19 @@
 let currentRequest = null; // Şu anki aktif istek
 
-function updateCustomProgressBar(percentage) {
+// Progress bar'ı güncelleyen fonksiyon
+function updateCustomProgressBar(progress, count) {
     const progressBar = document.getElementById('customProgress');
     const progressValue = document.querySelector('.progress-value');
     
     if (progressBar && progressValue) {
-        progressBar.style.width = percentage + '%';
-        progressValue.textContent = percentage === 100 ? 'İşlem tamamlandı' : `${percentage}%`;
+        progressBar.style.width = `${progress}%`;
+        progressValue.textContent = progress === 100 ? `İşlem tamamlandı` : `${progress}% (${count} link)`;
     } else {
         console.error('Progress bar or value element not found');
     }
 }
 
-
+// Progress bar'ı gösteren veya gizleyen fonksiyon
 function showCustomProgressBar(show) {
     const progressContainer = document.getElementById('customProgressContainer');
     if (progressContainer) {
@@ -21,7 +22,6 @@ function showCustomProgressBar(show) {
         console.error('Progress container not found');
     }
 }
-
 
 function decodeURL(url) {
     try {
@@ -290,6 +290,12 @@ async function fetchPatronLinks() {
             infoNote.textContent = `Son güncelleme tarihi: ${firstLine}`;
             linksContainer.appendChild(infoNote);
 
+            // Hatalı linkleri ve toplam sayıları gösterme alanı ekle
+            const summaryNote = document.createElement('div');
+            summaryNote.classList.add('alert', 'alert-warning', 'mt-2');
+            summaryNote.innerHTML = `Ayıklanan Linkler (Toplam <strong>${links.length}</strong> adet)`;
+            linksContainer.appendChild(summaryNote);
+
             // Linkleri listeye ekleme
             for (const [index, link] of links.entries()) {
                 if (signal.aborted) return;
@@ -366,18 +372,15 @@ async function fetchPatronLinks() {
 
                 // Progress bar'ı güncelle
                 const progress = Math.round(((index + 1) / links.length) * 100);
-                updateCustomProgressBar(progress);
+                updateCustomProgressBar(progress, index + 1);
 
                 // Gecikme ekle
                 await new Promise(resolve => setTimeout(resolve, 20));
             }
 
-            // Hatalı linkleri ekleme
+            // Hatalı linkleri ekleme ve toplam sayıları güncelleme
             if (invalidLinks.length > 0) {
-                const invalidLinksNote = document.createElement('div');
-                invalidLinksNote.classList.add('alert', 'alert-danger', 'mt-2');
-                invalidLinksNote.innerHTML = `Toplam <strong>${invalidLinks.length}</strong> hatalı yazılmış adres. <a href="#" id="showInvalidLinks">Göster</a>`;
-                linksContainer.appendChild(invalidLinksNote);
+                summaryNote.innerHTML += ` (Toplam <strong>${invalidLinks.length}</strong> hatalı yazılmış adres) <a href="#" id="showInvalidLinks">Göster</a>`;
 
                 const invalidLinksList = document.createElement('ul');
                 invalidLinksList.id = 'invalidLinksList';
@@ -387,7 +390,7 @@ async function fetchPatronLinks() {
                     invalidLinkItem.textContent = `${index + 1}. ${link}`;
                     invalidLinksList.appendChild(invalidLinkItem);
                 });
-                linksContainer.appendChild(invalidLinksList);
+                summaryNote.appendChild(invalidLinksList);
 
                 document.getElementById('showInvalidLinks').addEventListener('click', (e) => {
                     e.preventDefault();
@@ -398,7 +401,6 @@ async function fetchPatronLinks() {
 
             copyAllLinksBtn.style.display = 'block';
             sourceInfo.textContent = '@patr0n sağolsun 😅';
-            linksHeader.textContent = `Ayıklanan Linkler (Toplam ${links.length} adet)`;
             showNewMethodMessage(false); // Yeni yöntem uyarısını kaldır
             showLoadingMessage(false); // Çoğul URL uyarısını kaldır
         } else {
@@ -407,7 +409,7 @@ async function fetchPatronLinks() {
             sourceInfo.textContent = '';
             showNewMethodMessage(false); // Yeni yöntem uyarısını kaldır
             showLoadingMessage(false); // Çoğul URL uyarısını kaldır
-            updateCustomProgressBar(100);
+            updateCustomProgressBar(100, links.length);
         }
     } catch (error) {
         if (error.name === 'AbortError') {
@@ -415,7 +417,7 @@ async function fetchPatronLinks() {
         } else {
             console.error('Web sayfasından linkler alınamadı:', error);
             alert('Web sayfasından linkler alınamadı: ' + error);
-            updateCustomProgressBar(100);
+            updateCustomProgressBar(100, 0);
         }
     }
     showCustomProgressBar(true); // İşlem bittiğinde progress barı gizle
