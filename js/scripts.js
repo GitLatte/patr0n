@@ -293,7 +293,7 @@ async function fetchPatronLinks() {
             // Hatalı linkleri ve toplam sayıları gösterme alanı ekle
             const summaryNote = document.createElement('div');
             summaryNote.classList.add('alert', 'alert-warning', 'mt-2');
-            summaryNote.innerHTML = `Ayıklanan Linkler (Toplam <strong>${links.length}</strong> adet) (Toplam <strong>${invalidLinks.length}</strong> hatalı yazılmış adres <a href="#" id="showInvalidLinks">Göster</a>)`;
+            summaryNote.innerHTML = `Ayıklanan Linkler (Toplam <strong>${links.length}</strong> adet)`;
             linksContainer.appendChild(summaryNote);
 
             // Linkleri listeye ekleme
@@ -377,7 +377,10 @@ async function fetchPatronLinks() {
 
             // Hatalı linkleri ekleme ve toplam sayıları güncelleme
             if (invalidLinks.length > 0) {
-                summaryNote.innerHTML += ` (Toplam <strong>${invalidLinks.length}</strong> hatalı yazılmış adres <a href="#" id="showInvalidLinks">Göster</a>)`;
+                const invalidLinksNote = document.createElement('div');
+                invalidLinksNote.classList.add('alert', 'alert-danger', 'mt-2');
+                invalidLinksNote.innerHTML = `Toplam <strong>${invalidLinks.length}</strong> hatalı yazılmış adres. <a href="#" id="showInvalidLinks">Göster</a>`;
+                summaryNote.appendChild(invalidLinksNote);
 
                 const invalidLinksList = document.createElement('ul');
                 invalidLinksList.id = 'invalidLinksList';
