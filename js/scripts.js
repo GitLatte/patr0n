@@ -299,7 +299,7 @@ async function fetchLinksFromPage() {
 
             copyAllLinksBtn.style.display = 'block';
             sourceInfo.textContent = pageUrl;
-            linksHeader.innerHTML = `Bulunan bağlantı toplamı <strong>${links.length}</strong> adet`; // Toplam link sayısını ekle
+            llinksHeader.innerHTML = `Bulunan bağlantı toplamı&nbsp; <strong>${links.length}</strong> &nbsp;adet`; // Toplam link sayısını ekle
         } else {
             linksContainer.textContent = 'Hiçbir link bulunamadı.';
             copyAllLinksBtn.style.display = 'none';
