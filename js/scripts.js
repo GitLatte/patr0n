@@ -555,7 +555,6 @@ async function loadPlaylists() {
 // Sayfa yüklendiğinde hazır listeleri yükle
 document.addEventListener('DOMContentLoaded', function() {
     loadPlaylists();
-    showSection('metin-ayiklama'); // İlk açılışta metin ayıklama bölümünü göster
 });
 
 
