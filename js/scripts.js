@@ -286,14 +286,16 @@ async function fetchPatronLinks() {
         if (links && links.length > 0) {
             // Bilgi notunu ekleme
             const infoNote = document.createElement('div');
-            infoNote.classList.add('alert', 'alert-info', 'mt-2');
-            infoNote.textContent = `Son güncelleme tarihi: ${firstLine}`;
-            linksContainer.appendChild(infoNote);
+			infoNote.classList.add('alert', 'alert-info', 'mt-2');
+			const [datePart] = firstLine.split('_');
+			infoNote.textContent = `Son güncelleme tarihi: ${datePart}`;
+			linksContainer.appendChild(infoNote);
+
 
             // Hatalı linkleri ve toplam sayıları gösterme alanı ekle
             const summaryNote = document.createElement('div');
             summaryNote.classList.add('alert', 'alert-warning', 'mt-2');
-            summaryNote.innerHTML = `Ayıklanan Linkler (Toplam <strong>${links.length}</strong> adet)`;
+            summaryNote.innerHTML = `Bulunan bağlantı toplamı <strong>${links.length}</strong> adet`;
             linksContainer.appendChild(summaryNote);
 
             // Linkleri listeye ekleme
@@ -339,12 +341,12 @@ async function fetchPatronLinks() {
                 expiresInfo.classList.add('ml-2', 'font-italic', 'text-muted');
 
                 const copyButton = document.createElement('button');
-                copyButton.textContent = 'Bu Adresi Kullan';
-                copyButton.classList.add('btn', 'btn-outline-secondary', 'btn-block');
+                copyButton.textContent = 'Bu Adresi Kopyala 📋';
+                copyButton.classList.add('btn', 'btn-outline-success', 'btn-block');
                 copyButton.onclick = () => copyToClipboard(cleanedLink);
 
                 const showXtreamButton = document.createElement('button');
-                showXtreamButton.classList.add('btn', 'btn-outline-secondary', 'btn-block');
+                showXtreamButton.classList.add('btn', 'btn-outline-info', 'btn-block');
                 showXtreamButton.textContent = 'Xtream Code olarak Göster';
                 showXtreamButton.setAttribute('data-toggle', 'collapse');
                 showXtreamButton.setAttribute('data-target', '#xtreamPanel_' + index);
@@ -379,7 +381,7 @@ async function fetchPatronLinks() {
             if (invalidLinks.length > 0) {
                 const invalidLinksNote = document.createElement('div');
                 invalidLinksNote.classList.add('alert', 'alert-danger', 'mt-2');
-                invalidLinksNote.innerHTML = `Toplam <strong>${invalidLinks.length}</strong> hatalı yazılmış adres. <a href="#" id="showInvalidLinks">Göster</a>`;
+                invalidLinksNote.innerHTML = `Toplam <strong>${invalidLinks.length}</strong> hatalı yazılmış adres toplam URL sayısına dahil edilmemiştir. <a href="#" id="showInvalidLinks">Göster</a>`;
                 summaryNote.appendChild(invalidLinksNote);
 
                 const invalidLinksList = document.createElement('ul');
