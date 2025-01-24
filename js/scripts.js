@@ -424,8 +424,8 @@ async function fetchPatronLinks() {
                 // Progress bar'ı güncelle
                 const progress = Math.round(((index + 1) / links.length) * 100);
                 updateCustomProgressBar(progress, index + 1);
-				// Gecikme ekle // 
-				await new Promise(resolve => setTimeout(resolve, 1));
+		// Gecikme ekle // 
+		await new Promise(resolve => setTimeout(resolve, 0));
             }
 
             // Hatalı linkleri ekleme ve toplam sayıları güncelleme
