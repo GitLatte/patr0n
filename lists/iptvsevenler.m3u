@@ -1,4 +1,4 @@
-#EXTM3U x-tvg-url="https://www.open-epg.com/files/turkey4.xml"
+#EXTM3U x-tvg-url="http://epg.tvcdn.net/guide/tr-guide.xml"
 #EXTINF:-1 tvg-name="Meclis TV"tvg-id="TBMM"tvg-logo="https://seeklogo.com/images/T/tbmm-logo-9FB0F2818C-seeklogo.com.png"group-title="Ulusal ":http-referrer="":http-user-agent="",Meclis TV
 https://meclistv-live.ercdn.net/meclistv/meclistv_720p.m3u8?e=&st=
 #EXTINF:-1 tvg-name="TRT 1"tvg-id="TRT_1"tvg-logo="https://cdn-i.pr.trt.com.tr/trttv/w750/h750/q100/10660277.png"group-title="Ulusal":http-referrer="":http-user-agent="",TRT 1
@@ -36,7 +36,7 @@ https://demiroren-live.daioncdn.net/kanald/kanald_720p.m3u8?app=kanald_web&ce=3
 #EXTINF:-1 tvg-name="Fox " tvg-id="" tvg-logo="https://gaziantepsabah.com/uploads/haberler/2024/02/1707815076-fox-tv-neden-now-tv-oldu-817x_.jpg?token=7f2508cd78f99260fc0da4481dea7aad"group-title="Ulusal":http-referrer="":http-user-agent="",Fox
 https://c.fulltvizle.com/fox/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-name="TV 8" tvg-id="" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/6/68/Tv8_Yeni_Logo.png"group-title="Ulusal":http-referrer="":http-user-agent="",TV 8
-https://x.canlitvapp.com/kanal8/tracks-v1a1/mono.m3u8
+http://stream.tvcdn.net/ulusal/tv8.m3u8
 #EXTINF:-1 tvg-name="TV 8.5" tvg-id="" tvg-logo="https://yt3.googleusercontent.com/-vaIq06Du-qfHHBi-NyA37lxaTCOYv3CBl093Hm42IetGFzWtDxZxs3MScfHCBczf26Ldlj2=s900-c-k-c0x00ffffff-no-rj"group-title="Ulusal":http-referrer="":http-user-agent="",TV 8.5
 https://tvcdn.4t40.workers.dev/https://tv.arectv3.xyz/live/tv85.m3u8
 #EXTINF:-1 tvg-name="Kanal 7 " tvg-id="" tvg-logo="https://play-lh.googleusercontent.com/s029TvwR-pU-SIoJh2GcGIScm4LzsmuTTbwPSCtwIK_6aOOXjQwC6mcHeMrPDst2KYM"group-title="Ulusal":http-referrer="":http-user-agent="",Kanal 7
