@@ -22,7 +22,7 @@ https://tv-trtarabi.medya.trt.com.tr/master_720.m3u8
 #EXTINF:-1 tvg-name="TRT World"tvg-id="TRT_World"tvg-logo="https://cdn-i.pr.trt.com.tr/trttv/w750/h750/q100/7834584.png"group-title="Ulusal ":http-referrer="":http-user-agent="",TRT World
 https://tv-trtworld.medya.trt.com.tr/master_720.m3u8
 #EXTINF:-1 tvg-name="Show TV "tvg-id="https://www.open-epg.com/files/turkeypremium2.xml"tvg-logo="https://m.showtv.com.tr/assets/images/other/showtv_social_media.jpg"group-title="Ulusal ":http-referrer="":http-user-agent="",Show TV
-https://tv.arectv11.sbs/live/show.m3u8
+http://stream.tvcdn.net/ulusal/show-tv.m3u8
 #EXTINF:-1 tvg-name="Star "tvg-id="https://www.open-epg.com/files/turkeypremium2.xml"tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTODT1C4SB518JljOlb7etd8VRmpGQJSyiFVw&s"group-title="Ulusal":http-referrer="":http-user-agent="",Star
 https://dogus-live.daioncdn.net/startv/startv_720p.m3u8
 #EXTINF:-1 tvg-name="ATV"tvg-id="https://www.open-epg.com/files/turkeypremium2.xml"tvg-logo="https://img.ulusal.com.tr/rcman/Cw1280h720q95gc/storage/files/images/2022/10/06/806x378-atv-canli-izle-hd-kesintisiz-atv-yayin-akisi-bugun-atv-dizileri-ve-programlari-canli-yayin-tikla-izle-1647693994485-1665003460.jpg"group-title="Ulusal":http-referrer="":http-user-agent="",ATV
