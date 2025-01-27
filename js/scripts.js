@@ -54,7 +54,7 @@ function clearPreviousResults() {
     linksContainer.innerHTML = '';
     copyAllLinksBtn.style.display = 'none';
     sourceInfo.textContent = '';
-	linksHeader.innerHTML = 'Sonuçlar Aşağıda Listelenir <i class="bi bi-sort-down"></i>';
+    linksHeader.innerHTML = 'Sonuçlar Aşağıda Listelenir <i class="bi bi-sort-down"></i>';
     updateCustomProgressBar(0); // Progress barı sıfırla
 }
 
@@ -344,7 +344,7 @@ async function fetchPatronLinks() {
             // Hatalı linkleri ve toplam sayıları gösterme alanı ekle
             const summaryNote = document.createElement('div');
             summaryNote.classList.add('alert', 'alert-warning', 'mt-2');
-            summaryNote.innerHTML = `Bulunan bağlantı toplamı <strong>${links.length}</strong> adet`;
+            summaryNote.innerHTML = `Bulunan <strong>M3U Adresi</strong> toplamı <strong>${links.length}</strong> adet`;
             linksContainer.appendChild(summaryNote);
 
             // Linkleri listeye ekleme
