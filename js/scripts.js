@@ -482,7 +482,7 @@ async function fetchPatronLinks() {
 async function loadPlaylists() {
     const playlists = [
         { name: "IPTV Sevenler (Sinetech.tr @MemetCandal)", url: "https://tinyurl.com/iptvlovers" },
-	{ name: "patr0nspor Listesi (Sinetech.tr @patr0n)", url: "https://tinyurl.com/patronspor2025" },    
+	{ name: "patr0nspor Listesi (Sinetech.tr @patr0n)", url: "https://tinyurl.com/patronsport" },    
     ];
 
     const playlistContainer = document.getElementById('playlistContainer');
