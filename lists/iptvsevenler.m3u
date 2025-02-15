@@ -45,7 +45,7 @@ https://tv.ensonhaber.com/tv360/tv360.m3u8
 https://turkmedya-live.ercdn.net/tv4/tv4_1080p.m3u8
 #EXTINF:-1 tvg-name="Kanal 53" tvg-id="Kanal 53.tr" tvg-logo="https://s1.dmcdn.net/v/W4AVe1c3eeyX2yLHH/x1080" group-title="Ulusal" ,Kanal 53
 https://kanal53.ozelip.com:3448/hybrid/play.m3u8
-#EXTINF:-1 tvg-name="TRT Haber" tvg-id="TRT Haber.tr" tvg-logo="https://cdn-i.pr.trt.com.tr/trttv/w750/h750/q100/8971102.png" group-title="Haber " ,TRT Haber
+#EXTINF:-1 tvg-name="TRT Haber" tvg-id="TRT Haber.tr" tvg-logo="https://cdn-i.pr.trt.com.tr/trttv/w750/h750/q100/8971102.png" group-title="Haber" ,TRT Haber
 https://tv-trthaber.medya.trt.com.tr/master_720.m3u8
 #EXTINF:-1 tvg-name="Haber Türk" tvg-id="Haber Türk.tr" tvg-logo="https://blutv-images.mncdn.com/q/t/i/bluv2/100/750x750/5dc2bf0c866ac331e0feb216" group-title="Haber" ,Haber Türk
 https://ciner-live.daioncdn.net/haberturktv/haberturktv_720p.m3u8
@@ -83,9 +83,9 @@ https://ciner-live.daioncdn.net/bloomberght/bloomberght_720p.m3u8
 https://akittv-live.ercdn.net/akittv/akittv_480p.m3u8?hash=3f277808dd527874fba12c4fb05536f5
 #EXTINF:-1 tvg-name="Ekol TV" tvg-id="Ekol TV.tr" tvg-logo="https://i.ytimg.com/vi/Dgu7vLzwb98/hq720.jpg?v=6732222d&sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCYQCw0CbQSX2Q6DoJ03pM2o7OPQw" group-title="Haber" ,Ekol TV
 https://ekoltv-live.ercdn.net/ekoltv/ekoltv_1080p.m3u8
-#EXTINF:-1 tvg-name="TV Net" tvg-id="TV Net.tr" tvg-logo="https://play-lh.googleusercontent.com/AECL6sDr1YtDec7ZuBXs5ESB3fdHDZLdapYf-kKsR_miNAtrFXRxoD08qZg4hfwP_pvx" group-title="Haber " ,TV Net
+#EXTINF:-1 tvg-name="TV Net" tvg-id="TV Net.tr" tvg-logo="https://play-lh.googleusercontent.com/AECL6sDr1YtDec7ZuBXs5ESB3fdHDZLdapYf-kKsR_miNAtrFXRxoD08qZg4hfwP_pvx" group-title="Haber" ,TV Net
 https://mn-nl.mncdn.com/tvnet/tvnet/chunklist.m3u8
-#EXTINF:-1 tvg-name="TRT Belgesel" tvg-id="TRT Belgesel.tr" tvg-logo="https://cdn-i.pr.trt.com.tr/trttv/w750/h750/q100/8114410.png" group-title="Belgesel " ,TRT Belgesel
+#EXTINF:-1 tvg-name="TRT Belgesel" tvg-id="TRT Belgesel.tr" tvg-logo="https://cdn-i.pr.trt.com.tr/trttv/w750/h750/q100/8114410.png" group-title="Belgesel" ,TRT Belgesel
 https://tv-trtbelgesel.medya.trt.com.tr/master_720.m3u8
 #EXTINF:-1 tvg-name="TLC" tvg-id="TLC.tr" tvg-logo="https://img-tlctv.mncdn.com/logo.png" group-title="Belgesel" ,TLC
 https://dogus-live.daioncdn.net/tlc/tlc_720p.m3u8
@@ -121,7 +121,7 @@ http://alb854s.xyz:8080/st1321/st.0852/6290
 http://unreal.eztv4you.xyz:25461/98392023/224vpw99f7/432307
 #EXTINF:-1 tvg-name="TR | Fashion TVⓧ FHD" tvg-id="TR | Fashion TVⓧ FHD.tr" tvg-logo="http://platinumxmedia.xyz:8080/images/49a709e3d0ced8b1a6a0f5091cf6e231.png" group-title="Belgesel" ,TR | Fashion TVⓧ FHD
 http://unreal.eztv4you.xyz:25461/98392023/224vpw99f7/432308
-#EXTINF:-1 tvg-name="TR | Love Natureⓧ HD" tvg-id="TR | Love Natureⓧ HD.tr" tvg-logo="http://platinumxmedia.xyz:8080/images/32167cf1f862054f6c6c323d38a1f2f2.png" group-title="Belgesel " ,Love Nature
+#EXTINF:-1 tvg-name="TR | Love Natureⓧ HD" tvg-id="TR | Love Natureⓧ HD.tr" tvg-logo="http://platinumxmedia.xyz:8080/images/32167cf1f862054f6c6c323d38a1f2f2.png" group-title="Belgesel" ,Love Nature
 http://alb854s.xyz:8080/st1321/st.0852/22098
 #EXTINF:-1 tvg-name="TRT Çocuk" tvg-id="TRT Çocuk.tr" tvg-logo="https://cdn-i.pr.trt.com.tr/trttv/w750/h750/q100/13060701.png" group-title="Çocuklara Özel" ,TRT Çocuk
 https://tv-trtcocuk.medya.trt.com.tr/master_720.m3u8
@@ -139,7 +139,7 @@ http://unreal.eztv4you.xyz:25461/98392023/224vpw99f7/432280
 http://unreal.eztv4you.xyz:25461/98392023/224vpw99f7/432454
 #EXTINF:-1 tvg-name="TR | Sünger Bobⓧ FHD" tvg-id="TR | Sünger Bobⓧ FHD.tr" tvg-logo="http://platinumxmedia.xyz:8080/images/b37a7e9fb6eb84af57912e4dc55e088e.png" group-title="Çocuklara Özel" ,TR | Sünger Bobⓧ FHD
 http://unreal.eztv4you.xyz:25461/98392023/224vpw99f7/432520
-#EXTINF:-1 tvg-name="BEIN BOX OFFICE 1 ʜᴅ" tvg-id="BEIN BOX OFFICE 1 ʜᴅ.tr" tvg-logo="" group-title="Sinema " ,BEIN BOX OFFICE 1 ʜᴅ
+#EXTINF:-1 tvg-name="BEIN BOX OFFICE 1 ʜᴅ" tvg-id="BEIN BOX OFFICE 1 ʜᴅ.tr" tvg-logo="" group-title="Sinema" ,BEIN BOX OFFICE 1 ʜᴅ
 http://unreal.eztv4you.xyz:25461/98392023/224vpw99f7/432166
 #EXTINF:-1 tvg-name="beIN Box Office 2 HD TR" tvg-id="beIN Box Office 2 HD TR.tr" tvg-logo="" group-title="Sinema" ,beIN Box Office 2 HD TR
 http://alb854s.xyz:8080/st1321/st.0852/6196
@@ -873,7 +873,7 @@ http://alb854s.xyz:8080/st1321/st.0852/170468
 http://alb854s.xyz:8080/st1321/st.0852/170469
 #EXTINF:-1 tvg-name="TR: Cine Box TV 20 HD" tvg-id="TR: Cine Box TV 20 HD.tr" tvg-logo="http://play.iptvcity.tk/logolar/BeonLogolar/cinebox.png" group-title="TR/ Sinema Kanalları" ,TR: Cine Box TV 20 HD
 http://alb854s.xyz:8080/st1321/st.0852/170470
-#EXTINF:-1 tvg-name="A Spor" tvg-id="A Spor.tr" tvg-logo="https://cdn6.aptoide.com/imgs/7/f/d/7fd636ea06646d1a9aaefe27a11dfb58_icon.png" group-title="Spor " ,A Spor
+#EXTINF:-1 tvg-name="A Spor" tvg-id="A Spor.tr" tvg-logo="https://cdn6.aptoide.com/imgs/7/f/d/7fd636ea06646d1a9aaefe27a11dfb58_icon.png" group-title="Spor" ,A Spor
 https://tgn.bozztv.com/dvrfl05/gin-aspor/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-name="TRT Spor" tvg-id="TRT Spor.tr" tvg-logo="https://cdn-i.pr.trt.com.tr/trttv/w750/h750/q100/13687983.png" group-title="Spor" ,TRT Spor
 https://tgn.bozztv.com/dvrfl05/gin-trtspor/tracks-v1a1/mono.m3u8
@@ -1005,7 +1005,7 @@ http://alb854s.xyz:8080/st1321/st.0852/454318
 http://alb854s.xyz:8080/st1321/st.0852/454320
 #EXTINF:-1 tvg-name="Tabii Spor 5" tvg-id="Tabii Spor 5.tr" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW8juuOTEz0HTNRA-AE6f7FxQquA4dGTzQYQ&s" group-title="Spor" ,Tabii Spor 5
 https://v.arectv11.sbs/static/tabi5.m3u8
-#EXTINF:-1 tvg-name="Tabii Spor 6" tvg-id="Tabii Spor 6.tr" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW8juuOTEz0HTNRA-AE6f7FxQquA4dGTzQYQ&s" group-title="Spor " ,Tabii Spor 6
+#EXTINF:-1 tvg-name="Tabii Spor 6" tvg-id="Tabii Spor 6.tr" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW8juuOTEz0HTNRA-AE6f7FxQquA4dGTzQYQ&s" group-title="Spor" ,Tabii Spor 6
 http://alb854s.xyz:8080/st1321/st.0852/454324
 #EXTINF:-1 tvg-name="TRT Müzik" tvg-id="TRT Müzik.tr" tvg-logo="https://cdn-i.pr.trt.com.tr/trttv/w750/h750/q100/12382043.png" group-title="Müzik Kanalları" ,TRT Müzik
 https://tv-trtmuzik.medya.trt.com.tr/master_720.m3u8
@@ -1399,7 +1399,7 @@ http://alb854s.xyz:8080/movie/st1321/st.0852/427562.mkv
 http://alb854s.xyz:8080/movie/st1321/st.0852/427564.mp4
 #EXTINF:-1 tvg-name="Love You Zindagi (2019)" tvg-id="Love You Zindagi (2019).tr" tvg-logo="https://image.tmdb.org/t/p/w600_and_h900_bestv2/2yyFLpwL3GAVzWPAVnXtoEkGkqd.jpg" group-title="Filmler" ,Love You Zindagi (2019)
 http://alb854s.xyz:8080/movie/st1321/st.0852/427565.mp4
-#EXTINF:-1 tvg-name="Ters Yuz" tvg-id="Ters Yuz.tr" tvg-logo="https://www.hdfilmcehennemi.nl/images/list/poster/ters-yuz-film-izle-hd.webp" group-title="Animasyon " ,Ters Yuz
+#EXTINF:-1 tvg-name="Ters Yuz" tvg-id="Ters Yuz.tr" tvg-logo="https://www.hdfilmcehennemi.nl/images/list/poster/ters-yuz-film-izle-hd.webp" group-title="Animasyon" ,Ters Yuz
 https://a3.vidload.lol/1055/1080p.m3u8
 #EXTINF:-1 tvg-name="Ters Yuz 2" tvg-id="Ters Yuz 2.tr" tvg-logo="https://www.hdfilmcehennemi.nl/images/list/poster/inside-out-2.webp" group-title="Animasyon" ,Ters Yuz 2
 https://vidrame.pro/vr/get/968e8cf1/1080.txt
@@ -1411,5 +1411,5 @@ https://vidrame.pro/vr/get/45ba91a9/1080.txt
 https://vidmody.com/vs/tt0298148
 #EXTINF:-1 tvg-name="Srek 3" tvg-id="Srek 3.tr" tvg-logo="https://m.media-amazon.com/images/M/MV5BOTgyMjc3ODk2MV5BMl5BanBnXkFtZTcwMjY0MjEzMw@@._V1_FMjpg_UX1000_.jpg" group-title="Animasyon" ,Srek 3
 https://vidmody.com/vs/tt0413267
-#EXTINF:-1 tvg-name="Srek 4" tvg-id="Srek 4.tr" tvg-logo="https://m.media-amazon.com/images/M/MV5BMTY0OTU1NzkxMl5BMl5BanBnXkFtZTcwMzI2NDUzMw@@._V1_FMjpg_UX1000_.jpg" group-title="Animasyon " ,Srek 4
+#EXTINF:-1 tvg-name="Srek 4" tvg-id="Srek 4.tr" tvg-logo="https://m.media-amazon.com/images/M/MV5BMTY0OTU1NzkxMl5BMl5BanBnXkFtZTcwMzI2NDUzMw@@._V1_FMjpg_UX1000_.jpg" group-title="Animasyon" ,Srek 4
 https://vidrame.pro/vr/get/cc6feded/1080.txt
