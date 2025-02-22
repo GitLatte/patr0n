@@ -1,6 +1,5 @@
 ﻿#EXTM3U
 #EXTINF:-1 xui-id="" tvg-id="TR" tvg-name="TR: beIN Sport 1 HD" tvg-logo="https://i.hizliresim.com/5j967nr.png" group-title="Spor Kanalları",TR: beIN Sport 1 HD
-#EXTVLCOPT:http-user-agent=Dalvik/2.1.0 (Linux; U; Android 13; Samsung F1833B Build/TP1A.280629.015)
 https://cors.nicolasd-winsten.workers.dev/?apiUrl=https://tre.2b4a9bb526bd2acb.shop/i/bein1/601/playlist.m3u8
 #EXTINF:-1 xui-id="" tvg-id="TR" tvg-name="TR: beIN Sport 2 HD" tvg-logo="https://i.hizliresim.com/5j967nr.png" group-title="Spor Kanalları",TR: beIN Sport 2 HD
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0 (Linux; U; Android 13; Samsung F1833B Build/TP1A.280629.015)
