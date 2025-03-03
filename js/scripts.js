@@ -1,13 +1,18 @@
 let currentRequest = null; // Şu anki aktif istek
 
 // Progress bar'ı güncelleyen fonksiyon
-function updateCustomProgressBar(progress, count) {
+function updateCustomProgressBar(progress, count, totalLinks) {
     const progressBar = document.getElementById('customProgress');
     const progressValue = document.querySelector('.progress-value');
+    const linksHeader = document.getElementById('linksHeader');
     
     if (progressBar && progressValue) {
         progressBar.style.width = `${progress}%`;
-        progressValue.textContent = progress === 100 ? `İşlem tamamlandı` : `${progress}% (${count} link)`;
+        progressValue.textContent = progress === 100 ? `İşlem tamamlandı` : `${progress}% ${count}/${totalLinks} link`;
+        
+        if (linksHeader && count > 0) {
+            linksHeader.textContent = `Bulunan bağlantılar toplamı ${totalLinks} adet`;
+        }
     } else {
         console.error('Progress bar or value element not found');
     }
@@ -34,12 +39,16 @@ function decodeURL(url) {
 
 function showLoadingMessage(show) {
     const loadingMessage = document.getElementById('loadingMessage');
-    loadingMessage.style.display = show ? 'block' : 'none';
+    if (loadingMessage) {
+        loadingMessage.style.display = show ? 'block' : 'none';
+    }
 }
 
 function showNewMethodMessage(show) {
     const newMethodMessage = document.getElementById('newMethodMessage');
-    newMethodMessage.style.display = show ? 'block' : 'none';
+    if (newMethodMessage) {
+        newMethodMessage.style.display = show ? 'block' : 'none';
+    }
 }
 
 function cleanURL(url) {
@@ -51,14 +60,159 @@ function clearPreviousResults() {
     const copyAllLinksBtn = document.getElementById('copyAllLinksBtn');
     const sourceInfo = document.getElementById('sourceInfo');
     const linksHeader = document.getElementById('linksHeader');
-    linksContainer.innerHTML = '';
-    copyAllLinksBtn.style.display = 'none';
-    sourceInfo.textContent = '';
-    linksHeader.innerHTML = 'Sonuçlar Aşağıda Listelenir <i class="bi bi-sort-down"></i>';
-    updateCustomProgressBar(0); // Progress barı sıfırla
+    if (linksContainer) linksContainer.innerHTML = '';
+    if (copyAllLinksBtn) copyAllLinksBtn.style.display = 'none';
+    if (sourceInfo) sourceInfo.textContent = '';
+    if (linksHeader) linksHeader.textContent = 'Sonuçlar';
+    updateCustomProgressBar(0, 0); // Progress barı sıfırla
 }
 
+// Tab handling functions
+function initializeTabs() {
+    const mainTabs = document.getElementById('mainTabs');
+    if (mainTabs) {
+        mainTabs.addEventListener('click', function(e) {
+            if (e.target.classList.contains('nav-link')) {
+                e.preventDefault();
+                const tabId = e.target.getAttribute('href').substring(1);
+                showTab(tabId);
+                // Update URL with hash for direct access
+                window.location.hash = tabId;
+            }
+        });
 
+        // Check for hash in URL on page load
+        if (window.location.hash) {
+            const tabId = window.location.hash.substring(1);
+            showTab(tabId);
+        }
+    }
+}
+
+function showTab(tabId) {
+    // Hide all tab panes
+    document.querySelectorAll('.tab-pane').forEach(pane => {
+        pane.classList.remove('show', 'active');
+    });
+
+    // Deactivate all tabs
+    document.querySelectorAll('.nav-link').forEach(tab => {
+        tab.classList.remove('active');
+    });
+
+    // Show selected tab pane
+    const selectedPane = document.getElementById(tabId);
+    if (selectedPane) {
+        selectedPane.classList.add('show', 'active');
+    }
+
+    // Activate selected tab
+    const selectedTab = document.querySelector(`[href="#${tabId}"]`);
+    if (selectedTab) {
+        selectedTab.classList.add('active');
+    }
+
+    // Clear results section when switching tabs
+    clearPreviousResults();
+    showCustomProgressBar(false);
+    showNewMethodMessage(false);
+    showLoadingMessage(false);
+}
+
+// Initialize tabs when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    initializeTabs();
+    // Initialize tooltips
+    $('[data-toggle="tooltip"]').tooltip();
+    // Initialize dynamic page loading
+    initializeNavigation();
+    // Load the default page
+    loadPage('pages/link-extraction.html');
+});
+
+// Dynamic page loading functionality
+function initializeNavigation() {
+    const navLinks = document.querySelectorAll('#mainNav .nav-link');
+    if (navLinks) {
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Remove active class from all links
+                navLinks.forEach(l => l.classList.remove('active'));
+                
+                // Add active class to clicked link
+                this.classList.add('active');
+                
+                // Load the corresponding page
+                const pagePath = this.getAttribute('data-page');
+                if (pagePath) {
+                    loadPage(pagePath);
+                }
+            });
+        });
+    }
+}
+
+function loadPage(pagePath) {
+    const contentContainer = document.getElementById('content-container');
+    if (!contentContainer) return;
+    
+    // Add fade-out effect
+    contentContainer.style.opacity = '0';
+    
+    // Use XMLHttpRequest instead of fetch to handle local files
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', pagePath, true);
+    
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(xhr.responseText, 'text/html');
+            const container = doc.querySelector('.container-fluid');
+            
+            if (container) {
+                setTimeout(() => {
+                    contentContainer.innerHTML = container.innerHTML;
+                    contentContainer.style.opacity = '1';
+                    
+                    // Reset and hide UI elements for the new page
+                    const progressContainer = document.getElementById('customProgressContainer');
+                    const linksContainer = document.getElementById('linksContainer');
+                    const copyAllLinksBtn = document.getElementById('copyAllLinksBtn');
+                    const sourceInfo = document.getElementById('sourceInfo');
+                    const loadingMessage = document.getElementById('loadingMessage');
+                    
+                    if (progressContainer) progressContainer.style.display = 'none';
+                    if (linksContainer) linksContainer.style.display = pagePath.includes('ready-lists.html') ? 'none' : 'block';
+                    if (copyAllLinksBtn) copyAllLinksBtn.style.display = 'none';
+                    if (sourceInfo) sourceInfo.textContent = '';
+                    if (loadingMessage) loadingMessage.style.display = 'none';
+                    
+                    // Reinitialize components
+                    if (typeof $ !== 'undefined') {
+                        $('[data-toggle="tooltip"]').tooltip();
+                    }
+                    if (pagePath.includes('ready-lists.html')) {
+                        if (typeof loadPlaylists === 'function') {
+                            loadPlaylists();
+                        }
+                    }
+                }, 300);
+            }
+        } else {
+            contentContainer.innerHTML = '<div class="alert alert-danger">Error loading content</div>';
+            contentContainer.style.opacity = '1';
+        }
+    };
+    
+    xhr.onerror = function() {
+        contentContainer.innerHTML = '<div class="alert alert-danger">Error loading content</div>';
+        contentContainer.style.opacity = '1';
+    };
+    
+    xhr.send();
+}
 function showSection(sectionId) {
     const sections = ['metin-ayiklama', 'url-ayiklama', 'patron-ayiklama', 'hazir-listeler'];
     sections.forEach(id => {
@@ -71,7 +225,6 @@ function showSection(sectionId) {
     });
     clearPreviousResults(); // Sonuçları temizle
 }
-
 
 // Metinden Linkleri Ayıklama
 async function extractLinks() {
@@ -161,6 +314,8 @@ async function fetchLinksFromPage() {
         
         if (links && links.length > 0) {
             linksContainer.innerHTML = '';
+
+            document.getElementById('copyCurrentPageBtn').style.display = 'block';
             const invalidLinks = []; // Hatalı linkleri saklamak için
             
             for (const [index, link] of links.entries()) {
@@ -276,7 +431,7 @@ async function fetchLinksFromPage() {
                 });
             }
 
-            copyAllLinksBtn.style.display = 'block';
+
             sourceInfo.textContent = pageUrl;
             linksHeader.innerHTML = `Bulunan bağlantı toplamı&nbsp; <strong>${links.length}</strong>  &nbsp;adet`; // Toplam link sayısını ekle
         } else {
@@ -299,173 +454,320 @@ async function fetchLinksFromPage() {
     showLoadingMessage(false);
 }
 
+function hideError() {
+    const errorMessage = document.getElementById('errorMessage');
+    errorMessage.style.display = 'none';
+}
+
+function showError(message) {
+    const errorMessage = document.getElementById('errorMessage');
+    errorMessage.textContent = message;
+    errorMessage.style.display = 'block';
+}
+
+function showCustomProgressBar(show) {
+    const progressContainer = document.getElementById('customProgressContainer');
+    progressContainer.style.display = show ? 'block' : 'none';
+}
+
+function updateCustomProgressBar(percentage, count, totalCount) {
+    const progressBar = document.getElementById('customProgress');
+    const progressValue = document.querySelector('.progress-value');
+    progressBar.style.width = percentage + '%';
+    progressValue.textContent = totalCount ? `${percentage}% (${count}/${totalCount} link)` : `${percentage}% (${count} link)`;
+}
+
+function displayLinks(links) {
+    const linksContainer = document.getElementById('links');
+    const copyAllLinksBtn = document.getElementById('copyAllLinksBtn');
+    const linksHeader = document.getElementById('linksHeader');
+
+    linksContainer.innerHTML = '';
+    if (links.length > 0) {
+        links.forEach((link, index) => {
+            const linkWrapper = document.createElement('div');
+            linkWrapper.classList.add('p-3', 'mb-2', 'bg-light', 'rounded');
+
+            const linkElement = document.createElement('a');
+            linkElement.href = link;
+            linkElement.textContent = `${index + 1}. ${link}`;
+            linkElement.target = '_blank';
+            linkElement.classList.add('d-block', 'mb-2');
+
+            const copyButton = document.createElement('button');
+            copyButton.textContent = 'Bu Adresi Kopyala 📋';
+            copyButton.classList.add('btn', 'btn-outline-success', 'btn-block');
+            copyButton.onclick = () => copyToClipboard(link);
+
+            linkWrapper.appendChild(linkElement);
+            linkWrapper.appendChild(copyButton);
+            linksContainer.appendChild(linkWrapper);
+        });
+
+        copyAllLinksBtn.style.display = 'block';
+        linksHeader.textContent = `Bulunan bağlantı toplamı ${links.length} adet`;
+    } else {
+        linksContainer.textContent = 'Hiçbir link bulunamadı.';
+        copyAllLinksBtn.style.display = 'none';
+    }
+}
+
+function copyToClipboard(text) {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+}
+
+function copyCurrentPageLinks() {
+    const currentLinks = Array.from(document.querySelectorAll('.result-item a'))
+        .map(a => a.href)
+        .join('\n');
+    copyToClipboard(currentLinks);
+}
+
+function copyAllLinks() {
+    const allLinks = Array.from(document.querySelectorAll('.result-item a'))
+        .map(a => a.href)
+        .join('\n');
+    copyToClipboard(allLinks);
+}
+
+let currentPage = 1;
+const linksPerPage = 50;
+
 async function fetchPatronLinks() {
     clearPreviousResults();
     showNewMethodMessage(true);
     showLoadingMessage(true);
-    showCustomProgressBar(true); // Progress barı göster
+    showCustomProgressBar(true);
 
     if (currentRequest) {
-        currentRequest.abort(); // Önceki istek varsa iptal et
+        currentRequest.abort();
     }
 
-    currentRequest = new AbortController(); // Yeni AbortController oluştur
-    const signal = currentRequest.signal; // Abort sinyalini al
-
-    const invalidLinks = []; // Hatalı linkleri saklamak için
+    currentRequest = new AbortController();
+    const signal = currentRequest.signal;
+    const invalidLinks = [];
 
     try {
-        const proxyUrl = 'https://cors.gitlatte.workers.dev/?url='; // Cloudflare Worker URL'sini kullanıyoruz
+        const proxyUrl = 'https://cors.gitlatte.workers.dev/?url=';
         const targetUrl = 'https://tinyurl.com/gitpatron';
         let response = await fetch(proxyUrl + encodeURIComponent(targetUrl), { signal });
-        const html = await response.text(); // Proxy kullandığımız için doğrudan metin olarak alıyoruz
+        const html = await response.text();
 
-        // Ayıklama işlemi
         const urlPattern = /(https?:\/\/[^\s]+)/g;
         const links = html.match(urlPattern);
-        const lines = html.split('\n'); // Satırları ayır
+        const lines = html.split('\n');
 
         const linksContainer = document.getElementById('links');
         const copyAllLinksBtn = document.getElementById('copyAllLinksBtn');
         const sourceInfo = document.getElementById('sourceInfo');
         const linksHeader = document.getElementById('linksHeader');
+        const lastUpdate = document.getElementById('lastUpdate');
+        const totalLinks = document.getElementById('totalLinks');
         
-        const firstLine = html.split('\n')[0].trim(); // İlk satırı al
+        const firstLine = html.split('\n')[0].trim();
+        const [datePart] = firstLine.split('_');
+
+        // Find the first link and separator line to count new links
+        let newLinksCount = 0;
+        const firstLinkIndex = lines.findIndex(line => urlPattern.test(line));
+        const separatorIndex = lines.slice(firstLinkIndex).findIndex(line => line.trim().match(/^-{3,}/));
+        
+        if (firstLinkIndex >= 0 && separatorIndex > 0) {
+            // Count links from first link to separator
+            const newLinksText = lines.slice(firstLinkIndex, firstLinkIndex + separatorIndex).join('\n');
+            const newLinks = newLinksText.match(urlPattern) || [];
+            newLinksCount = newLinks.length;
+        }
+
+        // Update info cards
+        lastUpdate.textContent = datePart;
+        totalLinks.textContent = links ? links.length : '0';
+        
+        // Add new links count to the info cards if available
+        const newLinksInfo = document.getElementById('newLinks');
+        if (newLinksInfo) {
+            newLinksInfo.textContent = newLinksCount > 0 ? newLinksCount : '0';
+        }
 
         if (links && links.length > 0) {
-            // Bilgi notunu ekleme
-            const infoNote = document.createElement('div');
-			infoNote.classList.add('alert', 'alert-info', 'mt-2');
-			const [datePart] = firstLine.split('_');
-			infoNote.textContent = `Son güncelleme tarihi: ${datePart}`;
-			linksContainer.appendChild(infoNote);
+            linksContainer.innerHTML = '';
 
+            document.getElementById('copyCurrentPageBtn').style.display = 'block';
 
-            // Hatalı linkleri ve toplam sayıları gösterme alanı ekle
-            const summaryNote = document.createElement('div');
-            summaryNote.classList.add('alert', 'alert-warning', 'mt-2');
-            summaryNote.innerHTML = `Bulunan <strong>M3U Adresi</strong> toplamı <strong>${links.length}</strong> adet`;
-            linksContainer.appendChild(summaryNote);
+            // Calculate pagination
+            const totalPages = Math.ceil(links.length / linksPerPage);
+            const startIndex = (currentPage - 1) * linksPerPage;
+            const endIndex = Math.min(startIndex + linksPerPage, links.length);
+            const currentLinks = links.slice(startIndex, endIndex);
 
-            // Linkleri listeye ekleme
-            for (const [index, link] of links.entries()) {
+            // Create pagination controls
+            const paginationContainer = document.createElement('div');
+            paginationContainer.classList.add('pagination', 'justify-content-center', 'my-3');
+            paginationContainer.innerHTML = `
+                <button class="btn mx-1" onclick="changePage(1)" ${currentPage === 1 ? 'disabled' : ''}>
+                    <i class="fas fa-angle-double-left"></i>
+                </button>
+                <button class="btn mx-1" onclick="changePage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}>
+                    <i class="fas fa-angle-left"></i>
+                </button>
+                <span class="mx-3">Sayfa ${currentPage} / ${totalPages}</span>
+                <button class="btn mx-1" onclick="changePage(${currentPage + 1})" ${currentPage === totalPages ? 'disabled' : ''}>
+                    <i class="fas fa-angle-right"></i>
+                </button>
+                <button class="btn mx-1" onclick="changePage(${totalPages})" ${currentPage === totalPages ? 'disabled' : ''}>
+                    <i class="fas fa-angle-double-right"></i>
+                </button>
+            `;
+
+            linksContainer.appendChild(paginationContainer);
+
+            for (const [index, link] of currentLinks.entries()) {
                 if (signal.aborted) return;
 
-                // URL'yi doğrula ve temizle
                 let cleanedLink;
                 try {
                     cleanedLink = new URL(cleanURL(decodeURL(link)).trim()).href;
                 } catch (e) {
                     console.error('Geçersiz URL atlandı:', link);
                     invalidLinks.push(link);
-                    continue; // Geçersiz URL'yi atla
+                    continue;
                 }
 
-                // İlgili bilgileri içeren satırları bul
                 const linkLineIndex = lines.findIndex(line => line.includes(link));
                 const linkLine = lines[linkLineIndex] || '';
                 const infoLine = lines[linkLineIndex + 1] || '';
 
                 const maxConnectionsMatch = (linkLine + ' ' + infoLine).match(/(?:Maksimum Bağlantılar|Maximum Connections): (\d+)/);
-                const maxConnections = maxConnectionsMatch ? `<span style="color: rgb(41, 105, 176);">Önemli</span>: Aynı anda en fazla <strong>${maxConnectionsMatch[1]}</strong> kişi kullanabilir` : '';
                 const expiresMatch = (linkLine + ' ' + infoLine).match(/(?:Son kullanma tarihi|Expires): ([\d\/\.\- ]+ \d+:\d+:\d+)/);
-                const expires = expiresMatch ? `<span style="color: rgb(41, 105, 176);">Son kullanma tarihi</span>: <strong>${expiresMatch[1]}</strong>` : '';
 
-                const linkWrapper = document.createElement('div');
-                linkWrapper.classList.add('p-3', 'mb-2', 'bg-light', 'rounded');
-                linkWrapper.id = 'linkWrapper_' + index;
+                // Create result item container
+                const resultItem = document.createElement('div');
+                resultItem.classList.add('result-item');
 
-                const linkElement = document.createElement('a');
-                linkElement.href = cleanedLink;
-                linkElement.textContent = (index + 1) + '. ' + cleanedLink;
-                linkElement.target = '_blank';
-                linkElement.classList.add('d-block', 'mb-2');
+                // Add result number
+                const resultNumber = document.createElement('div');
+                resultNumber.classList.add('result-number');
+                resultNumber.textContent = startIndex + index + 1;
+                resultItem.appendChild(resultNumber);
 
-                const connectionsInfo = document.createElement('span');
-                connectionsInfo.innerHTML = maxConnections;
-                connectionsInfo.classList.add('ml-2', 'font-italic', 'text-muted');
+                // Create info section
+                const resultInfo = document.createElement('div');
+                resultInfo.classList.add('result-info');
 
-                const expiresInfo = document.createElement('span');
-                expiresInfo.innerHTML = expires;
-                expiresInfo.classList.add('ml-2', 'font-italic', 'text-muted');
-
-                const copyButton = document.createElement('button');
-                copyButton.textContent = 'Bu Adresi Kopyala 📋';
-                copyButton.classList.add('btn', 'btn-outline-success', 'btn-block');
-                copyButton.onclick = () => copyToClipboard(cleanedLink);
-
-                const showXtreamButton = document.createElement('button');
-                showXtreamButton.classList.add('btn', 'btn-outline-info', 'btn-block');
-                showXtreamButton.textContent = 'Xtream Code olarak Göster';
-                showXtreamButton.setAttribute('data-toggle', 'collapse');
-                showXtreamButton.setAttribute('data-target', '#xtreamPanel_' + index);
-                showXtreamButton.setAttribute('aria-expanded', 'false');
-                showXtreamButton.setAttribute('aria-controls', 'xtreamPanel_' + index);
-
-                const xtreamPanel = document.createElement('div');
-                xtreamPanel.id = 'xtreamPanel_' + index;
-                xtreamPanel.classList.add('collapse', 'mt-2');
-
-                const xtreamDetails = parseXtreamDetails(cleanedLink);
-                xtreamPanel.innerHTML = `
-                    <div><strong>Sunucu Adresi:</strong> <span>${xtreamDetails.server}</span></div>
-                    <div><strong>Kullanıcı Adı:</strong> <span>${xtreamDetails.username}</span></div>
-                    <div><strong>Şifre:</strong> <span>${xtreamDetails.password}</span></div>
+                // Add URL info
+                const urlInfo = document.createElement('div');
+                urlInfo.classList.add('result-info-item');
+                urlInfo.innerHTML = `
+                    <div class="result-info-label">URL:</div>
+                    <div class="result-info-value">
+                        <a href="${cleanedLink}" target="_blank">${cleanedLink}</a>
+                    </div>
                 `;
+                resultInfo.appendChild(urlInfo);
 
-                linkWrapper.appendChild(linkElement);
-                if (maxConnections) linkWrapper.appendChild(connectionsInfo); // Bağlantı bilgisi ekle
-                if (expires) linkWrapper.appendChild(expiresInfo); // Son kullanma tarihi bilgisi ekle
-                linkWrapper.appendChild(copyButton);
-                linkWrapper.appendChild(showXtreamButton);
-                linkWrapper.appendChild(xtreamPanel);
-                linksContainer.appendChild(linkWrapper);
+                // Add connection limit if available
+                if (maxConnectionsMatch) {
+                    const connectionInfo = document.createElement('div');
+                    connectionInfo.classList.add('result-info-item');
+                    connectionInfo.innerHTML = `
+                        <div class="result-info-label">Bağlantı Limiti:</div>
+                        <div class="result-info-value">${maxConnectionsMatch[1]} kullanıcı</div>
+                    `;
+                    resultInfo.appendChild(connectionInfo);
+                }
 
-                // Progress bar'ı güncelle
-                const progress = Math.round(((index + 1) / links.length) * 100);
-                updateCustomProgressBar(progress, index + 1);
-		// Gecikme ekle // 
-		await new Promise(resolve => setTimeout(resolve, 0));
+                // Add expiry date if available
+                if (expiresMatch) {
+                    const expiryInfo = document.createElement('div');
+                    expiryInfo.classList.add('result-info-item');
+                    expiryInfo.innerHTML = `
+                        <div class="result-info-label">Son Kullanma:</div>
+                        <div class="result-info-value">${expiresMatch[1]}</div>
+                    `;
+                    resultInfo.appendChild(expiryInfo);
+                }
+
+                resultItem.appendChild(resultInfo);
+
+                // Create actions section
+                const resultActions = document.createElement('div');
+                resultActions.classList.add('result-actions');
+
+                // Add copy button
+                const copyButton = document.createElement('button');
+                copyButton.classList.add('btn');
+                copyButton.innerHTML = '<i class="fas fa-copy"></i> Kopyala';
+                copyButton.onclick = () => copyToClipboard(cleanedLink);
+                resultActions.appendChild(copyButton);
+
+                // Add Xtream code button if applicable
+                try {
+                    const url = new URL(cleanedLink);
+                    if (url.searchParams.has('username') && url.searchParams.has('password')) {
+                        const showXtreamButton = document.createElement('button');
+                        showXtreamButton.classList.add('btn');
+                        showXtreamButton.innerHTML = '<i class="fas fa-code"></i> Xtream Detayları';
+
+                        const xtreamPanel = document.createElement('div');
+                        xtreamPanel.style.display = 'none';
+                        xtreamPanel.classList.add('xtream-details');
+
+                        const xtreamDetails = parseXtreamDetails(cleanedLink);
+                        xtreamPanel.innerHTML = `
+                            <div class="result-info-item">
+                                <div class="result-info-label">Sunucu:</div>
+                                <div class="result-info-value">${xtreamDetails.server}</div>
+                            </div>
+                            <div class="result-info-item">
+                                <div class="result-info-label">Kullanıcı Adı:</div>
+                                <div class="result-info-value">${xtreamDetails.username}</div>
+                            </div>
+                            <div class="result-info-item">
+                                <div class="result-info-label">Şifre:</div>
+                                <div class="result-info-value">${xtreamDetails.password}</div>
+                            </div>
+                        `;
+
+                        showXtreamButton.addEventListener('click', () => {
+                            const isVisible = xtreamPanel.style.display === 'block';
+                            xtreamPanel.style.display = isVisible ? 'none' : 'block';
+                            showXtreamButton.innerHTML = isVisible ? 
+                                '<i class="fas fa-code"></i> Xtream Detayları' : 
+                                '<i class="fas fa-times"></i> Detayları Gizle';
+                        });
+
+
+                        resultActions.appendChild(showXtreamButton);
+                        resultItem.appendChild(xtreamPanel);
+                    }
+                } catch (e) {
+                    console.error('URL parsing failed:', e);
+                }
+
+                resultItem.appendChild(resultActions);
+                linksContainer.appendChild(resultItem);
+
+                const progress = Math.round(((index + 1) / currentLinks.length) * 100);
+                updateCustomProgressBar(progress, index + 1, links.length);
+                await new Promise(resolve => setTimeout(resolve, 1));
             }
 
-            // Hatalı linkleri ekleme ve toplam sayıları güncelleme
-            if (invalidLinks.length > 0) {
-                const invalidLinksNote = document.createElement('div');
-                invalidLinksNote.classList.add('alert', 'alert-danger', 'mt-2');
-                invalidLinksNote.innerHTML = `Toplam <strong>${invalidLinks.length}</strong> hatalı yazılmış adres toplam URL sayısına dahil edilmemiştir. <a href="#" id="showInvalidLinks">Göster</a>`;
-                summaryNote.appendChild(invalidLinksNote);
+            // Add pagination controls at the bottom as well
+            const bottomPaginationContainer = paginationContainer.cloneNode(true);
+            linksContainer.appendChild(bottomPaginationContainer);
 
-                const invalidLinksList = document.createElement('ul');
-                invalidLinksList.id = 'invalidLinksList';
-                invalidLinksList.style.display = 'none';
-                invalidLinks.forEach((link, index) => {
-                    const invalidLinkItem = document.createElement('li');
-                    invalidLinkItem.textContent = `${index + 1}. ${link}`;
-                    invalidLinksList.appendChild(invalidLinkItem);
-                });
-                summaryNote.appendChild(invalidLinksList);
 
-                const showInvalidLinksButton = document.getElementById('showInvalidLinks');
-                showInvalidLinksButton.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const invalidLinksList = document.getElementById('invalidLinksList');
-                    const isVisible = invalidLinksList.style.display === 'none';
-                    invalidLinksList.style.display = isVisible ? 'block' : 'none';
-                    showInvalidLinksButton.textContent = isVisible ? 'Gizle' : 'Göster';
-                });
-            }
-
-            copyAllLinksBtn.style.display = 'block';
-            sourceInfo.textContent = '@patr0n sağolsun 😅';
-            showNewMethodMessage(false); // Yeni yöntem uyarısını kaldır
-            showLoadingMessage(false); // Çoğul URL uyarısını kaldır
+            sourceInfo.innerHTML = '<span class="patron-sagolsun" style="display: inline-flex; align-items: center; gap: 8px;"><i class="fas fa-heart fa-lg" style="color: rgb(5,47, 105); text-shadow: 0 0 10px #FFED46; animation: heartbeat 1.5s ease-in-out infinite;"></i><a href="https://forum.sinetech.tr/konu/1-2-03-2025-m3u-linkleri.2131/" target="blank">patr0n kardeşim sağolsun, emeklerine sağlık.</span><style>@keyframes heartbeat { 0% { transform: scale(1); } 50% { transform: scale(1.2); } 100% { transform: scale(1); }}</style></a>';
         } else {
             linksContainer.textContent = 'Hiçbir link bulunamadı.';
             copyAllLinksBtn.style.display = 'none';
             sourceInfo.textContent = '';
-            showNewMethodMessage(false); // Yeni yöntem uyarısını kaldır
-            showLoadingMessage(false); // Çoğul URL uyarısını kaldır
-            updateCustomProgressBar(100, links.length);
+            updateCustomProgressBar(100, 0);
         }
     } catch (error) {
         if (error.name === 'AbortError') {
@@ -476,142 +778,104 @@ async function fetchPatronLinks() {
             updateCustomProgressBar(100, 0);
         }
     }
-    showCustomProgressBar(true); // İşlem bittiğinde progress barı gizle
+    showCustomProgressBar(true);
+    showNewMethodMessage(false);
+    showLoadingMessage(false);
 }
 
-async function loadPlaylists() {
-    const playlists = [
-        { name: "IPTV Sevenler (Sinetech.tr @MemetCandal)", url: "https://tinyurl.com/iptvlovers" },
-	{ name: "patr0nspor (Sinetech.tr @patr0n)", url: "https://tinyurl.com/patronsport" },    
-    ];
+function changePage(page) {
+    currentPage = page;
+    fetchPatronLinks();
+}
 
-    const playlistContainer = document.getElementById('playlistContainer');
-    playlistContainer.innerHTML = ''; // Önceki içeriği temizle
+function hideError() {
+    const errorMessage = document.getElementById('errorMessage');
+    errorMessage.style.display = 'none';
+}
 
-    for (const playlist of playlists) {
-        const listItem = document.createElement('li');
-        listItem.classList.add('list-group-item');
+function showError(message) {
+    const errorMessage = document.getElementById('errorMessage');
+    errorMessage.textContent = message;
+    errorMessage.style.display = 'block';
+}
 
-        const itemContent = document.createElement('div');
-        itemContent.classList.add('item-content');
-
-        const nameText = document.createElement('span');
-        nameText.textContent = playlist.name;
-        nameText.classList.add('playlist-name');
-        nameText.setAttribute('data-url', playlist.url);
-
-        const itemButtons = document.createElement('div');
-        itemButtons.classList.add('item-buttons');
-
-        const copyButton = document.createElement('button');
-        copyButton.classList.add('btn', 'btn-outline-secondary', 'btn-sm');
-        copyButton.textContent = 'Kopyala';
-        copyButton.onclick = () => copyToClipboard(playlist.url);
-
-        const infoIcon = document.createElement('i');
-        infoIcon.classList.add('bi', 'bi-info-circle');
-        infoIcon.setAttribute('data-toggle', 'popover');
-        infoIcon.setAttribute('data-content', 'Yükleniyor...');
-        infoIcon.setAttribute('tabindex', '0'); // Popover'un çalışmasını sağlamak için tabindex ekliyoruz
-        infoIcon.setAttribute('role', 'button'); // Popover'un çalışmasını sağlamak için role ekliyoruz
-
-        itemButtons.appendChild(copyButton);
-        itemButtons.appendChild(infoIcon);
-
-        itemContent.appendChild(nameText);
-        itemContent.appendChild(itemButtons);
-
-        listItem.appendChild(itemContent);
-        playlistContainer.appendChild(listItem);
-
-        // Bilgi ikonuna dinamik içerik yükleme
-        try {
-            const response = await fetch(playlist.url);
-            const text = await response.text();
-
-            // Tekil grup başlıklarını belirlemek için set kullanma ve normalize etme
-            const groupTitles = new Set();
-            const groupTitleMatches = text.match(/group-title="([^"]+)"/g);
-            if (groupTitleMatches) {
-                groupTitleMatches.forEach(match => {
-                    const groupTitle = match.match(/group-title="([^"]+)"/)[1].trim().toLowerCase(); // Normalize etme
-                    groupTitles.add(groupTitle);
-                });
-            }
-
-            // Kanal URL'lerini ve isimlerini almak için
-            const channels = [];
-            const extinfLines = text.match(/#EXTINF[\s\S]*?https?:\/\/[^\s]+/g);
-            if (extinfLines) {
-                extinfLines.forEach((line) => {
-                    const urlMatch = line.match(/(http[^\s]+)/);
-                    const nameMatch = line.match(/tvg-name="([^"]+)"/) || line.match(/tvg-id="([^"]+)"/);
-                    if (urlMatch && nameMatch) {
-                        const channel = {
-                            url: urlMatch[1],
-                            name: nameMatch[1].trim()
-                        };
-                        channels.push(channel);
-                    }
-                });
-            }
-
-            console.log(channels); // Kanalların doğru alınıp alınmadığını kontrol edin.
-
-            // İçeriği oluşturma
-            const content = `Toplam ${groupTitles.size} kanal grubu, toplam ${channels.length} kanal`;
-
-            infoIcon.setAttribute('data-content', content);
-            $(infoIcon).popover(); // Popover'ı yeniden oluştur
-        } catch (error) {
-            infoIcon.setAttribute('data-content', 'Bilgiler yüklenemedi');
-        }
-
-        // Playlist adına tıklandığında kanal listesini gösterme
-        nameText.addEventListener('click', async function () {
-            try {
-                const response = await fetch(playlist.url);
-                const text = await response.text();
-
-                const channels = [];
-                const extinfLines = text.match(/#EXTINF[\s\S]*?https?:\/\/[^\s]+/g);
-                if (extinfLines) {
-                    extinfLines.forEach((line) => {
-                        const urlMatch = line.match(/(http[^\s]+)/);
-                        const nameMatch = line.match(/tvg-name="([^"]+)"/) || line.match(/tvg-id="([^"]+)"/);
-                        if (urlMatch && nameMatch) {
-                            const channel = {
-                                url: urlMatch[1],
-                                name: nameMatch[1].trim()
-                            };
-                            channels.push(channel);
-                        }
-                    });
-                }
-
-                const channelSelect = document.getElementById('channelSelect');
-                channelSelect.innerHTML = ''; // Önceki kanalları temizle
-                channels.forEach(channel => {
-                    const option = document.createElement('option');
-                    option.value = channel.url;
-                    option.textContent = channel.name;
-                    channelSelect.appendChild(option);
-                });
-
-                console.log(channels); // Kanalların doğru alındığını kontrol edin
-                
-                $('#channelPopup').modal('show');
-            } catch (error) {
-                console.error('Kanal bilgileri yüklenemedi:', error);
-            }
-        });
+function showCustomProgressBar(show) {
+    const progressContainer = document.getElementById('customProgressContainer');
+    if (progressContainer) {
+        progressContainer.style.display = show ? 'block' : 'none';
     }
 }
 
-// Sayfa yüklendiğinde hazır listeleri yükle
-document.addEventListener('DOMContentLoaded', function() {
-    loadPlaylists();
-});
+function showError(message) {
+    const errorElement = document.getElementById('errorMessage');
+    if (errorElement) {
+        errorElement.textContent = message;
+        errorElement.style.display = 'block';
+    }
+}
+
+function hideError() {
+    const errorElement = document.getElementById('errorMessage');
+    if (errorElement) {
+        errorElement.style.display = 'none';
+    }
+}
+
+function displayLinks(links) {
+    const linksContainer = document.getElementById('links');
+    const copyAllBtn = document.getElementById('copyAllLinksBtn');
+    
+    if (linksContainer) {
+        linksContainer.innerHTML = '';
+        
+        links.forEach((link, index) => {
+            const linkItem = document.createElement('div');
+            linkItem.className = 'link-item';
+            
+            const linkText = document.createElement('a');
+            linkText.href = link;
+            linkText.textContent = link;
+            linkText.target = '_blank';
+            
+            const copyBtn = document.createElement('button');
+            copyBtn.className = 'btn';
+            copyBtn.innerHTML = '<i class="fas fa-copy"></i>';
+            copyBtn.onclick = () => copyToClipboard(link);
+            
+            linkItem.appendChild(linkText);
+            linkItem.appendChild(copyBtn);
+            linksContainer.appendChild(linkItem);
+        });
+        
+        if (copyAllBtn) {
+            copyAllBtn.style.display = links.length > 0 ? 'block' : 'none';
+        }
+    }
+}
+
+async function copyToClipboard(text) {
+    try {
+        await navigator.clipboard.writeText(text);
+        alert('Link kopyalandı!');
+    } catch (err) {
+        console.error('Kopyalama başarısız:', err);
+        alert('Link kopyalanamadı!');
+    }
+}
+
+async function copyAllLinks() {
+    const linksContainer = document.getElementById('links');
+    if (linksContainer) {
+        const links = Array.from(linksContainer.querySelectorAll('a')).map(a => a.href);
+        try {
+            await navigator.clipboard.writeText(links.join('\n'));
+            alert('Tüm linkler kopyalandı!');
+        } catch (err) {
+            console.error('Kopyalama başarısız:', err);
+            alert('Linkler kopyalanamadı!');
+        }
+    }
+}
 
 function parseXtreamDetails(link) {
     const url = new URL(link);
@@ -621,61 +885,3 @@ function parseXtreamDetails(link) {
     const password = params.get('password');
     return { server, username, password };
 }
-
-function showAlert(message) {
-    alert(message);
-}
-
-function copyToClipboard(text) {
-    const tempTextarea = document.createElement('textarea');
-    tempTextarea.value = text;
-    document.body.appendChild(tempTextarea);
-    tempTextarea.select();
-    document.execCommand('copy');
-    document.body.removeChild(tempTextarea);
-    showAlert('Kopyalandı: ' + (text.length > 200 ? text.substring(0, 200) + '...' : text));
-}
-
-function copyAllLinks() {
-    const linksText = Array.from(document.getElementById('links').getElementsByTagName('a'), link => link.href).join('\n');
-    copyToClipboard(linksText);
-}
-function resetPage() {
-    clearPreviousResults();
-    document.getElementById('inputText').value = '';
-    document.getElementById('pageUrl').value = '';
-    showSection('metin-ayiklama'); // İlk açılışta metin ayıklama bölümünü göster
-}
-document.querySelector('.navbar-brand').addEventListener('click', function(e) {
-    e.preventDefault(); // Varsayılan bağlantı davranışını engelle
-    resetPage(); // Sayfayı başlangıç durumuna getir
-});
-
-// Tüm navbar öğelerini seç
-const navbarItems = document.querySelectorAll('.navbar-nav .nav-link');
-
-// Her bir navbar öğesine event listener ekle
-navbarItems.forEach(item => {
-    item.addEventListener('click', function() {
-        showCustomProgressBar(false); // Progress bar'ı gizle
-
-        // Hazır Listeler'e geçiş yapılınca "linksContainer"ı gizle
-        if (item.textContent.trim() === 'Hazır Listeler') {
-            document.getElementById('linksContainer').style.display = 'none';
-        } else {
-            document.getElementById('linksContainer').style.display = 'block';
-        }
-    });
-});
-
-// Metin alanına dosya ile de metin ekleyip link ayıklamak için
-document.getElementById('fileInput').addEventListener('change', function(event) {
-    const file = event.target.files[0];
-    if (file) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            document.getElementById('inputText').value = e.target.result; // Dosya içeriğini metin alanına ekle
-        };
-        reader.readAsText(file);
-    }
-});

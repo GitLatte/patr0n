@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hazır Listeler - Linkleri Topla</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="icon" type="image/x-icon" href="https://gitlatte.github.io/patr0n/img/favicon.ico">
+    <style>
+        .parser-container {
+            background-color: var(--secondary-color);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-top: 2rem;
+            box-shadow: 0 4px 6px var(--shadow-color);
+        }
+        
+        .input-area {
+            background-color: var(--background-color);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .list-group-item {
+            background-color: var(--background-color);
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+            transition: all 0.3s ease;
+            padding: 1rem;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .list-group-item:hover {
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(142, 45, 226, 0.4);
+        }
+        
+        .text-muted {
+            color: rgba(255, 255, 255, 0.7) !important;
+        }
+        
+        .btn {
+            background: linear-gradient(45deg, #4a00e0, #8e2de2);
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            padding: 0.75rem 1.2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(142, 45, 226, 0.4);
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(142, 45, 226, 0.6);
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- Include navigation -->
+    <div id="navigation-container"></div>
+    <script>
+        // Load navigation
+        fetch('shared/navigation.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('navigation-container').innerHTML = html;
+                // Highlight current page
+                const currentPage = window.location.pathname;
+                document.querySelector(`[href="${currentPage}"]`)?.classList.add('active');
+            });
+    </script>
+    <main class="container">
+        <div class="parser-container">
+            <h1><i class="fas fa-list"></i> Hazır Listeler</h1>
+            <div class="input-area">
+                <div id="playlistContainer" class="list-group">
+                    <!-- Hazır listeler burada görünecek -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/ready-lists.js"></script>
+</body>
+</html>
