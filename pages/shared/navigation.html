@@ -1,4 +1,4 @@
-<nav class="sidebar">
+<nav class="sidebar" id="toplayici-sidebar">
     <div><a href="https://gitlatte.github.io/patr0n/"><img src="https://gitlatte.github.io/patr0n/img/logo.png" alt="Logo" class="site-logo"></a></div>
     <div class="sidebar-container">
         <div class="sidebar-nav" style="flex: 1;">
@@ -23,6 +23,24 @@
         </div>
     </div>
 </nav>
+<script>
+// Check if the page is loaded in an iframe
+function isInIframe() {
+    try {
+        return window.self !== window.top;
+    } catch (e) {
+        return true;
+    }
+}
+
+// Hide sidebar if page is in iframe
+if (isInIframe()) {
+    const sidebar = document.getElementById('toplayici-sidebar');
+    if (sidebar) {
+        sidebar.style.display = 'none';
+    }
+}
+</script>
 <style>
 .sidebar {
     position: fixed;
