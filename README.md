@@ -19,9 +19,9 @@ A modern, user-friendly web application for processing and managing M3U playlist
 ## Screenshots
 
 <p align="center">
-  <img src="https://i.imgur.com/placeholder.png" alt="Screenshot 1" width="600">
+  <img src="https://github.com/GitLatte/patr0n/blob/2041943deb3fd85c6ef72d86b3ed4cc9fdce5c33/img/ss/screenshot1.png" alt="Screenshot 1" width="600">
+  <img src="https://github.com/GitLatte/patr0n/blob/2041943deb3fd85c6ef72d86b3ed4cc9fdce5c33/img/ss/screenshot2.png" alt="Screenshot 2" width="600">
 </p>
-
 ## Installation
 
 1. Clone the repository:
