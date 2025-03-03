@@ -1,79 +1,68 @@
-# M3U Link Processor
+# Link Toplayıcı
 
 <p align="center">
-  <img src="img/logo.png" alt="M3U Link Processor Logo" width="200">
+  <img src="img/logo.png" alt="Link Toplayıcı Logo" width="200">
 </p>
 
-A modern, user-friendly web application for processing and managing M3U playlist links. Built with a sleek dark theme interface, this tool helps users organize and process M3U links efficiently.
+URL adreslerini ayıklamak ve yönetmek için modern, kullanıcı dostu bir web uygulaması yapmaya çalıştım. Şık karanlık tema arayüzü ile tasarlanmış bu araç, kullanıcıların dosya, url adresi ve metin girerek içerisindeki bağlantılarını verimli bir şekilde ayıklamasına  yardımcı olur.
 
-## Features
+## Özellikler
 
-- 🎨 Modern dark theme interface
-- 🔗 Process M3U links from various sources
-- 📝 Text-based link processing
-- 📺 Patron IPTV link processing
-- 📋 Ready-to-use M3U playlists
-- 📱 Responsive design for mobile and desktop
-- ⚡ Fast and efficient processing
+- 🎨 Modern karanlık tema arayüzü
+- 🔗 Çeşitli kaynakların bağlantılarını işleme
+- 📝 Metin tabanlı bağlantı ayıklama
+- 📺 patr0n listelerini almak
+- 📋 Kullanıma hazır oynatma listeleri
+- 📱 Sadece masaüstü için bir tasarım
+- ⚡ Hızlı ve verimli işleme
 
-## Screenshots
+## Ekran Görüntüleri
 
 <p align="center">
-  <img src="https://github.com/GitLatte/patr0n/blob/2041943deb3fd85c6ef72d86b3ed4cc9fdce5c33/img/ss/screenshot1.png" alt="Screenshot 1" width="600">
-  <img src="https://github.com/GitLatte/patr0n/blob/2041943deb3fd85c6ef72d86b3ed4cc9fdce5c33/img/ss/screenshot2.png" alt="Screenshot 2" width="600">
+  <img src="https://github.com/GitLatte/patr0n/blob/2041943deb3fd85c6ef72d86b3ed4cc9fdce5c33/img/ss/screenshot1.png" alt="Ekran Görüntüsü 1" width="600">
+  <img src="https://github.com/GitLatte/patr0n/blob/2041943deb3fd85c6ef72d86b3ed4cc9fdce5c33/img/ss/screenshot2.png" alt="Ekran Görüntüsü 2" width="600">
 </p>
-## Installation
 
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/m3u-link-processor.git
-```
+## Kullanım
 
-2. Navigate to the project directory:
-```bash
-cd m3u-link-processor
-```
+1. **URL İşleyici**
+   - URL İşleyici bölümüne gidin
+   - Bağlantınızı girin
+   - Bağlantıları çıkarmak için İşle'ye tıklayın
 
-3. Open `index.html` in your web browser
-
-## Usage
-
-1. **URL Parser**
-   - Navigate to the URL Parser section
-   - Enter your M3U link
-   - Click Process to extract the links
-
-2. **Text Parser**
-   - Go to the Text Parser section
-   - Paste your text containing M3U links
-   - Process and organize the links
+2. **Metin İşleyici**
+   - Metin İşleyici bölümüne gidin
+   - Bağlantıları içeren metninizi yapıştırın 
+     ya da
+   - Bağlantıları içeren bir dosya seçin  
+   - Bağlantıları işleyin ve düzenleyin
 
 3. **Patron IPTV**
-   - Access the Patron IPTV section
-   - Follow the instructions to process specific IPTV links
+   - patr0n IPTV bölümüne erişin
+   - Özel liste adreslerine erişmek için talimatları takip edin
 
-4. **Ready Lists**
-   - Browse through pre-configured M3U playlists
-   - Download and use them directly
+4. **Hazır Listeler**
+   - Önceden yapılandırılmış oynatma listelerine göz atın
+   - Kanal grubu ve kanal sayılarını inceleyin.
 
-## Contributing
+## Katkıda Bulunma
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Katkılarınızı bekliyorum. Her türlü öneriyi dikkate alabilirim.
 
-## License
+## Lisans
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Gerek yok.
 
-## Contact
+## İletişim
 
-For any questions or suggestions, please visit [Forum SineTech](https://forum.sinetech.tr/uye/latte.1668/)
+Sorularınız veya önerileriniz için [Forum SineTech](https://forum.sinetech.tr/uye/latte.1668/) adresini ziyaret edin.
 
-## Credits
+## Emeği Geçenler
 
-Developed by [Latte](https://forum.sinetech.tr/uye/latte.1668/)
+Geliştirici: [Latte](https://github.com/GitLatte)
 
 ---
 
 <p align="center">
-Made with ❤️ by Latte
+Latte tarafından ❤️ ile yapıldı
 </p>
