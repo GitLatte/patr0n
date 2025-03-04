@@ -1,0 +1,88 @@
+// Playlist data
+const playlists = [
+    { name: "IPTV Sevenler (Sinetech.tr @Memetcandal)", url: "https://www.dropbox.com/scl/fi/v2kehgxdx8tzkby03kpht/IPTVSevenler.m3u?rlkey=4sop4kr4o7u9nzm55yfhmkx1w&st=5puawny2&dl=1" },
+    { name: "patr0nspor (Sinetech.tr @patr0n)", url: "https://tinyurl.com/patronsport" }, 
+    { name: "Bekx İptv (Sinetech.tr @Berat55)", url: "https://tinyurl.com/3ky78jf8" },
+    { name: "Sinema/Film Arşivi (Sinetech.tr @powerboard)", url: "https://tinyurl.com/power-cinema" },     
+];
+
+// Copy URL to clipboard
+async function copyToClipboard(text) {
+    try {
+        await navigator.clipboard.writeText(text);
+        alert('URL kopyalandı!');
+    } catch (err) {
+        console.error('URL kopyalanamadı:', err);
+        alert('URL kopyalanamadı!');
+    }
+}
+
+// Load and display playlist information
+async function loadPlaylists() {
+    const playlistContainer = document.getElementById('playlistContainer');
+    if (!playlistContainer) return;
+
+    playlistContainer.innerHTML = ''; // Clear previous content
+
+    for (const playlist of playlists) {
+        // Create playlist item
+        const listItem = document.createElement('div');
+        listItem.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center', 'mb-2');
+
+        // Create copy button
+        const copyButton = document.createElement('button');
+        copyButton.classList.add('btn', 'btn-link', 'text-primary', 'p-2', 'me-3');
+        copyButton.innerHTML = '<i class="fa-regular fa-clone"></i>';
+        copyButton.title = 'Kopyala';
+        copyButton.onclick = () => copyToClipboard(playlist.url);
+
+        // Create name and info container
+        const infoContainer = document.createElement('div');
+        infoContainer.classList.add('d-flex', 'flex-column', 'flex-grow-1');
+
+        const nameSpan = document.createElement('span');
+        nameSpan.classList.add('h6', 'mb-1');
+        nameSpan.textContent = playlist.name;
+
+        const statsSpan = document.createElement('small');
+        statsSpan.classList.add('text-muted');
+        statsSpan.textContent = 'Yükleniyor...';
+
+        infoContainer.appendChild(nameSpan);
+        infoContainer.appendChild(statsSpan);
+
+        // Add elements to list item
+        listItem.appendChild(copyButton);
+        listItem.appendChild(infoContainer);
+        playlistContainer.appendChild(listItem);
+
+        // Load playlist stats using CORS proxy
+        try {
+            const proxyUrl = 'https://cors.gitlatte.workers.dev/?url=';
+            const response = await fetch(proxyUrl + encodeURIComponent(playlist.url));
+            const text = await response.text();
+
+            // Count unique group titles
+            const groupTitles = new Set();
+            const groupTitleMatches = text.match(/group-title="([^"]+)"/g);
+            if (groupTitleMatches) {
+                groupTitleMatches.forEach(match => {
+                    const groupTitle = match.match(/group-title="([^"]+)"/)[1].trim();
+                    groupTitles.add(groupTitle);
+                });
+            }
+
+            // Count channels
+            const channelCount = (text.match(/#EXTINF/g) || []).length;
+
+            // Update stats display
+            statsSpan.textContent = `${groupTitles.size} içerik grubu ve ${channelCount} içerik`;
+        } catch (error) {
+            console.error('Playlist bilgileri yüklenemedi:', error);
+            statsSpan.textContent = 'Bilgiler yüklenemedi';
+        }
+    }
+}
+
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', loadPlaylists);
