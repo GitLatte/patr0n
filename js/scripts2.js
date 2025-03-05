@@ -475,7 +475,7 @@ function updateCustomProgressBar(percentage, count, totalCount) {
     const progressValue = document.querySelector('.progress-value');
     const sayfaBasiLink = currentPage * count;
     progressBar.style.width = percentage + '%';
-    progressValue.textContent = totalCount ? `Tamamlandı. (${totalCount} - ${currentPage}. sayfadaki ${count} link)` : `${percentage}% (${count} link)`;
+    progressValue.textContent = totalCount ? `Tamamlandı. (${totalCount} - ${currentPage}. sayfadaki ${count} liste)` : `${percentage}% (${count} link)`;
 }
 
 function displayLinks(links) {
