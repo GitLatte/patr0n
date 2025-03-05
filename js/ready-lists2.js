@@ -1,4 +1,4 @@
-// Playlist data
+// Oynatma Listesi verisi
 const playlists = [
     { name: "IPTV Sevenler (Sinetech.tr @Memetcandal)", url: "https://www.dropbox.com/scl/fi/v2kehgxdx8tzkby03kpht/IPTVSevenler.m3u?rlkey=4sop4kr4o7u9nzm55yfhmkx1w&st=5puawny2&dl=1" },
     { name: "patr0nspor (Sinetech.tr @patr0n)", url: "https://tinyurl.com/patronsport" }, 
@@ -6,37 +6,53 @@ const playlists = [
     { name: "Sinema/Film Arşivi (Sinetech.tr @powerboard)", url: "https://tinyurl.com/power-cinema" },     
 ];
 
-// Copy URL to clipboard
+// Adresi Kopyala
 async function copyToClipboard(text) {
     try {
+        // Önce API deneyelim
         await navigator.clipboard.writeText(text);
         alert('URL kopyalandı!');
     } catch (err) {
-        console.error('URL kopyalanamadı:', err);
-        alert('URL kopyalanamadı!');
+        // API hata verirse pas geçip yerel kopyalamaya geçelim.
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        textarea.style.position = 'fixed';
+        textarea.style.opacity = '0';
+        document.body.appendChild(textarea);
+        textarea.select();
+        
+        try {
+            document.execCommand('copy');
+            alert('URL kopyalandı!');
+        } catch (err) {
+            console.error('URL kopyalanamadı:', err);
+            alert('URL kopyalanamadı!');
+        } finally {
+            document.body.removeChild(textarea);
+        }
     }
 }
 
-// Load and display playlist information
+// Oynatma Listesi bilgilerini yükleyelim
 async function loadPlaylists() {
     const playlistContainer = document.getElementById('playlistContainer');
     if (!playlistContainer) return;
 
-    playlistContainer.innerHTML = ''; // Clear previous content
+    playlistContainer.innerHTML = ''; // Önceki verileri temizleyelim.
 
     for (const playlist of playlists) {
-        // Create playlist item
+        // Oynatma Listesi elemanlarını oluşturalım.
         const listItem = document.createElement('div');
         listItem.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center', 'mb-2');
 
-        // Create copy button
+        // Kopyala butonunu koyalım.
         const copyButton = document.createElement('button');
         copyButton.classList.add('btn', 'btn-link', 'text-primary', 'p-2', 'me-3');
         copyButton.innerHTML = '<i class="fa-regular fa-clone"></i>';
         copyButton.title = 'Kopyala';
         copyButton.onclick = () => copyToClipboard(playlist.url);
 
-        // Create name and info container
+        // İsim ve bilgiyi oluşturalım
         const infoContainer = document.createElement('div');
         infoContainer.classList.add('d-flex', 'flex-column', 'flex-grow-1');
 
@@ -51,18 +67,18 @@ async function loadPlaylists() {
         infoContainer.appendChild(nameSpan);
         infoContainer.appendChild(statsSpan);
 
-        // Add elements to list item
+        // butonları listeye ekleyelim
         listItem.appendChild(copyButton);
         listItem.appendChild(infoContainer);
         playlistContainer.appendChild(listItem);
 
-        // Load playlist stats using CORS proxy
+        // Oynatma listesi istatistiklerini çekelim
         try {
             const proxyUrl = 'https://cors.gitlatte.workers.dev/?url=';
             const response = await fetch(proxyUrl + encodeURIComponent(playlist.url));
             const text = await response.text();
 
-            // Count unique group titles
+            // Grup başlıklarından sayılarını alalım.
             const groupTitles = new Set();
             const groupTitleMatches = text.match(/group-title="([^"]+)"/g);
             if (groupTitleMatches) {
@@ -72,10 +88,10 @@ async function loadPlaylists() {
                 });
             }
 
-            // Count channels
+            // Kaç kanal varmış bakalım
             const channelCount = (text.match(/#EXTINF/g) || []).length;
 
-            // Update stats display
+            // istatistik ekranını güncelleyelim.
             statsSpan.textContent = `${groupTitles.size} içerik grubu ve ${channelCount} içerik`;
         } catch (error) {
             console.error('Playlist bilgileri yüklenemedi:', error);
@@ -84,5 +100,5 @@ async function loadPlaylists() {
     }
 }
 
-// Initialize when DOM is loaded
+// Herşey yüklensin bakalım.
 document.addEventListener('DOMContentLoaded', loadPlaylists);
