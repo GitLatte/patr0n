@@ -88,10 +88,10 @@ async function testStream() {
 function detectStreamFormat(content, url) {
     if (content.includes('#EXTM3U')) {
         if (content.includes('#EXT-X-STREAM-INF')) return 'HLS (M3U8)';
-        return 'M3U Playlist';
+        return 'M3U Oynatma Listesi';
     }
     if (url.toLowerCase().endsWith('.m3u8')) return 'HLS (M3U8)';
-    if (url.toLowerCase().endsWith('.m3u')) return 'M3U Playlist';
+    if (url.toLowerCase().endsWith('.m3u')) return 'M3U Oynatma Listesi';
     return 'Bilinmiyor';
 }
 
