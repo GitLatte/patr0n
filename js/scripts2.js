@@ -763,7 +763,7 @@ async function fetchPatronLinks() {
             linksContainer.appendChild(bottomPaginationContainer);
 
 
-            sourceInfo.innerHTML = '<span class="patron-sagolsun" style="display: inline-flex; align-items: center; gap: 8px;"><i class="fas fa-heart fa-lg" style="color: rgb(5,47, 105); text-shadow: 0 0 10px #FFED46; animation: heartbeat 1.5s ease-in-out infinite;"></i><a href="https://forum.sinetech.tr/konu/1-2-03-2025-m3u-linkleri.2131/" target="blank">patr0n kardeşim sağolsun, emeklerine sağlık.</span><style>@keyframes heartbeat { 0% { transform: scale(1); } 50% { transform: scale(1.2); } 100% { transform: scale(1); }}</style></a>';
+            sourceInfo.innerHTML = '<span class="patron-sagolsun" style="display: inline-flex; align-items: center; margin-left: 15px; gap: 8px;"><i class="fas fa-heart fa-lg" style="color: rgb(5,47, 105); text-shadow: 0 0 10px #FFED46; animation: heartbeat 1.5s ease-in-out infinite;"></i><a href="https://forum.sinetech.tr/konu/1-2-03-2025-m3u-linkleri.2131/" target="blank">patr0n kardeşim sağolsun, emeklerine sağlık.</span><style>@keyframes heartbeat { 0% { transform: scale(1); } 50% { transform: scale(1.2); } 100% { transform: scale(1); }}</style></a>';
         } else {
             linksContainer.textContent = 'Hiçbir link bulunamadı.';
             copyAllLinksBtn.style.display = 'none';
