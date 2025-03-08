@@ -190,10 +190,19 @@
 
         // Copy all links
         function copyAllLinks() {
-            const links = Array.from(document.querySelectorAll('.link-item a'))
-                .map(a => a.href)
+            const links = Array.from(document.querySelectorAll('#linksList .list-group-item span'))
+                .map(span => span.textContent.substring(span.textContent.indexOf('.') + 2))
                 .join('\n');
-            utils.copyToClipboard(links);
+            
+            if (links) {
+                utils.copyToClipboard(links);
+                const copyAllBtn = document.getElementById('copyAllBtn');
+                const originalHtml = copyAllBtn.innerHTML;
+                copyAllBtn.innerHTML = '<i class="fas fa-check"></i> Kopyalandı';
+                setTimeout(() => {
+                    copyAllBtn.innerHTML = originalHtml;
+                }, 2000);
+            }
         }
     </script>
 </body>
