@@ -3,7 +3,7 @@ const playlists = [
     { name: "IPTV Sevenler (Sinetech.tr @Memetcandal)", url: "https://www.dropbox.com/scl/fi/v2kehgxdx8tzkby03kpht/IPTVSevenler.m3u?rlkey=4sop4kr4o7u9nzm55yfhmkx1w&st=5puawny2&dl=1" },
     { name: "patr0nspor (Sinetech.tr @patr0n)", url: "https://tinyurl.com/patronsport" }, 
     { name: "Bekx İptv (Sinetech.tr @Berat55)", url: "https://www.dropbox.com/scl/fi/sa29n5m5xp9zvueg41f3p/M3U.txt?rlkey=lyjq8wauu4ws1cva1stqlzlet&st=wf8dndo7&dl=1" },
-    { name: "Sinema/Film Arşivi (Sinetech.tr @powerboard)", url: "https://tinyurl.com/2ao2rans" }, 
+    { name: "Sinema/Film Arşivi (Sinetech.tr @powerboard)", url: "https://tinyurl.com/power-cinema" }, 
 ];
 
 // Copy URL to clipboard
