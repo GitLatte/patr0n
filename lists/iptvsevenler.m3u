@@ -3,8 +3,10 @@
 https://meclistv-live.ercdn.net/meclistv/meclistv_720p.m3u8?e=&st=
 #EXTINF:-1 tvg-name="TRT 1" tvg-id="TRT 1.tr" tvg-logo="https://cdn-i.pr.trt.com.tr/trttv/w750/h750/q100/10660277.png" group-title="Ulusal",TRT 1
 https://tgn.bozztv.com/dvrfl05/gin-trt1eu/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-name="TRT 1" tvg-id="TRT 1.tr" tvg-logo="https://cdn-i.pr.trt.com.tr/trttv/w750/h750/q100/10660277.png" group-title="Ulusal",TRT 1
+https://tv-trt1.medya.trt.com.tr/master_1080.m3u8
 #EXTINF:-1 tvg-name="TRT 2" tvg-id="TRT 2.tr" tvg-logo="https://cdn-i.pr.trt.com.tr/trttv/w750/h750/q100/7027954.png" group-title="Ulusal",TRT 2
-http://1sn.ns1.name:18800/esathotnjaniDHjet21D30/jsQSdubaArbenpanda/240025
+http://103.161.34.243:8080/Babam/z8jwWatbaYGm/61763
 #EXTINF:-1 tvg-name="TRT Türk" tvg-id="TRT Turk.tr" tvg-logo="https://cdn-i.pr.trt.com.tr/trttv/w750/h750/q100/11787778.png" group-title="Ulusal",TRT Türk
 https://tv-trtturk.medya.trt.com.tr/master_720.m3u8
 #EXTINF:-1 tvg-name="TRT Avaz" tvg-id="TRT Avaz.tr" tvg-logo="https://cdn-i.pr.trt.com.tr/trttv/w750/h750/q100/7027789.png" group-title="Ulusal",TRT Avaz
@@ -24,7 +26,7 @@ http://89.187.191.41/ATV-HD-TR/video.m3u8
 #EXTINF:-1 tvg-name="ATV 2" tvg-id="a2.tr" tvg-logo="https://yt3.googleusercontent.com/7OsZQFhc7xtJKYvTqZKRQBYcBhUSpsYYqD4Z92WKRTlP1XPqaOt5z9sziyiT2kpGTuvHX7ER=s900-c-k-c0x00ffffff-no-rj" group-title="Ulusal",ATV 2
 https://x.canlitvapp.com/a2/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-name="Kanal D" tvg-id="Kanal D.tr" tvg-logo="https://image.kanald.com.tr/i/kanald/100/0x0/654b42b5ebc830246465c497.jpg" group-title="Ulusal",Kanal D
-https://c.fulltvizle.com/kanald/tracks-v1a1/mono.m3u8
+https://demiroren-live.daioncdn.net/kanald/kanald_1080p.m3u8
 #EXTINF:-1 tvg-name="Fox" tvg-id="NOW.tr" tvg-logo="https://gaziantepsabah.com/uploads/haberler/2024/02/1707815076-fox-tv-neden-now-tv-oldu-817x_.jpg?token=7f2508cd78f99260fc0da4481dea7aad" group-title="Ulusal",Fox
 https://tvcdn.4t40.workers.dev/https://tv.arectv3.xyz/live/foxtv.m3u8
 #EXTINF:-1 tvg-name="TV 8" tvg-id="TV8.tr" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/6/68/Tv8_Yeni_Logo.png" group-title="Ulusal",TV 8
@@ -52,7 +54,7 @@ https://tgn.bozztv.com/dvrfl05/gin-cnnturk/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-name="NTV" tvg-id="NTV.tr" tvg-logo="https://blutv-images.mncdn.com/q/t/i/bluv2/100/750x750/56a72d98058d024d98970264" group-title="Haber",NTV
 https://tgn.bozztv.com/dvrfl05/gin-ntvtv/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-name="A Haber" tvg-id="A Haber.tr" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/7c/Ahaber_Logo.png" group-title="Haber",A Haber
-http://1sn.ns1.name:18800/esathotnjaniDHjet21D30/jsQSdubaArbenpanda/219053
+http://103.161.34.243:8080/Babam/z8jwWatbaYGm/80207
 #EXTINF:-1 tvg-name="Haber Global" tvg-id="Haber Global.tr" tvg-logo="https://blutv-images.mncdn.com/q/t/i/bluv2/100/750x750/603dfe0f866ac31798b3f4fa" group-title="Haber",Haber Global
 https://tv.ensonhaber.com/haberglobal/haberglobal.m3u8
 #EXTINF:-1 tvg-name="Kanal 24" tvg-id="Kanal 24.tr" tvg-logo="https://blutv-images.mncdn.com/q/t/i/bluv2/100/750x750/5dc2bca3866ac331e0feb1ed" group-title="Haber",Kanal 24
@@ -70,7 +72,7 @@ https://tgrthaber-live.daioncdn.net/tgrthaber/tgrthaber_720p.m3u8
 #EXTINF:-1 tvg-name="KRT TV" tvg-id="KRT.tr" tvg-logo="https://blutv-images.mncdn.com/q/t/i/bluv2/100/750x750/61951f4c866ac31a807822e8" group-title="Haber",KRT TV
 https://tgn.bozztv.com/trn03/gt-krttv/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-name="Sözcü TV" tvg-id="Szc Tv.tr" tvg-logo="https://www.evrensel.net/upload/dosya/231375.jpg" group-title="Haber",Sözcü TV
-http://stream.tvcdn.net/haber/sozcu-tv.m3u8
+https://tgn.bozztv.com/trn03/gt-sozcutv/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-name="Halk TV" tvg-id="Halk TV.tr" tvg-logo="https://blutv-images.mncdn.com/q/t/i/bluv2/100/750x750/5dc2bfbd866ac31da06187c5" group-title="Haber",Halk TV
 https://halktv-live.daioncdn.net/halktv/halktv_720p.m3u8
 #EXTINF:-1 tvg-name="Bloomberg HT" tvg-id="Bloomberg HT.tr" tvg-logo="https://play-lh.googleusercontent.com/byyHq1uwkzFuB42rm9LDzVZhYr-jyW4KSubjUWtCKxi-C09JjNm7csXuFsTxOJ5_Eygk" group-title="Haber",Bloomberg HT
@@ -92,25 +94,25 @@ https://tgn.bozztv.com/dvrfl05/gin-tgrtbelgesel/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-name="Nat Geo HD TR" tvg-id="National Geographic.tr" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nat_Geo_HD_Logo.svg/2560px-Nat_Geo_HD_Logo.svg.png" group-title="Belgesel",Nat Geo HD TR
 http://unreal.eztv4you.xyz:25461/98392023/224vpw99f7/432433
 #EXTINF:-1 tvg-name="Nat Geo Wild" tvg-id="National Geographic WILD.tr" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ--wfW2_Q5bKwwwdDO2MA5f5MLd7mGhAoFvw&s" group-title="Belgesel",Nat Geo Wild
-#EXTVLCOPT:http-referrer=https://trgoals1077.xyz/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
-https://one.fbf1eb5f21ff67.shop/live/natgeowild/playlist.m3u8?live=true
+http://103.161.34.243:8080/Babam/z8jwWatbaYGm/166517
 #EXTINF:-1 tvg-name="History Channel" tvg-id="History Channel.tr" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f5/History_Logo.svg" group-title="Belgesel",History Channel
-#EXTVLCOPT:http-referrer=https://trgoals1077.xyz/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
-https://one.fbf1eb5f21ff67.shop/live/history/playlist.m3u8?live=true
+#EXTVLCOPT:http-user-agent=googleusercontent
+https://tv.arectv13.sbs/live/history.m3u8
 #EXTINF:-1 tvg-name="Viasat Explore" tvg-id="Viasat Explore" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-07/b199a733ed1ced4e5a12ec6aaade62bd.png" group-title="Belgesel",Viasat Explore
 http://bertalone.autos:8080/test_acct/ohbo1veifa4AhD/197561
 #EXTINF:-1 tvg-name="Viasat History" tvg-id="Viasat History.tr" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-07/6b5e58f28087af5e4e386665b549b67d.png" group-title="Belgesel",Viasat History
 http://bertalone.autos:8080/test_acct/ohbo1veifa4AhD/32589
-#EXTINF:-1 tvg-name="Viasat History" tvg-id="Viasat History.tr" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-07/6b5e58f28087af5e4e386665b549b67d.png" group-title="Belgesel",Viasat History
-http://1sn.ns1.name:18800/esathotnjaniDHjet21D30/jsQSdubaArbenpanda/243585
+#EXTINF:-1 tvg-name="Viasat Nature" tvg-id="Viasat History.tr" tvg-logo="https://yt3.googleusercontent.com/WfQMAOhqF3wr3wVxreoSVOlLyJuzg9s8QbrOSbwI92YjoKngdCNZV3EzkEtP9Anznff8uRwFvA=s900-c-k-c0x00ffffff-no-rj" group-title="Belgesel",Viasat Nature
+#EXTVLCOPT:http-user-agent=googleusercontent
+https://tv.arectv13.sbs/live/viasatexplore.m3u8
 #EXTINF:-1 tvg-name="BBC Earth" tvg-id="BBC Earth.tr" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNXOrjX8auopIAAKFRHx1Y-KLi8Ync-CWUfw&s" group-title="Belgesel",BBC Earth
 http://bertalone.autos:8080/test_acct/ohbo1veifa4AhD/8238
 #EXTINF:-1 tvg-name="TR | beIN Gurmeⓧ FHD" tvg-id="TR | beIN Gurmeⓧ FHD" tvg-logo="http://platinumxmedia.xyz:8080/images/17a24177c9d3b9f82eb8fc9d6e968123.png" group-title="Belgesel",TR | beIN Gurmeⓧ FHD
 http://unreal.eztv4you.xyz:25461/98392023/224vpw99f7/432169
 #EXTINF:-1 tvg-name="Bein Iz" tvg-id="Bein Iz.tr" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB16OQGYHvmbbeR7ojxAn2dBMRRG6YnMt0ww&s" group-title="Belgesel",Bein Iz
 http://bertalone.autos:8080/test_acct/ohbo1veifa4AhD/1806
+#EXTINF:-1 tvg-name="DISCOVERY CHANNEL" tvg-id="discoverychannel.tr" tvg-logo="https://eu1-prod-images.disco-api.com/2022/04/29/11ffef24-0f75-4ea3-941e-7f33bf786519.png?bf=0&f=jpg&p=true&q=70&w=1920" group-title="Belgesel",DISCOVERY CHANNEL
+http://103.161.34.243:8080/Babam/z8jwWatbaYGm/166515
 #EXTINF:-1 tvg-name="DISCOVERY SCIENCE" tvg-id="DISCOVERY SCIENCE" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Discovery_Science_2017_Logo.svg/1200px-Discovery_Science_2017_Logo.svg.png" group-title="Belgesel",DISCOVERY SCIENCE
 http://bertalone.autos:8080/test_acct/ohbo1veifa4AhD/5693
 #EXTINF:-1 tvg-name="TR | Fashion Midnightⓧ HD" tvg-id="TR | Fashion Midnightⓧ HD" tvg-logo="http://platinumxmedia.xyz:8080/images/49a709e3d0ced8b1a6a0f5091cf6e231.png" group-title="Belgesel",TR | Fashion Midnightⓧ HD
@@ -138,15 +140,15 @@ http://bertalone.autos:8080/test_acct/ohbo1veifa4AhD/192581
 #EXTINF:-1 tvg-name="TR: SL Niloya" tvg-id="TR: SL Niloya" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2023-11/2eeaf6e7640d0a1e258227397f003eaf.jpg" group-title="Çocuklara Özel",TR: SL Niloya
 http://bertalone.autos:8080/test_acct/ohbo1veifa4AhD/70743
 #EXTINF:-1 tvg-name="BEIN BOX OFFICE 1 ʜᴅ" tvg-id="BEIN BOX OFFICE 1 ʜᴅ.tr" tvg-logo="https://media0067.elcinema.com/tvguide/1326_1.png" group-title="Sinema",BEIN BOX OFFICE 1 ʜᴅ
-http://buytvplay.xyz:8080/Metin080808/GPRDx4uPER/6195
+http://buytvplay.xyz:8080/gr3503/gr00/6195
 #EXTINF:-1 tvg-name="TR: beIN Box Office 2" tvg-id="TR: beIN Box Office 2" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-12/adea4a88280fb88d0c2232343a33a69e.png" group-title="Sinema",TR: beIN Box Office 2
 http://1sn.ns1.name:18800/esathotnjaniDHjet21D30/jsQSdubaArbenpanda/16654
 #EXTINF:-1 tvg-name="TR: beIN Box Office 3" tvg-id="TR: beIN Box Office 3" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-12/661d76fd2683c5c3a355f92d2e71afc5.png" group-title="Sinema",TR: beIN Box Office 3
-http://bertalone.autos:8080/test_acct/ohbo1veifa4AhD/538
+http://buytvplay.xyz:8080/gr3503/gr00/6197
 #EXTINF:-1 tvg-name="TR: beIN Movies Action" tvg-id="TR: beIN Movies Action" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-07/ca1d2bb923338f5d520918b981135d91.png" group-title="Sinema",TR: beIN Movies Action
 http://1sn.ns1.name:18800/esathotnjaniDHjet21D30/jsQSdubaArbenpanda/16701
 #EXTINF:-1 tvg-name="TR: beIN Movies Family" tvg-id="TR: beIN Movies Family" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-07/75e47808eb64b20e1611e171c8a17339.png" group-title="Sinema",TR: beIN Movies Family
-http://bertalone.autos:8080/test_acct/ohbo1veifa4AhD/1763
+http://buytvplay.xyz:8080/gr3503/gr00/6204
 #EXTINF:-1 tvg-name="TR: beIN Movies Premiere" tvg-id="TR: beIN Movies Premiere" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-07/4c2308f19e292f658c25f7eeb320302c.png" group-title="Sinema",TR: beIN Movies Premiere
 http://bertalone.autos:8080/test_acct/ohbo1veifa4AhD/1764
 #EXTINF:-1 tvg-name="TR: beIN Movies Premiere 2" tvg-id="TR: beIN Movies Premiere 2" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-07/8132ccbeac2354ea63bf6b409a16a261.png" group-title="Sinema",TR: beIN Movies Premiere 2
@@ -158,15 +160,13 @@ http://bertalone.autos:8080/test_acct/ohbo1veifa4AhD/1767
 #EXTINF:-1 tvg-name="TR: beIN Series 1" tvg-id="TR: beIN Series 1" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2023-05/d248d175de659f0813a02e9134d18b6b.png" group-title="Sinema",TR: beIN Series 1
 http://bertalone.autos:8080/test_acct/ohbo1veifa4AhD/298429
 #EXTINF:-1 tvg-name="TR: beIN Series 2" tvg-id="TR: beIN Series 2" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2023-05/b356d48dffa753ebf6b5ae6f31ff71c0.png" group-title="Sinema",TR: beIN Series 2
-http://1sn.ns1.name:18800/esathotnjaniDHjet21D30/jsQSdubaArbenpanda/218815
+http://103.161.34.243:8080/Babam/z8jwWatbaYGm/181210
 #EXTINF:-1 tvg-name="TR: beIN Series 3" tvg-id="TR: beIN Series 3" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2023-05/ad65c62b7bfe6448570dfe2996b17f04.png" group-title="Sinema",TR: beIN Series 3
 http://bertalone.autos:8080/test_acct/ohbo1veifa4AhD/298428
 #EXTINF:-1 tvg-name="TR: beIN Series 4" tvg-id="TR: beIN Series 4" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2023-05/9abe75f1c9ee476a5d033cf5ceca6cad.png" group-title="Sinema",TR: beIN Series 4
 http://bertalone.autos:8080/test_acct/ohbo1veifa4AhD/298430
 #EXTINF:-1 tvg-name="TR: beIN Series Comedy" tvg-id="TR: beIN Series Comedy" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-07/adf92f2916a0009d7b4f31870656b093.png" group-title="Sinema",TR: beIN Series Comedy
 http://1sn.ns1.name:18800/esathotnjaniDHjet21D30/jsQSdubaArbenpanda/16706
-#EXTINF:-1 tvg-name="TR: beIN Series Drama" tvg-id="TR: beIN Series Drama" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-07/e62d82be35a5c21cae0c62a78dbf8cd3.png" group-title="Sinema",TR: beIN Series Drama
-http://1sn.ns1.name:18800/esathotnjaniDHjet21D30/jsQSdubaArbenpanda/16705
 #EXTINF:-1 tvg-name="TR: Cine 1" tvg-id="Cine1 Tv.tr" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2023-11/4ab475ba347ff4eda09e88808b07623b.png" group-title="Sinema",TR: Cine 1
 http://bertalone.autos:8080/test_acct/ohbo1veifa4AhD/300983
 #EXTINF:-1 tvg-name="Moviesmart Türk" tvg-id="MovieSmart Turk.tr" tvg-logo="https://www.yuksekovaguncel.com.tr/images/haberler/d_smartin_hd_kanal_sayisi_artiyor_h55683.jpg" group-title="Sinema",Moviesmart Türk
@@ -174,7 +174,7 @@ http://bertalone.autos:8080/test_acct/ohbo1veifa4AhD/1780
 #EXTINF:-1 tvg-name="TR: Moviesmart Classic" tvg-id="MovieSmart Classic.tr" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-07/5e761d79212e94473ec62fada843f9ac.png" group-title="Sinema",TR: Moviesmart Classic
 http://bertalone.autos:8080/test_acct/ohbo1veifa4AhD/1773
 #EXTINF:-1 tvg-name="TR: Moviesmart Premium" tvg-id="TR: Moviesmart Premium" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-07/39439f1ba26e0fe22f61bfb2f14ed9fd.png" group-title="Sinema",TR: Moviesmart Premium
-http://1sn.ns1.name:18800/esathotnjaniDHjet21D30/jsQSdubaArbenpanda/16690
+http://buytvplay.xyz:8080/gr3503/gr00/6183
 #EXTINF:-1 tvg-name="TR: DiziSmart Max" tvg-id="Dizi Smart Max.tr" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-07/0411b5f6674eec1a8abaf701ba25cb57.png" group-title="Sinema",TR: DiziSmart Max
 http://bertalone.autos:8080/test_acct/ohbo1veifa4AhD/32147
 #EXTINF:-1 tvg-name="TR: DiziSmart Premium" tvg-id="Dizi Smart Premium.tr" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-07/4f32853a6807d014d455ae7cbff4566e.png" group-title="Sinema",TR: DiziSmart Premium
@@ -187,32 +187,18 @@ http://unreal.eztv4you.xyz:25461/98392023/224vpw99f7/432269
 http://unreal.eztv4you.xyz:25461/98392023/224vpw99f7/432286
 #EXTINF:-1 tvg-name="TR | ENO Vizyon 03ⓧ FHD" tvg-id="TR | ENO Vizyon 03ⓧ FHD" tvg-logo="http://platinumxmedia.xyz:8080/images/3a2500979310fa089c38362dc871e3b5.png" group-title="Sinema",TR | ENO Vizyon 03ⓧ FHD
 http://unreal.eztv4you.xyz:25461/98392023/224vpw99f7/432288
-#EXTINF:-1 tvg-name="TR: MAX HD" tvg-id="TR: MAX HD" tvg-logo="https://www.tvguide.com/a/img/resize/fec47cea625912d817026c67f4f40824da86a432/hub/2024/06/10/7b5a5da1-fbf9-468a-b02b-1f8d4dc50cd0/e7d66990-11b7-4f7a-91b3-96cf7cef.jpg?auto=webp&width=1092" group-title="Sinema",TR: MAX HD
-http://1sn.ns1.name:18800/esathotnjaniDHjet21D30/jsQSdubaArbenpanda/16641
-#EXTINF:-1 tvg-name="TR: MAX 007 HD" tvg-id="TR: MAX 007 HD" tvg-logo="https://www.tvguide.com/a/img/resize/fec47cea625912d817026c67f4f40824da86a432/hub/2024/06/10/7b5a5da1-fbf9-468a-b02b-1f8d4dc50cd0/e7d66990-11b7-4f7a-91b3-96cf7cef.jpg?auto=webp&width=1092" group-title="Sinema",TR: MAX 007 HD
-http://1sn.ns1.name:18800/esathotnjaniDHjet21D30/jsQSdubaArbenpanda/16639
-#EXTINF:-1 tvg-name="TR: MAX Gold HD" tvg-id="TR: MAX Gold HD" tvg-logo="https://www.tvguide.com/a/img/resize/fec47cea625912d817026c67f4f40824da86a432/hub/2024/06/10/7b5a5da1-fbf9-468a-b02b-1f8d4dc50cd0/e7d66990-11b7-4f7a-91b3-96cf7cef.jpg?auto=webp&width=1092" group-title="Sinema",TR: MAX Gold HD
-http://1sn.ns1.name:18800/esathotnjaniDHjet21D30/jsQSdubaArbenpanda/16635
 #EXTINF:-1 tvg-name="TR | Max Animasyon 1ⓧ FHD" tvg-id="TR | Max Animasyon 1ⓧ FHD" tvg-logo="http://platinumxmedia.xyz:8080/images/04c37db4ebd44a81e8781c3c5016d6b3.png" group-title="Sinema",TR | Max Animasyon 1ⓧ FHD
 http://unreal.eztv4you.xyz:25461/98392023/224vpw99f7/432407
 #EXTINF:-1 tvg-name="TR: MAX Animasyon 2 HD" tvg-id="TR: MAX Animasyon 2 HD" tvg-logo="https://www.tvguide.com/a/img/resize/fec47cea625912d817026c67f4f40824da86a432/hub/2024/06/10/7b5a5da1-fbf9-468a-b02b-1f8d4dc50cd0/e7d66990-11b7-4f7a-91b3-96cf7cef.jpg?auto=webp&width=1092" group-title="Sinema",TR: MAX Animasyon 2 HD
 http://1sn.ns1.name:18800/esathotnjaniDHjet21D30/jsQSdubaArbenpanda/16629
 #EXTINF:-1 tvg-name="TR: MAX Premier HD" tvg-id="TR: MAX Premier HD" tvg-logo="https://www.tvguide.com/a/img/resize/fec47cea625912d817026c67f4f40824da86a432/hub/2024/06/10/7b5a5da1-fbf9-468a-b02b-1f8d4dc50cd0/e7d66990-11b7-4f7a-91b3-96cf7cef.jpg?auto=webp&width=1092" group-title="Sinema",TR: MAX Premier HD
 http://1sn.ns1.name:18800/esathotnjaniDHjet21D30/jsQSdubaArbenpanda/16634
-#EXTINF:-1 tvg-name="TR: MAX Star Wars HD" tvg-id="TR: MAX Star Wars HD" tvg-logo="https://www.tvguide.com/a/img/resize/fec47cea625912d817026c67f4f40824da86a432/hub/2024/06/10/7b5a5da1-fbf9-468a-b02b-1f8d4dc50cd0/e7d66990-11b7-4f7a-91b3-96cf7cef.jpg?auto=webp&width=1092" group-title="Sinema",TR: MAX Star Wars HD
-http://1sn.ns1.name:18800/esathotnjaniDHjet21D30/jsQSdubaArbenpanda/16633
-#EXTINF:-1 tvg-name="TR: MAX Vizyon HD" tvg-id="TR: MAX Vizyon 2 HD" tvg-logo="https://www.tvguide.com/a/img/resize/fec47cea625912d817026c67f4f40824da86a432/hub/2024/06/10/7b5a5da1-fbf9-468a-b02b-1f8d4dc50cd0/e7d66990-11b7-4f7a-91b3-96cf7cef.jpg?auto=webp&width=1092" group-title="Sinema",TR: MAX Vizyon HD
-http://1sn.ns1.name:18800/esathotnjaniDHjet21D30/jsQSdubaArbenpanda/16627
-#EXTINF:-1 tvg-name="TR: Max Vizyon 2 HD" tvg-id="TR: Max Vizyon 2 HD" tvg-logo="https://www.tvguide.com/a/img/resize/fec47cea625912d817026c67f4f40824da86a432/hub/2024/06/10/7b5a5da1-fbf9-468a-b02b-1f8d4dc50cd0/e7d66990-11b7-4f7a-91b3-96cf7cef.jpg?auto=webp&width=1092" group-title="Sinema",TR: Max Vizyon 2 HD
-http://1sn.ns1.name:18800/esathotnjaniDHjet21D30/jsQSdubaArbenpanda/48079
-#EXTINF:-1 tvg-name="TR: MAX Vizyon 3 HD" tvg-id="TR: MAX Vizyon 3 HD" tvg-logo="https://www.tvguide.com/a/img/resize/fec47cea625912d817026c67f4f40824da86a432/hub/2024/06/10/7b5a5da1-fbf9-468a-b02b-1f8d4dc50cd0/e7d66990-11b7-4f7a-91b3-96cf7cef.jpg?auto=webp&width=1092" group-title="Sinema",TR: MAX Vizyon 3 HD
-http://1sn.ns1.name:18800/esathotnjaniDHjet21D30/jsQSdubaArbenpanda/16626
 #EXTINF:-1 tvg-name="TR: Sinema 1002" tvg-id="Sinema Tv 1002.tr" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-07/17ef2ad2d87a709c0e7c766a51fa9b50.png" group-title="Sinema",TR: Sinema 1002
 http://bertalone.autos:8080/test_acct/ohbo1veifa4AhD/76722
 #EXTINF:-1 tvg-name="TR: Sinema 2" tvg-id="Sinema Tv 2.tr" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-07/7e777b1a0307186c05cddf9b0854b309.png" group-title="Sinema",TR: Sinema 2
 http://1sn.ns1.name:18800/esathotnjaniDHjet21D30/jsQSdubaArbenpanda/218821
 #EXTINF:-1 tvg-name="TR: Sinema Aile" tvg-id="Sinema Tv Aile.tr" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-07/f7539bc056bf23aa5ac9a8165198554a.png" group-title="Sinema",TR: Sinema Aile
-http://1sn.ns1.name:18800/esathotnjaniDHjet21D30/jsQSdubaArbenpanda/47999
+http://buytvplay.xyz:8080/gr3503/gr00/123923
 #EXTINF:-1 tvg-name="TR: Sinema Aile 2" tvg-id="Sinema Tv Aile 2.tr" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-07/40c9ccd31d19fc0376a1de2b80a9d85d.png" group-title="Sinema",TR: Sinema Aile 2
 http://1sn.ns1.name:18800/esathotnjaniDHjet21D30/jsQSdubaArbenpanda/218822
 #EXTINF:-1 tvg-name="TR: Sinema Aksiyon" tvg-id="Sinema Tv Aksiyon.tr" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-07/298280700831aef41b02e186d47c65d4.png" group-title="Sinema",TR: Sinema Aksiyon
@@ -223,10 +209,6 @@ http://1sn.ns1.name:18800/esathotnjaniDHjet21D30/jsQSdubaArbenpanda/71326
 http://1sn.ns1.name:18800/esathotnjaniDHjet21D30/jsQSdubaArbenpanda/218823
 #EXTINF:-1 tvg-name="TR: Sinema TV" tvg-id="Sinema Tv.tr" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-07/0656287e0deab66449ec57679c150bac.png" group-title="Sinema",TR: Sinema TV
 http://1sn.ns1.name:18800/esathotnjaniDHjet21D30/jsQSdubaArbenpanda/218820
-#EXTINF:-1 tvg-name="Teleon" tvg-id="" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrcDMtapWneyDb9s4Woay6mMs0P79Z-nSEZQ&s" group-title="Sinema",Teleon
-#EXTVLCOPT:http-referrer=https://trgoals1077.xyz/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
-https://stream-cdn-iad2.vaughnsoft.net/play/live_teleonmediagroups.flv
 #EXTINF:-1 tvg-name="A Spor" tvg-id="A Spor.tr" tvg-logo="https://cdn6.aptoide.com/imgs/7/f/d/7fd636ea06646d1a9aaefe27a11dfb58_icon.png" group-title="Spor",A Spor
 https://tgn.bozztv.com/dvrfl05/gin-aspor/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-name="TRT Spor" tvg-id="TRT Spor.tr" tvg-logo="https://cdn-i.pr.trt.com.tr/trttv/w750/h750/q100/13687983.png" group-title="Spor",TRT Spor
@@ -238,25 +220,29 @@ https://ciner-live.daioncdn.net/ht-spor/ht-spor_1080p.m3u8
 #EXTINF:-1 tvg-name="Sports TV" tvg-id="Sports Tv.tr" tvg-logo="http://assets.tvcdn.net/96bc5554-741b-4e91-8b4f-7b3bcc1e4c1d.png" group-title="Spor",Sports TV
 https://live.sportstv.com.tr/hls/low/sportstv.m3u8
 #EXTINF:-1 tvg-name="FB TV" tvg-id="FB TV.tr" tvg-logo="https://seeklogo.com/images/F/fenerbahce-tv-logo-A4F539D377-seeklogo.com.png" group-title="Spor",FB TV
-https://tgn.bozztv.com/trn03/gt-fbtv/tracks-v1a1/mono.m3u8
+https://ecanlitv3.etvserver.com/fbtv.m3u8?tkn=PfFSK6XSkPdF1JhdO0QQSg&tms=1741360332
 #EXTINF:-1 tvg-name="NBA TV" tvg-id="NBA TV.tr" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/8/89/Nbatv.png" group-title="Spor",NBA TV
-http://unreal.eztv4you.xyz:25461/98392023/224vpw99f7/432436
+#EXTVLCOPT:http-user-agent=googleusercontent
+https://r14.1ff0569977874.workers.dev/list/yayinnbatv.m3u8
 #EXTINF:-1 tvg-name="Euro Sport" tvg-id="Eurosport.tr" tvg-logo="https://w7.pngwing.com/pngs/350/883/png-transparent-eurosport-1-eurosport-2-television-channel-1-euro-television-blue-angle.png" group-title="Spor",Euro Sport
-https://cdn2.lexter.online/stream/432280.m3u8
+#EXTVLCOPT:http-referrer=https://trgoals1077.xyz/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
+https://i0.b4c8d3e9f1a2b7c5d79.cfd/yayineu1.m3u8
 #EXTINF:-1 tvg-name="Euro Sport 2" tvg-id="Eurosport 2.tr" tvg-logo="https://w7.pngwing.com/pngs/327/493/png-transparent-eurosport-1-television-channel-logo-eurosport-2-others-miscellaneous-television-text.png" group-title="Spor",Euro Sport 2
 http://1sn.ns1.name:18800/esathotnjaniDHjet21D30/jsQSdubaArbenpanda/16575
 #EXTINF:-1 tvg-name="Tivibu Spor" tvg-id="Tivibu Spor.tr" tvg-logo="https://golvar913.sbs/wp-content/themes/ikisifirbirdokuz/assets/_/ch/605.webp" group-title="Spor",Tivibu Spor
 http://bertalone.autos:8080/test_acct/ohbo1veifa4AhD/1746
 #EXTINF:-1 tvg-name="Tivibu Spor 1" tvg-id="Tivibu Spor 1.tr" tvg-logo="https://www.thesportsdb.com/images/media/channel/logo/qadnsi1642604437.png" group-title="Spor",Tivibu Spor 1
-https://sporligtv600.live/restrm/cek.m3u8?u=https://derbi.raventv12.live/yayint1.m3u8&a=&aa=derbi.raventv12.live/
+#EXTVLCOPT:http-referrer=https://trgoals1077.xyz/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
+https://haftaici.locabahistv1.com/yayint1.m3u8
 #EXTINF:-1 tvg-name="Tivibu Spor 2" tvg-id="Tivibu Spor 2.tr" tvg-logo="https://www.thesportsdb.com/images/media/channel/logo/kuasdm1642604455.png" group-title="Spor",Tivibu Spor 2
 #EXTVLCOPT:http-referrer=https://trgoals1077.xyz/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
 https://h0.b4c8d3e9f1a2b7c5d58.cfd/yayint2.m3u8
 #EXTINF:-1 tvg-name="Tivibu Spor 3" tvg-id="Tivibu Spor 3.tr" tvg-logo="https://www.thesportsdb.com/images/media/channel/logo/slwrz41642604502.png" group-title="Spor",Tivibu Spor 3
-#EXTVLCOPT:http-referrer=https://trgoals1077.xyz/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
-https://serveranon1.online:8443/713/tracks-v1a1/mono.m3u8
+#EXTVLCOPT:http-user-agent=googleusercontent
+https://r14.1ff0569977874.workers.dev/list/yayint3.m3u8
 #EXTINF:-1 tvg-name="Tivibu Spor 4" tvg-id="Tivibu Spor 4.tr" tvg-logo="https://www.thesportsdb.com/images/media/channel/logo/59bqi81642604517.png" group-title="Spor",Tivibu Spor 4
 #EXTVLCOPT:http-referrer=https://trgoals1077.xyz/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
@@ -294,95 +280,58 @@ https://sporligtv600.live/restrm/cek.m3u8?u=https://h0.b4c8d3e9f1a2b7c5d58.cfd/y
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
 https://h0.b4c8d3e9f1a2b7c5d58.cfd/yayinzirve.m3u8
 #EXTINF:-1 tvg-name="beIN SPORTS" tvg-id="beIN SPORTS.tr" tvg-logo="https://www.thesportsdb.com/images/media/channel/logo/5rhmw31628798883.png" group-title="Spor",beIN SPORTS
-#EXTVLCOPT:http-referrer=https://trgoals1115.xyz
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
-https://bidahat.raventv10.live/yayinzirve.m3u8
-#EXTINF:-1 tvg-name="beIN SPORTS" tvg-id="beIN SPORTS.tr" tvg-logo="https://www.thesportsdb.com/images/media/channel/logo/5rhmw31628798883.png" group-title="Spor",beIN SPORTS
-#EXTVLCOPT:http-referrer=https://trgoals1077.xyz/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
-https://cdn2.lextertv.com/stream/431081.m3u8
-#EXTINF:-1 tvg-name="beIN SPORTS" tvg-id="beIN SPORTS.tr" tvg-logo="https://www.thesportsdb.com/images/media/channel/logo/5rhmw31628798883.png" group-title="Spor",beIN SPORTS
 #EXTVLCOPT:http-referrer=https://trgoals1077.xyz/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
 https://s0.b4c8d3e9f1a2b7c5d68.cfd/yayinzirve.m3u8
-#EXTINF:-1 tvg-name="beIN SPORTS" tvg-id="beIN SPORTS" tvg-logo="https://www.thesportsdb.com/images/media/channel/logo/5rhmw31628798883.png" group-title="Spor",beIN SPORTS
-#EXTVLCOPT:http-referrer=https://trgoals1077.xyz/	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
-https://serveranon1.online:8443/701/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-name="beIN SPORTS" tvg-id="beIN SPORTS" tvg-logo="https://www.thesportsdb.com/images/media/channel/logo/5rhmw31628798883.png" group-title="Spor",beIN SPORTS
-#EXTVLCOPT:http-referrer=https://trgoals1077.xyz/	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
-https://bidaye.raventv11.live/yayinzirve.m3u8
-#EXTINF:-1 tvg-name="beIN SPORTS" tvg-id="beIN SPORTS" tvg-logo="https://www.thesportsdb.com/images/media/channel/logo/5rhmw31628798883.png" group-title="Spor",beIN SPORTS
-#EXTVLCOPT:http-referrer=https://trgoals1077.xyz/	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
-http://client.newsborntvs.info/live/KreshnikDahri/bRjguwZe2/51330.m3u8
-#EXTINF:-1 tvg-name="beIN SPORTS" tvg-id="beIN SPORTS.tr" tvg-logo="https://www.thesportsdb.com/images/media/channel/logo/5rhmw31628798883.png" group-title="Spor",beIN SPORTS
-http://buytvplay.xyz:8080/Metin080808/GPRDx4uPER/35762
-#EXTINF:-1 tvg-name="beIN SPORTS" tvg-id="beIN SPORTS.tr" tvg-logo="https://www.thesportsdb.com/images/media/channel/logo/5rhmw31628798883.png" group-title="Spor",beIN SPORTS
-http://buytvplay.xyz:8080/Metin080808/GPRDx4uPER/351541
-#EXTINF:-1 tvg-name="beIN SPORTS" tvg-id="beIN SPORTS.tr" tvg-logo="https://www.thesportsdb.com/images/media/channel/logo/5rhmw31628798883.png" group-title="Spor",beIN SPORTS
-http://buytvplay.xyz:8080/Metin080808/GPRDx4uPER/98925
-#EXTINF:-1 tvg-name="beIN SPORTS" tvg-id="beIN SPORTS.tr" tvg-logo="https://www.thesportsdb.com/images/media/channel/logo/5rhmw31628798883.png" group-title="Spor",beIN SPORTS
-http://buytvplay.xyz:8080/Metin080808/GPRDx4uPER/126272
-#EXTINF:-1 tvg-name="beIN SPORTS" tvg-id="beIN SPORTS.tr" tvg-logo="https://www.thesportsdb.com/images/media/channel/logo/5rhmw31628798883.png" group-title="Spor",beIN SPORTS
-http://buytvplay.xyz:8080/Metin080808/GPRDx4uPER/190072
-#EXTINF:-1 tvg-name="beIN SPORTS" tvg-id="beIN SPORTS.tr" tvg-logo="https://www.thesportsdb.com/images/media/channel/logo/5rhmw31628798883.png" group-title="Spor",beIN SPORTS
-http://buytvplay.xyz:8080/Metin080808/GPRDx4uPER/35650
-#EXTINF:-1 tvg-name="beIN SPORTS" tvg-id="beIN SPORTS.tr" tvg-logo="https://www.thesportsdb.com/images/media/channel/logo/5rhmw31628798883.png" group-title="Spor",beIN SPORTS
-http://buytvplay.xyz:8080/Metin080808/GPRDx4uPER/191152
-#EXTINF:-1 tvg-name="beIN SPORTS" tvg-id="beIN SPORTS.tr" tvg-logo="https://www.thesportsdb.com/images/media/channel/logo/5rhmw31628798883.png" group-title="Spor",beIN SPORTS
-http://buytvplay.xyz:8080/Metin080808/GPRDx4uPER/456568
-#EXTINF:-1 tvg-name="beIN SPORTS" tvg-id="beIN SPORTS.tr" tvg-logo="https://www.thesportsdb.com/images/media/channel/logo/5rhmw31628798883.png" group-title="Spor",beIN SPORTS
-http://buytvplay.xyz:8080/Metin080808/GPRDx4uPER/456567
-#EXTINF:-1 tvg-name="beIN SPORTS" tvg-id="beIN SPORTS.tr" tvg-logo="https://www.thesportsdb.com/images/media/channel/logo/5rhmw31628798883.png" group-title="Spor",beIN SPORTS
-http://buytvplay.xyz:8080/Metin080808/GPRDx4uPER/372624
-#EXTINF:-1 tvg-name="beIN SPORTS" tvg-id="beIN SPORTS.tr" tvg-logo="https://www.thesportsdb.com/images/media/channel/logo/5rhmw31628798883.png" group-title="Spor",beIN SPORTS
-http://buytvplay.xyz:8080/Metin080808/GPRDx4uPER/372625
-#EXTINF:-1 tvg-name="beIN SPORTS" tvg-id="beIN SPORTS.tr" tvg-logo="https://www.thesportsdb.com/images/media/channel/logo/5rhmw31628798883.png" group-title="Spor",beIN SPORTS
-http://buytvplay.xyz:8080/Metin080808/GPRDx4uPER/372626
-#EXTINF:-1 tvg-name="beIN SPORTS" tvg-id="beIN SPORTS.tr" tvg-logo="https://www.thesportsdb.com/images/media/channel/logo/5rhmw31628798883.png" group-title="Spor",beIN SPORTS
-http://buytvplay.xyz:8080/Metin080808/GPRDx4uPER/372627
 #EXTINF:-1 tvg-name="beIN SPORTS 2" tvg-id="beIN SPORTS 2.tr" tvg-logo="https://www.thesportsdb.com/images/media/channel/logo/7uv6x71628799003.png" group-title="Spor",beIN SPORTS 2
 #EXTVLCOPT:http-referrer=https://trgoals1077.xyz/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
-https://serveranon1.online:8443/702/tracks-v1a1/mono.m3u8
+https://haftaici.locabahistv1.com/yayinb2.m3u8
 #EXTINF:-1 tvg-name="beIN SPORTS 3" tvg-id="beIN SPORTS 3.tr" tvg-logo="https://www.thesportsdb.com/images/media/channel/logo/u3117i1628798857.png" group-title="Spor",beIN SPORTS 3
 #EXTVLCOPT:http-referrer=https://trgoals1077.xyz/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
-https://serveranon1.online:8443/703/tracks-v1a1/mono.m3u8
+https://haftaici.locabahistv1.com/yayinb3.m3u8
 #EXTINF:-1 tvg-name="beIN SPORTS 4" tvg-id="beIN SPORTS 4.tr" tvg-logo="https://www.thesportsdb.com/images/media/channel/logo/2ktmcp1628798841.png" group-title="Spor",beIN SPORTS 4
 #EXTVLCOPT:http-referrer=https://trgoals1077.xyz/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
-https://serveranon1.online:8443/704/tracks-v1a1/mono.m3u8
+https://haftaici.locabahistv1.com/yayinb4.m3u8
 #EXTINF:-1 tvg-name="beIN SPORTS 5" tvg-id="beIN SPORTS 5.tr" tvg-logo="https://i.imgur.com/iRKfaee.png" group-title="Spor",beIN SPORTS 5
 #EXTVLCOPT:http-referrer=https://trgoals1077.xyz/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
-https://cdn2.lexter.online/stream/432216.m3u8
+https://haftaici.locabahistv1.com/yayinb5.m3u8
 #EXTINF:-1 tvg-name="beIN SPORTS Max" tvg-id="beIN SPORTS Max.tr" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/6/6f/BeIN_Sports_MAX.png" group-title="Spor",beIN SPORTS Max
 #EXTVLCOPT:http-referrer=https://trgoals1077.xyz/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
-https://serveranon1.online:8443/716/tracks-v1a1/mono.m3u8
+https://haftaici.locabahistv1.com/yayinbm1.m3u8
 #EXTINF:-1 tvg-name="beIN SPORTS Max 2" tvg-id="beIN SPORTS Max 2" tvg-logo="https://i.imgur.com/t7U20yR.png" group-title="Spor",beIN SPORTS Max 2
 #EXTVLCOPT:http-referrer=https://trgoals1077.xyz/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
-https://serveranon1.online:8443/717/tracks-v1a1/mono.m3u8
+https://haftaici.locabahistv1.com/yayinbm1.m3u8
 #EXTINF:-1 tvg-name="Tabii Spor" tvg-id="Tabii Spor.tr" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW8juuOTEz0HTNRA-AE6f7FxQquA4dGTzQYQ&s" group-title="Spor",Tabii Spor
-https://cdn2.lextertv.com/stream/432323.m3u8
+#EXTVLCOPT:http-referrer=https://trgoals1077.xyz/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
+https://haftaici.locabahistv1.com/yayinex7.m3u8
 #EXTINF:-1 tvg-name="Tabii Spor 1" tvg-id="Tabii Spor 1.tr" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW8juuOTEz0HTNRA-AE6f7FxQquA4dGTzQYQ&s" group-title="Spor",Tabii Spor 1
-https://cdn2.lextertv.com/stream/432309.m3u8
+#EXTVLCOPT:http-referrer=https://trgoals1077.xyz/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
+https://haftaici.locabahistv1.com/yayinex1.m3u8
 #EXTINF:-1 tvg-name="Tabii Spor 2" tvg-id="Tabii Spor 2.tr" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW8juuOTEz0HTNRA-AE6f7FxQquA4dGTzQYQ&s" group-title="Spor",Tabii Spor 2
 #EXTVLCOPT:http-referrer=https://trgoals1077.xyz/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
-https://bidaye.raventv11.live/yayinex2.m3u8
+https://haftaici.locabahistv1.com/yayinex2.m3u8
 #EXTINF:-1 tvg-name="Tabii Spor 3" tvg-id="Tabii Spor 3.tr" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW8juuOTEz0HTNRA-AE6f7FxQquA4dGTzQYQ&s" group-title="Spor",Tabii Spor 3
 http://bertalone.autos:8080/test_acct/ohbo1veifa4AhD/306220
 #EXTINF:-1 tvg-name="Tabii Spor 4" tvg-id="Tabii Spor 4.tr" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW8juuOTEz0HTNRA-AE6f7FxQquA4dGTzQYQ&s" group-title="Spor",Tabii Spor 4
-https://cdn2.lextertv.com/stream/432312.m3u8
+#EXTVLCOPT:http-referrer=https://trgoals1077.xyz/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
+https://haftaici.locabahistv1.com/yayinex4.m3u8
 #EXTINF:-1 tvg-name="Tabii Spor 5" tvg-id="Tabii Spor 5.tr" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW8juuOTEz0HTNRA-AE6f7FxQquA4dGTzQYQ&s" group-title="Spor",Tabii Spor 5
-https://cdn2.lextertv.com/stream/432313.m3u8
+#EXTVLCOPT:http-referrer=https://trgoals1077.xyz/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
+https://haftaici.locabahistv1.com/yayinex5.m3u8
 #EXTINF:-1 tvg-name="Tabii Spor 6" tvg-id="Tabii Spor 6.tr" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW8juuOTEz0HTNRA-AE6f7FxQquA4dGTzQYQ&s" group-title="Spor",Tabii Spor 6
-https://cdn2.lextertv.com/stream/432314.m3u8
+#EXTVLCOPT:http-user-agent=googleusercontent
+https://v.arectv13.sbs/static/tabi6.m3u8
 #EXTINF:-1 tvg-name="TRT Müzik" tvg-id="TRT Müzik.tr" tvg-logo="https://cdn-i.pr.trt.com.tr/trttv/w750/h750/q100/12382043.png" group-title="Müzik Kanalları",TRT Müzik
 https://tv-trtmuzik.medya.trt.com.tr/master_720.m3u8
 #EXTINF:-1 tvg-name="Dream Türk" tvg-id="Dream Türk.tr" tvg-logo="https://blutv-images.mncdn.com/q/t/i/bluv2/100/750x750/5dc2c085866ac31da06187cd" group-title="Müzik Kanalları",Dream Türk
@@ -397,8 +346,6 @@ https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e18
 https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e17cd59e8b.smil/playlist.m3u8
 #EXTINF:-1 tvg-name="NumberOne Damar" tvg-id="NumberOne Damar.tr" tvg-logo="https://www.numberone.com.tr/wp-content/uploads/2017/07/N1_TR_Damar.png" group-title="Müzik Kanalları",NumberOne Damar
 https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e198784bdc_1/playlist.m3u8
-#EXTINF:-1 tvg-name="Tatlıses TV" tvg-id="Tatlıses TV.tr" tvg-logo="https://canlitv.center/channels/tatlises-tv.png" group-title="Müzik Kanalları",Tatlıses TV
-https://tgn.bozztv.com/dvrfl05/gin-powerturk/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-name="MTV Biggest Pop" tvg-id="MTV Biggest Pop.tr" tvg-logo="https://images.pluto.tv/channels/5d14fd1a252d35decbc4080c/colorLogoPNG.png" group-title="Müzik Kanalları",MTV Biggest Pop
 https://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5d14fd1a252d35decbc4080c/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=6c2a02e7-30d3-11ef-9cf5-e9ddff8ff496&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=db3aa987-9f35-4664-b523-5fe34623b36c
 #EXTINF:-1 tvg-name="Vevo Pop" tvg-id="Vevo Pop.tr" tvg-logo="https://images.pluto.tv/channels/5d93b635b43dd1a399b39eee/colorLogoPNG.png" group-title="Müzik Kanalları",Vevo Pop
