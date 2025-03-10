@@ -61,6 +61,9 @@ Sorularınız veya önerileriniz için [Forum SineTech](https://forum.sinetech.t
 
 Geliştirici: [Latte](https://github.com/GitLatte)
 
+En büyük manevi destekçim +
+Listelerin efendisi: [patr0n](https://github.com/patr0nq)
+
 ---
 
 <p align="center">
