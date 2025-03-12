@@ -55,6 +55,11 @@ https://tv-trthaber.medya.trt.com.tr/master_720.m3u8
 https://ciner-live.daioncdn.net/haberturktv/haberturktv_720p.m3u8
 #EXTINF:-1 tvg-name="CNN Türk" tvg-id="CNN Turk.tr" tvg-logo="https://blutv-images.mncdn.com/q/t/i/bluv2/100/750x750/61236013866ac319e8143500" group-title="Haber",CNN Türk
 https://tgn.bozztv.com/dvrfl05/gin-cnnturk/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-name="CNN Türk" tvg-id="CNN Turk.tr" tvg-logo="https://blutv-images.mncdn.com/q/t/i/bluv2/100/750x750/61236013866ac319e8143500" group-title="Haber",CNN Türk
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+http://megaott.live:8080/9Kr5Cd4JCYjt/T9HwZWXQmdWB/3926
+#EXTINF:-1 tvg-name="NTV" tvg-id="NTV.tr" tvg-logo="https://blutv-images.mncdn.com/q/t/i/bluv2/100/750x750/56a72d98058d024d98970264" group-title="Haber",NTV
+https://ecanlitv3.etvserver.com/ntv.m3u8?tkn=f7d7If2AxTEytLT_IIIeWA&tms=1741811850
 #EXTINF:-1 tvg-name="NTV" tvg-id="NTV.tr" tvg-logo="https://blutv-images.mncdn.com/q/t/i/bluv2/100/750x750/56a72d98058d024d98970264" group-title="Haber",NTV
 https://tgn.bozztv.com/dvrfl05/gin-ntvtv/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-name="A Haber" tvg-id="A Haber.tr" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/7c/Ahaber_Logo.png" group-title="Haber",A Haber
