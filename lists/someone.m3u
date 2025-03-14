@@ -1,0 +1,46 @@
+#EXTM3U
+#EXTINF:-1, ABC USA
+https://zeko.iosplayer.ru/zeko/premium51/mono.m3u8
+#EXTVLCOPT:http-referrer=https://pkpakiplay.xyz
+#EXTVLCOPT:http-origin=https://pkpakiplay.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+#EXTINF:-1, A&E USA
+https://zeko.iosplayer.ru/zeko/premium302/mono.m3u8
+#EXTVLCOPT:http-referrer=https://pkpakiplay.xyz
+#EXTVLCOPT:http-origin=https://pkpakiplay.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+#EXTINF:-1, AMC USA
+https://nfs.iosplayer.ru/nfs/premium303/mono.m3u8
+#EXTVLCOPT:http-referrer=https://pkpakiplay.xyz
+#EXTVLCOPT:http-origin=https://pkpakiplay.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+#EXTINF:-1, Animal Planet
+https://nfs.iosplayer.ru/nfs/premium304/mono.m3u8
+#EXTVLCOPT:http-referrer=https://pkpakiplay.xyz
+#EXTVLCOPT:http-origin=https://pkpakiplay.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+#EXTINF:-1, ACC Network USA
+https://ddy6.iosplayer.ru/ddy6/premium666/mono.m3u8
+#EXTVLCOPT:http-referrer=https://pkpakiplay.xyz
+#EXTVLCOPT:http-origin=https://pkpakiplay.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+#EXTINF:-1, Astro SuperSport 1
+https://zeko.iosplayer.ru/zeko/premium123/mono.m3u8
+#EXTVLCOPT:http-referrer=https://pkpakiplay.xyz
+#EXTVLCOPT:http-origin=https://pkpakiplay.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+#EXTINF:-1, Astro SuperSport 2
+https://wind.iosplayer.ru/wind/premium124/mono.m3u8
+#EXTVLCOPT:http-referrer=https://pkpakiplay.xyz
+#EXTVLCOPT:http-origin=https://pkpakiplay.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+#EXTINF:-1, Astro SuperSport 3
+https://zeko.iosplayer.ru/zeko/premium125/mono.m3u8
+#EXTVLCOPT:http-referrer=https://pkpakiplay.xyz
+#EXTVLCOPT:http-origin=https://pkpakiplay.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+#EXTINF:-1, Astro SuperSport 4
+https://zeko.iosplayer.ru/zeko/premium126/mono.m3u8
+#EXTVLCOPT:http-referrer=https://pkpakiplay.xyz
+#EXTVLCOPT:http-origin=https://pkpakiplay.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
