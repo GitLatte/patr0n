@@ -5,6 +5,7 @@ const playlists = [
     { name: "Bekx İptv (Sinetech.tr @Berat55)", url: "https://www.dropbox.com/scl/fi/sa29n5m5xp9zvueg41f3p/M3U.txt?rlkey=lyjq8wauu4ws1cva1stqlzlet&st=wf8dndo7&dl=1" },
     { name: "Sinema/Film Arşivi (Sinetech.tr @powerboard)", url: "https://tinyurl.com/power-cinema" },
     { name: "myway TV (Sinetech.tr @myway)", url: "https://drive.usercontent.google.com/download?id=10MliZSuqDh9Ljs1Fkqh0zKsROmspgYu3&export=download" },
+    { name: "SyndraxicV (Sinetech.tr @Syndraxic)", url: "https://m3u.ch/pl/c44d186f905c4c16237b647a99fabd34_44e86ec81890f2324ad996e86dbf4ae2.m3u" },
 ];
 
 // Adresi Kopyala
