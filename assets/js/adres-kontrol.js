@@ -312,6 +312,17 @@ function showHttpStatusInfo() {
     modal.show();
 }
 
+function pasteFromClipboard() {
+    navigator.clipboard.readText()
+        .then(text => {
+            document.getElementById('streamUrl').value = text;
+        })
+        .catch(err => {
+            console.error('Failed to read clipboard:', err);
+            alert('Panodaki içerik alınamadı.');
+        });
+  }
+
 function getHttpStatusInfo(statusCode) {
     const statusInfo = {
         '100': 'Devam! İstek alındı ve işlem devam ediyor.',
