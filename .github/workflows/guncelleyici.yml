@@ -3,7 +3,7 @@ description: Sinema, dizi ve IPTV Sevenleri güncellemek için.
 
 on:
   schedule:
-    - cron: '* * * * *'  # Her dakika çalışır
+    - cron: '*/5 * * * *'  # Her 5 dakika çalışır
   workflow_dispatch:  # Elle tetikleme için
   push:
     branches:
