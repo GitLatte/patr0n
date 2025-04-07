@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linkleri Topla</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="icon" type="image/x-icon" href="https://gitlatte.github.io/patr0n/img/favicon.ico">
+</head>
+<body>
+    <main class="container">
+        <div class="menu-container">
+            <div class="logo-container">
+                <a href="index.html"><img src="img/logo.png" alt="Logo" class="site-logo"></a>
+            </div>
+            <div class="menu-grid content-area">
+                <a href="pages/text-parser.html" class="menu-item">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Metin ve Dosya İşleme</span>
+                </a>
+                <a href="pages/url-parser.html" class="menu-item">
+                    <i class="fas fa-globe"></i>
+                    <span>URL İşleme</span>
+                </a>
+                <a href="pages/patron-iptv.html" class="menu-item">
+                    <i class="fas fa-tv"></i>
+                    <span>patr0n IPTV Linkleri</span>
+                </a>
+                <a href="pages/ready-lists.html" class="menu-item">
+                    <i class="fas fa-list"></i>
+                    <span>Hazır Listeler</span>
+                </a>
+            </div>
+        </div>
+    </main>
+    
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        footer {
+            background-color: var(--secondary-color);
+            padding: 0.5rem;
+            text-align: center;
+            position: sticky;
+            bottom: 0;
+            width: 100%;
+            z-index: 100;
+        }
+
+        footer p {
+            margin: 0;
+            color: var(--text-color);
+            font-size: 0.9rem;
+        }
+        footer a {
+          text-decoration:none;
+          font-weight: bolder;
+          color: #e5edf5;
+          font-size: 15px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+<footer>
+    <p>Linkleri Topla © 2024 - ∞ <a href="https://forum.sinetech.tr/uye/latte.1668/">Latte</a></p>
+</footer>
+</html>

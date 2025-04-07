@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hazır Listeler - Linkleri Topla</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/ready-lists2.css">
+    <link rel="icon" type="image/x-icon" href="https://gitlatte.github.io/patr0n/img/favicon.ico">
+    <style>
+        #playlistContainer {
+            max-height: 70vh;
+            overflow-y: auto;
+            padding-right: 0.5rem;
+            margin: 0 auto;
+            max-width: 600px;
+        }
+        .container {
+            max-width: auto;
+        }
+        #playlistContainer::-webkit-scrollbar {
+            width: 6px;
+        }
+        #playlistContainer::-webkit-scrollbar-track {
+            background: var(--background-color);
+        }
+        #playlistContainer::-webkit-scrollbar-thumb {
+            background: var(--accent-color);
+            border-radius: 3px;
+        }
+        .parser-container {
+            max-width: 650px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(33, 37, 41, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+        .input-area {
+            background: transparent;
+            border: none;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <div class="parser-container">
+            <h1><i class="fas fa-list"></i> Hazır Listeler</h1>
+            <div class="input-area">
+                <div id="playlistContainer" class="list-group">
+                    <!-- Hazır listeler burada görünecek -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/ready-lists2.js"></script>
+</body>
+</html>

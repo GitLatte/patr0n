@@ -1,0 +1,101 @@
+name: M3U Liste Güncelleme
+
+on:
+  schedule:
+    - cron: '0 */2 * * *'  # Her 2 saatte bir çalışır
+  workflow_dispatch:  # Elle tetikleme için
+  push:
+    branches:
+      - site
+
+permissions:
+  contents: write
+  actions: write
+  checks: write
+
+jobs:
+  update-lists:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: site
+
+      - name: Python Kurulumu
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Bağımlılıkları Yükle
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: M3U Listelerini Güncelle
+        run: |
+          python - <<EOF
+          import requests
+          import os
+          import zipfile
+          from io import BytesIO
+
+          def download_and_process_m3u(url, output_file, process_func=None):
+              response = requests.get(url)
+              if response.headers.get('content-type') == 'application/zip':
+                  with zipfile.ZipFile(BytesIO(response.content)) as zip_file:
+                      m3u_files = [f for f in zip_file.namelist() if f.endswith('.m3u')]
+                      if m3u_files:
+                          content = zip_file.read(m3u_files[0]).decode('utf-8')
+              else:
+                  content = response.text
+
+              if process_func:
+                  content = process_func(content)
+
+              with open(output_file, 'w', encoding='utf-8') as f:
+                  f.write(content)
+
+          def process_sinema(content):
+              lines = content.splitlines()
+              processed_lines = []
+              for line in lines:
+                  if line.startswith('#EXTINF'):
+                      if 'tvg-language=' not in line:
+                          line = line.replace('#EXTINF:-1', '#EXTINF:-1 tvg-language="TR/EN"')
+                      if 'tvg-country=' not in line:
+                          line = line.replace('#EXTINF:-1', '#EXTINF:-1 tvg-country="TR/Yabancı Dil"')
+                  processed_lines.append(line)
+              return '\n'.join(processed_lines)
+              
+          def process_iptvsevenler(content):
+              lines = content.splitlines()
+              processed_lines = []
+              for line in lines:
+                  if line.startswith('#EXTINF'):
+                      if 'tvg-language=' not in line:
+                          line = line.replace('#EXTINF:-1', '#EXTINF:-1 tvg-language="TR"')
+                      if 'tvg-country=' not in line:
+                          line = line.replace('#EXTINF:-1', '#EXTINF:-1 tvg-country="TR"')
+                  processed_lines.append(line)
+              return '\n'.join(processed_lines)
+
+          # Yabancı dizi listesini güncelle
+          yabanci_dizi_url = 'https://www.dropbox.com/scl/fi/4kfzfvom8u2tjwlcfwkcz/power-yabanci-dizi.m3u?rlkey=wq1kqb6mo6pctvgd85nkqc8yo&st=ev5l7lya&dl=1'
+          download_and_process_m3u(yabanci_dizi_url, 'lists/power-yabanci-dizi.m3u')
+
+          # Sinema listesini güncelle
+          sinema_url = 'https://tinyurl.com/2ao2rans'
+          download_and_process_m3u(sinema_url, 'lists/power-sinema.m3u', process_sinema)
+          
+          # IPTVSevenler listesini güncelle
+          iptvsevenler_url = 'https://www.dropbox.com/scl/fi/v2kehgxdx8tzkby03kpht/IPTVSevenler.m3u?rlkey=4sop4kr4o7u9nzm55yfhmkx1w&st=5puawny2&dl=1'
+          download_and_process_m3u(iptvsevenler_url, 'lists/iptvsevenler.m3u', process_iptvsevenler)
+          EOF
+
+      - name: Değişiklikleri Kaydet ve Gönder
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add lists/*.m3u
+          git diff --quiet && git diff --staged --quiet || git commit -m "M3U listeleri güncellendi"
+          git push origin site
