@@ -6,6 +6,7 @@ on:
   workflow_dispatch:  # Elle tetikleme için
   push:
     branches:
+      - main
       - site
 
 permissions:
