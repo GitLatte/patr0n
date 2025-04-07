@@ -1,5 +1,7 @@
 name: M3U Liste Güncelleme
 
+description: Sinema, dizi ve IPTV Sevenleri güncellemek için.
+
 on:
   schedule:
     - cron: '0 */2 * * *'  # Her 2 saatte bir çalışır
