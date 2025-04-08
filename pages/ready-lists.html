@@ -67,19 +67,31 @@
     </style>
 </head>
 <body>
-    <!-- Include navigation -->
-    <div id="navigation-container"></div>
-    <script>
-        // Load navigation
-        fetch('shared/navigation.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('navigation-container').innerHTML = html;
-                // Highlight current page
-                const currentPage = window.location.pathname;
-                document.querySelector(`[href="${currentPage}"]`)?.classList.add('active');
-            });
-    </script>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="https://gitlatte.github.io/patr0n/" data-page="index.html"><i class="fas fa-home"></i> Ana Sayfa</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="patron-iptv.html"><i class="fas fa-tv"></i> M3U Linkleri</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="text-parser.html"><i class="fas fa-file-alt"></i> Metin İşleme</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="url-parser.html"><i class="fas fa-link"></i> URL İşleme</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="ready-lists.html"><i class="fas fa-list"></i> Hazır Listeler</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <main class="container">
         <div class="parser-container">
             <h1><i class="fas fa-list"></i> Hazır Listeler</h1>
