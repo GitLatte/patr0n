@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M3U Stream Test - Linkleri Topla</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/navbar.css">
+    <link rel="icon" type="image/x-icon" href="https://gitlatte.github.io/patr0n/img/favicon.ico">
+    <style>
+        .test-container {
+            max-width: 800px;
+            width: 100%;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .status-indicator {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+            box-shadow: 0 0 10px currentColor;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.2); opacity: 0.7; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .status-success {
+            background-color: #2ecc71;
+            box-shadow: 0 0 15px #2ecc71;
+        }
+        .status-error {
+            background-color: #e74c3c;
+            box-shadow: 0 0 15px #e74c3c;
+        }
+        .status-pending {
+            background-color: #f39c12;
+            box-shadow: 0 0 15px #f39c12;
+            animation: pulse 1.5s infinite;
+        }
+        .status-vpn {
+            background-color: hsl(335, 85%, 31%);
+            box-shadow: 0 0 15px hsl(335, 67%, 51%);
+        }
+        #statusText {
+            font-weight: 300;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin-left: 1px;
+        }
+        #statusText.success { color: #2ecc71; }
+        #statusText.error { color: #e74c3c; }
+        #statusText.pending { color: #f39c12; }
+        #statusText.vpn { color: #3498db; }
+        .pulsing-text {
+            animation: textPulse 1.5s infinite;
+        }
+        @keyframes textPulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        .card {
+            margin-bottom: 1.5rem;
+            background: linear-gradient(145deg, rgba(33, 37, 41, 0.95), rgba(23, 27, 31, 0.95));
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+        .card-body {
+            padding: 1.5rem;
+        }
+        .card-body .col-md-4 {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 0.5rem 0;
+        }
+        .card-body .col-md-4:nth-child(2) {
+            background: rgba(255, 255, 255, 0.03);
+        }
+        .card-body .col-md-4:nth-child(3) {
+            background: rgba(255, 255, 255, 0.04);
+        }
+        .card-title {
+            color: #fff;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        .card-text, .mt-3 p {
+            margin-bottom: 0.75rem;
+            color: #ffffff;
+            font-size: 0.95rem;
+        }
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+        .form-control {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            transition: all 0.3s ease;
+        }
+        .form-control:focus {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.1);
+        }
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #fff;
+            font-weight: 700;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #fff;
+            font-weight: 600;
+        }
+        .btn-primary {
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(45deg, #4a90e2, #357abd);
+            border: none;
+            border-radius: 15px;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(45deg, #357abd, #2c6aa0);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+        }
+        .input-area {
+            background: rgba(0, 0, 0, 0.2);
+            color:antiquewhite;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+        .connection-status-area {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+        .connection-status-area .card-text {
+            display: flex;
+            align-items: center;
+            margin: 0;
+            font-size: 1rem;
+        }
+        #statusText {
+            margin-left: 8px;
+        }
+        /* Modal Styles */
+        .modal-test {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(23, 27, 31, 0.95);
+            backdrop-filter: blur(8px);
+            z-index: 1050;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .modal-test .test-container {
+            margin: 0;
+            animation: modalFadeIn 0.3s ease;
+            background: linear-gradient(145deg, rgba(33, 37, 41, 0.95), rgba(23, 27, 31, 0.95));
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .card span:empty {
+            display: none;
+        }
+        .card span:not(:empty) {
+            animation: fadeIn 0.3s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        #testResults {
+            display: none;
+        }
+        #testResults.active {
+            display: block;
+            animation: slideDown 0.3s ease-out;
+        }
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #responseDetails p, #streamDetails p, #accountDetails p {
+          color: rgba(255, 255, 255, 0.9);
+          margin-bottom: 0.5rem;
+          font-size: 0.95rem;
+        }
+
+        #responseDetails strong, #streamDetails strong, #accountDetails strong {
+          color: #4a90e2;
+          font-weight: 600;
+          text-shadow: 0 0 1px rgba(74, 144, 226, 0.3);
+        }
+
+        #responseDetails span, #streamDetails span, #accountDetails span {
+          color: rgba(255, 255, 255, 0.85);
+          font-size: 0.85rem;
+        }
+
+        .thanks-to-thanos {
+          font-size: 12px;
+          color: #f39c12;
+          position: absolute;
+          bottom: 8px;
+          right: 25px;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          border-radius: 4px;
+        }
+
+        .thanks-to-thanos span a{
+          text-decoration: none !important; 
+          color: #aa6e0e !important;
+          font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+        <div class="container">
+            <a href="https://gitlatte.github.io/patr0n/" data-page="index.html"><img class="nav-logo" src="https://gitlatte.github.io/patr0n/img/logo.png" title="Giriş ekranına dön" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="patron-iptv.html"><i class="fas fa-list-ol"></i> patr0n Sunar!</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="test-m3u.html"><i class="fas fa-list-check"></i> M3u Kontrolcüsü</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="text-parser.html"><i class="fas fa-file-alt"></i> Metin/Dosya İşleme</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="url-parser.html"><i class="fas fa-link"></i> URL İşleme</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ready-lists.html"><i class="fas fa-list"></i> Hazır Listeler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://gitlatte.github.io/m3ueditor/" target="_blank"><i class="fas fa-external-link-alt"></i> M3u Web Editör</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="container">
+
+            <div class="test-container">
+                <h1><i class="fas fa-vial"></i> IPTV Bağlantı Kontrolü</h1>
+                <div class="input-area mb-3">
+                    <div class="form-group">
+                        <label for="streamUrl" class="mb-1">M3u ya da M3u8 Adresini Girin:</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="streamUrl" placeholder="http://example.com/stream.m3u8">
+                            <button class="btn btn-secondary" onclick="pasteFromClipboard()">
+                                <i class="fas fa-paste"></i> Yapıştır
+                            </button>
+                        </div>
+                    </div>
+                    <div class="kontrol-container" style="text-align: center;">
+                        <button class="btn btn-primary w-25 mt-2" onclick="testStream()">
+                            <i class="fas fa-check"></i> Kontrol Et
+                        </button>
+                    </div>
+                </div>
+                
+                <div id="testResults" class="content-area">
+                    <h3>Test Sonuçları</h3>
+                    <div class="connection-status-area">
+                        <p class="card-text">
+                            <span id="connectionStatus" class="status-indicator status-error"></span>
+                            <span id="statusText">Bağlantı sonucu için URL gerekiyor...</span>
+                        </p>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h5 class="card-title">Bağlantı Durumu</h5>
+                                    <div id="responseDetails">
+                                        <p><strong>HTTP Durum Kodu:</strong><br/><span id="httpStatus">HTTP Bilgisi</span> <i class="fas fa-info-circle text-info" style="cursor: pointer" data-bs-toggle="tooltip" data-bs-placement="right" title="HTTP durum kodları hakkında bilgi almak için tıklayın" onclick="showHttpStatusInfo()"></i></p>
+                                        <p><strong>Yanıt Süresi:</strong><br/><span id="responseTime">-</span></p>
+                                        <p><strong>İçerik Türü:</strong><br/><span id="contentType">-</span></p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5 class="card-title">Akış Bilgileri</h5>
+                                    <div id="streamDetails">
+                                        <p><strong>Format:</strong> <span id="streamFormat">-</span></p>
+                                        <p><strong>Kanal Sayısı:</strong> <span id="channelCount">-</span></p>
+                                        <p><strong>Dosya Boyutu:</strong> <span id="fileSize">-</span></p>
+                                        <p><strong>Son Güncelleme:</strong> <span id="lastModified">-</span></p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5 class="card-title">Hesap Bilgileri</h5>
+                                    <div id="accountDetails">
+                                        <p><strong>Son Kullanma Tarihi:</strong><br/><span id="expirationDate">-</span></p>
+                                        <p><strong>Kaç kişi bağlanabilir?:</strong> <span id="maxConnections">-</span></p>
+                                        <p><strong>Şu anda bağlı olanlar:</strong> <span id="activeConnections">-</span></p>
+                                    </div>
+                                    <div class="thanks-to-thanos"><span>Hesap bilgileri için <a href="https://forum.sinetech.tr/arama/106528/?c[users]=Thanos&o=date" target="_blank">Thanos</a>'a teşekkürler.</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/adres-kontrol.js"></script>
+    
+    <div class="footer-pages">
+        <p>Linkleri Topla © 2024 - ∞ <a href="https://forum.sinetech.tr/uye/latte.1668/">Latte</a></p>
+      </div>
+    <script>
+    function pasteFromClipboard() {
+    navigator.clipboard.readText()
+        .then(text => {
+            document.getElementById('streamUrl').value = text;
+        })
+        .catch(err => {
+            console.error('Failed to read clipboard:', err);
+            alert('Panodaki içerik alınamadı.');
+        });
+  }
+  </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const streamUrlInput = document.getElementById('streamUrl');
+            if (streamUrlInput) {
+                const testButton = document.querySelector('.btn-primary');
+                if (testButton) {
+                    testButton.addEventListener('click', testStream);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

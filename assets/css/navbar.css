@@ -3,7 +3,9 @@
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 1rem 0;
+    padding: 0.1rem 0;
+    height: 115px;
+    max-height: 117px;
 }
 
 .navbar-brand {
@@ -87,7 +89,7 @@
 }
 
 .nav-link.active {
-    background: linear-gradient(45deg, var(--primary-color), #8e2de2);
+    background: linear-gradient(45deg, #201c23, #7b4ea1);
     color: #fff !important;
     box-shadow: 0 4px 15px rgba(142, 45, 226, 0.3);
     animation: glow 1.5s ease-in-out infinite alternate;

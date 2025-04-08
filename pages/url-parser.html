@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>URL İşleme - Linkleri Topla</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../assets/css/navbar.css">
@@ -121,7 +121,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="patron-iptv.html"><i class="fas fa-tv"></i> patr0n Sunar!</a>
+                        <a class="nav-link" href="patron-iptv.html"><i class="fas fa-list-ol"></i> patr0n Sunar!</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="test-m3u.html"><i class="fas fa-list-check"></i> M3u Kontrolcüsü</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="text-parser.html"><i class="fas fa-file-alt"></i> Metin/Dosya İşleme</a>
@@ -147,10 +150,10 @@
                 <input type="url" id="urlInput" class="url-input" placeholder="Web sayfası URL'sini girin...">
                 <hr>
                 <div class="filter-section mb-3">
-                    <div class="form-check custom-filter">
+                    <div class="form-check form-switch">
                         <input class="form-check-input" type="checkbox" id="m3uFilter">
                         <label class="form-check-label" for="m3uFilter">
-                            <i class="fas fa-filter"></i> Sadece M3u/M3u8 linklerini bulsun.
+                            Sadece M3u/M3u8 linklerini bulsun <i class="fas fa-exclamation fa-sm"></i>
                         </label>
                     </div>
                 </div>
@@ -189,6 +192,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/main.js"></script>
     <script src="../js/url-parser.js"></script>
+    
+    <div class="footer-pages">
+        <p>Linkleri Topla © 2024 - ∞ <a href="https://forum.sinetech.tr/uye/latte.1668/">Latte</a></p>
+      </div>
 </body>
 </html>
 

@@ -61,6 +61,29 @@ footer {
     z-index: 100;
 }
 
+.footer-pages {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #0e1525;
+    color: #c9c4c4;
+    text-align: center;
+    border-top: 0.5px solid #471477;
+ }
+
+.footer-pages a {
+    text-decoration: none;
+    font-weight: bolder;
+    color: var(--primary-color);
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.footer-pages a:hover {
+    color: var(--text-color);
+}
+
 footer p {
     margin: 0;
     color: var(--text-color);
@@ -82,11 +105,15 @@ footer a:hover {
 /* Menu Grid */
 .menu-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 sütun */
+    grid-template-rows: 1fr 1fr 1fr;   /* 3 satır */
+    gap: 0.5rem;
     padding: 2rem;
-    max-width: 800px;
+    max-width: 600px;
     margin: 0 auto;
+    text-align: center;
+    justify-items: center; /* Tüm öğeleri yatayda ortalar */
+    align-items: center;   /* Tüm öğeleri dikeyde ortalar */
 }
 
 .menu-item {
@@ -95,19 +122,24 @@ footer a:hover {
     padding: 2rem;
     text-decoration: none;
     color: var(--text-color);
-    text-align: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 8px 16px var(--shadow-color);
     display: flex;
     flex-direction: column;
-    position: relative;
-    overflow: hidden;
     align-items: center;
     justify-content: center;
     min-height: 200px;
-    position: relative;
-    overflow: hidden;
+    min-width: 200px;
+    max-width: 200px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 16px var(--shadow-color);
 }
+
+/* Grid alanlarını tanımlama */
+.item1 { grid-column: 1; grid-row: 1; } /* Sol üst */
+.item2 { grid-column: 3; grid-row: 1; } /* Sağ üst */
+.item-center { grid-column: 2; grid-row: 2; } /* Tam orta */
+.item3 { grid-column: 1; grid-row: 3; } /* Sol alt */
+.item4 { grid-column: 3; grid-row: 3; } /* Sağ alt */
+
 
 .menu-item::before {
     content: '';
@@ -280,7 +312,8 @@ input:focus, textarea:focus {
     }
 
     .menu-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Tek sütun */
+        grid-template-rows: auto; /* Otomatik satır yüksekliği */
     }
 
     footer {
