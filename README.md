@@ -19,8 +19,8 @@ URL adreslerini ayıklamak ve yönetmek için modern, kullanıcı dostu bir web 
 ## Ekran Görüntüleri
 
 <p align="center">
-  <img src="https://github.com/GitLatte/patr0n/blob/2041943deb3fd85c6ef72d86b3ed4cc9fdce5c33/img/ss/screenshot1.png" alt="Ekran Görüntüsü 1" width="600">
-  <img src="https://github.com/GitLatte/patr0n/blob/2041943deb3fd85c6ef72d86b3ed4cc9fdce5c33/img/ss/screenshot2.png" alt="Ekran Görüntüsü 2" width="600">
+  <img src="https://raw.githubusercontent.com/GitLatte/patr0n/refs/heads/site/img/ss/screenshot1.png" alt="Ekran Görüntüsü 1" width="600">
+  <img src="https://raw.githubusercontent.com/GitLatte/patr0n/refs/heads/site/img/ss/m3u-m3u8-kontrolcusu.png" alt="Ekran Görüntüsü 2" width="600">
 </p>
 
 ## Kullanım
