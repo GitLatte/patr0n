@@ -317,28 +317,29 @@
             };
 
             // Sayfa içeriğini yükle
-            const loadContent = async (url) => {
+            const loadContent = (url) => {
                 const spinner = createLoadingSpinner();
                 dynamicContent.innerHTML = '';
                 dynamicContent.appendChild(spinner);
 
-                try {
-                    const response = await fetch(url);
-                    if (!response.ok) throw new Error('Sayfa yüklenemedi');
-                    
-                    const html = await response.text();
-                    const parser = new DOMParser();
-                    const doc = parser.parseFromString(html, 'text/html');
-                    const content = doc.querySelector('.parser-container');
-                    
-                    if (!content) throw new Error('Sayfa içeriği bulunamadı');
-
+                $('#dynamic-content').load(url + ' .parser-container', function(response, status, xhr) {
                     spinner.remove();
-                    dynamicContent.innerHTML = '';
-                    dynamicContent.appendChild(content);
+                    
+                    if (status === 'error') {
+                        console.error('Sayfa yükleme hatası:', xhr.status, xhr.statusText);
+                        dynamicContent.appendChild(createErrorMessage('Sayfa yüklenirken bir hata oluştu. Lütfen tekrar deneyin.'));
+                        return;
+                    }
+
+                    // URL'yi ve başlığı güncelle
+                    const tempTitle = document.createElement('div');
+                    tempTitle.innerHTML = response;
+                    const pageTitle = tempTitle.querySelector('title')?.textContent || 'Linkleri Topla';
+                    window.history.pushState({ url }, pageTitle, url);
+                    document.title = pageTitle;
 
                     // Sayfadaki scriptleri yeniden yükle
-                    const scripts = content.getElementsByTagName('script');
+                    const scripts = dynamicContent.getElementsByTagName('script');
                     Array.from(scripts).forEach(oldScript => {
                         const newScript = document.createElement('script');
                         Array.from(oldScript.attributes).forEach(attr => {
@@ -347,17 +348,7 @@
                         newScript.appendChild(document.createTextNode(oldScript.innerHTML));
                         oldScript.parentNode.replaceChild(newScript, oldScript);
                     });
-
-                    // URL'yi güncelle
-                    const pageTitle = doc.title || 'Linkleri Topla';
-                    window.history.pushState({ url }, pageTitle, url);
-                    document.title = pageTitle;
-
-                } catch (error) {
-                    console.error('Sayfa yükleme hatası:', error);
-                    spinner.remove();
-                    dynamicContent.appendChild(createErrorMessage('Sayfa yüklenirken bir hata oluştu. Lütfen tekrar deneyin.'));
-                }
+                });
             };
 
             // Sayfa geçişlerini yönet
