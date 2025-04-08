@@ -148,7 +148,18 @@ footer a:hover {
 }
 
 /* Logo Styles */
+.logo-container {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
 .site-logo {
+    position: relative;
+    margin-left: 10%;
+    max-width: 200px;
+    height: auto;
+}
+.nav-logo {
     position: relative;
     max-width: 100px;
     height: auto;
