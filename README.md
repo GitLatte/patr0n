@@ -30,6 +30,11 @@ URL adreslerini ayıklamak ve yönetmek için modern, kullanıcı dostu bir web 
    - Bağlantınızı girin
    - Bağlantıları çıkarmak için İşle'ye tıklayın
 
+1. **M3u Kontrolü**
+   - M3u Kontrolü bölümüne gidin
+   - Bağlantınızı girin
+   - Bağlantı adresine ait bilgileri (erişimde sorun yoksa) görün.
+   - 
 2. **Metin İşleyici**
    - Metin İşleyici bölümüne gidin
    - Bağlantıları içeren metninizi yapıştırın 
