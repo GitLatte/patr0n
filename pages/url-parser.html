@@ -51,6 +51,32 @@
             opacity: 0.9;
         }
 
+        /* Scroll to top button */
+        #scrollTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+
+        #scrollTopBtn:hover {
+            opacity: 0.8;
+        }
+
+        /* Copy all buttons */
+        .copy-all-btn {
+            margin: 10px 0;
+        }
+
         /* Progress bar styles */
         #customProgressContainer {
             margin-top: 20px;
@@ -88,14 +114,14 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
         <div class="container">
-            <a class="navbar-brand" href="https://gitlatte.github.io/patr0n/" data-page="index.html"><i class="fas fa-home"></i> Ana Sayfa</a>
+            <a href="https://gitlatte.github.io/patr0n/" data-page="index.html"><img class="site-logo" src="https://gitlatte.github.io/patr0n/img/logo.png" title="Giriş ekranına dön" /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="patron-iptv.html"><i class="fas fa-tv"></i> patr0n IPTV Linkleri</a>
+                        <a class="nav-link" href="patron-iptv.html"><i class="fas fa-tv"></i> patr0n Sunar!</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="text-parser.html"><i class="fas fa-file-alt"></i> Metin/Dosya İşleme</a>
@@ -120,13 +146,26 @@
             <div class="input-area">
                 <input type="url" id="urlInput" class="url-input" placeholder="Web sayfası URL'sini girin...">
                 <hr>
-                <div class="info-text">
+                <div class="filter-section mb-3">
+                    <div class="form-check custom-filter">
+                        <input class="form-check-input" type="checkbox" id="m3uFilter">
+                        <label class="form-check-label" for="m3uFilter">
+                            <i class="fas fa-filter"></i> Sadece M3u/M3u8 linklerini bulsun.
+                        </label>
+                    </div>
+                </div>
+                <div class="info-text mt-3">
                     <i class="fas fa-info-circle"></i> Linkleri ayıklamak istediğiniz web sayfasının URL'sini girin.
                 </div>
             </div>
-            <button class="btn" onclick="parseURL()">
-                <i class="fas fa-search"></i> Linkleri Bul
-            </button>
+            <div class="button-container d-flex justify-content-between align-items-center">
+                <button class="btn" onclick="parseURL()">
+                    <i class="fas fa-search"></i> Linkleri Bul
+                </button>
+                <button class="btn copy-all-btn" onclick="copyAllLinks()" style="display: none;">
+                    <i class="fas fa-copy"></i> Tüm Linkleri Kopyala
+                </button>
+            </div>
             <div id="loadingMessage" class="alert alert-info mt-3" style="display: none;">
                 <i class="fas fa-spinner fa-spin"></i> İşleniyor...
             </div>
@@ -138,7 +177,13 @@
                 </div>
             </div>
             <div id="results" class="mt-3"></div>
+            <button class="btn copy-all-btn" onclick="copyAllLinks()" style="display: none;">
+                <i class="fas fa-copy"></i> Tüm Linkleri Kopyala
+            </button>
         </div>
+        <button id="scrollTopBtn" onclick="scrollToTop()">
+            <i class="fas fa-arrow-up"></i>
+        </button>
     </main>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -146,3 +191,28 @@
     <script src="../js/url-parser.js"></script>
 </body>
 </html>
+
+<style>
+        .filter-section {
+            background-color: var(--background-color);
+            border-radius: 6px;
+            padding: 0.75rem;
+            margin: 1rem 0;
+        }
+
+        .custom-filter {
+            margin: 0;
+        }
+
+        .custom-filter .form-check-input {
+            margin-right: 0.5rem;
+        }
+
+        .button-container {
+            margin-top: 1rem;
+        }
+
+        .button-container .btn {
+            margin-top: 0;
+        }
+    </style>

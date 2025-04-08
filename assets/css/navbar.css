@@ -16,7 +16,7 @@
     margin-right: 1.5rem;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(45deg, var(--primary-color), #8e2de2);
+    background: linear-gradient(45deg, #0e1525, #8e2de2);
     box-shadow: 0 4px 15px rgba(142, 45, 226, 0.2);
 }
 
@@ -44,6 +44,7 @@
 
 .navbar-nav {
     gap: 1rem;
+    margin-left: 2%;
 }
 
 .nav-item {

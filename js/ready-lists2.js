@@ -3,8 +3,9 @@ const playlists = [
     { name: "IPTV Sevenler (Sinetech.tr @Memetcandal)", url: "https://www.dropbox.com/scl/fi/v2kehgxdx8tzkby03kpht/IPTVSevenler.m3u?rlkey=4sop4kr4o7u9nzm55yfhmkx1w&st=5puawny2&dl=1" },
     { name: "patr0nspor (Sinetech.tr @patr0n)", url: "https://tinyurl.com/patronsport" }, 
     { name: "Bekx İptv (Sinetech.tr @Berat55)", url: "https://www.dropbox.com/scl/fi/sa29n5m5xp9zvueg41f3p/M3U.txt?rlkey=lyjq8wauu4ws1cva1stqlzlet&st=wf8dndo7&dl=1" },
-    { name: "Sinema/Film Arşivi (Sinetech.tr @powerboard)", url: "https://tinyurl.com/power-cinema" },
-    { name: "myway TV (Sinetech.tr @myway)", url: "https://drive.usercontent.google.com/download?id=10MliZSuqDh9Ljs1Fkqh0zKsROmspgYu3&export=download" },
+    { name: "Sinema/Film Arşivi (Sinetech.tr @powerboard)", url: "https://tinyurl.com/power-cinema" }, 
+    { name: "Dizi Arşivi (Sinetech.tr @powerboard)", url: "https://raw.githubusercontent.com/GitLatte/patr0n/refs/heads/site/lists/power-yabanci-dizi.m3u" }, 
+    { name: "myway TV (Sinetech.tr @myway)", url: "https://surl.be/myway06" },
     { name: "SyndraxicV (Sinetech.tr @Syndraxic)", url: "https://m3u.ch/pl/c44d186f905c4c16237b647a99fabd34_44e86ec81890f2324ad996e86dbf4ae2.m3u" },
 ];
 
