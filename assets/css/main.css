@@ -1,18 +1,18 @@
 :root {
-    --primary-color: #6c5ce7;
-    --secondary-color: #f5f6fa;
-    --background-color: #ffffff;
-    --text-color: #2d3436;
-    --border-color: #dfe6e9;
-    --hover-color: #5541d7;
-    --shadow-color: rgba(108, 92, 231, 0.2);
-    --gradient-start: #5541d7;
-    --gradient-end: #6c5ce7;
-    --vscode-highlight: rgba(108, 92, 231, 0.05);
-    --vscode-bg: #f5f6fa;
-    --vscode-border: #dfe6e9;
-    --vscode-blue: #6c5ce7;
-    --vscode-fg: #2d3436;
+    --primary-color: #8e2de2;
+    --secondary-color: #0e1525;
+    --background-color: #0e1525;
+    --text-color: rgba(255, 255, 255, 0.7);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --hover-color: #4a00e0;
+    --shadow-color: rgba(142, 45, 226, 0.3);
+    --gradient-start: #4a00e0;
+    --gradient-end: #8e2de2;
+    --vscode-highlight: rgba(255, 255, 255, 0.05);
+    --vscode-bg: #0e1525;
+    --vscode-border: rgba(255, 255, 255, 0.1);
+    --vscode-blue: #8e2de2;
+    --vscode-fg: #ffffff;
 }
 
 * {
