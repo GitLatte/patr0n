@@ -91,23 +91,30 @@ jobs:
                       if match:
                           attrs, title = match.groups()
                           
-                          # Mevcut grup başlığını koru
+                          # Mevcut grup başlığını koru ve noktalı formatı düzelt
                           group_title_match = re.search(r'group-title="([^"]*)"', attrs)
                           group_title = group_title_match.group(1) if group_title_match else "Yabancı Diziler"
+                          group_title = group_title.replace('.', ' ')
                           
-                          # Başlığı temizle
+                          # Başlığı temizle ve noktalı formatı düzelt
                           title = title.strip()
+                          title_parts = title.split(' ')
+                          main_title = title_parts[0].replace('.', ' ')
+                          rest_of_title = ' '.join(title_parts[1:]) if len(title_parts) > 1 else ''
                           
                           # Sezon/bölüm formatlarını düzenle
                           season_ep_pattern = r'(?i)(?:s(?:eason)?\s*)(\d+)\s*(?:e(?:pisode)?\s*)(\d+)'
                           season_ep_match = re.search(season_ep_pattern, title)
                           
                           if season_ep_match:
-                              season_num = season_ep_match.group(1)
-                              episode_num = season_ep_match.group(2)
+                              season_num = str(int(season_ep_match.group(1)))  # Baştaki sıfırları kaldır
+                              episode_num = str(int(season_ep_match.group(2)))  # Baştaki sıfırları kaldır
                               old_format = season_ep_match.group(0)
                               new_format = f"{season_num}. Sezon {episode_num}. Bölüm"
-                              title = title.replace(old_format, new_format)
+                              rest_of_title = rest_of_title.replace(old_format, new_format)
+                          
+                          # Başlığı birleştir
+                          title = f"{main_title} {rest_of_title}".strip()
                           
                           # Dil ve ülke bilgilerini ekle/koru
                           if 'tvg-language=' not in attrs:
@@ -116,6 +123,7 @@ jobs:
                               attrs = f'{attrs} tvg-country="TR/Yabancı Dil"'
                           
                           # Grup başlığını ekle/güncelle
+                          attrs = re.sub(r'group-title="[^"]*"', f'group-title="{group_title}"', attrs)
                           if 'group-title=' not in attrs:
                               attrs = f'{attrs} group-title="{group_title}"'
                           
