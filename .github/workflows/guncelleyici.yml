@@ -86,39 +86,41 @@ jobs:
               processed_lines = []
               for line in lines:
                   if line.startswith('#EXTINF'):
-                      # Grup başlığındaki noktaları düzelt
-                      line = re.sub(r'group-title="([^"]*)\.+([^"]*)"', lambda m: f'group-title="{m.group(1)} {m.group(2)}"', line)
-                      
-                      # Kanal ismindeki noktaları düzelt
-                      title_match = re.search(r'group-title="[^"]*",(.*?)$', line)
-                      if title_match:
-                          title = title_match.group(1)
+                      # Tüm EXTINF özelliklerini ve başlığı ayır
+                      match = re.match(r'#EXTINF:-1\s*(.*?),\s*(.*?)$', line)
+                      if match:
+                          attrs, title = match.groups()
                           
-                          # Nokta ile ayrılmış kelimeleri boşlukla ayır
-                          title = re.sub(r'\.+', ' ', title)
+                          # Mevcut grup başlığını koru
+                          group_title_match = re.search(r'group-title="([^"]*)"', attrs)
+                          group_title = group_title_match.group(1) if group_title_match else "Yabancı Diziler"
+                          
+                          # Başlığı temizle
+                          title = title.strip()
                           
                           # Sezon/bölüm formatlarını düzenle
-                          # s01e01, S01E01, season 1 episode 1 gibi formatları yakala
                           season_ep_pattern = r'(?i)(?:s(?:eason)?\s*)(\d+)\s*(?:e(?:pisode)?\s*)(\d+)'
                           season_ep_match = re.search(season_ep_pattern, title)
                           
                           if season_ep_match:
                               season_num = season_ep_match.group(1)
                               episode_num = season_ep_match.group(2)
-                              
-                              # Eski formatı yeni Türkçe format ile değiştir
                               old_format = season_ep_match.group(0)
                               new_format = f"{season_num}. Sezon {episode_num}. Bölüm"
                               title = title.replace(old_format, new_format)
                           
-                          # Başlığı güncelle
-                          line = re.sub(r'(group-title="[^"]*",).*$', f'\\1{title}', line)
+                          # Dil ve ülke bilgilerini ekle/koru
+                          if 'tvg-language=' not in attrs:
+                              attrs = f'{attrs} tvg-language="TR/EN"'
+                          if 'tvg-country=' not in attrs:
+                              attrs = f'{attrs} tvg-country="TR/Yabancı Dil"'
                           
-                          # Dil ve ülke bilgilerini ekle
-                          if 'tvg-language=' not in line:
-                              line = line.replace('#EXTINF:-1', '#EXTINF:-1 tvg-language="TR/EN"')
-                          if 'tvg-country=' not in line:
-                              line = line.replace('#EXTINF:-1', '#EXTINF:-1 tvg-country="TR/Yabancı Dil"')
+                          # Grup başlığını ekle/güncelle
+                          if 'group-title=' not in attrs:
+                              attrs = f'{attrs} group-title="{group_title}"'
+                          
+                          # Satırı yeniden oluştur
+                          line = f'#EXTINF:-1 {attrs.strip()},{title}'
                   processed_lines.append(line)
               return '\n'.join(processed_lines)
 
