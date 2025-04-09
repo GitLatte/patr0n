@@ -98,12 +98,14 @@ jobs:
                           
                           # Başlığı temizle ve noktalı formatı düzelt
                           title = title.strip()
+                          # Nokta ile ayrılmış başlığı boşluklarla değiştir
+                          title = re.sub(r'\.(?=\S)', ' ', title)
                           title_parts = title.split(' ')
-                          main_title = title_parts[0].replace('.', ' ')
+                          main_title = ' '.join(word.capitalize() for word in title_parts[0].split())
                           rest_of_title = ' '.join(title_parts[1:]) if len(title_parts) > 1 else ''
                           
                           # Sezon/bölüm formatlarını düzenle
-                          season_ep_pattern = r'(?i)(?:s(?:eason)?\s*)(\d+)\s*(?:e(?:pisode)?\s*)(\d+)'
+                          season_ep_pattern = r'(?i)(?:s(?:eason)?[\s\.]?)(\d+)(?:[\s\.])?(?:e(?:pisode)?[\s\.]?)(\d+)'
                           season_ep_match = re.search(season_ep_pattern, title)
                           
                           if season_ep_match:
