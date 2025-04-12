@@ -1,22 +1,56 @@
 ﻿#EXTM3U
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://img.logo-cdn.cc/beinsportshaber.png" group-title="🌟SPOR Canlı TV🌟",BEIN SPORTS HABER HD
+http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/154
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://img.logo-cdn.cc/beinsports1.png" group-title="🌟SPOR Canlı TV🌟",BEIN SPORTS 1
+http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/148
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Beinsports1.png" group-title="🌟SPOR Canlı TV🌟",Bein Sport 1
 http://188.95.65.168:25461/arjantin/EByTyVc9emWq/2463
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://img.logo-cdn.cc/beinsports1.png" group-title="🌟SPOR Canlı TV🌟",BEIN SPORTS 1 HD
+http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/147
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Beinsports1.png" group-title="🌟SPOR Canlı TV🌟",bein1-1080p
 http://188.95.65.168:25461/arjantin/EByTyVc9emWq/2476
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://img.logo-cdn.cc/beinsports1.png" group-title="🌟SPOR Canlı TV🌟",BEIN SPORTS 1 FHD
+http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/146
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Beinsportsfeed.png" group-title="🌟SPOR Canlı TV🌟",Bein 1 4K
 http://188.95.65.168:25461/arjantin/EByTyVc9emWq/2474
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://img.logo-cdn.cc/beinsports2.png" group-title="🌟SPOR Canlı TV🌟",BEIN SPORTS 2 HD
+http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/149
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Beinsports2.png" group-title="🌟SPOR Canlı TV🌟",Bein Sport 2
 http://188.95.65.168:25461/arjantin/EByTyVc9emWq/2464
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://img.logo-cdn.cc/beinsports3.png" group-title="🌟SPOR Canlı TV🌟",BEIN SPORTS 3 HD
+http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/150
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Beinsports3.png" group-title="🌟SPOR Canlı TV🌟",Bein Sport 3
 http://188.95.65.168:25461/arjantin/EByTyVc9emWq/2465
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Beinsports4.png" group-title="🌟SPOR Canlı TV🌟",Bein Sport 4
 http://188.95.65.168:25461/arjantin/EByTyVc9emWq/2466
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://assets.bein.com/mena/sites/3/2015/06/beIN_SPORTS5_DIGITAL_Mono.png" group-title="🌟SPOR Canlı TV🌟",Bein Sport 5
 http://188.95.65.168:25461/arjantin/EByTyVc9emWq/2467
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://img.logo-cdn.cc/beinsportsmax1.png" group-title="🌟SPOR Canlı TV🌟",BEIN SPORTS MAX 1 HD
+http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/152
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Beinsportsmax1.png" group-title="🌟SPOR Canlı TV🌟",Bein Sport Max 1
 http://188.95.65.168:25461/arjantin/EByTyVc9emWq/2468
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://img.logo-cdn.cc/beinsportsmax2.png" group-title="🌟SPOR Canlı TV🌟",BEIN SPORTS MAX 2 HD
+http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/153
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Beinsportsmax2.png" group-title="🌟SPOR Canlı TV🌟",Bein Sport Max 2
 http://188.95.65.168:25461/arjantin/EByTyVc9emWq/2469
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://img.logo-cdn.cc/trtspor.png" group-title="🌟SPOR Canlı TV🌟",TRT SPOR HD
+http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/157
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://img.logo-cdn.cc/ssport.png" group-title="🌟SPOR Canlı TV🌟",S SPORT HD
+http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/155
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://img.logo-cdn.cc/tivibuspor1hd.png" group-title="🌟SPOR Canlı TV🌟",TIVIBU SPOR 1 HD
+http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/161
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://img.logo-cdn.cc/tivibuspor2hd.png" group-title="🌟SPOR Canlı TV🌟",TIVIBU SPOR 2 HD
+http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/162
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://img.logo-cdn.cc/tivibuspor3hd.png" group-title="🌟SPOR Canlı TV🌟",TIVIBU SPOR 3 HD
+http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/163
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://img.logo-cdn.cc/exxensports.png" group-title="🌟SPOR Canlı TV🌟",|TR|  EXXEN SPORTS 1
+http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/167
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://img.logo-cdn.cc/exxensports.png" group-title="🌟SPOR Canlı TV🌟",|TR|  EXXEN SPORTS 2
+http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/168
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://img.logo-cdn.cc/exxensports.png" group-title="🌟SPOR Canlı TV🌟",|TR|  EXXEN SPORTS 3
+http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/169
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://img.logo-cdn.cc/eurosport1.png" group-title="🌟SPOR Canlı TV🌟",EUROSPORT 1 HD
+http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/142
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Beinsports1.png" group-title="🔸VPN🔸[Türkiye |SPOR]",TR: BEIN SPORTS 1 HD
 http://iptv.maxlacress.com:2082/nbx74sHVe3GUZ6/cxz83DS5mF3wDS/140431
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Beinsports2.png" group-title="🔸VPN🔸[Türkiye |SPOR]",TR: BEIN SPORTS 2 HD
