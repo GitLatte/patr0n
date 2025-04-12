@@ -1,4 +1,24 @@
 ﻿#EXTM3U
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Beinsports1.png" group-title="🌟SPOR Canlı TV🌟",Bein Sport 1
+http://188.95.65.168:25461/454543/4534543/2463
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Beinsports1.png" group-title="🌟SPOR Canlı TV🌟",bein1-1080p
+http://188.95.65.168:25461/454543/4534543/2476
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Beinsportsfeed.png" group-title="🌟SPOR Canlı TV🌟",Bein 1 4K
+http://188.95.65.168:25461/454543/4534543/2474
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Beinsports2.png" group-title="🌟SPOR Canlı TV🌟",Bein Sport 2
+http://188.95.65.168:25461/454543/4534543/2464
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Beinsports3.png" group-title="🌟SPOR Canlı TV🌟",Bein Sport 3
+http://188.95.65.168:25461/454543/4534543/2465
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Beinsports4.png" group-title="🌟SPOR Canlı TV🌟",Bein Sport 4
+http://188.95.65.168:25461/454543/4534543/2466
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://assets.bein.com/mena/sites/3/2015/06/beIN_SPORTS5_DIGITAL_Mono.png" group-title="🌟SPOR Canlı TV🌟",Bein Sport 5
+http://188.95.65.168:25461/454543/4534543/2467
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Beinsportsmax1.png" group-title="🌟SPOR Canlı TV🌟",Bein Sport Max 1
+http://188.95.65.168:25461/454543/4534543/2468
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Beinsportsmax2.png" group-title="🌟SPOR Canlı TV🌟",Bein Sport Max 2
+http://188.95.65.168:25461/454543/4534543/2469
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Beinsports1.png" group-title="🌟SPOR Canlı TV🌟",Bein-1-Yedek
+http://188.95.65.168:25461/454543/4534543/2478
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Beinsports1.png" group-title="🔸VPN🔸[Türkiye |SPOR]",TR: BEIN SPORTS 1 HD
 http://iptv.maxlacress.com:2082/nbx74sHVe3GUZ6/cxz83DS5mF3wDS/140431
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Beinsports2.png" group-title="🔸VPN🔸[Türkiye |SPOR]",TR: BEIN SPORTS 2 HD
