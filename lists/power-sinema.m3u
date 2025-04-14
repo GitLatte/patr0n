@@ -1,8 +1,6 @@
 ﻿#EXTM3U
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTYzZ_447.png" group-title="🌟SPOR Canlı TV🌟",BEIN SPORTS HABER HD
 http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/154
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/international/beinsports/old/stacked/bein-sports-1-int.png" group-title="🌟SPOR Canlı TV🌟",beIN SPORTS 1 HD
-http://kasdkhakfbv.xyz:8080/c7B8fgeKJt982/ezeSyCtJSxFX/102284
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTY0M_253.png" group-title="🌟SPOR Canlı TV🌟",BEIN SPORTS 1
 http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/148
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Beinsports1.png" group-title="🌟SPOR Canlı TV🌟",Bein Sport 1
@@ -15,80 +13,38 @@ http://188.95.65.168:25461/arjantin/EByTyVc9emWq/2476
 http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/146
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Beinsportsfeed.png" group-title="🌟SPOR Canlı TV🌟",Bein 1 4K
 http://188.95.65.168:25461/arjantin/EByTyVc9emWq/2474
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/international/beinsports/old/stacked/bein-sports-2-int.png" group-title="🌟SPOR Canlı TV🌟",beIN SPORTS 2 HD
-http://kasdkhakfbv.xyz:8080/c7B8fgeKJt982/ezeSyCtJSxFX/102285
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTY0M_255.png" group-title="🌟SPOR Canlı TV🌟",BEIN SPORTS 2 HD
 http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/149
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Beinsports2.png" group-title="🌟SPOR Canlı TV🌟",Bein Sport 2
 http://188.95.65.168:25461/arjantin/EByTyVc9emWq/2464
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/international/beinsports/old/stacked/bein-sports-3-int.png" group-title="🌟SPOR Canlı TV🌟",beIN SPORTS 3 HD
-http://kasdkhakfbv.xyz:8080/c7B8fgeKJt982/ezeSyCtJSxFX/102286
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTY0M_258.png" group-title="🌟SPOR Canlı TV🌟",BEIN SPORTS 3 HD
 http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/150
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Beinsports3.png" group-title="🌟SPOR Canlı TV🌟",Bein Sport 3
 http://188.95.65.168:25461/arjantin/EByTyVc9emWq/2465
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/international/beinsports/old/stacked/bein-sports-4-int.png" group-title="🌟SPOR Canlı TV🌟",beIN SPORTS 4 HD
-http://kasdkhakfbv.xyz:8080/c7B8fgeKJt982/ezeSyCtJSxFX/102287
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Beinsports4.png" group-title="🌟SPOR Canlı TV🌟",Bein Sport 4
 http://188.95.65.168:25461/arjantin/EByTyVc9emWq/2466
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/international/beinsports/old/stacked/bein-sports-5-int.png" group-title="🌟SPOR Canlı TV🌟",beIN SPORTS 5 HD
 http://kasdkhakfbv.xyz:8080/c7B8fgeKJt982/ezeSyCtJSxFX/102288
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://assets.bein.com/mena/sites/3/2015/06/beIN_SPORTS5_DIGITAL_Mono.png" group-title="🌟SPOR Canlı TV🌟",Bein Sport 5
 http://188.95.65.168:25461/arjantin/EByTyVc9emWq/2467
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/international/beinsports/old/stacked/bein-sports-1-max-int.png" group-title="🌟SPOR Canlı TV🌟",beIN SPORTS MAX 1 HD
-http://kasdkhakfbv.xyz:8080/c7B8fgeKJt982/ezeSyCtJSxFX/102289
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTY0M_264.png" group-title="🌟SPOR Canlı TV🌟",BEIN SPORTS MAX 1 HD
 http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/152
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Beinsportsmax1.png" group-title="🌟SPOR Canlı TV🌟",Bein Sport Max 1
 http://188.95.65.168:25461/arjantin/EByTyVc9emWq/2468
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/international/beinsports/old/stacked/bein-sports-2-max-int.png" group-title="🌟SPOR Canlı TV🌟",beIN SPORTS MAX 2 HD
-http://kasdkhakfbv.xyz:8080/c7B8fgeKJt982/ezeSyCtJSxFX/102290
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTY0M_266.png" group-title="🌟SPOR Canlı TV🌟",BEIN SPORTS MAX 2 HD
 http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/153
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Beinsportsmax2.png" group-title="🌟SPOR Canlı TV🌟",Bein Sport Max 2
 http://188.95.65.168:25461/arjantin/EByTyVc9emWq/2469
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/trt-spor-tr.png" group-title="🌟SPOR Canlı TV🌟",TRT SPOR HD
-http://kasdkhakfbv.xyz:8080/c7B8fgeKJt982/ezeSyCtJSxFX/102307
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTY0M_329.png" group-title="🌟SPOR Canlı TV🌟",TRT SPOR HD
 http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/157
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTY0Z_98.png" group-title="🌟SPOR Canlı TV🌟",S SPORT HD
 http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/155
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/s-sport-tr.png" group-title="🌟SPOR Canlı TV🌟",S SPORTS 1 HD
-http://kasdkhakfbv.xyz:8080/c7B8fgeKJt982/ezeSyCtJSxFX/102291
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/s-sport-2-tr.png" group-title="🌟SPOR Canlı TV🌟",S SPORTS 2 HD
-http://kasdkhakfbv.xyz:8080/c7B8fgeKJt982/ezeSyCtJSxFX/102292
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/spor-smart-hd-tr.png" group-title="🌟SPOR Canlı TV🌟",SMART SPOR 1 HD
-http://kasdkhakfbv.xyz:8080/c7B8fgeKJt982/ezeSyCtJSxFX/102300
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://raw.githubusercontent.com/bulutdev/Sinemapicon/main/smartspor2.png" group-title="🌟SPOR Canlı TV🌟",SMART SPOR 2 HD
-http://kasdkhakfbv.xyz:8080/c7B8fgeKJt982/ezeSyCtJSxFX/102301
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://raw.githubusercontent.com/bulutdev/Sinemapicon/refs/heads/main/tabii.png" group-title="🌟SPOR Canlı TV🌟",TABII SPOR HD
-http://kasdkhakfbv.xyz:8080/c7B8fgeKJt982/ezeSyCtJSxFX/102293
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://raw.githubusercontent.com/bulutdev/Sinemapicon/refs/heads/main/tabii.png" group-title="🌟SPOR Canlı TV🌟",TABII SPOR 1 HD
-http://kasdkhakfbv.xyz:8080/c7B8fgeKJt982/ezeSyCtJSxFX/102294
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://raw.githubusercontent.com/bulutdev/Sinemapicon/refs/heads/main/tabii.png" group-title="🌟SPOR Canlı TV🌟",TABII SPOR 2 HD
-http://kasdkhakfbv.xyz:8080/c7B8fgeKJt982/ezeSyCtJSxFX/102295
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://raw.githubusercontent.com/bulutdev/Sinemapicon/refs/heads/main/tabii.png" group-title="🌟SPOR Canlı TV🌟",TABII SPOR 3 HD
-http://kasdkhakfbv.xyz:8080/c7B8fgeKJt982/ezeSyCtJSxFX/102296
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://raw.githubusercontent.com/bulutdev/Sinemapicon/refs/heads/main/tabii.png" group-title="🌟SPOR Canlı TV🌟",TABII SPOR 4 HD
-http://kasdkhakfbv.xyz:8080/c7B8fgeKJt982/ezeSyCtJSxFX/102297
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://raw.githubusercontent.com/bulutdev/Sinemapicon/refs/heads/main/tabii.png" group-title="🌟SPOR Canlı TV🌟",TABII SPOR 5 HD
-http://kasdkhakfbv.xyz:8080/c7B8fgeKJt982/ezeSyCtJSxFX/102298
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://raw.githubusercontent.com/bulutdev/Sinemapicon/refs/heads/main/tabii.png" group-title="🌟SPOR Canlı TV🌟",TABII SPOR 6 HD
-http://kasdkhakfbv.xyz:8080/c7B8fgeKJt982/ezeSyCtJSxFX/102299
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://raw.githubusercontent.com/bulutdev/Sinemapicon/refs/heads/main/Tivibuspor1.png" group-title="🌟SPOR Canlı TV🌟",TIVIBUSPOR 1 HD
-http://kasdkhakfbv.xyz:8080/c7B8fgeKJt982/ezeSyCtJSxFX/102302
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTY0Z_102.png" group-title="🌟SPOR Canlı TV🌟",TIVIBU SPOR 1 HD
 http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/161
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://raw.githubusercontent.com/bulutdev/Sinemapicon/refs/heads/main/Tivibuspor2.png" group-title="🌟SPOR Canlı TV🌟",TIVIBUSPOR 2 HD
-http://kasdkhakfbv.xyz:8080/c7B8fgeKJt982/ezeSyCtJSxFX/102303
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTY0Z_103.png" group-title="🌟SPOR Canlı TV🌟",TIVIBU SPOR 2 HD
 http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/162
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://raw.githubusercontent.com/bulutdev/Sinemapicon/refs/heads/main/Tivibuspor3.png" group-title="🌟SPOR Canlı TV🌟",TIVIBUSPOR 3 HD
-http://kasdkhakfbv.xyz:8080/c7B8fgeKJt982/ezeSyCtJSxFX/102304
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTY0Z_104.png" group-title="🌟SPOR Canlı TV🌟",TIVIBU SPOR 3 HD
 http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/163
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://raw.githubusercontent.com/bulutdev/Sinemapicon/refs/heads/main/Tivibuspor4.png" group-title="🌟SPOR Canlı TV🌟",TIVIBUSPOR 4 HD
-http://kasdkhakfbv.xyz:8080/c7B8fgeKJt982/ezeSyCtJSxFX/102305
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTY0Z_96.png" group-title="🌟SPOR Canlı TV🌟",|TR|  EXXEN SPORTS 1
 http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/167
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTY0Z_96.png" group-title="🌟SPOR Canlı TV🌟",|TR|  EXXEN SPORTS 2
