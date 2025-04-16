@@ -1,236 +1,4 @@
 ﻿#EXTM3U
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTYzZ_447.png" group-title="🌟SPOR Canlı TV🌟",BEIN SPORTS HABER HD
-http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/154
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTY0M_253.png" group-title="🌟SPOR Canlı TV🌟",BEIN SPORTS 1
-http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/148
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Beinsports1.png" group-title="🌟SPOR Canlı TV🌟",Bein Sport 1
-http://188.95.65.168:25461/arjantin/EByTyVc9emWq/2463
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTY0M_253.png" group-title="🌟SPOR Canlı TV🌟",BEIN SPORTS 1 HD
-http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/147
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Beinsports1.png" group-title="🌟SPOR Canlı TV🌟",bein1-1080p
-http://188.95.65.168:25461/arjantin/EByTyVc9emWq/2476
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTYzZ_443.png" group-title="🌟SPOR Canlı TV🌟",BEIN SPORTS 1 FHD
-http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/146
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Beinsportsfeed.png" group-title="🌟SPOR Canlı TV🌟",Bein 1 4K
-http://188.95.65.168:25461/arjantin/EByTyVc9emWq/2474
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTY0M_255.png" group-title="🌟SPOR Canlı TV🌟",BEIN SPORTS 2 HD
-http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/149
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Beinsports2.png" group-title="🌟SPOR Canlı TV🌟",Bein Sport 2
-http://188.95.65.168:25461/arjantin/EByTyVc9emWq/2464
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTY0M_258.png" group-title="🌟SPOR Canlı TV🌟",BEIN SPORTS 3 HD
-http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/150
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Beinsports3.png" group-title="🌟SPOR Canlı TV🌟",Bein Sport 3
-http://188.95.65.168:25461/arjantin/EByTyVc9emWq/2465
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Beinsports4.png" group-title="🌟SPOR Canlı TV🌟",Bein Sport 4
-http://188.95.65.168:25461/arjantin/EByTyVc9emWq/2466
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/international/beinsports/old/stacked/bein-sports-5-int.png" group-title="🌟SPOR Canlı TV🌟",beIN SPORTS 5 HD
-http://kasdkhakfbv.xyz:8080/c7B8fgeKJt982/ezeSyCtJSxFX/102288
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://assets.bein.com/mena/sites/3/2015/06/beIN_SPORTS5_DIGITAL_Mono.png" group-title="🌟SPOR Canlı TV🌟",Bein Sport 5
-http://188.95.65.168:25461/arjantin/EByTyVc9emWq/2467
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTY0M_264.png" group-title="🌟SPOR Canlı TV🌟",BEIN SPORTS MAX 1 HD
-http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/152
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Beinsportsmax1.png" group-title="🌟SPOR Canlı TV🌟",Bein Sport Max 1
-http://188.95.65.168:25461/arjantin/EByTyVc9emWq/2468
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTY0M_266.png" group-title="🌟SPOR Canlı TV🌟",BEIN SPORTS MAX 2 HD
-http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/153
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Beinsportsmax2.png" group-title="🌟SPOR Canlı TV🌟",Bein Sport Max 2
-http://188.95.65.168:25461/arjantin/EByTyVc9emWq/2469
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTY0M_329.png" group-title="🌟SPOR Canlı TV🌟",TRT SPOR HD
-http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/157
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTY0Z_98.png" group-title="🌟SPOR Canlı TV🌟",S SPORT HD
-http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/155
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTY0Z_102.png" group-title="🌟SPOR Canlı TV🌟",TIVIBU SPOR 1 HD
-http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/161
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTY0Z_103.png" group-title="🌟SPOR Canlı TV🌟",TIVIBU SPOR 2 HD
-http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/162
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTY0Z_104.png" group-title="🌟SPOR Canlı TV🌟",TIVIBU SPOR 3 HD
-http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/163
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTY0Z_96.png" group-title="🌟SPOR Canlı TV🌟",|TR|  EXXEN SPORTS 1
-http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/167
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTY0Z_96.png" group-title="🌟SPOR Canlı TV🌟",|TR|  EXXEN SPORTS 2
-http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/168
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTY0Z_96.png" group-title="🌟SPOR Canlı TV🌟",|TR|  EXXEN SPORTS 3
-http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/169
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTY0M_314.png" group-title="🌟SPOR Canlı TV🌟",EUROSPORT 1 HD
-http://103.161.34.59:8080/INFINITYZBRbH14hQF/KWz6KrhQvj/142
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Beinsports1.png" group-title="🔸VPN🔸[Türkiye |SPOR]",TR: BEIN SPORTS 1 HD
-http://iptv.maxlacress.com:2082/nbx74sHVe3GUZ6/cxz83DS5mF3wDS/140431
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Beinsports2.png" group-title="🔸VPN🔸[Türkiye |SPOR]",TR: BEIN SPORTS 2 HD
-http://iptv.maxlacress.com:2082/nbx74sHVe3GUZ6/cxz83DS5mF3wDS/139939
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Beinsports3.png" group-title="🔸VPN🔸[Türkiye |SPOR]",TR: BEIN SPORTS 3 HD
-http://iptv.maxlacress.com:2082/nbx74sHVe3GUZ6/cxz83DS5mF3wDS/139942
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Beinsports4.png" group-title="🔸VPN🔸[Türkiye |SPOR]",TR: BEIN SPORTS 4 HD
-http://iptv.maxlacress.com:2082/nbx74sHVe3GUZ6/cxz83DS5mF3wDS/139940
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Beinsportsmax1.png" group-title="🔸VPN🔸[Türkiye |SPOR]",TR: BEIN MAX SPORTS 1 HD
-http://iptv.maxlacress.com:2082/nbx74sHVe3GUZ6/cxz83DS5mF3wDS/139943
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Trtspor.png" group-title="🔸VPN🔸[Türkiye |SPOR]",TR: TRT SPORT 1 HD
-http://iptv.maxlacress.com:2082/nbx74sHVe3GUZ6/cxz83DS5mF3wDS/190523
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Trtspor.png" group-title="🔸VPN🔸[Türkiye |SPOR]",TR: TRT SPORT 2 HD
-http://iptv.maxlacress.com:2082/nbx74sHVe3GUZ6/cxz83DS5mF3wDS/190524
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Aspor.png" group-title="🔸VPN🔸[Türkiye |SPOR]",TR: A SPOR HD LOCAL
-http://iptv.maxlacress.com:2082/nbx74sHVe3GUZ6/cxz83DS5mF3wDS/139967
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://www.sariyertimes.com/wp-content/uploads/2020/06/869964.jpg" group-title="🔸VPN🔸[Türkiye |SPOR]",TR: SPORTS HABER HD LOCAL
-http://iptv.maxlacress.com:2082/nbx74sHVe3GUZ6/cxz83DS5mF3wDS/139966
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Sporsmart.png" group-title="🔸VPN🔸[Türkiye |SPOR]",TR: SPORSMART LOCAL
-http://iptv.maxlacress.com:2082/nbx74sHVe3GUZ6/cxz83DS5mF3wDS/139969
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://antensiztv.eu/tabispor.jpg" group-title="🔸VPN🔸[Türkiye |SPOR]",TR: TABII SPORT HD
-http://iptv.maxlacress.com:2082/nbx74sHVe3GUZ6/cxz83DS5mF3wDS/190514
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://antensiztv.eu/tabispor.jpg" group-title="🔸VPN🔸[Türkiye |SPOR]",TR: TABII SPORT 1 HD
-http://iptv.maxlacress.com:2082/nbx74sHVe3GUZ6/cxz83DS5mF3wDS/190515
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://antensiztv.eu/tabispor.jpg" group-title="🔸VPN🔸[Türkiye |SPOR]",TR: TABII SPORT 2 HD
-http://iptv.maxlacress.com:2082/nbx74sHVe3GUZ6/cxz83DS5mF3wDS/190516
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://antensiztv.eu/tabispor.jpg" group-title="🔸VPN🔸[Türkiye |SPOR]",TR: TABII SPORT 3 HD
-http://iptv.maxlacress.com:2082/nbx74sHVe3GUZ6/cxz83DS5mF3wDS/190517
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://antensiztv.eu/tabispor.jpg" group-title="🔸VPN🔸[Türkiye |SPOR]",TR: TABII SPORT 4 HD
-http://iptv.maxlacress.com:2082/nbx74sHVe3GUZ6/cxz83DS5mF3wDS/190518
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://antensiztv.eu/tabispor.jpg" group-title="🔸VPN🔸[Türkiye |SPOR]",TR: TABII SPORT 5 HD
-http://iptv.maxlacress.com:2082/nbx74sHVe3GUZ6/cxz83DS5mF3wDS/190519
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://antensiztv.eu/tabispor.jpg" group-title="🔸VPN🔸[Türkiye |SPOR]",TR: TABII SPORT 6 HD
-http://iptv.maxlacress.com:2082/nbx74sHVe3GUZ6/cxz83DS5mF3wDS/190520
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Exxenspor1.png" group-title="🔸VPN🔸[Türkiye |SPOR]",TR: Exxen SPOR 1
-http://iptv.maxlacress.com:2082/nbx74sHVe3GUZ6/cxz83DS5mF3wDS/145013
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Exxenspor1.png" group-title="🔸VPN🔸[Türkiye |SPOR]",TR: Exxen Spor 1 HD
-http://iptv.maxlacress.com:2082/nbx74sHVe3GUZ6/cxz83DS5mF3wDS/145014
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Exxenspor2.png" group-title="🔸VPN🔸[Türkiye |SPOR]",TR: Exxen SPOR 2
-http://iptv.maxlacress.com:2082/nbx74sHVe3GUZ6/cxz83DS5mF3wDS/145015
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Exxenspor2.png" group-title="🔸VPN🔸[Türkiye |SPOR]",TR: Exxen Sport 2 HD
-http://iptv.maxlacress.com:2082/nbx74sHVe3GUZ6/cxz83DS5mF3wDS/145016
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Exxenspor3.png" group-title="🔸VPN🔸[Türkiye |SPOR]",TR: Exxen SPOR 3 HD
-http://iptv.maxlacress.com:2082/nbx74sHVe3GUZ6/cxz83DS5mF3wDS/145017
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Exxenspor4.png" group-title="🔸VPN🔸[Türkiye |SPOR]",TR: Exxen Sport 4 HD
-http://iptv.maxlacress.com:2082/nbx74sHVe3GUZ6/cxz83DS5mF3wDS/145018
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Exxenspor5.png" group-title="🔸VPN🔸[Türkiye |SPOR]",TR: Exxen SPORT 5 HD
-http://iptv.maxlacress.com:2082/nbx74sHVe3GUZ6/cxz83DS5mF3wDS/145019
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://cappadociaultratrail.com/upload/etkinlikler/partners/ssport.jpg" group-title="🔸VPN🔸[Türkiye |SPOR]",TR: spor
-http://iptv.maxlacress.com:2082/nbx74sHVe3GUZ6/cxz83DS5mF3wDS/139970
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Ssport2.png" group-title="🔸VPN🔸[Türkiye |SPOR]",TR: S SPORT 2
-http://iptv.maxlacress.com:2082/nbx74sHVe3GUZ6/cxz83DS5mF3wDS/140462
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Eurosports1.png" group-title="🔸VPN🔸[Türkiye |SPOR]",TR: EUROSPORT LOCAL
-http://iptv.maxlacress.com:2082/nbx74sHVe3GUZ6/cxz83DS5mF3wDS/139971
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f6/BeIN_Sports.png" group-title="💎+VPN💎[TR SPORTS]",TR:- beiN Spor Haber
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/4034
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f6/BeIN_Sports.png" group-title="💎+VPN💎[TR SPORTS]",TR:- BeiN Mac Zamani
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/25765
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f6/BeIN_Sports.png" group-title="💎+VPN💎[TR SPORTS]",TR:-BEIN SPOR 1 4K UHD
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/11498
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f6/BeIN_Sports.png" group-title="💎+VPN💎[TR SPORTS]",TR:- BEIN SPOR 1 FHD*
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/6938
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f6/BeIN_Sports.png" group-title="💎+VPN💎[TR SPORTS]",TR:- BEIN SPORTS 1 FHD
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/9103
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f6/BeIN_Sports.png" group-title="💎+VPN💎[TR SPORTS]",TR:- BEIN SPOR 1 HD
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/3512
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f6/BeIN_Sports.png" group-title="💎+VPN💎[TR SPORTS]",TR:- beIN SPOR 2 HD*
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/3513
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f6/BeIN_Sports.png" group-title="💎+VPN💎[TR SPORTS]",TR:- beiN Sport 2 Hd
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/1903
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f6/BeIN_Sports.png" group-title="💎+VPN💎[TR SPORTS]",TR:- beiN Sport HD 3
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/1904
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f6/BeIN_Sports.png" group-title="💎+VPN💎[TR SPORTS]",TR:- beiN Sport 3*
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/7094
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f6/BeIN_Sports.png" group-title="💎+VPN💎[TR SPORTS]",TR:-beiN Spor 4**
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/2312
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f6/BeIN_Sports.png" group-title="💎+VPN💎[TR SPORTS]",TR:- beiN Sport 4*
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/7095
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f6/BeIN_Sports.png" group-title="💎+VPN💎[TR SPORTS]",TR:- BEINSPORTS 5 HD
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/17714
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f6/BeIN_Sports.png" group-title="💎+VPN💎[TR SPORTS]",TR:- beiN Spor Max HD 1
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/2515
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f6/BeIN_Sports.png" group-title="💎+VPN💎[TR SPORTS]",TR:- beiN Spor Max HD 2
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/2516
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTY0M_329.png" group-title="💎+VPN💎[TR SPORTS]",TR:- TRT Spor FHD
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/1925
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTY0M_329.png" group-title="💎+VPN💎[TR SPORTS]",TR:- TRT Spor
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/11463
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTY0M_326.png" group-title="💎+VPN💎[TR SPORTS]",TR: TRT  SPOR YILDIZ
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/16243
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://iaspr.tmgrup.com.tr/2020/10/29/1604005135373.png" group-title="💎+VPN💎[TR SPORTS]",TR:- A Spor FHD
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/2313
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://iaspr.tmgrup.com.tr/2020/10/29/1604005135373.png" group-title="💎+VPN💎[TR SPORTS]",TR:- A Spor HD*
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/1876
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://www.htspor.com/images/manifest/social-share-logo.png" group-title="💎+VPN💎[TR SPORTS]",TR:-HT SPOR
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/25525
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/tr/8/89/Nbatv.png" group-title="💎+VPN💎[TR SPORTS]",TR:- NBA
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/21900
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://picon.pics/TR/Spor/Fightbox.png" group-title="💎+VPN💎[TR SPORTS]",TR:- Fight Box
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/19831
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTY0Z_102.png" group-title="💎+VPN💎[TR SPORTS]",TR:- Tivibu Spor 1 HD
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/2510
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTY0Z_103.png" group-title="💎+VPN💎[TR SPORTS]",TR:- Tivibu Spor 2 HD
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/2511
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTY0Z_104.png" group-title="💎+VPN💎[TR SPORTS]",TR:- Tivibu Spor 3 HD
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/2512
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTY0Z_105.png" group-title="💎+VPN💎[TR SPORTS]",TR:- TivibuSpor 4  HD
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/19816
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTY0M_314.png" group-title="💎+VPN💎[TR SPORTS]",TR:- Euro Spor 1 HD
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/2513
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTY0M_312.png" group-title="💎+VPN💎[TR SPORTS]",TR:- Eurosport 2
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/19833
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTY2N_167.png" group-title="💎+VPN💎[TR SPORTS]",TR:- Smart Spor HD
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/2304
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/fd/Smart-spor-hd.png" group-title="💎+VPN💎[TR SPORTS]",TR:- Smart Spor
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/3445
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTY0M_318.png" group-title="💎+VPN💎[TR SPORTS]",TR: SPOR SMART 2 FHD
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/15888
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTY0M_318.png" group-title="💎+VPN💎[TR SPORTS]",TR: SPOR SMART 2 HD
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/15889
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTY0M_317.png" group-title="💎+VPN💎[TR SPORTS]",TR:- Spor TV HD*
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/2305
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://begenal.shop//resim/galeri_MTY0M_325.png" group-title="💎+VPN💎[TR SPORTS]",TR:- FB TV
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/2617
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/db/Exxen.png" group-title="💎+VPN💎[TR SPORTS]",TR:Exxenn Sports 1 FHD
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/12188
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/db/Exxen.png" group-title="💎+VPN💎[TR SPORTS]",TR:Exxenn Sports 1 HD
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/12189
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/db/Exxen.png" group-title="💎+VPN💎[TR SPORTS]",TR:Exxenn Sports 1 SD
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/12190
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/db/Exxen.png" group-title="💎+VPN💎[TR SPORTS]",TR:Exxenn Sports 2 FHD
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/12191
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/db/Exxen.png" group-title="💎+VPN💎[TR SPORTS]",TR:Exxenn Sports 2 HD
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/12192
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/db/Exxen.png" group-title="💎+VPN💎[TR SPORTS]",TR:Exxenn Sports 3 FHD
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/12193
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/db/Exxen.png" group-title="💎+VPN💎[TR SPORTS]",TR:Exxenn Sports 3 HD
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/12194
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/db/Exxen.png" group-title="💎+VPN💎[TR SPORTS]",TR:Exxenn Sports 4 HD
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/12196
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/db/Exxen.png" group-title="💎+VPN💎[TR SPORTS]",TR:Exxenn Sports 5 HD
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/12198
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/db/Exxen.png" group-title="💎+VPN💎[TR SPORTS]",TR:Exxenn Sports 6 HD
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/12200
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/db/Exxen.png" group-title="💎+VPN💎[TR SPORTS]",TR:Exxenn Sports 7 HD
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/12202
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/db/Exxen.png" group-title="💎+VPN💎[TR SPORTS]",TR:Exxenn Sports 8 HD
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/12204
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/db/Exxen.png" group-title="💎+VPN💎[TR SPORTS]",TR:Exxenn Sports 9 FHD
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/12205
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/a/a9/S_Sport_logo1.png" group-title="💎+VPN💎[TR SPORTS]",TR:- S Spor Plus
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/19834
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/a/a9/S_Sport_logo1.png" group-title="💎+VPN💎[TR SPORTS]",TR:- S Sport
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/3223
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/a/a9/S_Sport_logo1.png" group-title="💎+VPN💎[TR SPORTS]",TR:- S Spor 1
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/19830
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/a/a9/S_Sport_logo1.png" group-title="💎+VPN💎[TR SPORTS]",TR:- S Spor 2 L
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/3446
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/a/a9/S_Sport_logo1.png" group-title="💎+VPN💎[TR SPORTS]",| TR | SSpor+ 1
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/22472
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/a/a9/S_Sport_logo1.png" group-title="💎+VPN💎[TR SPORTS]",| TR | SSpor+ 2
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/22473
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/a/a9/S_Sport_logo1.png" group-title="💎+VPN💎[TR SPORTS]",| TR | SSpor+ 3
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/22474
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/74/Tabii_-_TRT_Logo.png" group-title="💎+VPN💎[TR SPORTS]",TR:- TABii SPOR
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/26500
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/74/Tabii_-_TRT_Logo.png" group-title="💎+VPN💎[TR SPORTS]",TR:- TABİİ SPOR 1
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/23998
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/74/Tabii_-_TRT_Logo.png" group-title="💎+VPN💎[TR SPORTS]",TR:- TABİİ SPOR 2
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/23999
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/74/Tabii_-_TRT_Logo.png" group-title="💎+VPN💎[TR SPORTS]",TR:- TABİİ SPOR 3
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/24000
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/74/Tabii_-_TRT_Logo.png" group-title="💎+VPN💎[TR SPORTS]",TR:- TABİİ SPOR 4
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/24001
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/74/Tabii_-_TRT_Logo.png" group-title="💎+VPN💎[TR SPORTS]",TR:- TABİİ SPOR 5
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/24002
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/74/Tabii_-_TRT_Logo.png" group-title="💎+VPN💎[TR SPORTS]",TR:- TABİİ SPOR 6
-http://www.tr35.net:8080/Cineboxxx2024/S4CXV9fPjvR7/25331
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://turkcealtyazi.org/film/200/2245084.jpg" group-title="🕊️⚡  ANIMASYON  ⚡🕊️",6 Süper Kahraman
 https://vidmody.com/vs/tt2245084
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://image.tmdb.org/t/p/w500/Ah3J9OJVc2CNCuH2zMydXy9fmIC.jpg" group-title="🕊️⚡  ANIMASYON  ⚡🕊️",A Bug's Life
@@ -2563,55 +2331,55 @@ http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10023.mp4
 http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/9992.mp4
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://images.justwatch.com/poster/280260762/s718/chip-n-dale-rescue-rangers.jpg" group-title="💢COCUK💢",Chip Ve Dale Kurtarma Timi (2022)
 http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/9991.mp4
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/en/8/83/Encanto_poster.jpg" group-title="💢COCUK💢", Encanto (2021)
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/en/8/83/Encanto_poster.jpg" group-title="💢COCUK💢",Encanto (2021)
 http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/9961.mp4
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://images.justwatch.com/poster/281333616/s718/marmaduke-2022.jpg" group-title="💢COCUK💢", Marmaduke (2022)
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://images.justwatch.com/poster/281333616/s718/marmaduke-2022.jpg" group-title="💢COCUK💢",Marmaduke (2022)
 http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/9957.mp4
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://m.media-amazon.com/images/M/MV5BNzc0MjdiYmYtNjE4MC00YWI5LTllYWUtYmJjM2Y1YjVmZTcxXkEyXkFqcGc@._V1_.jpg" group-title="💢COCUK💢",Pisiriciler Die Heinzels (2019)
 http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/9900.mp4
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://m.media-amazon.com/images/I/817eEYiMrVL.jpg" group-title="💢COCUK💢", Damali Ninja 2 Ternet Ninja 2 (2021)
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://m.media-amazon.com/images/I/817eEYiMrVL.jpg" group-title="💢COCUK💢",Damali Ninja 2 Ternet Ninja 2 (2021)
 http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/9882.mp4
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://images.justwatch.com/poster/319838216/s718/raya-ve-son-ejderha.jpg" group-title="💢COCUK💢", Raya ve Son Ejderha Raya and the Last Dragon (2021)
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://images.justwatch.com/poster/319838216/s718/raya-ve-son-ejderha.jpg" group-title="💢COCUK💢",Raya ve Son Ejderha Raya and the Last Dragon (2021)
 http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/9775.mp4
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://images.justwatch.com/poster/272457934/s166/apollo-101-2-a-space-age-childhood" group-title="💢COCUK💢", Apollo 10 12 Uzay Caginda Cocuk Olmak (2022)
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://images.justwatch.com/poster/272457934/s166/apollo-101-2-a-space-age-childhood" group-title="💢COCUK💢",Apollo 10 12 Uzay Caginda Cocuk Olmak (2022)
 http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/9774.mp4
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://images.justwatch.com/poster/306711471/s718/starbeam-beaming-in-the-new-year.jpg" group-title="💢COCUK💢", Yildiz Kiz Yilbasi Macerasi
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://images.justwatch.com/poster/306711471/s718/starbeam-beaming-in-the-new-year.jpg" group-title="💢COCUK💢",Yildiz Kiz Yilbasi Macerasi
 http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/9772.mp4
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://m.media-amazon.com/images/M/MV5BZDM4OWNiYjUtM2QwYy00NTk4LWFmYWUtZjIzNTc3MTVhZjQzXkEyXkFqcGc@._V1_.jpg" group-title="💢COCUK💢", The Seven Deadly Sins Cursed by Light (2021)
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://m.media-amazon.com/images/M/MV5BZDM4OWNiYjUtM2QwYy00NTk4LWFmYWUtZjIzNTc3MTVhZjQzXkEyXkFqcGc@._V1_.jpg" group-title="💢COCUK💢",The Seven Deadly Sins Cursed by Light (2021)
 http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/9771.mp4
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://turkcealtyazi.org/images/poster/7531096.jpg" group-title="💢COCUK💢", Super Kopek ve Turbo Kedi StarDog and TurboCat (2019)
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://turkcealtyazi.org/images/poster/7531096.jpg" group-title="💢COCUK💢",Super Kopek ve Turbo Kedi StarDog and TurboCat (2019)
 http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/9770.mp4
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/en/8/85/StevenUniverseTheMoviePoster.png" group-title="💢COCUK💢", Steven Universe The Movie (2019)
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/en/8/85/StevenUniverseTheMoviePoster.png" group-title="💢COCUK💢",Steven Universe The Movie (2019)
 http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/9769.mp4
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/tr/4/42/Robot_Ron_afi%C5%9F.jpg" group-title="💢COCUK💢", Robot Ron Bir Sorun Var Rons Gone Wrong (2021)
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/tr/4/42/Robot_Ron_afi%C5%9F.jpg" group-title="💢COCUK💢",Robot Ron Bir Sorun Var Rons Gone Wrong (2021)
 http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/9768.mp4
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://image.tmdb.org/t/p/w500/vGcHyV9s1N2I7bJLSBODvqHTYLL.jpg" group-title="💢COCUK💢", Pokemon Filmi Ormanin Sirlari (2021)
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://image.tmdb.org/t/p/w500/vGcHyV9s1N2I7bJLSBODvqHTYLL.jpg" group-title="💢COCUK💢",Pokemon Filmi Ormanin Sirlari (2021)
 http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/9767.mp4
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img3.acsta.net/pictures/19/11/12/15/09/1278852.jpg" group-title="💢COCUK💢", Kahraman Balik Go Fish (2020)
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img3.acsta.net/pictures/19/11/12/15/09/1278852.jpg" group-title="💢COCUK💢",Kahraman Balik Go Fish (2020)
 http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/9766.mp4
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img3.acsta.net/pictures/21/12/27/12/30/3525111.jpg" group-title="💢COCUK💢", Hilda ve Dag Krali Hilda and the Mountain King (2021)
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img3.acsta.net/pictures/21/12/27/12/30/3525111.jpg" group-title="💢COCUK💢",Hilda ve Dag Krali Hilda and the Mountain King (2021)
 http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/9765.mp4
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://m.media-amazon.com/images/M/MV5BZjQxMTQ3M2ItZTNiOS00OGVmLWE5NDUtNmQ4MmVjNTllNDcyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" group-title="💢COCUK💢", Go Go Chrissy Carson Chrissy Yollarda (2021)
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://m.media-amazon.com/images/M/MV5BZjQxMTQ3M2ItZTNiOS00OGVmLWE5NDUtNmQ4MmVjNTllNDcyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" group-title="💢COCUK💢",Go Go Chrissy Carson Chrissy Yollarda (2021)
 http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/9764.mp4
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://images.justwatch.com/poster/265463226/s718/croodlar-2-yeni-bir-cag.jpg" group-title="💢COCUK💢", Croodlar 2 Yeni Bir Cag The Croods A New Age (2020)
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://images.justwatch.com/poster/265463226/s718/croodlar-2-yeni-bir-cag.jpg" group-title="💢COCUK💢",Croodlar 2 Yeni Bir Cag The Croods A New Age (2020)
 http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/9762.mp4
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://images.justwatch.com/poster/306711458/s718/sharkdogs-fintastic-halloween.jpg" group-title="💢COCUK💢", Camgoz Fantastik Cadilar Bayrami Sharkdogs Fintastic Halloween (2021)
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://images.justwatch.com/poster/306711458/s718/sharkdogs-fintastic-halloween.jpg" group-title="💢COCUK💢",Camgoz Fantastik Cadilar Bayrami Sharkdogs Fintastic Halloween (2021)
 http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/9761.mp4
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://turkcealtyazi.org/images/poster/3139072.jpg" group-title="💢COCUK💢", Batmanin Oglu Son of Batman (2014)
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://turkcealtyazi.org/images/poster/3139072.jpg" group-title="💢COCUK💢",Batmanin Oglu Son of Batman (2014)
 http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/9760.mp4
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://m.media-amazon.com/images/M/MV5BOGVlY2MzMzgtODBiNi00YzM5LTg5NmMtMWFiN2Q5YWNlNmJlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" group-title="💢COCUK💢", Barbie Big City Big Dreams (2021)
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://m.media-amazon.com/images/M/MV5BOGVlY2MzMzgtODBiNi00YzM5LTg5NmMtMWFiN2Q5YWNlNmJlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" group-title="💢COCUK💢",Barbie Big City Big Dreams (2021)
 http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/9759.mp4
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://m.media-amazon.com/images/M/MV5BNDU4Mzc3NzE5NV5BMl5BanBnXkFtZTgwMzE1NzI1NzM@._V1_.jpg" group-title="💢COCUK💢", Pokemon Detective Pikachu (2019)
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://m.media-amazon.com/images/M/MV5BNDU4Mzc3NzE5NV5BMl5BanBnXkFtZTgwMzE1NzI1NzM@._V1_.jpg" group-title="💢COCUK💢",Pokemon Detective Pikachu (2019)
 http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/9744.mp4
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/pictures/22/03/03/17/19/5604015.jpg" group-title="💢COCUK💢", Kirmizi Turning Red (2022)
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/pictures/22/03/03/17/19/5604015.jpg" group-title="💢COCUK💢",Kirmizi Turning Red (2022)
 http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/9743.mp4
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://media.themoviedb.org/t/p/w500/muIaHotSaSUQr0KZCIJOYQEe7y2.jpg" group-title="💢COCUK💢", Tom ve Jerry Cesaretini Topla Tom and Jerry Cowboy Up (2022)
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://media.themoviedb.org/t/p/w500/muIaHotSaSUQr0KZCIJOYQEe7y2.jpg" group-title="💢COCUK💢",Tom ve Jerry Cesaretini Topla Tom and Jerry Cowboy Up (2022)
 http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/9720.mp4
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://m.media-amazon.com/images/M/MV5BNzQyNTIxZDgtMGI5NS00ZDk2LWJlOTItMmJmYzdhMDIzYzljXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" group-title="💢COCUK💢", Catwoman Hunted (2022)
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://m.media-amazon.com/images/M/MV5BNzQyNTIxZDgtMGI5NS00ZDk2LWJlOTItMmJmYzdhMDIzYzljXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" group-title="💢COCUK💢",Catwoman Hunted (2022)
 http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/9719.mp4
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://www.hdfilmizle.to/v/144/poster/watch/rabbids-istila-mars-gorevi-hd-izle.jpg" group-title="💢COCUK💢", Rabbids istila Mars Gorevi (2022)
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://www.hdfilmizle.to/v/144/poster/watch/rabbids-istila-mars-gorevi-hd-izle.jpg" group-title="💢COCUK💢",Rabbids istila Mars Gorevi (2022)
 http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/9705.mp4
-#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://m.media-amazon.com/images/M/MV5BZWEzNTYyNDYtY2QyYy00NGQxLWIxNGEtM2E4MGM5NjZjMDM5XkEyXkFqcGc@._V1_.jpg" group-title="💢COCUK💢", Luca (2021)
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://m.media-amazon.com/images/M/MV5BZWEzNTYyNDYtY2QyYy00NGQxLWIxNGEtM2E4MGM5NjZjMDM5XkEyXkFqcGc@._V1_.jpg" group-title="💢COCUK💢",Luca (2021)
 http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/9669.mkv
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/c_310_420/pictures/16/01/11/15/15/471957.jpg" group-title="💢COCUK💢",Kostebekgiller2.Golgenin.Tilsimi2016
 http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/471.mkv
@@ -2623,6 +2391,86 @@ http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/469.mkv
 http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/468.mkv
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://images.justwatch.com/poster/264247649/s718/oyunbozan-ralph.jpg" group-title="💢COCUK💢",Wreck.it.RalphOyunbozan.Ralph2012
 http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/467.mkv
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://m.media-amazon.com/images/M/MV5BMjExMTg5OTU0NF5BMl5BanBnXkFtZTcwMjMxMzMzMw@@._V1_FMjpg_UX1000_.jpg" group-title="💢COCUK💢",WallE2008
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/466.mkv
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/pictures/bzp/01/130368.jpg" group-title="💢COCUK💢",UpYukari.bak2009
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/465.mkv
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/tr/d/d4/TrollerFilm.jpg" group-title="💢COCUK💢",TrollsTroller2016
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/464.mkv
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/pictures/bzp/02/35142.jpg" group-title="💢COCUK💢",Treasure.PlanetDefine.Gezegeni2002
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/463.mkv
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/c_310_420/pictures/bzp/01/126123.jpg" group-title="💢COCUK💢",Toy.Story.3Oyuncak.Hikayesi.32010
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/462.mkv
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://turkcealtyazi.org/images/poster/0120363.jpg" group-title="💢COCUK💢",Toy.Story.2Oyuncak.Hikayesi.21999
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/461.mkv
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://turkcealtyazi.org/images/poster/0114709.jpg" group-title="💢COCUK💢",Toy.Story.1Oyuncak.Hikayesi.11995
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/460.mkv
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://images.justwatch.com/poster/271252520/s718/tom-and-jerry-willy-wonka-and-the-chocolate-factory.jpg" group-title="💢COCUK💢",Tom.and.JerryWilly.Wonka.Ve.Cikolata.Fabrikasi2017
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/459.mkv
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://cdn-0.tvprofil.com/img/covers/img343222-tv4039247.jpg" group-title="💢COCUK💢",Tom.and.JerryHazine.Avcisi2015
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/458.mkv
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://m.media-amazon.com/images/M/MV5BMjE1MzcwNTE5OV5BMl5BanBnXkFtZTcwMTIxNzQ0MQ@@._V1_FMjpg_UX1000_.jpg" group-title="💢COCUK💢",TMNTNinja.Kaplumbalar2007
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/423.mkv
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://image.tmdb.org/t/p/original/uHt6IEDmS6xWxbMWNKqxFEpRMdJ.jpg" group-title="💢COCUK💢",Thomas.and.FriendsSodorun.Otesine.Yolculuk2017
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/457.mkv
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/c_310_420/pictures/bzp/06/57616.jpeg" group-title="💢COCUK💢",The.WildVahsi.Doga2006
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/456.mkv
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/tr/4/48/Despero_%28afi%C5%9F%29.jpg" group-title="💢COCUK💢",The.Tale.Of.DespereauxDespero2008
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/455.mkv
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://d3tvwjfge35btc.cloudfront.net/Assets/22/241/L_p0042424122.jpg" group-title="💢COCUK💢",The.SpongeBob.Movie2015
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/454.mkv
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://static.boxofficeturkiye.com/movie/poster/300x429/19/2013619-470291076.jpg" group-title="💢COCUK💢",The.Son.of.BigfootKocaayak.ve.Oglu2017
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/453.mkv
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://turkcealtyazi.org/images/poster/2017020.jpg" group-title="💢COCUK💢",The.Smurfs.2Sirinler.22013
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/452.mkv
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img2.acsta.net/pictures/16/01/29/08/59/371859.jpg" group-title="💢COCUK💢",The.Secret.Life.of.PetsEvcil.Hayvanlarin.Gizli.Yasami2016
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/451.mkv
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/c_310_420/pictures/bzp/03/29144.jpg" group-title="💢COCUK💢",The.Polar.ExpressKutup.Ekspresi2004
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/450.mkv
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/en/7/77/Peanuts_2015.jpg" group-title="💢COCUK💢",The.Peanut.Movie2015
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/449.mkv
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/pictures/14/04/09/16/24/035850.jpg" group-title="💢COCUK💢",The.Nut.JobFindik.isi2014
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/448.mkv
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/tr/9/98/Noel_Gecesi_Kabusu.jpg" group-title="💢COCUK💢",The.Nightmare.Before.ChristmasNoel.Gecesi.Kabusu1993
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/447.mkv
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://m.media-amazon.com/images/M/MV5BMTU1MTAwMjk1NF5BMl5BanBnXkFtZTcwMDI5NDc4Ng@@._V1_.jpg" group-title="💢COCUK💢",The.Lorax2012
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/446.mkv
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img3.acsta.net/pictures/15/09/15/09/04/158326.png" group-title="💢COCUK💢",The.Little.PrinceKucuk.Prince2015
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/445.mkv
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/tr/7/75/Movie_poster_the_little_mermaid.jpg" group-title="💢COCUK💢",The.Little.MermaidKucuk.Denizkizi1989
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/444.mkv
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/pictures/bzp/01/10862.jpg" group-title="💢COCUK💢",The.Lion.KingAslan.Kral1994
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/443.mkv
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img2.acsta.net/pictures/17/08/04/14/15/293755.jpg" group-title="💢COCUK💢",The.Lego.Ninjago2017
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/442.mkv
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://m.media-amazon.com/images/M/MV5BMTcyNTEyOTY0M15BMl5BanBnXkFtZTgwOTAyNzU3MDI@._V1_.jpg" group-title="💢COCUK💢",The.Lego.Batman2017
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/441.mkv
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/tr/f/fe/%C4%B0nan%C4%B1lmaz_Aile_afi%C5%9F.jpg" group-title="💢COCUK💢",The.IncrediblesInanilmaz.Aile2004
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/440.mkv
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://turkcealtyazi.org/images/poster/0116583.jpg" group-title="💢COCUK💢",The.Hunchback.of.Notre.DameNotre.Damein.Kamburu1996
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/439.mkv
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://media.themoviedb.org/t/p/w500/A2Sl9BRnVG8LqYQqjvtRG1zZ2TP.jpg" group-title="💢COCUK💢",The.Guardian.BrothersMuhafiz.Kardesler2016
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/438.mkv
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/pictures/15/11/05/15/48/430967.jpg" group-title="💢COCUK💢",The.Good.DinosaurIyi.Bir.Dinazor2015
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/437.mkv
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://media.themoviedb.org/t/p/w500/d9fvJfCItbQFjjHXCqnenMYxsP8.jpg" group-title="💢COCUK💢",The.Flintstones.And.WWECakmaktaslar.ve.Tas.devri2015
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/436.mkv
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img2.acsta.net/medias/nmedia/18/87/88/21/19962505.jpg" group-title="💢COCUK💢",The.Emperors.New.GrooveSaskin.Imparator2000
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/435.mkv
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/pictures/17/08/01/14/49/313886.jpg" group-title="💢COCUK💢",The.Emoji.MovieSevimli.Emojiler2017
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/434.mkv
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://m.media-amazon.com/images/M/MV5BMTcyOTc2OTA1Ml5BMl5BanBnXkFtZTcwOTI1MjkzOQ@@._V1_.jpg" group-title="💢COCUK💢",The.CroodsCroodlar2013
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/433.mkv
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://m.media-amazon.com/images/M/MV5BMTQxODA5MDkyNV5BMl5BanBnXkFtZTgwMDMyNjkzMjE@._V1_.jpg" group-title="💢COCUK💢",The.BoxtrollsKutu.Cuceleri2014
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/432.mkv
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://images.justwatch.com/poster/318995541/s718/the-boss-baby-back-in-the-cribs.jpg" group-title="💢COCUK💢",The.Boss.BabyPatron.Bebek2017
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/431.mkv
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img3.acsta.net/pictures/15/05/04/20/31/202204.jpg" group-title="💢COCUK💢",The.Book.of.LifeHayat.Kitabi2014
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/430.mkv
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://m.media-amazon.com/images/M/MV5BNjAzOTUzNTY3Ml5BMl5BanBnXkFtZTgwMjYwNzE5ODE@._V1_FMjpg_UX1000_.jpg" group-title="💢COCUK💢",The.BFG2016
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/429.mkv
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://m.media-amazon.com/images/M/MV5BNDE5MDExNTQ1OF5BMl5BanBnXkFtZTcwMDIxMTM5Ng@@._V1_FMjpg_UX1000_.jpg" group-title="💢COCUK💢",The.Adventures.of.TintinTentenin.Maceralari2011
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/428.mkv
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://m.media-amazon.com/images/M/MV5BMjhkNGZkZDItMDE5My00MDgwLWE1ZWItNjZiNmYyYzY5MzdkXkEyXkFqcGc@._V1_.jpg" group-title="💢WESTERN💢",Big Jake
 http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/7532.mkv
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://m.media-amazon.com/images/M/MV5BOWQ1YmI4NGItYzRjOS00MDEwLWI3YzYtYTMwNWY0MDU4YTczXkEyXkFqcGc@._V1_.jpg" group-title="💢WESTERN💢",3 Godfathers
@@ -3319,6 +3167,204 @@ http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/11747.mp4
 http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/11746.mp4
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://m.media-amazon.com/images/M/MV5BMTM5OTUyYWYtMGE2OS00ODEzLTk0ZjctZmQ5NzFlNWQ3OTAxXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" group-title="💢Imdb Top 250💢",Deep.Blue.Sea.1999
 http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/11745.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/c_310_420/pictures/bzp/03/47617.jpg" group-title="💢Imdb Top 250💢",Conquest.of.the.Planet.of.the.Apes.1972
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/11744.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/c_310_420/pictures/bzp/03/37416.jpg" group-title="💢Imdb Top 250💢",Beneath.The.Planet.Of.The.Apes.1970
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/11743.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img2.acsta.net/c_310_420/pictures/13/12/09/16/41/565620.jpg" group-title="💢Imdb Top 250💢",Battle.For.The.Planet.of.the.Apes.1973
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/11742.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img2.acsta.net/c_310_420/pictures/bzp/01/448.jpg" group-title="💢Imdb Top 250💢",Back.to.the.Future.1985
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/11741.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img3.acsta.net/c_310_420/medias/nmedia/18/80/43/61/19547639.jpg" group-title="💢Imdb Top 250💢",Back.To.The.Future.Part.III.1990
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/11740.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/c_310_420/pictures/bzp/01/5247.jpg" group-title="💢Imdb Top 250💢",Back.To.The.Future.Part.II.1989
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/11739.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img3.acsta.net/c_310_420/pictures/bzp/01/188521.jpg" group-title="💢Imdb Top 250💢",Amerikan.Pastasi.8.Bulusma.American.Pie.Reunion.2012j
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/11738.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img2.acsta.net/c_310_420/pictures/bzp/01/47319.jpg" group-title="💢Imdb Top 250💢",American.Pie.The.Wedding.2003
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/11737.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://m.media-amazon.com/images/M/MV5BYzVhNjgwNGEtYzgzZS00MTc3LThiM2QtYzFiMTQ5ZGUzNGJlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" group-title="💢Imdb Top 250💢",American.Pie.Presents.The.Mile.2006
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/11736.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://m.media-amazon.com/images/M/MV5BMTdiOGNjOTAtYmEyOS00OTg2LTg1M2ItMjU5NmI5MDQ1YjFiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" group-title="💢Imdb Top 250💢",American.Pie.Presents.The.Book.of.Love.2009
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/11735.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://m.media-amazon.com/images/M/MV5BNTg5OThhZjctNTgwMy00ZTljLTkxM2YtYjM0YWJhZWJiNzM3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" group-title="💢Imdb Top 250💢",American.Pie.Presents.Beta.House.2007
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/11734.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://m.media-amazon.com/images/M/MV5BYzcyZTRmZWEtYTRiZS00MGExLTkwZWUtMDE4Yjg1NTdlM2Q2XkEyXkFqcGc@._V1_.jpg" group-title="💢Imdb Top 250💢",American.Pie.Presents.Band.Camp.2005
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/11733.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img3.acsta.net/c_310_420/pictures/bzp/01/29279.jpg" group-title="💢Imdb Top 250💢",American.Pie.2.2001
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/11732.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/c_310_420/pictures/bzp/03/21608.jpg" group-title="💢Imdb Top 250💢",American.Pie.1999
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/11731.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://m.media-amazon.com/images/M/MV5BMGE0ZWZiMGEtNTFjMC00MTAzLWE5ZGItMjNiYjg3YjE3ZDk2XkEyXkFqcGc@._V1_.jpg" group-title="💢Imdb Top 250💢",American.Ninja.5.1993.BluRay.H264.DUAL
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/11730.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img2.acsta.net/c_310_420/pictures/bzp/05/203731.jpg" group-title="💢Imdb Top 250💢",American.Ninja.4.The.Annihilation.1990
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/11729.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://m.media-amazon.com/images/M/MV5BMjE4NzA2ODYxN15BMl5BanBnXkFtZTYwMDAwMzY5._V1_.jpg" group-title="💢Imdb Top 250💢",American.Ninja.3.Blood.Hunt.1989
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/11728.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://m.media-amazon.com/images/M/MV5BMjM1MjU0ZTYtNDA4NS00MWI2LWE3ZDctZDU0Mjc5OWYyNDNjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" group-title="💢Imdb Top 250💢",American.Ninja.2.The.Confrontation.1987
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/11727.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://m.media-amazon.com/images/M/MV5BODVlZTYyNGEtZGZkNC00NjEyLWIwN2YtOTkyYWEwNzcyNzc3XkEyXkFqcGc@._V1_.jpg" group-title="💢Imdb Top 250💢",American.Ninja.1985
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/11726.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/c_310_420/medias/nmedia/18/87/89/22/19962616.jpg" group-title="💢Imdb Top 250💢",A.Nightmare.on.Elm.Street.3.Dream.Warriors.1987
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/11725.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img2.acsta.net/c_310_420/pictures/bzp/03/133955.jpg" group-title="💢Imdb Top 250💢",A.Nightmare.on.Elm.Street.2010
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/11724.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://m.media-amazon.com/images/M/MV5BYzA0OTk4OWQtYWZlYy00Y2M4LWFmNzctZmU4OWVkMTI1NjJkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" group-title="💢Imdb Top 250💢",A.Nightmare.on.Elm.Street.2.Freddys.Revenge.1985
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/11723.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://m.media-amazon.com/images/M/MV5BYzVlNWFlMTItNjRkYS00Y2FhLTk5NDgtZDM0MWFiNDVlNWMxXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" group-title="💢Imdb Top 250💢",A.Nightmare.On.Elm.Street.5.The.Dream.Child.1989
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/11722.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://m.media-amazon.com/images/M/MV5BY2FlMDZlNjUtM2QyYS00Y2YyLWI3ZjEtZDdjZWM5ZTg0MDRiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" group-title="💢Imdb Top 250💢",A.Nightmare.On.Elm.Street.4.The.Dream.Master.1988
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/11721.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/c_310_420/pictures/bzp/01/1814.jpg" group-title="💢Imdb Top 250💢",A.Nightmare.On.Elm.Street.1984
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/11720.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img2.acsta.net/c_310_420/pictures/bzp/01/57529.jpg" group-title="💢Imdb Top 250💢",300.Spartali.2006
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/11719.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/c_310_420/pictures/14/02/12/09/16/237228.jpg" group-title="💢Imdb Top 250💢",300.Rise.Of.An.Empire.2014
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/11718.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/c_310_420/pictures/bzp/01/16026.jpg" group-title="💢Imdb Top 250💢",Enemy.of.the.State.1998.ac3
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10649.mkv
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img3.acsta.net/c_310_420/pictures/bzp/01/28968.jpg" group-title="💢Imdb Top 250💢",New.York.Ceteleri.2002
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10574.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img3.acsta.net/c_310_420/pictures/bzp/01/27417.jpg" group-title="💢Imdb Top 250💢",Pearl.Harbor.2001
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10566.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/c_310_420/medias/nmedia/18/80/23/83/19545233.jpg" group-title="💢Imdb Top 250💢",We.Were.Soldiers.2002
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10540.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img3.acsta.net/c_310_420/pictures/bzp/01/35144.jpg" group-title="💢Imdb Top 250💢",Black.Hawk.Down.2001
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10539.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/c_310_420/pictures/bzp/01/19395.jpg" group-title="💢Imdb Top 250💢",iyi.kotu.Cirkin.1966
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10509.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img3.acsta.net/c_310_420/pictures/bzp/01/110096.jpg" group-title="💢Imdb Top 250💢",ihtiyarlara.Yer.Yok.2007
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10508.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/c_310_420/pictures/bzp/03/54137.jpg" group-title="💢Imdb Top 250💢",ihtiyar.Delikanli.2003
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10507.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/c_310_420/pictures/bzp/01/4989.jpg" group-title="💢Imdb Top 250💢",cennet.sinemasi.1998
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10506.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img3.acsta.net/c_310_420/medias/nmedia/18/90/97/87/20412876.JPG" group-title="💢Imdb Top 250💢",Zincirsiz.2012
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10505.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img3.acsta.net/c_310_420/pictures/210/357/21035765_20130903131422751.jpg" group-title="💢Imdb Top 250💢",Zafere.Hucum.Rush
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10504.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img2.acsta.net/c_310_420/pictures/bzp/01/857.jpg" group-title="💢Imdb Top 250💢",Yurttas.Kane.1941
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10503.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/c_310_420/pictures/bzp/01/25803.jpg" group-title="💢Imdb Top 250💢",Yildiz.Savaslari.1983
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10502.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img3.acsta.net/c_310_420/pictures/bzp/01/25802.jpg" group-title="💢Imdb Top 250💢",Yildiz.Savaslari.1980
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10501.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img2.acsta.net/c_310_420/pictures/bzp/01/25801.jpg" group-title="💢Imdb Top 250💢",Yildiz.Savaslari.1977
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10500.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/c_310_420/pictures/bzp/01/22779.jpg" group-title="💢Imdb Top 250💢",Yesil.Yol.1999.AC3
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10499.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img3.acsta.net/c_310_420/pictures/19/02/27/11/09/1954073.jpg" group-title="💢Imdb Top 250💢",Yesil.Rehber.Green.Book.2018
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10498.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://media.themoviedb.org/t/p/w500/wWPzuez35HzIe5oKsZsOt5fBX6E.jpg" group-title="💢Imdb Top 250💢",Yerdeki.Yildizlar.2007
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10497.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/pictures/15/09/05/15/04/178846.jpg" group-title="💢Imdb Top 250💢",Yedinci.Muhur.1957
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10496.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img3.acsta.net/c_310_420/pictures/bzp/01/900.jpg" group-title="💢Imdb Top 250💢",Yarali.Yuz.1983
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10495.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/tr/f/f9/Singing_in_the_rain_poster.jpg" group-title="💢Imdb Top 250💢",Yagmur.Altinda.1952
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10494.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img2.acsta.net/c_310_420/pictures/15/02/25/12/49/187876.jpg" group-title="💢Imdb Top 250💢",Wild.Tales.2014
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10493.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/c_310_420/pictures/bzp/03/138673.jpg" group-title="💢Imdb Top 250💢",Warrior.2011
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10492.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/c_310_420/pictures/bzp/03/980.jpg" group-title="💢Imdb Top 250💢",Vertigo.1958
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10491.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img2.acsta.net/c_310_420/pictures/bzp/01/58911.jpg" group-title="💢Imdb Top 250💢",V.For.Vendetta.2005
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10490.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img2.acsta.net/c_310_420/medias/nmedia/18/96/77/38/20488357.jpg" group-title="💢Imdb Top 250💢",Tutsak.2013
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10489.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/c_310_420/pictures/18/03/09/14/47/2757849.jpg" group-title="💢Imdb Top 250💢",Three.Billboards.Outside.Ebbing.Missouri.BRRip.2017
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10488.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img3.acsta.net/c_310_420/pictures/210/201/21020166_20130717110427461.jpg" group-title="💢Imdb Top 250💢",The.Matrix.1999
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10487.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img2.acsta.net/c_310_420/medias/nmedia/18/88/92/22/20015833.jpg" group-title="💢Imdb Top 250💢",The.Help.2011
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10486.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/c_310_420/pictures/14/04/02/14/01/402286.jpg" group-title="💢Imdb Top 250💢",The.Grand.Budapest.Hotel.2014
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10485.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img3.acsta.net/c_310_420/pictures/bzp/01/28201.jpg" group-title="💢Imdb Top 250💢",The.Godfather.Part.II.1974
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10484.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://m.media-amazon.com/images/M/MV5BNGEwYjgwOGQtYjg5ZS00Njc1LTk2ZGEtM2QwZWQ2NjdhZTE5XkEyXkFqcGc@._V1_.jpg" group-title="💢Imdb Top 250💢",The.Godfather.Part.I.1972
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10483.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img3.acsta.net/c_310_420/pictures/bzp/01/180.jpg" group-title="💢Imdb Top 250💢",The.Elephant.Man.1980
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10482.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/c_310_420/medias/nmedia/18/85/20/56/20129570.jpg" group-title="💢Imdb Top 250💢",The.Dark.Knight.Rises.2012
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10481.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img2.acsta.net/c_310_420/pictures/bzp/01/16463.jpg" group-title="💢Imdb Top 250💢",The.Big.Lebowski.1998
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10480.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/c_310_420/pictures/bzp/03/45264.jpg" group-title="💢Imdb Top 250💢",Tanrikent.2002
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10479.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/tr/3/33/Taxi_Driver_%281976_film_poster%29.jpg" group-title="💢Imdb Top 250💢",Taksi.Soforu.1976
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10478.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://image.tmdb.org/t/p/original/nLImaDib0AwIRw4jGDEhEmmiDwj.jpg" group-title="💢Imdb Top 250💢",Soysuzlar.Cetesi.2009
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10477.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/c_310_420/pictures/bzp/03/702.jpg" group-title="💢Imdb Top 250💢",Stalker.1979
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10476.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/c_310_420/pictures/16/01/13/16/53/343770.jpg" group-title="💢Imdb Top 250💢",Spotlight.2015
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10475.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/c_310_420/pictures/bzp/01/40191.jpg" group-title="💢Imdb Top 250💢",Sil.Bastan.2004
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10474.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://static.wikia.nocookie.net/international-dubbing/images/2/22/Klaus_-_Croatia.jpg/revision/latest/scale-to-width-down/340?cb=20210212060529" group-title="💢Imdb Top 250💢",Sihirli.Plan.Klaus.2019
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10473.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/c_310_420/pictures/bzp/01/132039.jpg" group-title="💢Imdb Top 250💢",Shutter.Island.2010
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10472.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img2.acsta.net/c_310_420/pictures/16/11/02/12/22/051251.jpg" group-title="💢Imdb Top 250💢",Savas.Vadisi.Hacksaw.Ridge
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10471.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://m.media-amazon.com/images/I/51AP5MY2B5L._AC_UF894,1000_QL80_.jpg" group-title="💢Imdb Top 250💢",Rocky.I.1976
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10470.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://m.media-amazon.com/images/M/MV5BMTIzYWNhNmYtYmM0YS00YmNjLWI0YjgtYmQ4ZTJkNDgxMjViXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" group-title="💢Imdb Top 250💢",Portrait.de.La.Jeune.Fille.en.Feu.2019
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10469.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img2.acsta.net/pictures/bzp/01/29700.jpg" group-title="💢Imdb Top 250💢",Platoon.Mufreze.1986
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10468.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/pictures/bzp/03/28359.jpg" group-title="💢Imdb Top 250💢",Piyanist.2002
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10467.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/pictures/bzp/01/26066.jpg" group-title="💢Imdb Top 250💢",Paramparca.Asklar.Kopekler.2000
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10466.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img2.acsta.net/c_310_420/pictures/14/01/24/10/55/409246.jpg" group-title="💢Imdb Top 250💢",Para.Avcisi.2013
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10465.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img3.acsta.net/c_310_420/medias/nmedia/18/36/23/74/18675769.jpg" group-title="💢Imdb Top 250💢",Panin.Labirenti.2006
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10464.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/tr/thumb/e/e5/Into_the_Wild.jpg/220px-Into_the_Wild.jpg" group-title="💢Imdb Top 250💢",Ozgurluk.Yolu.2007
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10463.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/pictures/210/547/21054750_20131104130549674.jpg" group-title="💢Imdb Top 250💢",Onur.Savasi.2012
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10462.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img3.acsta.net/c_310_420/pictures/bzp/01/14790.jpg" group-title="💢Imdb Top 250💢",My.Neighbor.Totoro.1988
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10461.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/c_310_420/pictures/bzp/01/56714.jpg" group-title="💢Imdb Top 250💢",Milyonluk Bebek .2004
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10460.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/c_310_420/pictures/bzp/01/139621.jpg" group-title="💢Imdb Top 250💢",Mary.ve.Max.2009
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10459.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img2.acsta.net/pictures/bzp/03/12032.jpg" group-title="💢Imdb Top 250💢",Los.Angeles.Sirlari.1997
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10458.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img2.acsta.net/c_310_420/pictures/17/01/31/09/54/531088.jpg" group-title="💢Imdb Top 250💢",Logan.2017
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10457.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img3.acsta.net/c_310_420/pictures/bzp/01/1602.jpg" group-title="💢Imdb Top 250💢",Kwai.Koprusu.1957
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10456.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/c_310_420/pictures/bzp/01/55983.jpg" group-title="💢Imdb Top 250💢",Kostebek.2006
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10455.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/c_310_420/pictures/bzp/01/950.jpg" group-title="💢Imdb Top 250💢",Kizgin.Boga.1980
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10454.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img2.acsta.net/c_310_420/pictures/bzp/01/27061.jpg" group-title="💢Imdb Top 250💢",Kiyamet.1979
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10453.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/c_310_420/pictures/bzp/03/28541.jpg" group-title="💢Imdb Top 250💢",Kill.Bill.1.2003
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10452.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/c_310_420/pictures/19/01/22/11/13/2299676.jpg" group-title="💢Imdb Top 250💢",Kefernahum.2018
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10451.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img2.acsta.net/c_310_420/pictures/bzp/03/115362.jpg" group-title="💢Imdb Top 250💢",Kara.Sovalye.2008
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10450.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img2.acsta.net/c_310_420/pictures/bzp/01/26251.jpg" group-title="💢Imdb Top 250💢",Kapisma.2000
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10449.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img3.acsta.net/c_310_420/pictures/13/12/09/19/17/011085.jpg" group-title="💢Imdb Top 250💢",Kan.Dokulecek.2007
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10448.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/c_310_420/pictures/210/148/21014861_20130624160418353.jpg" group-title="💢Imdb Top 250💢",JurassicPark.1993
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10447.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/c_310_420/pictures/bzp/01/5032.jpg" group-title="💢Imdb Top 250💢",Indiana.Jones.and.the.Last.Crusade.1989
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10446.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/c_310_420/pictures/bzp/03/179349.jpg" group-title="💢Imdb Top 250💢",Icimdeki.Yangin.2010
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10445.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://tr.web.img4.acsta.net/pictures/bzp/01/55666.jpg" group-title="💢Imdb Top 250💢",Hotel.Ruanda.2004
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10444.mp4
+#EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://upload.wikimedia.org/wikipedia/tr/c/c6/The_Handmaiden_film.jpg" group-title="💢Imdb Top 250💢",Hizmetci.The.Handmaiden.2016
+http://asdfk.xtreamtvplus.net:8080/movie/ytr21s2az/f98d23asac/10443.mp4
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://turkcealtyazi.org/film/200/6119504.jpg" group-title="🎬 YABANCI FİLM  ✪ TR DUBLAJ🎬",#realityhigh
 https://vidmody.com/vs/tt6119504
 #EXTINF:-1 tvg-country="TR/Yabancı Dil" tvg-language="TR/EN"  tvg-logo="https://m.media-amazon.com/images/M/MV5BYTdjZWZjNWYtM2YwOC00NTFiLTk1YTUtNzIxNTM4OGZmNjJiXkEyXkFqcGc@._V1_.jpg" group-title="🎬 YABANCI FİLM  ✪ TR DUBLAJ🎬",#SeAcabó: Diario de las campeonas - Her Şey Bitti: İspanyol Futbolunu Değiştiren Öpücük
