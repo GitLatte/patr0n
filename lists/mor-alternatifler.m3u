@@ -1,3 +1,22 @@
 #EXTM3U
-#EXTINF:-1 tvg-name="Beinsport 1 Alternatif" tvg-id="" tvg-logo="https://raw.githubusercontent.com/GitLatte/m3ueditor/refs/heads/site/images/kanal-gorselleri/turkiye/bein-sport-1-hd.png" group-title="Türkiye-Futbol" ,Beinsport 1 Alternatif
-https://steep-silence-b428.freelinkgenerator.workers.dev/https://fener2.demoscript.buzz/hls/bein-sports-1.m3u8
+#EXTINF:-1 tvg-name="beIN SPORTS 1 (Alternatif)" tvg-id="beIN SPORTS.tr" tvg-logo="https://gitlatte.github.io/m3ueditor/images/kanal-gorselleri/turkiye/bein-sport-1-hd.png" group-title="Türkiye-Futbol",beIN SPORTS 1 (kalacak1)
+#EXTVLCOPT:http-referrer=https://trgoals1077.xyz/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
+https://due.b7d6fbb7f7093400.click/itis/8c1437d28413db5112720e3ce0579154/playlist.m3u8
+#EXTINF:-1 tvg-name="beIN SPORTS 1 (Alternatif 2)" tvg-id="beIN SPORTS.tr" tvg-logo="https://gitlatte.github.io/m3ueditor/images/kanal-gorselleri/turkiye/bein-sport-1-hd.png" group-title="Türkiye-Futbol",beIN SPORTS 1 (kalacak)
+#EXTVLCOPT:http-referrer=https://trgoals1077.xyz/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
+https://guhjexjm6qlma62smk3l22wiu0d6vn.top/cek.m3u8?u=https://yayin.owmygodstream.click/yayinzirve.m3u8&a=&aa=yayin.owmygodstream.click
+#EXTINF:-1 tvg-name="beIN SPORTS 2 (Alternatif)" tvg-id="beIN SPORTS 2.tr" tvg-logo="https://gitlatte.github.io/m3ueditor/images/kanal-gorselleri/turkiye/bein-sport-2-hd.png" group-title="Türkiye-Futbol",beIN SPORTS 2 (kalacak)
+#EXTVLCOPT:http-referrer=https://izlemac4217.sbs/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
+#EXTVLCOPT:http-origin=https://izlemac4217.sbs
+https://guhjexjm6qlma62smk3l22wiu0d6vn.top/cek.m3u8?u=https://k.mevzuhls11.cfd/yayinb2.m3u8&a=&aa=k.mevzuhls11.cfd
+#EXTINF:-1 tvg-name="beIN SPORTS 4 (Alternatif)" tvg-id="beIN SPORTS 4.tr" tvg-logo="https://gitlatte.github.io/m3ueditor/images/kanal-gorselleri/turkiye/bein-sport-4-hd.png" group-title="Türkiye-Futbol",beIN SPORTS 4 (kalacak)
+#EXTVLCOPT:http-referrer=https://trgoals1077.xyz/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
+https://guhjexjm6qlma62smk3l22wiu0d6vn.top/cek.m3u8?u=https://yayin.owmygodstream.click/yayinb4.m3u8&a=&aa=yayin.owmygodstream.click
+#EXTINF:-1 tvg-name="HT Spor" tvg-id="HT Spor.tr" tvg-logo="https://yt3.googleusercontent.com/B3IWp1Ke7InBdWs0z8dkXpRlg4J6lQ0ETi8hbMQ64w3uh9RfHTOtU6K7_uLYRbIoA6NteY9a=s900-c-k-c0x00ffffff-no-rj" group-title="Türkiye-Futbol",HT Spor
+https://ciner-live.daioncdn.net/ht-spor/ht-spor_1080p.m3u8
+#EXTINF:-1 tvg-name="Sports TV" tvg-id="Sports Tv.tr" tvg-logo="http://assets.tvcdn.net/96bc5554-741b-4e91-8b4f-7b3bcc1e4c1d.png" group-title="Türkiye-Futbol",Sports TV
+https://live.sportstv.com.tr/hls/low/sportstv.m3u8
