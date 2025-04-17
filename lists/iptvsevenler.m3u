@@ -23,7 +23,8 @@ https://ciner-live.daioncdn.net/showtv/showtv_1080p.m3u8
 #EXTINF:-1 tvg-country="TR" tvg-language="TR" tvg-name="Star" tvg-id="Star.tr" tvg-logo="https://gitlatte.github.io/m3ueditor/images/kanal-gorselleri/turkiye/star-tv-tr.png" group-title="Ulusal",Star
 https://dogus-live.daioncdn.net/startv/startv_720p.m3u8
 #EXTINF:-1 tvg-country="TR" tvg-language="TR" tvg-name="ATV" tvg-id="ATV.tr" tvg-logo="https://gitlatte.github.io/m3ueditor/images/kanal-gorselleri/turkiye/atv-tr.png" group-title="Ulusal",ATV
-https://trkvz-live.daioncdn.net/atv/atv_720p.m3u8
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://cdn402.kavuntv.net/atv720.m3u8?tkn=fNVu-jSjNGQpK2GT86WkjA&tms=1744906732&hst=tv.kavuntv.net&ip=2a02:8109:410:3e00:6464:efcf:f620:38ad
 #EXTINF:-1 tvg-country="TR" tvg-language="TR" tvg-name="A2" tvg-id="a2.tr" tvg-logo="https://gitlatte.github.io/m3ueditor/images/kanal-gorselleri/turkiye/a2-tr.png" group-title="Ulusal",A2
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/a2tv/a2tv_1080p.m3u8
 #EXTINF:-1 tvg-country="TR" tvg-language="TR" tvg-name="Kanal D" tvg-id="Kanal D.tr" tvg-logo="https://image.kanald.com.tr/i/kanald/100/0x0/654b42b5ebc830246465c497.jpg" group-title="Ulusal",Kanal D
