@@ -1,5 +1,5 @@
 #EXTM3U
-#EXTINF:-1 tvg-name="beIN SPORTS 1 (Alternatif 1)" tvg-id="beIN SPORTS.tr" tvg-logo="https://gitlatte.github.io/m3ueditor/images/kanal-gorselleri/turkiye/bein-sport-1-hd.png" group-title="Türkiye-Futbol",beIN SPORTS 1 (Alternatif1)
+#EXTINF:-1 tvg-name="beIN SPORTS 1 (Alternatif 1)" tvg-id="beIN SPORTS_alt1.tr" tvg-logo="https://gitlatte.github.io/m3ueditor/images/kanal-gorselleri/turkiye/bein-sport-1-hd.png" group-title="Türkiye-Futbol",beIN SPORTS 1 (Alternatif1)
 https://steep-silence-b428.freelinkgenerator.workers.dev/https://fener2.demoscript.buzz/hls/bein-sports-1.m3u8
 #EXTINF:-1 tvg-name="beIN SPORTS 1 (Alternatif)" tvg-id="beIN SPORTS.tr" tvg-logo="https://gitlatte.github.io/m3ueditor/images/kanal-gorselleri/turkiye/bein-sport-1-hd.png" group-title="Türkiye-Futbol",beIN SPORTS 1 (Alternatif)
 #EXTVLCOPT:http-referrer=https://trgoals1077.xyz/
