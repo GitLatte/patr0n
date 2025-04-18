@@ -1,15 +1,9 @@
 #EXTM3U x-tvg-url="https://www.open-epg.com/files/turkey2.xml"
 #EXTINF:-1 tvg-country="TR" tvg-language="TR" tvg-name="TRT 1" tvg-id="TRT 1.tr" tvg-logo="https://cdn-i.pr.trt.com.tr/trttv/w750/h750/q100/10660277.png" group-title="Ulusal",TRT 1
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://tatatam.trt1sultanfatihss.workers.dev/https://trt.daioncdn.net/trt-1/master_1080p.m3u8?&sid=7bls23cufl1b&app=ed3904e8-737b-4a5e-856a-1b0d7a0a94e2&ce=2
-#EXTINF:-1 tvg-country="TR" tvg-language="TR" tvg-name="TRT 1" tvg-id="TRT 1.tr" tvg-logo="https://cdn-i.pr.trt.com.tr/trttv/w750/h750/q100/10660277.png" group-title="Ulusal",TRT 1
 https://tv-trt1.medya.trt.com.tr/master_1080.m3u8
 #EXTINF:-1 tvg-country="TR" tvg-language="TR" tvg-name="TRT 2" tvg-id="TRT 2.tr" tvg-logo="https://cdn-i.pr.trt.com.tr/trttv/w750/h750/q100/7027954.png" group-title="Ulusal",TRT 2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0
-https://cdn900.kavuntv.net/trt2.m3u8?tkn=23TGPzR-u-r_kU4ahAREdA&tms=1744562476&hst=tv.kavuntv.net&ip=2a02:8109:410:3e00:68f6:8edd:aab5:59ef
-#EXTINF:-1 tvg-country="TR" tvg-language="TR" tvg-name="TRT 2 (Tabii linki)" tvg-id="TRT 2.tr" tvg-logo="https://cdn-i.pr.trt.com.tr/trttv/w750/h750/q100/7027954.png" group-title="Ulusal",TRT 2 (Tabii linki)
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://tv-trt2.medya.trt.com.tr/master.m3u8
+http://norsvpx.top:8080/231679575500969074/1511679575500969/58070
 #EXTINF:-1 tvg-country="TR" tvg-language="TR" tvg-name="TRT Türk" tvg-id="TRT Turk.tr" tvg-logo="https://cdn-i.pr.trt.com.tr/trttv/w750/h750/q100/11787778.png" group-title="Ulusal",TRT Türk
 https://tv-trtturk.medya.trt.com.tr/master_720.m3u8
 #EXTINF:-1 tvg-country="TR" tvg-language="TR" tvg-name="TRT Kürdi" tvg-id="TRT Kurdi.tr" tvg-logo="https://cdn-i.pr.trt.com.tr/trttv/w750/h750/q100/14812637.png" group-title="Ulusal",TRT Kürdi
@@ -24,7 +18,7 @@ https://ciner-live.daioncdn.net/showtv/showtv_1080p.m3u8
 https://dogus-live.daioncdn.net/startv/startv_720p.m3u8
 #EXTINF:-1 tvg-country="TR" tvg-language="TR" tvg-name="ATV" tvg-id="ATV.tr" tvg-logo="https://gitlatte.github.io/m3ueditor/images/kanal-gorselleri/turkiye/atv-tr.png" group-title="Ulusal",ATV
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://cdn402.kavuntv.net/atv720.m3u8?tkn=fNVu-jSjNGQpK2GT86WkjA&tms=1744906732&hst=tv.kavuntv.net&ip=2a02:8109:410:3e00:6464:efcf:f620:38ad
+https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_1080p.m3u8
 #EXTINF:-1 tvg-country="TR" tvg-language="TR" tvg-name="A2" tvg-id="a2.tr" tvg-logo="https://gitlatte.github.io/m3ueditor/images/kanal-gorselleri/turkiye/a2-tr.png" group-title="Ulusal",A2
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/a2tv/a2tv_1080p.m3u8
 #EXTINF:-1 tvg-country="TR" tvg-language="TR" tvg-name="Kanal D" tvg-id="Kanal D.tr" tvg-logo="https://image.kanald.com.tr/i/kanald/100/0x0/654b42b5ebc830246465c497.jpg" group-title="Ulusal",Kanal D
@@ -47,7 +41,7 @@ https://tv.ensonhaber.com/tv360/tv360.m3u8
 https://ciner-live.daioncdn.net/haberturktv/haberturktv_720p.m3u8
 #EXTINF:-1 tvg-country="TR" tvg-language="TR" tvg-name="CNN Türk" tvg-id="CNN Turk.tr" tvg-logo="https://blutv-images.mncdn.com/q/t/i/bluv2/100/750x750/61236013866ac319e8143500" group-title="Haber",CNN Türk
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://cdn7.kavuntv.net/cnnturk.m3u8?tkn=q7izQH4zAI0jTDIiraPQRw&tms=1744562917&hst=tv.kavuntv.net&ip=2a02:8109:410:3e00:68f6:8edd:aab5:59ef
+https://live.duhnet.tv//S2/HLS_LIVE/cnnturknp/track_4_1000/playlist.m3u8?&live=true&app=com.cnnturk&st=fERDwBUs7zuF8--R6t7I5w&e=1744992047
 #EXTINF:-1 tvg-country="TR" tvg-language="TR" tvg-name="NTV" tvg-id="NTV.tr" tvg-logo="https://blutv-images.mncdn.com/q/t/i/bluv2/100/750x750/56a72d98058d024d98970264" group-title="Haber",NTV
 https://cdn405.canlitv.me/ntv.m3u8?tkn=GLZpl7UQmmprGSNG97uLlg&tms=1744563025&hst=www.canlitv.me&ip=2a02:8109:410:3e00:68f6:8edd:aab5:59ef
 #EXTINF:-1 tvg-country="TR" tvg-language="TR" tvg-name="NTV" tvg-id="NTV.tr" tvg-logo="https://gitlatte.github.io/m3ueditor/images/kanal-gorselleri/turkiye/ntv-tr.png" group-title="Haber",NTV
