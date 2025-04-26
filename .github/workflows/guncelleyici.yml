@@ -139,7 +139,7 @@ jobs:
           download_and_process_m3u(yabanci_dizi_url, 'lists/power-yabanci-dizi.m3u', process_yabanci_dizi)
 
           # Sinema listesini güncelle
-          sinema_url = 'https://tinyurl.com/2bhf2qox'
+          sinema_url = 'https://www.dropbox.com/scl/fi/ounaj1vnv16nqgptlurdw/power-sinema.m3u?rlkey=cl9u2z3w0lh602l7tncq1lw5m&st=0ew7uywu&dl=1'
           download_and_process_m3u(sinema_url, 'lists/power-sinema.m3u', process_sinema)
           
           # IPTVSevenler listesini güncelle
