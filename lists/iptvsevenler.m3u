@@ -211,8 +211,6 @@ https://53557cd0ca.bcb8b3b132.workers.dev/f6e33e69e0fdec0a7780e174f3c8b2c2/DmodY
 #EXTVLCOPT:http-origin=https://netsporgiriss.com
 https://t6co.32ufajdjfnsa32.workers.dev/list/yayinstar.m3u8
 #EXTINF:-1 tvg-country="TR" tvg-language="TR" tvg-name="beIN SPORTS" tvg-id="beIN SPORTS.tr" tvg-logo="https://gitlatte.github.io/m3ueditor/images/kanal-gorselleri/turkiye/bein-sport-1-hd.png" group-title="Spor",beIN SPORTS
-http://norsvpx.top:8080/231679575500969074/1511679575500969/57821
-#EXTINF:-1 tvg-country="TR" tvg-language="TR" tvg-name="beIN SPORTS" tvg-id="beIN SPORTS.tr" tvg-logo="https://gitlatte.github.io/m3ueditor/images/kanal-gorselleri/turkiye/bein-sport-1-hd.png" group-title="Spor",beIN SPORTS
 http://ecetv.xyz:80/play/6Tk-zVBs9GzvbIV3Er__JHVYpFHR9yEI8DIEbXkn2lHs6njOeh7hOc5UgCYhU7WQ
 #EXTINF:-1 tvg-country="TR" tvg-language="TR" tvg-name="beIN SPORTS" tvg-id="beIN SPORTS.tr" tvg-logo="https://gitlatte.github.io/m3ueditor/images/kanal-gorselleri/turkiye/bein-sport-1-hd.png" group-title="Spor",beIN SPORTS
 http://ecetv.xyz:80/play/6Tk-zVBs9GzvbIV3Er__JCAt43BP5faGiVcBAdeIsMp1x0l4AlK9bwvmc99DRGCe
@@ -221,10 +219,8 @@ http://ecetv.xyz:80/play/6Tk-zVBs9GzvbIV3Er__JI5J3txEuVTb1SugxXPDmQ5j6iGEoIDBrq9
 #EXTINF:-1 tvg-country="TR" tvg-language="TR" tvg-name="beIN SPORTS" tvg-id="beIN SPORTS.tr" tvg-logo="https://gitlatte.github.io/m3ueditor/images/kanal-gorselleri/turkiye/bein-sport-1-hd.png" group-title="Spor",beIN SPORTS
 http://ecetv.xyz:80/play/6Tk-zVBs9GzvbIV3Er__JH9fc3eTSiBXDOK3WYjIyHVZ4wD0g0G7IXNEc1F2veO-
 #EXTINF:-1 tvg-country="TR" tvg-language="TR" tvg-name="beIN SPORTS 2" tvg-id="beIN SPORTS 2.tr" tvg-logo="https://gitlatte.github.io/m3ueditor/images/kanal-gorselleri/turkiye/bein-sport-2-hd.png" group-title="Spor",beIN SPORTS 2
-#EXTVLCOPT:http-referrer=https://golvar3489.sbs/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
-#EXTVLCOPT:http-origin=https://golvar3489.sbs
-https://a.strmrdr-cf-worker-5859a6b75c.workers.dev/bc2b05d321cb80050c5d035a9daeb26d/DmodYM9CdSNPUZyc2x7VWd/5063/a.strmrdr-cf-worker-5859a6b75c.workers.dev/chunklist_hd.m3u8?verify=1746381610754~2a02:8109:410:3e00:e192:2ac0:5f7a:b639~5c6a9ff3eb34a6ad24237b7db024ba6d
+https://alpha.cf-worker-2fa2f308d0ef6e.workers.dev/live/bein-sports-2/playlist.m3u8
 #EXTINF:-1 tvg-country="TR" tvg-language="TR" tvg-name="beIN SPORTS 3" tvg-id="beIN SPORTS 3.tr" tvg-logo="https://gitlatte.github.io/m3ueditor/images/kanal-gorselleri/turkiye/bein-sport-3-hd.png" group-title="Spor",beIN SPORTS 3
 #EXTVLCOPT:http-referrer=https://trgoals1077.xyz/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
