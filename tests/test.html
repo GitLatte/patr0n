@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloudstream Eklenti Geliştirme Basit Anlatım</title>
+    <link rel="stylesheet" href="../assets/css/text-parser.css">
+    <style>
+        /* Temel Sayfa Yapısı */
+        .guide-header {
+            text-align: center;
+            padding: 2rem;
+            background: #2c3e50;
+            color: #ecf0f1;
+        }
+
+        .guide-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .chapter {
+            margin-bottom: 3rem;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 1.5rem;
+        }
+
+        /* Kod Blokları */
+        .code-sample {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            overflow-x: auto; /* Yatay kaydırma ekler */
+        }
+
+        .code-sample pre {
+            margin: 0;
+            padding: 0;
+        }
+
+        .language-kotlin {
+            color: #8e44ad;
+        }
+
+        .language-bash {
+            color: #27ae60;
+        }
+
+        .language-html {
+            color: #e67e22; /* HTML için renk */
+        }
+
+        /* Önemli Uyarılar */
+        .important-note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .warning-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive Tasarım */
+        @media (max-width: 768px) {
+            .guide-container {
+                padding: 1rem;
+            }
+            .code-sample {
+                 padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="guide-header">
+        <h1>📚 Cloudstream Eklenti Geliştirme Basit anlatım</h1>
+        <p class="meta-info">Yazar: Latte</p>
+    </header>
+
+    <main class="guide-container">
+        <section class="chapter">
+            <h2>1. Başlangıç Adımları</h2>
+            <p>Latte hocam öncelikle emeğine sağlık. insanlar içeriklere rahat ulaşsın diye epey emek veriyorsun. senden bir ricam uygun bir zamanda bir siteyi sistemine eklerken nerde ne yaptın nasıl yaptın adım adım video çeksen belki feyz alıp kendi repolarını oluşturacak kişiler çıkabilir.</p>
+            <p>Teşekkür ederim.</p>
+            <p>Aslında bunu kekikakademi reposunu arşive çıkartırken sağolsun "keyiflerolsun" video çekerek göstermişti.</p>
+            <p>Kaynak kodlarında videoları çok fazla gömerek sağdan soldan almaya çalışıp farklı sunucular üzerinden oynatmaya çalışan siteler için bu durum biraz zor olsa da genel anlamda o video bir çok şeyi açıklıyor. Yine de yapay zekalardan yardım alarak da yapabilirsiniz. Ben öyle yapıyorum çünkü o kadar kodla tek başına uğraşmak bir süre sonra can sıkabilir. Fakat yaşı genç olanlar için kendilerinin öğrenmesi adına bu tercih olarak bir kenarda bırakılabilir. Yani ben yapacağım her şeyi sadece diyorlarsa. Bizim gibi 40 küsür yılı geride bırakıp da bunu yapmayı ilk defa deneyecekler için çok da kolay değil özellikle de hiç bir android veya kodlama bilgisi yoksa.</p>
+            <p>Yine de özetle şöyle anlatabilirim bir video tadında:</p>
+
+            <div class="step">
+                <h3>1.1 GitHub Kurulum</h3>
+                <p>Github kullanacaksanız eğer bir hesap açın.</p>
+                <p>Sonrasında hazır kalıp olan <a href="https://github.com/recloudstream/extensions" target="_blank">https://github.com/recloudstream/extensions</a> bu adresteki repository'i fork edin hesabınıza.</p>
+                <p>Ya da;</p>
+                <p>Bu adresteki repository sayfasıdnaki yeşil arkaplanı olan <>Code yazan butona basıp Download ZIP'i seçin ve bilgisayarınıza indirin.</p>
+                <p>Yeni bir repository oluşturun ve deponuzu temsil edecek bir isim verin. Diyelim ki Github kullanıcı adınız yakamoz, yakamoz-cloudstream veya istediğiniz bir isim olabilir.</p>
+
+                <p>Hesap oluşturma ve repo klonlama:</p>
+                <pre><code class="language-bash">git clone https://github.com/[KULLANICI]/patr0n.git
+cd patr0n</code></pre>
+
+                <p>Her seferinde tek tek dosya yüklemekle uğraşmamak için ve komutlarla kullanmak yerine uygulama ile daha rahat yaparım diyorsanız Github Desktop uygulamasını indirin ve github üyeliğinizle giriş yapın.</p>
+                <p>Github Desktop uygulamasını açtığınızda ekli olan hiçbir depo görünmeyecektir siz bilgisayarınıza klonlamadığınız sürece. O yüzden sol üstteki repositories menüsüne sağ tık yaparak clone repository'i seçin ve hesabınıza bağlı olan hangi depoyu bilgisayarınıza klonlayacaksanız onu seçin.</p>
+                <p>Bunun önemi bilgisayarınıza klonladığınız bu depoların içeriğini bilgisayarda değiştirdiğiniz zaman github desktop uygulaması direkt algılayacak ve değişiklikleri commit etmeniz için size seçenek sunacak olmasıdır.</p>
+                <p>Şimdi indirmiş olduğunuz extensions deposuna ait zip dosyasını dışarı çıkartın ve kök dizinde yer alan tüm dosyaları (aynı indirmeden önce orijinal depoda göründüğü haliyle yani) kopyalayıp klonladığınız deponun içine yapıştırın.</p>
+                <p>Göreceğiniz üzere orada örnek olarak Dailymotion, Invidious ve Twitch eklentileri var. Onları kullanmayacaksanız eğer direkt olarak silin.</p>
+                <p>kekikakademinin arşive alınan <a href="https://github.com/keyiflerolsun/Kekik-cloudstream" target="_blank">https://github.com/keyiflerolsun/Kekik-cloudstream</a> deposundaki __Temel isimli eklentiyi birebir bilgisayarınızdaki deponun içine ekleyin.</p>
+            </div>
+        </section>
+
+        <section class="chapter">
+            <h2>2. Temel Yapılandırma</h2>
+            <p>Şimdi sıra indirdiğiniz örnek depoyu kendinize özel hazırlamak.</p>
+            <p>Klonladığınız deponun ana dizininde build.gradle.kts dosyası var. Onu açın ve;</p>
+            <div class="code-sample">
+                <pre><code class="language-kotlin">cloudstream {
+        // when running through github workflow, GITHUB_REPOSITORY should contain current repository name
+        // you can modify it to use other git hosting services, like gitlab
+        setRepo(System.getenv("GITHUB_REPOSITORY") ?: "https://github.com/user/repo")
+    }</code></pre>
+            </div>
+            <p>bu satırı kendi kullanıcı bilginize ve depo isminize göre düzenleyin. Örneğin:</p>
+             <div class="code-sample">
+                <pre><code class="language-kotlin">cloudstream {
+        setRepo(System.getenv("GITHUB_REPOSITORY") ?: "https://github.com/yakamoz01/yakamoz-cloudstream")
+
+        authors = listOf("yakamoz01")
+    }</code></pre>
+            </div>
+            <p>Sonrasında,</p>
+             <div class="code-sample">
+                <pre><code class="language-kotlin">android {
+        namespace = "recloudstream"</code></pre>
+            </div>
+            <p>bu kısmı kullanacağınız kendi paket adınıza göre değiştirin. Örneğin:</p>
+             <div class="code-sample">
+                <pre><code class="language-kotlin">android {
+        namespace = "com.yakamoz01"</code></pre>
+            </div>
+        </section>
+
+        <section class="chapter">
+            <h2>3. Repo.json Düzenlemesi</h2>
+             <p>Sıradaki adım ise repo.json dosyasını düzenlemek. Bu dosya eklenmek istendiğinde deponuzun bulunmasını sağlayacak olan düzenlemeyi içeren dosyadır.</p>
+             <div class="code-sample">
+                <pre><code class="language-json">{
+    "name": "Cloudstream providers repository",
+    "description": "Cloudstream extension Repository",
+    "manifestVersion": 1,
+    "pluginLists": [
+      "https://raw.githubusercontent.com/recloudstream/extensions/builds/plugins.json"
+    ]
+}</code></pre>
+            </div>
+            <p>bu şekilde olan bu dosyayı örneklerde kullandığım şekilde düzenlersek aşağıdaki gibi olmak zorunda:</p>
+             <div class="code-sample">
+                <pre><code class="language-json">{
+    "name": "yakamoz01 Cloudsteam Eklenti Deposu",
+    "description": "Depomun açıklamasıdır. Dikkate alın ya da almayın",
+    "manifestVersion": 1,
+    "pluginLists": [
+      "https://raw.githubusercontent.com/yakamoz01/yakamoz-cloudstream/builds/plugins.json"
+    ]
+}</code></pre>
+            </div>
+        </section>
+
+        <section class="chapter">
+             <h2>4. Eklenti Yapısı ve Düzenlenmesi</h2>
+             <p>Sırada eklentinin düzenlenmesi var.</p>
+             <p>__Temel isimli eklentiyi örnek olarak kullanacağımız için onu hiç değiştirmeden sabit olarak bırakabilirsiniz.</p>
+             <p>Yalnız bu eklentiyi de sürekli olarak deponzuda bulunduracaksanız fakat projede eklentiler listesinde görünmesini istemiyorsanız settings.gradle.kts dosyası içerisindeki val disabled = listOf<String>() listesine eklemelisiniz eklenti adını ve bu satırı val disabled = listOf<String>("__Temel") olarak değiştirmelisiniz. Bu kısıma yazılacak olan eklentiler proje dizininde olsa ve içinde build.gradle.kts dosyası olsa bile derleme sırasında dahil edilip projeye eklenmezler.</p>
+             <p>Yeni bir klasör oluşturun ve isim olarak hangi eklentiyi oluşturacaksanız o ismi verin. Örnek olarak YakamozFilm adını veriyoruz çünkü öyle bir site var diyelim ve ona özel bir eklenti yapmak istiyorsunuz.</p>
+             <p>__Temel klasörü içindeki tüm dosyaları bu klasörün içine ekleyin.</p>
+             <p>burada paket adınızı eğer namespace = "com.yakamoz01" yaptıysanız bir iki değişiklik yapacağız.</p>
+             <p>src/main/kotlin/com/keyiflerolsun olarak iç içe olan klasörlerden keyiflerolsun'u yakamoz01 yani namespace olarak verdiğiniz değerler değiştirin.</p>
+             <p>Değiştirdiğinizi varsayarak devam edersek yakamoz01 dizini altında Temel.kt ve TemelPlugin.kt dosyaları olacak. Onların isimlerini:</p>
+             <ul>
+                 <li>YakamozFilm.kt (veya YakamozFilmProvider.kt)</li>
+                 <li>YakamozFilmPlugin.kt</li>
+             </ul>
+             <p>olarak değiştirin.</p>
+             <p>Bu dosyaların isimleri önemlidir. Nasıl yazarsanız eklentilerin içindeki tanımlarında da aynı şekilde büyük/küçük harfe duyarlı yazmalısınız</p>
+             <p>Sonraki değiştireceğiniz dosya ise bu yeni dosya yani YakamozFilm içerisinde yer alan build.gradle.kts dosyası.</p>
+             <p>Değiştirilmemiş haliyle şöyle görünür:</p>
+             <div class="code-sample">
+                 <pre><code class="language-kotlin">version = 0
+
+cloudstream {
+    authors     = listOf("keyiflerolsun")
+    language    = "tr"
+    description = "Setfilmizle sitemizde, donma yaşamadan Türkçe dublaj ve altyazılı filmleri ile dizileri muhteşem 1080p full HD kalitesinde izleyebilirsiniz."
+
+    /**
+     * Status int as the following:
+     * 0: Down
+     * 1: Ok
+     * 2: Slow
+     * 3: Beta only
+    **/
+    status  = 1 // will be 3 if unspecified
+    tvTypes = listOf("Movie")
+    iconUrl = "https://www.google.com/s2/favicons?domain=www.*****.de&sz=%size%"
+}</code></pre>
+            </div>
+            <p>Sizin bu yapacağınız eklentiye özel olması için bunda yapabileceğiniz değişiklikler sonrası hali ise şöyle görünmeli:</p>
+             <div class="code-sample">
+                 <pre><code class="language-kotlin">version = 1 // Buradaki versiyon sabit de kalabilir ama isterseniz eklentideki sağlam değişiklikler sonrası yükseltebilirsiniz.
+
+cloudstream {
+    authors     = listOf("yakamoz01") // sizin paket adınız
+    language    = "tr" // eklentinin dili
+    description = "YakamozFilm sitesinden film izle keyfine bak" // depo içindeki eklentiler listelenirken tıklandığında görünmesi için kısa açıklama
+
+    /**
+     * Bu kısım eklentinin durumunu anlatmak için bilgi olarak var.
+     * status= kısmına 0 derseniz down, 1 derseniz çalışıyor, 2 derseniz yavaş ve 3 derseniz deneme aşamasında olduğunu anlatır uygulamaya
+     * Status int as the following:
+     * 0: Down
+     * 1: Ok
+     * 2: Slow
+     * 3: Beta only
+    **/
+    status  = 1 // Yukarıda açıkladım :))
+    tvTypes = listOf("Movie") // Buradaki kısım eklentinin tipi. Eğer sadece film içinse Movie, dizi içinse TvSeries vb şeklinde düzenlenir.
+    iconUrl = "https://www.google.com/s2/favicons?domain=www.yakamozfilm.latte&sz=%size%" // burada eklenti listesindeki simgesini direkt sitenin faviconunu alarak kullanmak için düzenleme yaparsınız. İsterseniz farklı bir görsel url adresi de verebilirsiniz.
+}</code></pre>
+            </div>
+             <p>Buraya kadar her şey tamamsa;</p>
+             <p>Oluşturduğunuz YakamozFilmPlugin.kt dosyasını düzenleyin. Mevcut içerik böyle görünecektir ve bunu yapmanız gerekenler ise sonraki kod alanında.</p>
+             <div class="code-sample">
+                 <pre><code class="language-kotlin">package com.keyiflerolsun
+
+import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
+import com.lagradost.cloudstream3.plugins.Plugin
+import android.content.Context
+
+@CloudstreamPlugin
+class TemelPlugin: Plugin() {
+    override fun load(context: Context) {
+        registerMainAPI(Temel())
+    }
+}</code></pre>
+            </div>
+            <div class="code-sample">
+                 <pre><code class="language-kotlin">package com.yakamoz01
+
+import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
+import com.lagradost.cloudstream3.plugins.Plugin
+import android.content.Context
+
+@CloudstreamPlugin
+class YakamozFilmPlugin: Plugin() {
+    override fun load(context: Context) {
+        registerMainAPI(YakamozFilm())
+    }
+}</code></pre>
+            </div>
+             <p>Yani paket adını kendinize göre yakamoz01 yaptınız ve plugin sınıfını TemelPlugin yerine eklentideki ismiyle YakamozFilmPlugin olarak değiştirdiniz ve API kaydını Temel yerine YakamozFilm olarak YakamozFilm.kt dosyasının ismiyle aynı olacak şekilde değiştirdiniz.</p>
+        </section>
+
+        <section class="chapter">
+            <h2>5. Eklenti Kod Dosyasındaki Değişiklikler (YakamozFilm.kt)</h2>
+            <p>Asıl uğraştıracak kısma şimdi geliyoruz oda YakamozFilm.kt dosyasındaki değişiklikler:</p>
+            <div class="code-sample">
+                <pre><code class="language-kotlin">// ! Bu araç @keyiflerolsun tarafından | @KekikAkademi için yazılmıştır.
+
+package com.keyiflerolsun</code></pre>
+            </div>
+            <p>bu kısma dikkat edin. Her seferinde temel eklentisini kopyalarsanız paket adını unutmanız çok muhtemel olacağı için com.keyiflerolsun yerine kendi paket adınızı yazmalısınız yani örnekteki gibi com.yakamoz01</p>
+            <p>Plugin dosyası ile buradaki paket isimleri uyuşmazsa hata alırsınız.</p>
+             <div class="code-sample">
+                <pre><code class="language-kotlin">class Temel : MainAPI() {
+    override var mainUrl              = "https://www.****.kafsinkaf"
+    override var name                  = "Temel"
+    override val hasMainPage      = true
+    override var lang                 = "tr"
+    override val hasQuickSearch       = false
+    override val supportedTypes       = setOf(TvType.Movie)
+}</code></pre>
+            </div>
+            <p>Buradaki class Temel eklentinin adıyla aynı olacak yani örneğe göre YakamozFilm.</p>
+            <p>mainURL adresi ise içerikleri alacağınız sitenin adresiyle değişmeli. Kopyala yapıştır yaparken sonunda "/" işareti olmamasına dikkat edin kodlamada sorun çıkartmaması açısından.</p>
+            <ul>
+                <li><code>hasMainPage = true</code> değeri eklentinin bir ana sayfası olsun demektir. Yani eklenti açıldığında kategoriler vs görünsün ekranda diye. Bunu eğer <code>false</code> yaparsanız eklenti seçildiğinde ekran boş görünür ve o eklentiye ait içerikler sadece arama yoluyla bulunabilir.</li>
+                <li><code>override var lang = "tr"</code> eklentinin hangi dilde olduğunu belirtmeniz için</li>
+                <li><code>override val hasQuickSearch = false</code> bu eklenti açıkken hızlı arama yapılıp yapılmayacağıyla ilgili.</li>
+                <li><code>override val supportedTypes = setOf(TvType.Movie)</code> bu da eklentinin medya türü</li>
+            </ul>
+            <p>bunlar dışında ekleyebilecekleriniz:</p>
+            <ul>
+                <li><code>override val hasChromecastSupport = true</code> chromecast desteği vermek için</li>
+                <li><code>override val hasDownloadSupport = true</code> içerik sayfasını açtığınızda Filmi İzle'nin altında İndir seçeneğini de göstermek için.</li>
+            </ul>
+            <p>Buradaki değerleri <code>false</code> yapmak geçersiz bırakmak demek <code>true</code> yapmak ise evet bu özelliğe sahiptir kullanılabilir demek içindir.</p>
+            <div class="code-sample">
+                <pre><code class="language-kotlin">override val mainPage = mainPageOf(
+        "${mainUrl}/tur/aile/"      to "Aile",
+        "${mainUrl}/tur/aksiyon/"   to "Aksiyon",
+        "${mainUrl}/tur/animasyon/" to "Animasyon",
+        "${mainUrl}/tur/belgesel/"  to "Belgesel"
+    )</code></pre>
+            </div>
+            <p>bu kısım verilerini alacağınız sitenin kategori düzenlemesine göre kullanmak istediğiniz her bir kategorinin url yapısını ekleyip eklenti üzerinde hangi isimde görüneceğine karar verdiğiniz yer. İşin doğrusu her bir eklenen url tek başına bir ana sayfa oluşturuyor.</p>
+            <p>Bu temel eklentisindeki örneğe göre eklenen site adresinin sonuna /tur/aile/ yazılırsa Aile filmleri kategorisi açılacağı varsayılarak eklenmiş oysa kullanacağınız sitede bu kategoriye ait url kategoriler/aile-filmleri olabilir. O zaman bu kısmı oradaki yapı neyse ona göre düzenlemeniz gerekir ve "${mainUrl}/kategoriler/aile-filmleri" to "Aile", gibi bir şekilde değiştirmeniz gerekebilir.</p>
+            <p>Bu alanlar basit görünse de en ufak bir karakter hatası yapmamanız lazım yoksa yanlış bir url'den veri almaya çalışacağı için ana sayfada kategori adı görünecek olsa da adresi hatalı olduğu için içeriği boş görünebilir.</p>
+            <div class="code-sample">
+                <pre><code class="language-kotlin">override suspend fun getMainPage(page: Int, request: MainPageRequest): HomePageResponse {
+        val document = app.get("${request.data}").document
+        val home     = document.select("div.items article").mapNotNull { it.toMainPageResult() }
+
+        return newHomePageResponse(request.name, home)
+    }</code></pre>
+            </div>
+            <p>Bu kısım yukarda belirttiğiniz kategori sayfalarındaki içerilerin listelendiği html seçicilere göre düzenlenmek zorunda. Örnek kodda gösterilen div.items article diyor ki;</p>
+            <ul>
+                <li>Sayfaya girdim.</li>
+                <li>Tüm sayfa ve film içerikleri listelendi.</li>
+                <li>Bu tüm sayfa içerisinden benim ilgimi çeken kısım "items" adlı div sınıfının içinde olan html kodlarından "<articles>" içindeki ögeler.</li>
+            </ul>
+            <p>Örneğin böyle bir html kodlaması var o sayfanın:</p>
+            <pre><code>
+                &lt;article&gt;
+                    &lt;h2&gt;Film 1&lt;/h2&gt;
+                    &lt;img data-src="film1.jpg" alt="Film 1"&gt;
+                    &lt;p&gt;Bu film hakkında kısa açıklama.&lt;/p&gt;
+                    &lt;a href="film1.html"&gt;Daha fazla bilgi&lt;/a&gt;
+                &lt;/article&gt;
+                
+                &lt;article&gt;
+                    &lt;h2&gt;Film 2&lt;/h2&gt;
+                    &lt;img data-src="film2.jpg" alt="Film 2"&gt;
+                    &lt;p&gt;Bu film hakkında kısa açıklama.&lt;/p&gt;
+                    &lt;a href="film2.html"&gt;Daha fazla bilgi&lt;/a&gt;
+                &lt;/article&gt;
+                </code></pre>
+                
+            </div>
+             <p>Şu durumda örneksiteadresimiz/tur/aile/ adresine girdiğinizde açılacak olan kategori sayfasında listelenen içerikler yukardaki gibi listeleniyorsa;</p>
+             <p>Bir sonraki fonksiyon olan <code>private fun Element.toMainPageResult(): SearchResponse?</code> fonksiyonundaki değerlere göre her bir içeriğin title yani başlığı, href yani erişim adresi ve posterurl yani görseli ana sayfadaki kategoriler altına eklenen içerikler için belirlenir. Burada önemli olan kısım kullanılan html seçiciler.</p>
+             <p>Temel eklentisi örneğinde bunlar:</p>
+             <div class="code-sample">
+                 <pre><code class="language-kotlin">        val title     = this.selectFirst("div.flbaslik")?.text() ?: return null
+        val href      = fixUrlNull(this.selectFirst("a")?.attr("href")) ?: return null
+        val posterUrl = fixUrlNull(this.selectFirst("img")?.attr("data-src"))
+</code></pre>
+             </div>
+             <p>yani başlığı almak için flbaslik isimli div'i arar ve ekler bulamazsa null'a ekler.</p>
+             <p><code><div class="flbaslik">Avatar: Kara Murat'ın Gri Ordusu</div></code> gibiyse yani içerik adının olduğu html satırı, başlığı alacak demektir.</p>
+             <p>href ise seçici içindeki ilk <code><a href...></code> değerine bakar ve bulursa ekler.</p>
+             <p><code><a href="film1.html">Daha fazla bilgi</a></code> gibiyse buradaki değeri adres olacak demektir.</p>
+             <p>posterUrl ise img html etiki içindeki data-src değerini görsel olarak alacak demektir.</p>
+             <p><code><img data-src="film2.jpg" alt="Film 2"></code></p>
+             <p>Sitenin kendi arama sayfasını taklit etmek için kullanılan kısım ise:</p>
+             <div class="code-sample">
+                 <pre><code class="language-kotlin">override suspend fun search(query: String): List<SearchResponse> {
+        val document = app.get("${mainUrl}/?s=${query}").document
+
+        return document.select("div.result-item article").mapNotNull { it.toSearchResult() }
+    }</code></pre>
+             </div>
+             <p>Burası da basit bir şekilde örnektekine göre <code>app.get("${mainUrl}/?s=${query}")</code> eğer böyleyse sitenin arama sayfası bu şekilde çalışıyor demektir. Yani:</p>
+             <p>Site içerisinde arama yaptığınızda çıkan sonuç sayfasının url adresi örneksiteadresi/?s=AradığımFilm gibiyse arama fonksiyonu doğru çalışacaktır site içerisinde bu şekilde ögeleri arayacaktır. Fakat bu kısım /?ara=, /search= vb şekilde olabilir. Yani bu örnek eklentideki hiçbir kod her site için aynı şekilde değildir.</p>
+             <p><code>div.result-item article</code> bu kısım ise getMainPage fonksiyonunda olduğu gibi arama sonuçları sayfasında listelenen içeriklerin bulunduğu html seçiciyle kullanılacak kod parçası. result-items adlı bir div sınıfı altındaki article başlığındaki sonuçları arayacağını gösterir. Böylece bulduklarını cloudstream uygulamasındaki arama sonuçlarında da gösterecektir tabi Element.toSearchResult(): SearchResponse? fonksiyonundaki seçiciler doğruysa.</p>
+             <p>Çünkü aynı Element.toMainPageResult fonksiyonunda olduğu gibi seçicilere sahiptir. Html seçiciler doğruysa arama sonrası içeriklerin adı ve görseli görünür ve adres de doğru alınabildiyse tıklanınca içeriğin sayfası açılır.</p>
+             <div class="code-sample">
+                 <pre><code class="language-kotlin">override suspend fun quickSearch(query: String): List<SearchResponse> = search(query)</code></pre>
+             </div>
+             <p>Bu kod kısa ve adından anlaşılabileceği üzere eklenti içi hızlı arama içindir.</p>
+        </section>
+
+        <section class="chapter">
+            <h2>6. İçerik Sayfası Bilgileri ve Load Fonksiyonu</h2>
+             <p>Şimdi geldik her bir içeriğin tıklandığında açılacak olan sayfasındaki bilgileri düzenleyeceğiniz fonksiyona o da:</p>
+             <div class="code-sample">
+                 <pre><code class="language-kotlin">override suspend fun load(url: String): LoadResponse? {
+        val document = app.get(url).document
+
+        val title           = document.selectFirst("h1")?.text()?.trim() ?: return null
+        val poster          = fixUrlNull(document.selectFirst("div.poster img")?.attr("src"))
+        val description     = document.selectFirst("div.wp-content p")?.text()?.trim()
+        val year            = document.selectFirst("div.extra span.C a")?.text()?.trim()?.toIntOrNull()
+        val tags            = document.select("div.sgeneros a").map { it.text() }
+        val rating          = document.selectFirst("span.dt_rating_vgs")?.text()?.trim()?.toRatingInt()
+        val duration        = document.selectFirst("span.runtime")?.text()?.split(" ")?.first()?.trim()?.toIntOrNull()
+        val recommendations = document.select("div.srelacionados article").mapNotNull { it.toRecommendationResult() }
+        val actors          = document.select("span.valor a").map { Actor(it.text()) }
+        val trailer         = Regex("""embed\/(.*)\?rel""").find(document.html())?.groupValues?.get(1)?.let { "https://www.youtube.com/embed/$it" }
+
+        return newMovieLoadResponse(title, url, TvType.Movie, url) {
+            this.posterUrl       = poster
+            this.plot            = description
+            this.year            = year
+            this.tags            = tags
+            this.rating          = rating
+            this.duration        = duration
+            this.recommendations = recommendations
+            addActors(actors)
+            addTrailer(trailer)
+        }
+    }</code></pre>
+             </div>
+             <p>Burada ilk satırda içeriğe ait adresin url olarak belirlendiğini görüyorsunuz. Yani içerik sayfasının oynatıcıdaki url adresinin değil.</p>
+             <p><code>title</code>, <code>poster</code>, <code>description</code> vb değerlerin her biri içerik sayfasında film bilgilerinin alınacağı html seçicileri gösteriyor. Eğer bu html seçicileri doğruysa kodun devamında yer alan</p>
+             <div class="code-sample">
+                 <pre><code class="language-kotlin">return newMovieLoadResponse(title, url, TvType.Movie, url) {
+            this.posterUrl       = poster
+            this.plot            = description
+            this.year            = year
+            this.tags            = tags
+            this.rating          = rating
+            this.duration        = duration
+            this.recommendations = recommendations
+            addActors(actors)
+            addTrailer(trailer)
+        }</code></pre>
+             </div>
+             <p>bu kısımda yüklenecek olan içerik bilgilerinde film görseli, açıklama (plot alanı), yılı, etiketleri, puanlaması, süresi, önerilen(benzer) filmleri, oyuncuları ve fragmanı içerik sayfasına ekler.</p>
+             <p>Burada bu bilgiler her içerik için girilmeyecek olsa da içeriğin eklenti içinde tıklanınca açılmasında sorun olmaz fakat bu bilgilerden sitede eklenmemiş olanlar varsa gösterilmez.</p>
+             <p><code>private fun Element.toRecommendationResult(): SearchResponse?</code> bu fonksiyon da arama ve ana sayfa fonksiyonları gibi html seçiciler içerir ve eğer varsa film sayfasındaki benzer filmler veya önerilen filmlerin olduğu html alanının seçicileri kullanılarak içeriğin sayfasında Benzer/Önerilen içerikleri gösterebilmek için kullanılır. Zorunlu değildir bu özellik ama zenginlik katar. Detaylı anlatmaya gerek yok çünkü yukarıda anlattım.</p>
+        </section>
+
+        <section class="chapter">
+            <h2>7. Link Yükleme ve Extractorlar</h2>
+             <div class="code-sample">
+                 <pre><code class="language-kotlin"> override suspend fun loadLinks(data: String, isCasting: Boolean, subtitleCallback: (SubtitleFile) -> Unit, callback: (ExtractorLink) -> Unit): Boolean {
+        Log.d("STF", "data » ${data}")
+        val document = app.get(data).document
+
+        // TODO:
+        // loadExtractor(iframe, "${mainUrl}/", subtitleCallback, callback)
+
+        return true
+    }</code></pre>
+             </div>
+             <p>Bu fonksiyon ise içerik sayfalarındaki filmlerin oynatma adreslerini alıp cloudstream'in oynatıcısına aktarmak için olan kısım.</p>
+             <ul>
+                 <li><code>data</code> içeriğin sayfasını</li>
+                 <li><code>isCasting</code> chromecast olayı için</li>
+                 <li><code>subtitleCallback</code> altyazı desteği varsa onu ekletmek için</li>
+             </ul>
+             <p><code>val document = app.get(data).document</code> ile data verisiyle içerik sayfasının adresi çağrılır ve document ise sayfanın içeriğini gösterir.</p>
+             <p>Bu temel eklentisinde TODO olarak eklenen kısım extractor'a hangi verinin aktarılacağının daha belirtilmediği için kapalı olduğunu görüyorsunuz. Yani başında // varsa o kod satırı kapatılmıştır. Basit bir şekilde orayı doldurursak yani çalışan bir hale getirirsek eğer örneğin;</p>
+             <div class="code-sample">
+                 <pre><code class="language-kotlin">override suspend fun loadLinks(
+    data: String,
+    isCasting: Boolean,
+    subtitleCallback: (SubtitleFile) -> Unit,
+    callback: (ExtractorLink) -> Unit
+): Boolean {
+    Log.d("STF", "data » ${data}")
+    val document = app.get(data).document
+
+    // Iframe içindeki kaynak URL'yi al
+    val iframeUrl = document.selectFirst("iframe")?.attr("src") ?: return false
+
+    // "icerik" parametresini içeren gerçek M3U8 bağlantısını ayrıştır
+    val icerikUrl = Regex("icerik=([^&]+)").find(iframeUrl)?.groupValues?.get(1)
+
+    // Eğer M3U8 bağlantısı bulunursa, Extractor'a gönder
+    // Bu kısımda `streamUrl` yerine `icerikUrl` kullanılmalı ve null kontrolü yapılmalı
+    if (icerikUrl != null) {
+        loadExtractor(icerikUrl, "${mainUrl}/", subtitleCallback, callback)
+        return true
+    }
+
+    return false
+}
+</code></pre>
+             </div>
+             <p>bu şekilde yapınca göreceğiniz üzere içeriğin sayfasındaki html bilgilerini alarak iframe adında bir değer oluşturuyoruz ve html içinden iframe adındaki kodun src değeri içindeki veriyi alıyoruz. Farz edelim ki site kaynak kodlarında oynatılan video içeriğinin olduğu kod aşağıdaki gibi olsun:</p>
+             <pre><code>
+                &lt;iframe src="https://orneksiteadresi/oynat?icerik=https://cdn.example.com/video.m3u8"&gt;&lt;/iframe&gt;
+                </code></pre>
+                
+             <p>Bu durumda içerik sayfasındaki video adresi için iframe içerisinden src değerini alacak ve içinden icerik değerindeki m3u8 adresini oynatıcıya yollayacak oynatması için.</p>
+             <p>Burada en can sıkıcı fonksiyon bu olabilir. Her sitenin oynatma özelliği farklı olduğu ve farklı sağlayıcılar kullanabildikleri için eğer cloudstream'in kendi extractorleri arasında o sitelerin oynatma özelliği ekliyse sorun yok ama yoksa kendiniz bir extractor oluşturmak zorunda kalırsınız.</p>
+             <p>İşte bu yüzden en başta söylediğim gibi yapay zekayı kullanmaktan çekinmeyin.</p>
+             <p>Her bir fonksiyon için sitenin gerekli olan kısımlarının kaynak kodlarını verip nereye hangi seçicinin eklenmesinin doğru olacağı bilgisini alıp test ede ede devam edin.</p>
+             <p>Eğer bilgisayarınızda android studio veya bir IDE ile derleme yaparsanız daha hızlı ilerlersiniz. Her bir kod değişikliği için github'a yükleyip derleme yapmak vs çok ama çok zaman alır. Özellikle de her seferinde bir iki eksikten dolayı hata alıyorsanız. Yerelde yapmak çok daha hızlı olmanızı sağlayacaktır.</p>
+        </section>
+
+    </main>
+
+    <footer class="guide-footer">
+        <p>Benden bu kadar. Gerçekten de yoruldum keşke yapay zekaya yazdırsaydım ;)) Hatalarım olduysa yazarken ve okuyanlardan fark edenler olursa lütfen görmezden gelip kendisi doğru bildiğini yapsın. Konu da uzamasın bundan dolayı  😅</p>
+        <p>Kolay gelsin! 🚀</p>
+    </footer>
+</body>
+</html>
