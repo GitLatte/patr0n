@@ -63,9 +63,9 @@ jobs:
               for line in lines:
                   if line.startswith('#EXTINF'):
                       if 'tvg-language=' not in line:
-                          line = line.replace('#EXTINF:-1', '#EXTINF:-1 tvg-language="TR/EN"')
+                          line = line.replace('#EXTINF:0', '#EXTINF:0 tvg-language="TR/EN"')
                       if 'tvg-country=' not in line:
-                          line = line.replace('#EXTINF:-1', '#EXTINF:-1 tvg-country="TR/Yabancı Dil"')
+                          line = line.replace('#EXTINF:0', '#EXTINF:0 tvg-country="TR/Yabancı Dil"')
                   processed_lines.append(line)
               return '\n'.join(processed_lines)
               
@@ -75,9 +75,9 @@ jobs:
               for line in lines:
                   if line.startswith('#EXTINF'):
                       if 'tvg-language=' not in line:
-                          line = line.replace('#EXTINF:-1', '#EXTINF:-1 tvg-language="TR"')
+                          line = line.replace('#EXTINF:0', '#EXTINF:0 tvg-language="TR"')
                       if 'tvg-country=' not in line:
-                          line = line.replace('#EXTINF:-1', '#EXTINF:-1 tvg-country="TR"')
+                          line = line.replace('#EXTINF:0', '#EXTINF:0 tvg-country="TR"')
                   processed_lines.append(line)
               return '\n'.join(processed_lines)
 
@@ -88,7 +88,7 @@ jobs:
               for line in lines:
                   if line.startswith('#EXTINF'):
                       # Tüm EXTINF özelliklerini ve başlığı ayır
-                      match = re.match(r'#EXTINF:-1\s*(.*?),\s*(.*?)$', line)
+                      match = re.match(r'#EXTINF:0\s*(.*?),\s*(.*?)$', line)
                       if match:
                           attrs, title = match.groups()
                           
@@ -131,7 +131,7 @@ jobs:
                               attrs = f'{attrs} group-title="{group_title}"'
                           
                           # Satırı yeniden oluştur
-                          line = f'#EXTINF:-1 {attrs.strip()},{title}'
+                          line = f'#EXTINF:0 {attrs.strip()},{title}'
                   processed_lines.append(line)
               return '\n'.join(processed_lines)
 
