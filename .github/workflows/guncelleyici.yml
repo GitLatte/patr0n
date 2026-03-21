@@ -140,7 +140,7 @@ jobs:
           download_and_process_m3u(yabanci_dizi_url, 'lists/power-yabanci-dizi.m3u', process_yabanci_dizi)
 
           # Sinema listesini güncelle
-          sinema_url = ' https://uc71111384c6a382de17a3c7e8c5.dl.dropboxusercontent.com/cd/0/get/C9E8pyeSqKrLyWkSjFei60WydGXi30oV-3jZ_EaTs7apzqlUd-TDYHGY8s7z2fvif2S7zz2qpgtC6LrGU1PiOKAbWysuRwwxdpgy3yYFtBATG6ttdCWbVmOAoP8uXqY9PHFUL1D-eEIosEdgnk5O1ZtX/file?dl=1'
+          sinema_url = ' https://www.dropbox.com/scl/fi/ounaj1vnv16nqgptlurdw/power-sinema.m3u?rlkey=ifwigrpulks49qkw7fxb9wql1&st=avs5bpg9&dl=1'
           download_and_process_m3u(sinema_url, 'lists/power-sinema.m3u', process_sinema)
           
           # IPTVSevenler listesini güncelle
