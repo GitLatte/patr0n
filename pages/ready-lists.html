@@ -17,28 +17,35 @@
             --border-color: rgba(255, 255, 255, 0.1);
             --text-color: #fff;
             --shadow-color: rgba(0, 0, 0, 0.1);
+            --sidebar-width: 250px;
+        }
+
+        * {
+            box-sizing: border-box;
         }
 
         body {
             margin: 0;
             padding: 0;
             overflow-x: hidden;
-            background-color: #050b14; /* Arka plan rengini karanlık temaya uygun ayarladık */
+            background-color: #050b14;
             color: #fff;
         }
 
-        /* --- SİDEBAR (SOL MENÜ) TASARIMI --- */
+        /* --- SİDEBAR --- */
         .sidebar {
             position: fixed;
             left: 0;
             top: 0;
             height: 100vh;
-            width: 250px;
-            background: #0e1525 !important;
+            width: var(--sidebar-width);
+            background: #0e1525;
             padding: 1rem 0;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
             z-index: 1000;
             transition: width 0.3s ease;
+            /* FIX: overflow gizle ki taşma olmasın */
+            overflow: hidden;
         }
 
         .sidebar-container {
@@ -47,11 +54,25 @@
             flex-direction: column;
         }
 
+        /* Logo alanı */
+        .sidebar-logo {
+            text-align: center;
+            padding: 1rem 1rem 0.5rem;
+            flex-shrink: 0;
+        }
+
+        /* FIX: nav-link'lerin footer üstüne taşmaması için
+           flex: 1 + overflow-y: auto eklendi */
         .sidebar-nav {
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
             padding: 1rem;
+            flex: 1;
+            overflow-y: auto;
+            /* scrollbar çok sık görünmesin */
+            scrollbar-width: thin;
+            scrollbar-color: rgba(142, 45, 226, 0.4) transparent;
         }
 
         .nav-link {
@@ -65,6 +86,7 @@
             position: relative;
             overflow: hidden;
             background: rgba(255, 255, 255, 0.05);
+            white-space: nowrap;
         }
 
         .nav-link::before {
@@ -87,6 +109,7 @@
             font-size: 1.1rem;
             color: #8e2de2;
             transition: all 0.3s ease;
+            flex-shrink: 0;
         }
 
         .nav-link:hover {
@@ -115,22 +138,20 @@
             color: #ffffff;
         }
 
+        /* FIX: position: absolute kaldırıldı, margin-top: auto ile
+           flex flow içinde en alta itildi */
         .sidebar-footer {
             padding: 1rem;
             text-align: center;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            margin-top: auto;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
+            flex-shrink: 0;
             background: #0e1525;
-            box-sizing: border-box;
         }
 
         .sidebar-footer p {
             margin: 0;
             color: rgba(255, 255, 255, 0.7);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         .sidebar-footer a {
@@ -139,19 +160,21 @@
             font-weight: bold;
         }
 
-        /* --- ANA İÇERİK ALANI TASARIMI --- */
+        /* --- ANA İÇERİK --- */
+        /* FIX: margin: 2rem auto ile margin-left çelişmesi giderildi.
+           Artık sadece margin-left ve margin-top/right/bottom ayrı tanımlandı. */
         .parser-container {
+            margin-left: calc(var(--sidebar-width) + 20px);
+            margin-right: 20px;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
             max-width: 800px;
-            width: calc(100% - 290px);
-            margin: 2rem auto;
-            margin-left: 270px;
             padding: 2rem;
             background-color: var(--secondary-color);
             border-radius: 15px;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), 0 4px 6px var(--shadow-color);
             backdrop-filter: blur(10px);
             border: 1px solid var(--border-color);
-            box-sizing: border-box;
         }
 
         .input-area {
@@ -161,7 +184,6 @@
             padding: 1rem;
             margin-bottom: 1rem;
             width: 100%;
-            box-sizing: border-box;
         }
 
         .list-group-item {
@@ -223,18 +245,22 @@
             box-shadow: 0 8px 20px rgba(142, 45, 226, 0.6);
         }
 
-        /* --- MOBİL UYUM (RESPONSIVE) --- */
+        /* --- MOBİL UYUM --- */
         @media (max-width: 768px) {
+            :root {
+                --sidebar-width: 60px;
+            }
+
             .sidebar {
-                width: 60px;
+                width: var(--sidebar-width);
             }
 
             .nav-logo {
-                display: none; /* Mobilde büyük logoyu gizleriz, sadece ikonlar kalır */
+                display: none;
             }
 
             .nav-link span {
-                display: none; /* Mobilde yazıları gizle */
+                display: none;
             }
 
             .nav-link i {
@@ -242,9 +268,9 @@
                 font-size: 1.2rem;
             }
 
-            .sidebar-footer {
-                padding: 0.5rem;
-                font-size: 0.8rem;
+            .nav-link {
+                justify-content: center;
+                padding: 0.75rem;
             }
 
             .sidebar-footer p {
@@ -257,9 +283,9 @@
             }
 
             .parser-container {
-                margin: 1rem auto;
-                margin-left: 70px;
-                width: calc(100% - 80px);
+                margin-left: calc(var(--sidebar-width) + 10px);
+                margin-right: 10px;
+                margin-top: 1rem;
                 padding: 1.2rem;
             }
 
@@ -279,8 +305,8 @@
 
         @media (max-width: 480px) {
             .parser-container {
-                margin-left: 65px;
-                width: calc(100% - 75px);
+                margin-left: calc(var(--sidebar-width) + 8px);
+                margin-right: 8px;
                 padding: 1rem;
             }
         }
@@ -290,11 +316,15 @@
 
     <nav class="sidebar">
         <div class="sidebar-container">
-            <div class="text-center mt-3 mb-4">
+
+            <!-- Logo -->
+            <div class="sidebar-logo">
                 <a href="https://gitlatte.github.io/patr0n/" data-page="index.html">
                     <img class="nav-logo" src="https://gitlatte.github.io/patr0n/img/logo.png" title="Giriş ekranına dön" style="max-width: 60%; height: auto;" />
                 </a>
             </div>
+
+            <!-- Nav Linkleri -->
             <div class="sidebar-nav">
                 <a class="nav-link" href="patron-iptv.html">
                     <i class="fas fa-list-ol"></i> <span>patr0n Sunar!</span>
@@ -315,19 +345,23 @@
                     <i class="fas fa-external-link-alt"></i> <span>M3u Web Editör</span>
                 </a>
             </div>
+
+            <!-- Footer -->
             <div class="sidebar-footer">
                 <p>Linkleri Topla © 2024 - ∞</p>
                 <a href="https://forum.sinetech.tr/uye/latte.1668/">Latte</a>
             </div>
+
         </div>
     </nav>
 
     <main>
         <div class="parser-container">
-            <h1 class="h6 mb-4" style="font-size: 1.5rem;"><i class="fas fa-list"></i> Hazır Listeler</h1>
+            <h1 class="h6 mb-4" style="font-size: 1.5rem;">
+                <i class="fas fa-list"></i> Hazır Listeler
+            </h1>
             <div class="input-area">
-                <div id="playlistContainer" class="list-group">
-                    </div>
+                <div id="playlistContainer" class="list-group"></div>
             </div>
         </div>
     </main>
